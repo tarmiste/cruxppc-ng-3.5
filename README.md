@@ -29,6 +29,17 @@ of a Linux sytem, then you should be able to work through the rough spots.
 As time passes, the rough edges will be smoothed out but as of right now,
 there may be issues that the user will have to work through.
 
+### Project goals:
+
+   Create a port of CRUX to the Apple PowerPC 32 bit machines.   
+
+   Provide the same functionality for PowerPC as is provide by mainline Crux for x86 machines.   This will be done in stages.   Initial focus is
+on providing a very solid set of core packages.   Then move on to a set of prebuilt packages from opt and xorg that are
+equivalent to what is on the Crux install ISO.   Later stages will work on creating a CRUX PPC installation CD and validation of 
+additional packages from opt, xorg and contrib.
+
+   Crux PPC should be generally be the same as Crux mainline as much as possible.   Changes will be required for the PowerPC but  
+differences between Crux PPC and Crux mainline will be minimal.
 
 ### Contents:
 
