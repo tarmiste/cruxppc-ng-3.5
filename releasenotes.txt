@@ -17,11 +17,11 @@ Release Notes for CRUX PPC 3.5
 
   Toolchain updates
 
-   CRUX PPC 3.5 includes glibc 2.27, gcc 7.4.0 and binutils 2.30.1 .
+   CRUX PPC 3.5 includes glibc 2.31, gcc 8.3.0 and binutils 2.32.1 .
 
   Kernel
 
-   Linux-4.15.1
+   Linux-4.19.24
 
   Important changes
 
@@ -38,9 +38,6 @@ Release Notes for CRUX PPC 3.5
    machine.
 
   Known issues
-
-   iptables-1.8.2 does not build in 3.5.   The rev of iptables was bumped down
-   to 1.6.2 for this release.
 
    CRUX PPC does not provide .signature checking on the ppc specific packages.
 

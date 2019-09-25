@@ -1,13 +1,13 @@
 # cruxppc-ng-3.5
 
-01Feb2019
+25Sep2019
 
 ## CRUX 3.5 port to powerpc (32bit)
 
   This repository contains a port of CRUX Linux 3.5 to the PowerPC architecture (32 bit only).   
 
   Note that this project is not a part of, nor sponsored, nor endorsed by the 
-mainline CRUX project.  If you are using CRUX-PPC and run into problems, please do not ask questions or raise issues against the mainline CRUX project.  
+mainline CRUX project.  If you are using CRUX-PPC and run into problems, please do not ask questions of, or raise issues against, the mainline CRUX project.  
 
   CRUX is a lightweight Linux distribution and CRUX PPC is an even lighter weight port of CRUX to the PowerPC architecture.   CRUX provides 
   a small set of prebuilt packages which are sufficient to get started with but most CRUX packages will have to be built and added by the user.   If you are 
@@ -27,7 +27,7 @@ mainline CRUX project.  If you are using CRUX-PPC and run into problems, please 
 If you are already familiar with CRUX or manual installation and configuration
 of a Linux sytem, then you should be able to work through the rough spots.
 As time passes, the rough edges will be smoothed out but as of right now,
-it will be a difficult distribution for some.
+there may be issues that the user will have to work through.
 
 
 ### Contents:
@@ -45,20 +45,21 @@ and various notes and materials related to crux ppc development.
 crux ppc 3.5 root filesystem.  This rootfs is the seed from which a user
 grows the remainder of their crux system.
 
-  Of course this README file and various other information.
+  Of course this README file and various other information which may
+be useful in getting a Crux system up and running on a PowerPC machine.
 
 
 ### Usage overview:
 
-  Download the root filesystem tarball.   
+  Download the root filesystem tarball.   The root filesystem consists
+  mostly of packages from the Crux "core" ports.  A small handful of 
+  "opt" packages are also included.
 
   The user extracts the root filesystem into the partition or directory 
   that will contain the crux ppc system.
 
   The user will need to build a number of additional packages to have 
-  a fully functional crux system.   At the least, the packages openssl,
-  ca-certificates, and wget will have to be built to support automatic
-  download and building of packages with the crux package utilities.
+  a fully functional crux system.  
 
   If bootable crux system is desired, the user will build the kernel 
   and configure the bootloader to boot the crux system.   A sample 
