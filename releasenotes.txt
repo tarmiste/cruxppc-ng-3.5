@@ -1,0 +1,49 @@
+Release Notes for CRUX PPC 3.5
+
+  Introduction
+
+   This page discusses the relevant changes introduced in CRUX PPC 3.5.
+
+ Supported machines:
+ Apple 32bit "NewWorld" G3/G4 
+
+ Other machines which use the G3, G4, or 60X PowerPC processors may be 
+ compatible with CRUX PPC 3.5 but are untested. Use on non-MAC machines will 
+ likely require the user to improvise installation (and at the least
+ will require the user to obtain/build a kernel for their machine).
+ 
+ Non supported machines:
+ 64bit PowerPC
+
+  Toolchain updates
+
+   CRUX PPC 3.5 includes glibc 2.27, gcc 7.4.0 and binutils 2.30.1 .
+
+  Kernel
+
+   Linux-4.15.1
+
+  Important changes
+
+   CRUX PPC 3.5 is a new port of CRUX to the PowerPC.  There is no support
+   for upgrading from any earlier CRUX PPC releases to 3.5.  
+
+   CRUX PPC 3.5 is released as a root filesystem tar archive.
+   An install ISO is not provided.
+
+
+  Miscellaneous notes
+
+   Please be sure you are using the  latest version of firmware for your  own
+   machine.
+
+  Known issues
+
+   iptables-1.8.2 does not build in 3.5.   The rev of iptables was bumped down
+   to 1.6.2 for this release.
+
+   CRUX PPC does not provide .signature checking on the ppc specific packages.
+
+ 
+  Tips
+

@@ -1,0 +1,37 @@
+# Description: Secure Sockets Layer and Transport Layer Security tools
+# URL:         http://www.openssl.org/
+# Maintainer:  TBA
+
+name=openssl
+version=1.1.1d
+release=1
+source=(http://www.openssl.org/source/$name-$version.tar.gz \
+        mksslcert.sh)
+
+build() {
+    cd $name-$version
+
+    export MAKEFLAGS="$MAKEFLAGS -j1"
+
+    #./config --prefix=/usr \
+    #         --openssldir=/etc/ssl \
+    #         shared \
+    #         enable-ec_nistp_64_gcc_128
+
+    ./Configure linux-ppc`echo $HOSTTYPE|sed 's|[a-z]*||'` --prefix=/usr \
+        --openssldir=/etc/ssl shared
+
+
+    sed -i "s|-O3|$CFLAGS|" Makefile
+
+    #make depend
+    make
+    #make -j1 test
+    make INSTALL_PREFIX=$PKG LIBDIR=lib MANDIR=/usr/share/man MANSUFFIX=ssl DESTDIR=$PKG install
+
+    find $PKG -name "*fips*" -delete
+#     # Purge html docs
+#     rm -r $PKG/usr/share/doc
+    chmod -R +w $PKG
+    install -D -m 755 $SRC/mksslcert.sh $PKG/usr/bin/mksslcert
+}

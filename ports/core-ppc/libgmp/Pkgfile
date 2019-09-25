@@ -1,0 +1,25 @@
+# Description: Free library for arbitrary precision arithmetic
+# URL:         http://gmplib.org/
+# Maintainer:  TBA
+# Arch Maintainer: CRUX-PPC System Team, devel at crux-ppc dot tba
+
+name=libgmp
+version=6.1.2
+release=1
+source=(http://gmplib.org/download/gmp/gmp-$version.tar.xz \
+        gmp.h)
+
+build() {
+    cd gmp-$version
+    ./configure --prefix=/usr \
+                --enable-cxx
+    #./configure --prefix=/usr \
+    #            --enable-cxx \
+    #            --build=powerpc-unknown-linux-gnu
+    make
+    #make check
+    make DESTDIR=$PKG install
+    # mv $PKG/usr/include/gmp{,-64}.h
+    # install -m 0644 $SRC/gmp.h $PKG/usr/include/
+    rm -r $PKG/usr/share
+}

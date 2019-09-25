@@ -1,0 +1,29 @@
+--- hfsutils-3.2.6/Makefile.in.orig	2003-07-27 00:20:13.000000000 +0200
++++ hfsutils-3.2.6/Makefile.in	2003-07-27 00:20:42.000000000 +0200
+@@ -111,7 +111,7 @@
+ install :: @INSTALL_TARGETS@
+ 
+ install_cli :: all_cli
+-	$(BININSTALL) $(HFSUTIL) "$(BINDEST)/."
++	$(BININSTALL) $(HFSUTIL) "$(BINDEST)/"
+ 
+ 	for file in $(CLITARGETS); do  \
+ 		$(HARDLINK) "$(BINDEST)/$(HFSUTIL)" "$(BINDEST)/$$file";  \
+@@ -126,7 +126,7 @@
+ 
+ install_tcl :: all_tcl
+ 	for file in $(TCLTARGETS); do  \
+-		$(BININSTALL) $$file "$(BINDEST)/.";  \
++		$(BININSTALL) $$file "$(BINDEST)/";  \
+ 	done
+ 
+ 	if [ -f "$(BINDEST)/hfs" ]; then  \
+@@ -142,7 +142,7 @@
+ 
+ install_tk :: all_tk
+ 	for file in $(TKTARGETS); do  \
+-		$(BININSTALL) $$file "$(BINDEST)/.";  \
++		$(BININSTALL) $$file "$(BINDEST)/";  \
+ 	done
+ 
+ 	for file in $(TKDOCS); do  \

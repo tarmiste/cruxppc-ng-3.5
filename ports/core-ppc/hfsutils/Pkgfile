@@ -1,0 +1,22 @@
+# Description: tools used to access hfs filesystems
+# URL:         http://www.mars.org/home/rob/proj/hfs/
+# Maintainer:  TBA
+# PPC!=
+
+name=hfsutils
+version=3.2.6
+release=1
+source=(ftp://ftp.mars.org/pub/hfs/$name-$version.tar.gz \
+	$name-$version.patch $name-$version-fixes-1.patch)
+
+build() {
+    cd $name-$version
+	patch -p1 -i $SRC/$name-$version.patch
+	patch -p1 -i $SRC/$name-$version-fixes-1.patch
+
+    ./configure --prefix=/usr --disable-nls
+    make
+    mkdir -p $PKG/usr/bin
+    mkdir -p $PKG/usr/man/man1
+    make BINDEST=$PKG/usr/bin MANDEST=$PKG/usr/man install
+}

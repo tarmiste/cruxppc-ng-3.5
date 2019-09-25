@@ -1,0 +1,25 @@
+# Description: Widely used set of C/C++ libraries providing Unicode and Globalization support.
+# URL: http://www.icu-project.org/
+# Maintainer: Danny Rawlins, crux at romster dot me
+
+name=icu
+version=63.1
+release=1
+source=(https://ssl.icu-project.org/files/icu4c/$version/icu4c-${version//./_}-src.tgz)
+
+build() {
+	cd icu/source
+
+	# icu tries to use clang by default
+	[ "$CC" ] || export CC=gcc
+	[ "$CXX" ] || export CXX=g++
+
+	./configure \
+		--prefix=/usr \
+		--mandir=/usr/share/man \
+		--disable-samples \
+		--disable-tests
+
+	make
+	make -j1 DESTDIR=$PKG install
+}
