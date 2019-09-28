@@ -202,19 +202,6 @@ Introduction
    has been limited to Apple PowerPC machines and so its usability is unknown 
    regarding other machines.
 
-  Initial source packages required
-
-   The initial CRUX system lacks several packages needed to download and
-   install packages.  For initial system bringup, you will need to download
-   a number of source files and make then available (via usb stick or 
-   otherwise) on the system.  These are:
-
-   TBA
-
-   Once the initial installation and bringup is accomplished, the CRUX
-   package system will be capable of automatically downloading additional
-   source packages as needed.
-
   Installing From CD-ROM
 
    NOTE:  There is currently no ISO installation image of this release and 
@@ -311,9 +298,10 @@ Introduction
 
  Extra packages.
 
-   None provided at this time.  Users must build and install any additional
-   packages from /usr/opt* and /usr/opt/xorg* (and a few from /usr/core/*)
-   as desired.
+   None provided at this time but as this project progresses, some precompiled
+   packages from the opt and xorg ports will be provided.  Users must build 
+   and install any additional packages from /usr/opt* and /usr/opt/xorg* 
+   (and /usr/port/contrib) as desired.
 
  Configuring a new CRUX-PPC system
 
@@ -337,7 +325,8 @@ Introduction
    details about /etc/rc.conf .
 
    Generate  locales  for  your system.  See  Section  6.1.4,  Generating
-   Locales for more information.
+   Locales for more information.   A script which generates a few selected
+   (of the many possible) locales can be found under misc.
 
    Edit /etc/rc.d/net, /etc/hosts and /etc/resolv.conf to configure  your
    network (ip-address/gateway/hostname/domain/dns).
@@ -353,7 +342,8 @@ Introduction
    cp -r *-ppc /usr/ports
 
    Periodically check and update the ppc specific ports from the git 
-   repository if needed.
+   repository if needed.    These ports are not automatically updated
+   when 'ports -u' is runa and must be updated by hand periodically.
    
    Note that most of the ppc specific ports have a counter part in the
    generic /usr/ports tree.   For example there will exist both a 
@@ -363,6 +353,8 @@ Introduction
    the generic version.   This is not ideal but for now is the way it
    works.   Manually deleting the generic ports where the equivalent
    powerpc specific port exists may make it easier to avoid mistakes.
+   The prt-get tool should automatically find and use the ppc version
+   of ports when they exist.
 
    
 
