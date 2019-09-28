@@ -1,10 +1,10 @@
 # Description: The VP8/VP9 Codec SDK
 # URL: http://www.webmproject.org/
-# Maintainer: Danny Rawlins, crux at romster dot me
+# Maintainer: TBA
 # Depends on: yasm
 
 name=libvpx
-version=1.7.0
+version=1.5.0
 release=1
 source=(https://github.com/webmproject/$name/archive/v$version/$name-v$version.tar.gz)
 
