@@ -1,0 +1,28 @@
+#!/bin/bash
+
+KV=$(grep ^KERNEL_VERSION ../Makefile | awk '{ print $3 }')
+OPT=(DEVTMPFS DEVTMPFS_MOUNT EXT2_FS EXT3_FS EXT4_FS XFS_FS REISERFS_FS JFS_FS BTRFS_FS BLK_DEV_SD HYPERV_STORAGE SCSI_VIRTIO VIRTIO_BLK VMWARE_PVSCSI SATA_AHCI ATA_PIIX SATA_NV PATA_AMD PATA_JMICRON IA32_EMULATION DRM)
+
+if [ ! -f linux-${KV}.defconfig ]; then
+    echo "Can't find 'linux-${KV}.defconfig'!"
+    exit 1
+fi
+
+echo "Sanity checking 'linux-${KV}.defconfig':"
+echo
+
+function checkopt() {
+    grep -q ^CONFIG_${O}=y linux-${KV}.defconfig
+    if [ $? -eq 0 ]; then
+        echo "OK"
+    else
+        echo "not found or not set to =y!"
+    fi
+}
+
+for O in ${OPT[@]}; do
+    echo -n "Checking for CONFIG_${O}... "
+    checkopt ${O}
+done
+
+echo

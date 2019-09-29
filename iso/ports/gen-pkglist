@@ -1,0 +1,18 @@
+#!/bin/sh
+
+COLLECTIONS="core opt xorg"
+
+:>packages.lst
+
+for COLL in $COLLECTIONS
+do
+	find $COLL -name "*.pkg.tar.gz" -o -name "*.pkg.tar.bz2" -o -name "*.pkg.tar.xz" | sed -e 's|/| |g' >> packages.lst.$$
+done
+sort < packages.lst.$$ > packages.lst
+rm -f packages.lst.$$
+
+:>MD5SUMS
+for COLL in $COLLECTIONS
+do
+	md5sum ./$COLL/*/*.pkg.tar.* >> MD5SUMS
+done

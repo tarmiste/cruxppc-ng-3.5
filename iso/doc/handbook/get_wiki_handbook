@@ -1,0 +1,24 @@
+#!/bin/bash
+# Quick hack to generate handbook.txt from pmwiki
+# Johannes Winkelmann, jw at tks6 dot net
+
+INFILE=handbook.in
+OUTFILE=handbook.txt
+CRUX_VERSION=3.5
+TITLE="HANDBOOK FOR CRUX $CRUX_VERSION"
+URL="https://crux.nu/Main/Handbook${CRUX_VERSION/\./-}?action=print"
+
+set -x
+links -dump $URL > $INFILE
+cat $INFILE|while read n; do
+	if [ -n "$intext" ]; then
+		cat
+	elif [ "$n" = "1. Preface" ]; then
+		echo "$TITLE"
+		echo "";
+		echo "   $n";
+		intext="yes";
+	fi
+done > $OUTFILE
+
+rm $INFILE

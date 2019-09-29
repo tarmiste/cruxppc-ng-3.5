@@ -1,0 +1,88 @@
+#!/bin/bash
+#
+# checkportstree
+#
+# v2.0 jue 2008-10-27
+# 
+# Simple script to find duplicate, missing, orphaned and outdated
+# packages.
+# We collect the package-names in a temporary file, find dups from
+# here with 'uniq -d' and dups/orphaned packages by comparing our 
+# list with packages.all. Outdated packages are found by sourcing
+# the Pkfile and comparing $version-$release with the one found 
+# in the package-name.
+
+
+print_result() {
+    printf "* %s: " $1 
+    printf "%s " $2
+    printf "\n"
+}
+
+setup() {
+    if [ ! -f $ALL_PKGS ]; then
+        echo "File $ALL_PKGS missing, run 'make packages.all' to create"
+        exit 1
+    fi 
+    PKGS_D=$(mktemp) 
+    PKGS_U=$(mktemp)
+    echo "Check for duplicate, missing, orphaned and outdated packages..."
+}
+
+clean() {
+    rm $PKGS_D $PKGS_U
+}
+
+find_packages() {
+    find -L $PORTS_DIR -name '*.pkg.tar.*' | sed 's|^.*/||;s|#.*$||' | sort > $PKGS_D
+    cat $PKGS_D | uniq > $PKGS_U
+}
+
+duplicates() {
+    print_result "Duplicates" "$(cat $PKGS_D | uniq -d)"
+}
+
+missing() {
+    print_result "Missing" "$(comm -3 $ALL_PKGS $PKGS_U | sort | cut -f1)"
+}
+
+orphaned() {
+    print_result "Orphaned" "$(comm -3 $ALL_PKGS $PKGS_U | sort | cut -s -f2)"
+}
+
+outdated_pkg() {
+    if [ -f Pkgfile ]; then
+        source Pkgfile
+        if [[ $(echo $name*.pkg.*) =~ ^$name#(.+-.+)\.pkg\..+$ ]]; then
+            if [ "$version-$release" != "${BASH_REMATCH[1]}" ]; then
+                printf "%s" $name
+            fi
+        fi
+    fi
+}
+
+outdated() {
+    local prt otd
+    for prt in $(cat $ALL_PKGS); do
+        pushd */$prt > /dev/null
+        O="$(outdated_pkg)"
+        [ -n "$O" ] && otd="$otd  $O"
+        popd > /dev/null
+    done
+    print_result "Outdated" "$otd"
+}
+
+
+ALL_PKGS=../packages.all
+PORTS_DIR=.
+
+setup
+find_packages
+duplicates
+missing
+orphaned
+outdated 
+clean
+
+# End of file
+

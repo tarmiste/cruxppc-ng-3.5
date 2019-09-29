@@ -1,0 +1,354 @@
+#!/bin/sh
+
+#
+# initramfs /init (busybox ash)
+#
+
+# color codes and some predefined texts
+BOLD="\033[1m"
+NORM="\033[0m"
+RED="\033[31m"
+GREEN="\033[32m"
+YELLOW="\033[33m"
+BLUE="\033[34m"
+OK="${BOLD}${GREEN}OK${NORM}"
+FAILED="${BOLD}${RED}FAILED${NORM}"
+DONE="${BOLD}${GREEN}DONE${NORM}"
+
+# helper functions
+
+# check an exit value and print a colored status
+checkReturn() {
+	if [ $? -ne 0 ]
+	then
+		echo -e $FAILED
+	else
+		echo -e $OK
+	fi
+}
+
+# print a colored done status
+echoDone() {
+	echo -e $DONE
+}
+
+# search for and mount the crux media, populate a tmpfs from it,
+# and prepare /newroot for switch_root at the end of the script
+find_and_mount_media() {
+	grep -q "prefix=*" /proc/cmdline
+	if [ $? -eq 0 ]
+	then
+		for opt in `cat /proc/cmdline`
+		do
+			echo $opt | grep -q "prefix="
+			if [ $? -eq 0 ]
+			then
+				PREFIX=`echo $opt | cut -d= -f2`
+			fi
+		done
+	fi
+
+	MEDIAMNT=/media
+	mkdir -p ${MEDIAMNT}
+
+	echo -e " ${BOLD}${BLUE}*${NORM} Searching for the CRUX media..."
+	CRUXMEDIA=""
+	CDROM_DEVICES="`awk '/drive name:/ { for (i=3;i<=NF;i++) { printf("%s ", $i) } }' /proc/sys/dev/cdrom/info`"
+	BLOCK_DEVICES="`grep -E '[shv]d' /proc/partitions | awk '{ print $4 }'`"
+	for DEV in $CDROM_DEVICES $BLOCK_DEVICES
+	do
+		DEV="/dev/$DEV"
+		mount -r $DEV ${MEDIAMNT} 2> /dev/null
+		if [ $? -eq 0 ]
+			then
+			echo -e -n "   ${BOLD}${GREEN}*${NORM} Found media on $DEV"
+			if [ -e ${MEDIAMNT}/${PREFIX}/crux-media ]
+			then
+				echo ", CRUX media."
+				CRUXMEDIA=$DEV
+				break
+			else
+				echo ", but it's not the CRUX media."
+				umount ${MEDIAMNT}
+			fi
+		else
+			echo -e "   ${BOLD}${YELLOW}*${NORM} No media found on $DEV."
+		fi
+	done
+
+	# check if the media was mounted properly. if not, spawn a shell
+	if [ ! -e ${MEDIAMNT}/${PREFIX}/crux-media ]
+	then
+		echo -e " ${BOLD}${RED}*${NORM} The CRUX media was not properly mounted!"
+		echo " Spawning a shell for you to attempt to fix this problem. If"
+		echo " you are able to find the correct device, mount it at"
+		echo " ${MEDIAMNT} and then log out of this shell to continue."
+		echo " If you are NOT able to fix the problem, installation will"
+		echo " not be possible."
+		echo
+		/bin/sh
+	fi
+
+	# check again and stop if it's still not there
+	if [ ! -e ${MEDIAMNT}/${PREFIX}/crux-media ]
+	then
+		echo -e " ${BOLD}${RED}*${NORM} The CRUX media still appears not to be"
+		echo " found and installation will not continue."
+		echo
+		sleep 99999
+		exit 1
+	fi
+
+	echo -e " ${BOLD}${BLUE}*${NORM} Populating root filesystem..."
+	mkdir -p /newroot
+	echo -e -n "   ${BOLD}${BLUE}*${NORM} Mounting new root filesystem... "
+	mount -t tmpfs tmpfs /newroot -o size=640m
+	checkReturn
+	echo -e -n "   ${BOLD}${BLUE}*${NORM} Copying files from rootfs.tar.xz... "
+	tar -xJf ${MEDIAMNT}/${PREFIX}/rootfs.tar.xz -C /newroot
+	checkReturn
+	echo -e -n "   ${BOLD}${BLUE}*${NORM} Copying devices from rootfs... "
+	cp -af /dev/* /newroot/dev/
+	checkReturn
+	mkdir -p /newroot/dev/pts /newroot/media
+
+	# the media gets unmounted here and remounted after switch_root
+	umount ${MEDIAMNT}
+	rmdir ${MEDIAMNT}
+	sed -i -e "s,#CRUXMEDIA#,${CRUXMEDIA}," /newroot/etc/fstab
+}
+
+/bin/busybox --install -s /bin
+
+# main script
+echo ""
+echo -e "${BOLD}CRUX 3.5 - ${BLUE}https://crux.nu/${NORM}"
+echo ""
+
+exec >/dev/console </dev/console 2>&1
+
+echo -e -n " ${BOLD}${BLUE}*${NORM} Mounting "
+echo -e -n "${BOLD}${GREEN}/proc${NORM}"
+mount -t proc proc /proc
+
+PRINTK="`cat /proc/sys/kernel/printk`"
+echo "0" > /proc/sys/kernel/printk
+
+echo -e ", ${BOLD}${GREEN}/sys${NORM}."
+mount -t sysfs sysfs /sys
+
+grep -q "debug" /proc/cmdline
+if [ $? -eq 0 ]
+then
+	DEBUG=1
+fi
+
+grep -q "dshell" /proc/cmdline
+if [ $? -eq 0 ]
+then
+	DSHELL=1
+fi
+
+echo -e -n " ${BOLD}${BLUE}*${NORM} Populating /dev via mdev... "
+mdev -s
+checkReturn
+echo -e -n "   ${BOLD}${BLUE}*${NORM} Registering mdev as hotplug agent... "
+echo "/bin/mdev" > /proc/sys/kernel/hotplug
+checkReturn
+
+if [ -d /lib/modules ]
+then
+	echo -e -n " ${BOLD}${BLUE}*${NORM} Loading modules... "
+
+	# filesystem
+	load_fs_modules() {
+		# no notification for fs modules since they're generic
+		#echo -e -n "${BOLD}${BLUE}File Systems${NORM}"
+		for mod in crc32c libcrc32c isofs ext2 ext4 reiserfs xfs jfs \
+			nls_cp437 nls_iso8859-1 vfat msdos btrfs
+		do
+			if [ ! -z "$DEBUG" ]
+			then
+				echo -n " $mod"
+			fi
+			modprobe $mod
+		done
+		#echo -n ", "
+	}
+
+	# cdrom
+	load_cdrom_modules() {
+		# no notification for cdrom modules since they're generic
+		#echo -e -n "${BOLD}${BLUE}CDROM${NORM}"
+		# there's only one cdrom module for now but the loop allows for adding
+		# more if ever needed
+		for mod in cdrom
+		do
+			if [ ! -z "$DEBUG" ]
+			then
+				echo -n " $mod"
+			fi
+			modprobe $mod
+		done
+		#echo -n ", "
+	}
+
+	# SCSI
+	load_scsi_modules() {
+		echo -e -n "${BOLD}${BLUE}SCSI${NORM}"
+		for mod in scsi_mod sr_mod sd_mod scsi_transport_fc scsi_transport_iscsi \
+			scsi_transport_sas scsi_transport_spi 3w-9xxx 3w-xxxx 53c700 BusLogic \
+			NCR53c406a a100u2w aacraid advansys aha152x aha1542 aha1740 aic79xx \
+			aic7xxx aic94xx arcmsr atp870u dc395x dmx3191d dpt_i2o dtc eata fdomain \
+			gdth hptiop in2000 initio ipr ips lpfc megaraid megaraid_mbox megaraid_sas \
+			nsp32 pas16 psi240i qla1280 qla2xxx qla4xxx qlogicfas qlogicfas408 seagate \
+			sim710 stex sym53c416 sym53c8xx t128 u14-34f ultrastor \
+			wd7000 mptsas mptspi hpsa hv_storvsc virtio_scsi vmw_pvscsi
+		do
+			if [ ! -z "$DEBUG" ]
+			then
+				echo -n " $mod"
+			fi
+			modprobe $mod > /dev/null 2>&1
+		done
+		echo -n ", "
+	}
+
+	# USB
+	load_usb_modules() {
+		echo -e -n "${BOLD}${BLUE}USB${NORM}"
+		for mod in usb-storage hid-generic hid-apple hid-logitech-dj
+		do
+			if [ ! -z "$DEBUG" ]
+			then
+				echo -n " $mod"
+			fi
+			modprobe $mod
+		done
+		echo -n ", "
+	}
+
+	# ATA
+	load_ata_modules() {
+		echo -e -n "${BOLD}${BLUE}ATA${NORM}"
+		for mod in libata libahci ahci sata_promise sata_sil sata_svw sata_via \
+			sata_mv sata_nv sata_sil24 sata_sx4 sata_sis sata_uli \
+			sata_vsc sata_qstor sata_inic162x ata_piix pata_mpiix \
+			pata_pdc2027x pata_radisys pata_sil680 pata_rz1000 pata_cmd640 \
+			pata_efar pata_cmd64x pata_hpt366 pata_hpt37x pata_hpt3x3 \
+			pata_opti pata_optidma pata_it8213 pata_ninja32 pata_it821x \
+			pata_artop pata_cypress pata_serverworks pata_ns87410 \
+			pata_ns87415 pata_ali pata_amd pdc_adma ata_generic \
+			pata_atiixp pata_triflex pata_netcell pata_sch pata_sis \
+			pata_hpt3x2n pata_marvell pata_jmicron pata_via pata_sl82c105
+		do
+			if [ ! -z "$DEBUG" ]
+			then
+				echo -n " $mod"
+			fi
+			modprobe $mod
+		done
+		echo -n ", "
+	}
+
+	# FireWire
+	load_firewire_modules() {
+		echo -e -n "${BOLD}${BLUE}FireWire${NORM}"
+		for mod in core ohci sbp2
+		do
+			if [ ! -z "$DEBUG" ]
+			then
+				echo -n " $mod"
+			fi
+			modprobe firewire-$mod
+		done
+		echo -n ", "
+	}
+
+	MODORDER="fs cdrom ata scsi usb firewire"
+
+	for MODS in $MODORDER
+	do
+		grep -q "no$MODS" /proc/cmdline
+		[ $? -ne 0 ] && load_${MODS}_modules
+	done
+
+	echoDone
+else
+	echo -e " ${BOLD}${YELLOW}*${NORM} No modules were found in the initial RAM filesystem."
+fi
+
+grep -q "devicetimeout=*" /proc/cmdline
+if [ $? -eq 0 ]
+then
+	for opt in `cat /proc/cmdline`
+	do
+		echo $opt | grep -q "devicetimeout"
+		if [ $? -eq 0 ]
+		then
+			DEVTIMEOUT=`echo $opt | cut -d= -f2`
+		fi
+	done
+else
+	DEVTIMEOUT=10
+fi
+echo -e " ${BOLD}${BLUE}*${NORM} Waiting $DEVTIMEOUT seconds for devices to settle..."
+sleep $DEVTIMEOUT
+
+# if root=/dev/XXX was specified on the command line, use that as the new root
+# instead of searching for the media and using it. if it fails, fall back to
+# the media
+grep -q "root=/dev/*" /proc/cmdline
+if [ $? -eq 0 ]
+then
+	#echo "root= was specified"
+	for opt in `cat /proc/cmdline`
+	do
+		echo "$opt" | grep -q root=
+		if [ $? -eq 0 ]
+		then
+			ROOTDEV=`echo $opt | cut -d= -f2`
+		fi
+	done
+	mkdir -p /newroot
+	# check the specified root device to see if it has an init
+	mount $ROOTDEV /newroot
+	if [ $? -ne 0 ]
+	then
+		echo -e " ${BOLD}${RED}*${NORM} Unable to mount the specified root device! Falling back to the live media."
+		find_and_mount_media
+	else
+		if [ -x /newroot/sbin/init ]
+		then
+			echo -e " ${BOLD}${BLUE}*${NORM} Mounted root device $ROOTDEV."
+		else
+			echo -e " ${BOLD}${RED}*${NORM} The specified root device ($ROOTDEV) does not appear to be usable! Falling back to the live media."
+			umount /newroot
+			find_and_mount_media
+		fi
+	fi
+else
+	find_and_mount_media
+fi
+
+# copy busybox for debugging
+if [ ! -z "${DEBUG}" ]
+then
+	cp /bin/busybox /newroot/bin/
+fi
+
+if [ ! -z "$DSHELL" ]
+then
+	echo "Starting debug shell."
+	/bin/ash
+fi
+
+echo -e " ${BOLD}${BLUE}*${NORM} Switching root.\n"
+echo "$PRINTK" > /proc/sys/kernel/printk
+echo > /proc/sys/kernel/hotplug
+umount /sys
+umount /proc
+exec /bin/switch_root /newroot /sbin/init
+
+echo "Something's broken, here's a shell."
+exec /bin/sh

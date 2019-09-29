@@ -1,0 +1,3969 @@
+3.5 - Released 2019-06-11
+	- Installation/Bootkernel:
+
+	- Updated packages:
+		- kernel/linux		4.14.40	 -> 4.19.48
+		- core/acl		2.2.52-2 -> 2.2.53-3
+		- core/attr		2.4.47-2 -> 2.4.48-1
+		- core/bash		4.4.19-1 -> 5.0-1
+		- core/bindutils	9.11.3-1 -> 9.12.4-1
+		- core/binutils		2.29.1-1 -> 2.32-1
+		- core/bison		3.0.4-2	 -> 3.4.1-1
+		- core/ca-certificates	20180307-1 -> 20190515-1
+		- core/coreutils	8.29-1	 -> 8.31-1
+		- core/curl		7.59.0-1 -> 7.65.1-1
+		- core/dash		0.5.9.1-1 -> 0.5.10.2-1
+		- core/db		5.3.28-1 -> 5.3.28-2
+		- core/dhcpcd		7.0.4-1	 -> 7.2.2-1
+		- core/diffutils	3.6-1	 -> 3.7-1
+		- core/e2fsprogs	1.44.1-1 -> 1.45.2-1
+		- core/ed		1.14.2-1 -> 1.15-1
+		- core/elfutils		0.169-1	 -> 0.176-1
+		- core/eudev		3.2.5-1	 -> 3.2.8-2
+		- core/exim		4.91-1	 -> 4.92-1
+		- core/file		5.33-2	 -> 5.37-1
+		- core/filesystem	3.4-2	 -> 3.5-1
+		- core/gawk		4.2.1-1	 -> 5.0.0-1
+		- core/gcc		7.3.0-1	 -> 8.3.0-1
+		- core/gdbm		1.14.1-1 -> 1.18.1-1
+		- core/gettext		0.19.8.1-1 -> 0.20.1-1
+		- core/glibc		2.27-1	 -> 2.28-2
+		- core/glibc-32		2.27-1	 -> 2.28-2
+		- core/grep		3.1-1	 -> 3.3-1
+		- core/groff		1.22.3-2 -> 1.22.4-1
+		- core/gzip		1.9-1	 -> 1.10-1
+		- core/hdparm		9.56-1	 -> 9.58-1
+		- core/httpup		0.4.0m-1 -> 0.5.0-1
+		- core/iana-etc		2.4-1	 -> 3.4-1
+		- core/iproute2		4.16.0-1 -> 5.1.0-1
+		- core/iptables		1.6.2-1	 -> 1.8.3-1
+		- core/kmod		25-1	 -> 26-1
+		- core/less		530-1	 -> 550-1
+		- core/libarchive	3.3.2-1	 -> 3.3.3-1
+		- core/libcap		2.25-2	 -> 2.27-1
+		- core/libdevmapper	1.02.146-1 -> 1.02.158-1
+		- core/libmpfr		4.0.1-1	 -> 4.0.2-1
+		- core/libpcre		8.42-1	 -> 8.43-1
+		- core/libpipeline	1.5.0-1	 -> 1.5.1-1
+		- core/man-db		2.8.3-1	 -> 2.8.5-1
+		- core/man-pages	4.16-1	 -> 5.01-1
+		- core/nasm		2.13.03-1 -> 2.14.02-1
+		- core/openssh		7.7p1-1	 -> 8.0p1-1
+		- core/openssl		1.0.2o-1 -> 1.1.1c-1
+		- core/patch		2.7.6-1	 -> 2.7.6.17-9c98-1
+		- core/pciutils		3.5.6-1	 -> 3.6.2-1
+		- core/perl		5.26.2-1 -> 5.28.2-1
+		- core/ports		1.5-23	 -> 1.6-1
+		- core/procps		3.3.14-1 -> 3.3.15-1
+		- core/prt-get		5.19.1-1 -> 5.19.3-1
+		- core/rc		2.31-1	 -> 2.31-3
+		- core/readline		7.0.3-1	 -> 8.0-1
+		- core/sed		4.5-1	 -> 4.7-1
+		- core/shadow		4.6-1	 -> 4.6-2
+		- core/start-stop-daemon 20170812-1 -> 20190310-1
+		- core/sudo		1.8.23-1 -> 1.8.27-2
+		- core/sysklogd		1.5.1-6	 -> 1.5.1-8
+		- core/sysvinit		2.89-1	 -> 2.95-beta-1
+		- core/tar		1.30-1	 -> 1.32-1
+		- core/tzdata		2018e-1	 -> 2019a-1
+		- core/usbutils		009-1	 -> 012-1
+		- core/util-linux	2.32-1	 -> 2.33.2-1
+		- core/vim		8.0.1587-1 -> 8.1.1390-1
+		- core/wget		1.19.5-1 -> 1.20.3-1
+		- opt/alsa-lib		1.1.6-1	 -> 1.1.9-1
+		- opt/at-spi2-atk	2.26.2-1 -> 2.32.0-1
+		- opt/at-spi2-core	2.26.2-1 -> 2.32.1-1
+		- opt/atk		2.28.1-1 -> 2.32.0-1
+		- opt/btrfs-progs	4.16.1-1 -> 4.20.1-1
+		- opt/cairo		1.15.10-1 -> 1.16.0-2
+		- opt/cmake		3.11.1-1 -> 3.14.5-1
+		- opt/cryptsetup	1.7.5-1	 -> 2.1.0-1
+		- opt/dbus		1.12.8-1 -> 1.12.14-2
+		- opt/dialog		1.3-20171209-1 -> 1.3-20190211-1
+		- opt/efibootmgr	15-1	 -> 16-1
+		- opt/efivar		31-1	 -> 37-1
+		- opt/expat		2.2.5-1	 -> 2.2.6-1
+		- opt/fakeroot		1.22-1	 -> 1.23-1
+		- opt/fetchmail		6.3.26-2 -> 6.3.26-3
+		- opt/fontconfig	2.13.0-1 -> 2.13.1-1
+		- opt/freetype		2.9.1-2	 -> 2.10.0-1
+		- opt/fribidi		0.19.7-1 -> 1.0.5-1
+		- opt/gdk-pixbuf	2.36.12-1 -> 2.38.1-2
+		- opt/glib		2.56.1-1 -> 2.60.3-1
+		- opt/gnu-efi		3.0.6-1	 -> 3.0.9-1
+		- opt/gobject-introspection 1.52.1-1 -> 1.60.1-1
+		- opt/grub2		2.02-1	 -> 2.02-3
+		- opt/grub2-efi		2.02-1	 -> 2.02-2
+		- opt/gtk3		3.22.30-1 -> 3.24.8-1
+		- opt/harfbuzz		1.7.6-1	 -> 2.5.1-1
+		- opt/iputils		s20151218-2 -> s20190515-1
+		- opt/jfsutils		1.1.15-3 -> 1.1.15-4
+		- opt/keyutils		1.5.10-1 -> 1.6-2
+		- opt/libevent		2.1.8-1	 -> 2.1.10-1
+		- opt/libgcrypt		1.8.2-1	 -> 1.8.4-1
+		- opt/libgpg-error	1.27-1	 -> 1.36-1
+		- opt/libjpeg-turbo	1.5.3-1	 -> 2.0.1-1
+		- opt/libpng		1.6.34-1 -> 1.6.36-1
+		- opt/libtiff		4.0.9-1	 -> 4.0.10-1
+		- opt/libtirpc		1.0.3-1	 -> 1.1.4-1
+		- opt/libxml2		2.9.8-1	 -> 2.9.9-1
+		- opt/libxml2-python	2.9.8-1	 -> 2.9.9-1
+		- opt/libxslt		1.1.29-1 -> 1.1.30-1
+		- opt/linux-firmware	20180408-1 -> 20190514-1
+		- opt/llvm		6.0.0-2	 -> 8.0.0-1
+		- opt/lvm2		2.02.177-1 -> 2.02.185-1
+		- opt/mdadm		4.0-2	 -> 4.1-1
+		- opt/meson		0.46.0-1 -> 0.50.1-1
+		- opt/mutt		1.9.5-1	 -> 1.12.0-1
+		- opt/nano		2.9.6-1	 -> 4.2-1
+		- opt/nfs-utils		2.3.1-1	 -> 2.3.4-1
+		- opt/ninja		1.8.2-1	 -> 1.9.0-1
+		- opt/pango		1.42.1-1 -> 1.42.4-1
+		- opt/ppp		2.4.7-3	 -> 2.4.7-4
+		- opt/python		2.7.15-1 -> 2.7.16-2
+		- opt/python3		3.6.5-1	 -> 3.7.3-1
+		- opt/reiserfsprogs	3.6.27-1 -> 3.6.27-2
+		- opt/rpcbind		0.2.4-2	 -> 1.2.5-1
+		- opt/shared-mime-info	1.9-1	 -> 1.10-1
+		- opt/sqlite3		3.23.1-1 -> 3.28.0-1
+		- opt/talloc		2.1.13-1 -> 2.2.0-1
+		- opt/wireless-tools	29-2	 -> 30.pre9-1
+		- opt/wpa_supplicant	2.6-3	 -> 2.8-1
+		- opt/xfsprogs		4.16.1-1 -> 5.0.0-1
+		- opt/xterm		333-1	 -> 346-1
+		- opt/zstd		1.3.4-1	 -> 1.4.0-1
+		- xorg/libdrm		2.4.92-1 -> 2.4.98-1
+		- xorg/libepoxy		1.4.3-1	 -> 1.4.3-2
+		- xorg/libinput		1.10.6-1 -> 1.13.2-1
+		- xorg/libvdpau		1.1.1-1	 -> 1.2-1
+		- xorg/mesa3d		18.0.3-1 -> 19.0.6-1
+		- xorg/xkeyboard-config	2.23.1-1 -> 2.24-1
+		- xorg/xorg		7.7-1	 -> 7.7-2
+		- xorg/xorg-libdmx	1.1.3-2	 -> 1.1.4-1
+		- xorg/xorg-libfontenc	1.1.3-1	 -> 1.1.4-1
+		- xorg/xorg-libpixman	0.34.0-1 -> 0.38.4-1
+		- xorg/xorg-libsm	1.2.2-1	 -> 1.2.3-1
+		- xorg/xorg-libx11	1.6.5-1	 -> 1.6.7-1
+		- xorg/xorg-libxau	1.0.8-2	 -> 1.0.9-1
+		- xorg/xorg-libxcomposite 0.4.4-2 -> 0.4.5-1
+		- xorg/xorg-libxcursor	1.1.15-1 -> 1.2.0-1
+		- xorg/xorg-libxdamage	1.1.4-1	 -> 1.1.5-1
+		- xorg/xorg-libxdmcp	1.1.2-1	 -> 1.1.3-1
+		- xorg/xorg-libxext	1.3.3-2	 -> 1.3.4-1
+		- xorg/xorg-libxft	2.3.2-2	 -> 2.3.3-1
+		- xorg/xorg-libxinerama	1.1.3-2	 -> 1.1.4-1
+		- xorg/xorg-libxkbfile	1.0.9-1	 -> 1.1.0-1
+		- xorg/xorg-libxmu	1.1.2-1	 -> 1.1.3-1
+		- xorg/xorg-libxrandr	1.5.1-1	 -> 1.5.2-1
+		- xorg/xorg-libxscrnsaver 1.2.2-2 -> 1.2.3-1
+		- xorg/xorg-libxvmc	1.0.10-1 -> 1.0.11-1
+		- xorg/xorg-libxxf86dga	1.1.4-2	 -> 1.1.5-1
+		- xorg/xorg-libxxf86misc 1.0.3-2 -> 1.0.4-1
+		- xorg/xorg-makedepend	1.0.5-2	 -> 1.0.6-1
+		- xorg/xorg-mkfontscale	1.1.3-1	 -> 1.2.1-1
+		- xorg/xorg-server	1.20.0-1 -> 1.20.5-1
+		- xorg/xorg-x11perf	1.6.0-2	 -> 1.6.1-1
+		- xorg/xorg-xcompmgr	1.1.7-2	 -> 1.1.8-1
+		- xorg/xorg-xev		1.2.2-2	 -> 1.2.3-1
+		- xorg/xorg-xf86-input-evdev	2.10.5-1 -> 2.10.6-1
+		- xorg/xorg-xf86-input-libinput	0.27.1-1 -> 0.28.2-1
+		- xorg/xorg-xf86-input-mouse	1.9.2-1	 -> 1.9.3-1
+		- xorg/xorg-xf86-input-synaptics 1.9.0-1 -> 1.9.1-1
+		- xorg/xorg-xf86-video-ati	18.0.1-1 -> 19.0.1-1
+		- xorg/xorg-xf86-video-intel	2.99.917-812-1 -> 2.99.917-855-1
+		- xorg/xorg-xf86-video-neomagic	1.2.9-2	 -> 1.3.0-1
+		- xorg/xorg-xf86-video-nouveau	1.0.15-1 -> 1.0.16-1
+		- xorg/xorg-xhost		1.0.7-2	 -> 1.0.8-1
+		- xorg/xorg-xinit		1.4.0-1	 -> 1.4.1-1
+		- xorg/xorg-xkbcomp		1.4.1-1	 -> 1.4.2-1
+		- xorg/xorg-xmodmap		1.0.9-2	 -> 1.0.10-1
+		- xorg/xorg-xprop		1.2.3-1	 -> 1.2.4-1
+		- xorg/xorg-xrdb		1.1.1-1	 -> 1.2.0-1
+		- xorg/xorg-xtrans		1.3.5-1	 -> 1.4.0-1
+		- xorg/xorg-xvinfo		1.1.3-2	 -> 1.1.4-1
+	- New packages:
+		- core/linux-pam		1.3.1-1
+		- opt/dbus-glib			0.110-1
+		- opt/firefox-bin		67.0.1-1
+		- opt/iputils			s20190515-1
+		- opt/json-c			0.13.1-1
+		- opt/libaio			0.3.112-1
+		- opt/lilo			24.2-1
+		- opt/prt-utils			1.1.1-2
+		- opt/python3-mako		1.0.10-1
+		- opt/python3-markupsafe	1.1.1-1
+		- opt/python3-setuptools	41.0.1-1
+		- xorg/libglvnd			1.1.0-1
+	- Removed packages
+		- core/iputils
+		- core/libusb-compat
+		- core/lilo
+		- opt/autoconf-2.13
+		- opt/firefox
+		- opt/nspr
+		- opt/nss
+		- opt/rust
+		- opt/wvdial
+		- xorg/xorg-mkfontdir
+
+
+3.4 - Released 2018-05-12
+	- Installation/Bootkernel:
+
+	- Updated packages:
+		- kernel/linux		4.9.6	 -> 4.14.40
+		- core/automake		1.15-2	 -> 1.16.1-1
+		- core/bash		4.4-1	 -> 4.4.19-1
+		- core/bc		1.06-4	 -> 1.07.1-1
+		- core/bindutils	9.10.4-1 -> 9.11.3-1
+		- core/binutils		2.27-1	 -> 2.29.1-1
+		- core/bzip2		1.0.6-2	 -> 1.0.6-3
+		- core/ca-certificates	20170118-1 -> 20180307-1
+		- core/coreutils	8.26-1	 -> 8.29-1
+		- core/cpio		2.12-1	 -> 2.12-2
+		- core/curl		7.52.1-2 -> 7.59.0-1
+		- core/dhcpcd		6.11.5-1 -> 7.0.4-1
+		- core/diffutils	3.5-1	 -> 3.6-1
+		- core/e2fsprogs	1.43.3-1 -> 1.44.1-1
+		- core/ed		1.14.1-1 -> 1.14.2-1
+		- core/elfutils		0.168-1	 -> 0.169-1
+		- core/eudev		3.2.1-1	 -> 3.2.5-1
+		- core/exim		4.88-1	 -> 4.91-1
+		- core/file		5.29-1	 -> 5.33-2
+		- core/filesystem	3.3-1	 -> 3.4-2
+		- core/flex		2.6.3-2	 -> 2.6.4-2
+		- core/gawk		4.1.4-1	 -> 4.2.1-1
+		- core/gcc		6.3.0-1	 -> 7.3.0-1
+		- core/gdbm		1.12-1	 -> 1.14.1-1
+		- core/glibc		2.24-3	 -> 2.27-1
+		- core/glibc-32		2.24-1	 -> 2.27-1
+		- core/gperf		3.0.4-2	 -> 3.1-1
+		- core/grep		2.27-1	 -> 3.1-1
+		- core/gzip		1.8-1	 -> 1.9-1
+		- core/hdparm		9.51-1	 -> 9.56-1
+		- core/httpup		0.4.0l-2 -> 0.4.0m-1
+		- core/iproute2		4.9.0-1	 -> 4.16.0-1
+		- core/iptables		1.6.1-1	 -> 1.6.2-1
+		- core/iputils		s20151218-1 -> s20151218-2
+		- core/kmod		23-1	 -> 25-1
+		- core/less		481-1	 -> 530-1
+		- core/libarchive	3.2.2-1	 -> 3.3.2-1
+		- core/libcap		2.25-1	 -> 2.25-2
+		- core/libdevmapper	1.02.137-1 -> 1.02.146-1
+		- core/libmpc		1.0.3-1	 -> 1.1.0-1
+		- core/libmpfr		3.1.5-p2-1 -> 4.0.1-1
+		- core/libpcre		8.40-1	 -> 8.42-1
+		- core/libpipeline	1.4.1-1	 -> 1.5.0-1
+		- core/libusb		1.0.21-1 -> 1.0.22-1
+		- core/lzo		2.09-1	 -> 2.10-1
+		- core/make		4.2.1-1	 -> 4.2.1-2
+		- core/man-db		2.7.6.1-1 -> 2.8.3-1
+		- core/man-pages	4.09-1	 -> 4.16-1
+		- core/nasm		2.12.02-1 -> 2.13.03-1
+		- core/ncurses		6.0-4	 -> 6.1-1
+		- core/openrdate	1.2-2	 -> 1.2-3
+		- core/openssh		7.4p1-1	 -> 7.7p1-1
+		- core/openssl		1.0.2k-1 -> 1.0.2o-1
+		- core/patch		2.7.5-2	 -> 2.7.6-1
+		- core/pciutils		3.5.2-1	 -> 3.5.6-1
+		- core/perl		5.24.1-1 -> 5.26.2-1
+		- core/pkg-config	0.29.1-1 -> 0.29.2-1
+		- core/pkgutils		5.40-1	 -> 5.40.7-1
+		- core/ports		1.5-22	 -> 1.5-23
+		- core/procps		3.3.12-1 -> 3.3.14-1
+		- core/psmisc		22.21-3	 -> 23.1-1
+		- core/rc		2.29-1	 -> 2.31-1
+		- core/readline		7.0-1	 -> 7.0.3-1
+		- core/rsync		3.1.2-1	 -> 3.1.3-1
+		- core/sed		4.3-1	 -> 4.5-1
+		- core/shadow		4.4-1	 -> 4.6-1
+		- core/start-stop-daemon 20150921-1 -> 20170812-1
+		- core/sudo		1.8.19p2-1 -> 1.8.23-1
+		- core/sysvinit		2.88-4	 -> 2.89-1
+		- core/tar		1.29-1	 -> 1.30-1
+		- core/time		1.7-3	 -> 1.9-1
+		- core/tzdata		2016j-1	 -> 2018e-1
+		- core/usbutils		008-2	 -> 009-1
+		- core/util-linux	2.29.1-1 -> 2.32-1
+		- core/vim		8.0.0095-1 -> 8.0.1587-1
+		- core/wget		1.18-1	 -> 1.19.5-1
+		- core/xz		5.2.3-1	 -> 5.2.4-1
+		- opt/alsa-lib		1.1.2-1	 -> 1.1.6-1
+		- opt/at-spi2-atk	2.22.0-1 -> 2.26.2-1
+		- opt/at-spi2-core	2.22.0-1 -> 2.26.2-1
+		- opt/atk		2.22.0-1 -> 2.28.1-1
+		- opt/btrfs-progs	4.9.1-1	 -> 4.16.1-1
+		- opt/cairo		1.15.4-1 -> 1.15.10-1
+		- opt/cmake		3.6.1-2	 -> 3.11.1-1
+		- opt/cryptsetup	1.7.3-1	 -> 1.7.5-1
+		- opt/dbus		1.10.14-1 -> 1.12.8-1
+		- opt/dialog		1.3-20160828-1	 -> 1.3-20171209-1
+		- opt/dosfstools	4.0-1	 -> 4.1-1
+		- opt/efibootmgr	14-1	 -> 15-1
+		- opt/efivar		26-1	 -> 31-1
+		- opt/expat		2.2.0-1	 -> 2.2.5-1
+		- opt/fakeroot		1.21-2	 -> 1.22-1
+		- opt/firefox		51.0.1-1 -> 60.0-1
+		- opt/fontconfig	2.12.0-1 -> 2.13.0-1
+		- opt/freetype		2.7-1	 -> 2.9.1-2
+		- opt/gdk-pixbuf	2.36.4-1 -> 2.36.12-1
+		- opt/glib		2.50.2-1 -> 2.56.1-1
+		- opt/gnu-efi		3.0.5-1	 -> 3.0.6-1
+		- opt/gobject-introspection 1.50.0-1 -> 1.52.1-1
+		- opt/grub2		2.02-beta3-1 -> 2.02-1
+		- opt/grub2-efi		2.02-beta3-1 -> 2.02-1
+		- opt/gtk		2.24.31-1 -> 2.24.32-1
+		- opt/gtk3		3.22.7-1 -> 3.22.30-1
+		- opt/harfbuzz		1.3.4-1	 -> 1.7.6-1
+		- opt/hicolor-icon-theme 0.15-1	 -> 0.17-1
+		- opt/intltool		0.51.0-1 -> 0.51.0-2
+		- opt/keyutils		1.5.9-2	 -> 1.5.10-1
+		- opt/libffi		3.2.1-2	 -> 3.2.1-3
+		- opt/libgcrypt		1.7.6-1	 -> 1.8.2-1
+		- opt/libgpg-error	1.26-1	 -> 1.27-1
+		- opt/libjpeg-turbo	1.5.1-1	 -> 1.5.3-1
+		- opt/libnl		3.2.29-1 -> 3.4.0-1
+		- opt/libpng		1.6.27-1 -> 1.6.34-1
+		- opt/libtiff		4.0.7-1	 -> 4.0.9-1
+		- opt/libtirpc		1.0.1-2	 -> 1.0.3-1
+		- opt/libxml2		2.9.4-1	 -> 2.9.8-1
+		- opt/libxml2-python	2.9.4-1	 -> 2.9.8-1
+		- opt/linux-firmware	20161122-1 -> 20180408-1
+		- opt/llvm		3.9.1-3	 -> 6.0.0-2
+		- opt/lvm2		2.02.168-1 -> 2.02.177-1
+		- opt/mdadm		4.0-1	 -> 4.0-2
+		- opt/mutt		1.7.2-1	 -> 1.9.5-1
+		- opt/nano		2.7.4-1	 -> 2.9.6-1
+		- opt/nfs-utils		2.1.1-1	 -> 2.3.1-1
+		- opt/nspr		4.13.1-1 -> 4.19-1
+		- opt/nss		3.28.1-1 -> 3.37-1
+		- opt/p5-xml-parser	2.44-1	 -> 2.44_01-1
+		- opt/pango		1.40.3-1 -> 1.42.1-1
+		- opt/parted		3.2-1	 -> 3.2-2
+		- opt/python		2.7.13-1 -> 2.7.15-1
+		- opt/reiserfsprogs	3.6.24-3 -> 3.6.27-1
+		- opt/rpcbind		0.2.4-1	 -> 0.2.4-2
+		- opt/sqlite3		3.16.2-2 -> 3.23.1-1
+		- opt/syslinux		6.03-3	 -> 6.03-5
+		- opt/talloc		2.1.8-1	 -> 2.1.13-1
+		- opt/unzip		6.0-6	 -> 6.0-7
+		- opt/wpa_supplicant	2.6-2	 -> 2.6-3
+		- opt/xfsprogs		4.7.0-1	 -> 4.16.1-1
+		- opt/xterm		327-1	 -> 333-1
+		- xorg/libdrm		2.4.75-1 -> 2.4.92-1
+		- xorg/libepoxy		1.3.1-1	 -> 1.4.3-1
+		- xorg/libinput		1.6.0-1	 -> 1.10.6-1
+		- xorg/libpthread-stubs		0.3-1	 -> 0.4-1
+		- xorg/mesa3d			13.0.3-1 -> 18.0.3-1
+		- xorg/xkeyboard-config		2.19-1	 -> 2.23.1-1
+		- xorg/xorg-bdftopcf		1.0.5-2	 -> 1.1-1
+		- xorg/xorg-iceauth		1.0.7-2	 -> 1.0.8-1
+		- xorg/xorg-libevdev		1.2-2	 -> 1.5.7-2
+		- xorg/xorg-libpciaccess	0.13.4-1 -> 0.14-1
+		- xorg/xorg-libx11		1.6.4-1	 -> 1.6.5-1
+		- xorg/xorg-libxcb		1.12-1	 -> 1.13-1
+		- xorg/xorg-libxcursor		1.1.14-2 -> 1.1.15-1
+		- xorg/xorg-libxfont		1.5.2-1	 -> 1.5.4-1
+		- xorg/xorg-libxfont2		2.0.1-1	 -> 2.0.3-1
+		- xorg/xorg-libxres		1.0.7-2	 -> 1.2.0-1
+		- xorg/xorg-libxshmfence	1.2-1	 -> 1.3-1
+		- xorg/xorg-mkfontscale		1.1.2-2	 -> 1.1.3-1
+		- xorg/xorg-server		1.19.1-1 -> 1.20.0-1
+		- xorg/xorg-sessreg		1.1.0-2	 -> 1.1.1-1
+		- xorg/xorg-util-macros		1.19.1-1 -> 1.19.2-1
+		- xorg/xorg-xbacklight		1.2.1-2	 -> 1.2.2-1
+		- xorg/xorg-xbitmaps		1.1.1-1	 -> 1.1.2-1
+		- xorg/xorg-xcb-proto		1.12-1	 -> 1.13-1
+		- xorg/xorg-xdriinfo		1.0.5-2	 -> 1.0.6-1
+		- xorg/xorg-xf86-input-libinput	0.23.0-1 -> 0.27.1-1
+		- xorg/xorg-xf86-video-ati	7.8.0-1	 -> 18.0.1-1
+		- xorg/xorg-xf86-video-intel	20161206-1 -> 2.99.917-812-1
+		- xorg/xorg-xf86-video-nouveau	1.0.13-1 -> 1.0.15-1
+		- xorg/xorg-xf86-video-vesa	2.3.4-2	 -> 2.4.0-1
+		- xorg/xorg-xfontsel		1.0.5-2	 -> 1.0.6-1
+		- xorg/xorg-xinit		1.3.4-2	 -> 1.4.0-1
+		- xorg/xorg-xkbcomp		1.3.0-2	 -> 1.4.1-1
+		- xorg/xorg-xkill		1.0.4-2	 -> 1.0.5-1
+		- xorg/xorg-xlsfonts		1.0.5-2	 -> 1.0.6-1
+		- xorg/xorg-xprop		1.2.2-2	 -> 1.2.3-1
+		- xorg/xorg-xrdb		1.1.0-2	 -> 1.1.1-1
+		- xorg/xorg-xset		1.2.3-2	 -> 1.2.4-2
+		- xorg/xorg-xsetroot		1.1.1-2	 -> 1.1.2-1
+		- xorg/xorg-xwininfo		1.1.3-2	 -> 1.1.4-1
+	- New packages:
+		- core/elfutils		0.169-1
+		- opt/fribidi		0.19.7-1
+		- opt/meson		0.46.0-1
+		- opt/mpdecimal		2.4.2-1
+		- opt/ninja		1.8.2-1
+		- opt/python3		3.6.5-1
+		- opt/rust		1.26.0-1
+		- opt/shared-mime-info	1.9-1
+		- opt/zstd		1.3.4-1
+		- xorg/xorg-xorgproto	2018.4-1
+	- Removed packages
+		- opt/elfutils
+		- opt/libnfsidmap
+		- xorg/xorg-bigreqsproto
+		- xorg/xorg-compositeproto
+		- xorg/xorg-damageproto
+		- xorg/xorg-dmxproto
+		- xorg/xorg-dri2proto
+		- xorg/xorg-dri3proto
+		- xorg/xorg-fixesproto
+		- xorg/xorg-fontsproto
+		- xorg/xorg-glproto
+		- xorg/xorg-inputproto
+		- xorg/xorg-kbproto
+		- xorg/xorg-presentproto
+		- xorg/xorg-randrproto
+		- xorg/xorg-recordproto
+		- xorg/xorg-renderproto
+		- xorg/xorg-resourceproto
+		- xorg/xorg-scrnsaverproto
+		- xorg/xorg-videoproto
+		- xorg/xorg-xcmiscproto
+		- xorg/xorg-xextproto
+		- xorg/xorg-xf86bigfontproto
+		- xorg/xorg-xf86dgaproto
+		- xorg/xorg-xf86driproto
+		- xorg/xorg-xf86miscproto
+		- xorg/xorg-xf86rushproto
+		- xorg/xorg-xf86vidmodeproto
+		- xorg/xorg-xineramaproto
+		- xorg/xorg-xproto
+
+
+3.3 - Released 2017-02-11
+	- Installation/Bootkernel:
+		- UEFI installation support improved, efivarfs mounted automatically
+		- opt/linux-firmware is available in the installation environment
+
+	- Updated packages:
+		- kernel/linux		4.1.13	 -> 4.9.6
+		- core/bash		4.3.42-1 -> 4.4-1
+		- core/bindutils	9.9.7-P1-2 -> 9.10.4-1
+		- core/binutils		2.25.1-2 -> 2.27-1
+		- core/ca-certificates	20151026-1 -> 20170118-1
+		- core/coreutils	8.24-2	 -> 8.26-1
+		- core/curl		7.45.0-1 -> 7.52.1-2
+		- core/dash		20150713-1 -> 0.5.9.1-1
+		- core/dhcpcd		6.9.3-1	 -> 6.11.5-1
+		- core/diffutils	3.3-2	 -> 3.5-1
+		- core/e2fsprogs	1.42.13-2 -> 1.43.3-1
+		- core/ed		1.12-2	 -> 1.14.1-1
+		- core/eudev		3.1.5-2	 -> 3.2.1-1
+		- core/exim		4.86-1	 -> 4.88-1
+		- core/file		5.25-1	 -> 5.29-1
+		- core/filesystem	3.2-4	 -> 3.3-1
+		- core/findutils	4.4.2-2	 -> 4.6.0-1
+		- core/flex		2.5.39-2 -> 2.6.3-2
+		- core/gawk		4.1.3-2	 -> 4.1.4-1
+		- core/gcc		5.2.0-2	 -> 6.3.0-1
+		- core/gdbm		1.11-2	 -> 1.12-1
+		- core/gettext		0.19.6-1 -> 0.19.8.1-1
+		- core/glibc		2.22-1	 -> 2.24-3
+		- core/glibc-32		2.22-1	 -> 2.24-1
+		- core/grep		2.22-1	 -> 2.27-1
+		- core/gzip		1.6-2	 -> 1.8-1
+		- core/hdparm		9.48-2	 -> 9.51-1
+		- core/iproute2		4.3.0-1	 -> 4.9.0-1
+		- core/iptables		1.4.21-2 -> 1.6.1-1
+		- core/iputils		s20121221-2 -> s20151218-1
+		- core/kbd		2.0.3-2	 -> 2.0.4-1
+		- core/kmod		21-2	 -> 23-1
+		- core/libarchive	3.1.2-3	 -> 3.2.2-1
+		- core/libcap		2.24-2	 -> 2.25-1
+		- core/libdevmapper	1.02.110-1 -> 1.02.137-1
+		- core/libgmp		6.0.0a-1 -> 6.1.2-1
+		- core/libmpfr		3.1.3-p5-1 -> 3.1.5-p2-1
+		- core/libpcre		8.37-5	 -> 8.40-1
+		- core/libusb		1.0.19-1 -> 1.0.21-1
+		- core/lilo		24.1-3	 -> 24.2-1
+		- core/m4		1.4.17-2 -> 1.4.18-1
+		- core/make		4.1-2	 -> 4.2.1-1
+		- core/man-db		2.7.5-1	 -> 2.7.6.1-1
+		- core/man-pages	4.02-1	 -> 4.09-1
+		- core/nasm		2.11.08-2 -> 2.12.02-1
+		- core/ncurses		6.0-2	 -> 6.0-4
+		- core/openssh		7.1p1-1	 -> 7.4p1-1
+		- core/openssl		1.0.2d-2 -> 1.0.2k-1
+		- core/pciutils		3.4.0-1	 -> 3.5.2-1
+		- core/perl		5.22.0-3 -> 5.24.1-1
+		- core/pkg-config	0.29-1	 -> 0.29.1-1
+		- core/pkgutils		5.36-2	 -> 5.40-1
+		- core/ports		1.5-17	 -> 1.5-22
+		- core/procps		3.3.11-1 -> 3.3.12-1
+		- core/prt-get		5.19-3	 -> 5.19.1-1
+		- core/readline		6.3.8-2	 -> 7.0-1
+		- core/rsync		3.1.1-3	 -> 3.1.2-1
+		- core/sed		4.2.2-2	 -> 4.3-1
+		- core/shadow		4.2.1-2	 -> 4.4-1
+		- core/sudo		1.8.14p3-2 -> 1.8.19p2-1
+		- core/sysklogd		1.5.1-3	 -> 1.5.1-6
+		- core/tar		1.28-3	 -> 1.29-1
+		- core/tzdata		2015g-1	 -> 2016j-1
+		- core/util-linux	2.27.1-1 -> 2.29.1-1
+		- core/vim		7.4.890-1 -> 8.0.0095-1
+		- core/wget		1.16.3-2 -> 1.18-1
+		- core/xz		5.2.2-1	 -> 5.2.3-1
+		- core/zlib		1.2.8-2	 -> 1.2.11-1
+		- opt/alsa-lib		1.0.29-1 -> 1.1.2-1
+		- opt/at-spi2-atk	2.18.1-1 -> 2.22.0-1
+		- opt/at-spi2-core	2.18.2-1 -> 2.22.0-1
+		- opt/atk		2.18.0-1 -> 2.22.0-1
+		- opt/btrfs-progs	4.3-1	 -> 4.9.1-1
+		- opt/cairo		1.14.4-1 -> 1.15.4-1
+		- opt/cdrkit		1.1.11-2 -> 1.1.11-3
+		- opt/cmake		3.3.1-1	 -> 3.6.1-2
+		- opt/cryptsetup	1.6.8-1	 -> 1.7.3-1
+		- opt/dbus		1.10.2-1 -> 1.10.14-1
+		- opt/dialog		1.2-20150225-1 -> 1.3-20160828-1
+		- opt/dosfstools	3.0.26-1 -> 4.0-1
+		- opt/efibootmgr	0.12-1	 -> 14-1
+		- opt/efivar		0.21-1	 -> 26-1
+		- opt/elfutils		0.164-1	 -> 0.168-1
+		- opt/expat		2.1.0-1	 -> 2.2.0-1
+		- opt/fakeroot		1.20.2-1 -> 1.21-2
+		- opt/fetchmail		6.3.26-1 -> 6.3.26-2
+		- opt/firefox		42.0-1	 -> 51.0.1-1
+		- opt/fontconfig	2.11.1-1 -> 2.12.0-1
+		- opt/freetype		2.6.1-1	 -> 2.7-1
+		- opt/gdk-pixbuf	2.32.2-1 -> 2.36.4-1
+		- opt/glib		2.46.2-1 -> 2.50.2-1
+		- opt/gnu-efi		3.0u.orig-1 -> 3.0.5-1
+		- opt/gobject-introspection 1.46.0-1 -> 1.50.0-1
+		- opt/grub2		2.00-7	 -> 2.02-beta3-1
+		- opt/grub2-efi		2.00-4	 -> 2.02-beta3-1
+		- opt/gtk		2.24.28-1 -> 2.24.31-1
+		- opt/gtk3		3.18.4-1 -> 3.22.7-1
+		- opt/harfbuzz		1.0.5-1	 -> 1.3.4-1
+		- opt/intltool		0.50.2-1 -> 0.51.0-1
+		- opt/keyutils		1.5.9-1	 -> 1.5.9-2
+		- opt/libevent		2.0.22-1 -> 2.1.8-1
+		- opt/libgcrypt		1.6.4-1	 -> 1.7.6-1
+		- opt/libgpg-error	1.20-1	 -> 1.26-1
+		- opt/libjpeg-turbo	1.4.1-3	 -> 1.5.1-1
+		- opt/libnfsidmap	0.25-1	 -> 0.26-1
+		- opt/libnl		3.2.27-1 -> 3.2.29-1
+		- opt/libpng		1.6.19-1 -> 1.6.27-1
+		- opt/libtiff		4.0.6-1	 -> 4.0.7-1
+		- opt/libtirpc		1.0.1-1	 -> 1.0.1-2
+		- opt/libxml2		2.9.2-1	 -> 2.9.4-1
+		- opt/libxml2-python	2.9.2-1	 -> 2.9.4-1
+		- opt/libxslt		1.1.28-2 -> 1.1.29-1
+		- opt/llvm		3.6.2-1	 -> 3.9.1-3
+		- opt/lvm2		2.02.133-1 -> 2.02.168-1
+		- opt/mdadm		3.3.4-1	 -> 4.0-1
+		- opt/mtools		4.0.18-1 -> 4.0.18-2
+		- opt/mutt		1.5.24-1 -> 1.7.2-1
+		- opt/nano		2.4.2-1	 -> 2.7.4-1
+		- opt/nfs-utils		1.3.3-1	 -> 2.1.1-1
+		- opt/nspr		4.10.10-1 -> 4.13.1-1
+		- opt/nss		3.20.1-1 -> 3.28.1-1
+		- opt/p5-xml-parser	2.41-3	 -> 2.44-1
+		- opt/pango		1.38.1-1 -> 1.40.3-1
+		- opt/parted		3.1-2	 -> 3.2-1
+		- opt/popt		1.16-1	 -> 1.16-2
+		- opt/ppp		2.4.7-2	 -> 2.4.7-3
+		- opt/python		2.7.10-1 -> 2.7.13-1
+		- opt/rpcbind		0.2.3-2	 -> 0.2.4-1
+		- opt/sqlite3		3.9.2-1	 -> 3.16.2-2
+		- opt/syslinux		6.03-2	 -> 6.03-3
+		- opt/talloc		2.1.4-1	 -> 2.1.8-1
+		- opt/wireless-tools	29-1	 -> 29-2
+		- opt/wpa_supplicant	2.5-2	 -> 2.6-2
+		- opt/wvdial		1.61-5	 -> 1.61-7
+		- opt/xfsprogs		3.2.4-1	 -> 4.7.0-1
+		- opt/xterm		320-1	 -> 327-1
+		- opt/yasm		1.3.0-1	 -> 1.3.0-2
+		- xorg/libdrm		2.4.65-1 -> 2.4.75-1
+		- xorg/libepoxy		1.2-1	 -> 1.3.1-1
+		- xorg/mesa3d		11.0.5-1 -> 13.0.3-1
+		- xorg/xkeyboard-config	2.16-1	 -> 2.19-1
+		- xorg/xorg-inputproto	2.3.1-1	 -> 2.3.2-1
+		- xorg/xorg-libpixman	0.32.8-1 -> 0.34.0-1
+		- xorg/xorg-libx11	1.6.3-2	 -> 1.6.4-1
+		- xorg/xorg-libxcb	1.11.1-1 -> 1.12-1
+		- xorg/xorg-libxfixes	5.0.1-2	 -> 5.0.3-1
+		- xorg/xorg-libxfont	1.5.1-1	 -> 1.5.2-1
+		- xorg/xorg-libxi	1.7.5-1	 -> 1.7.9-1
+		- xorg/xorg-libxpm	3.5.11-2 -> 3.5.12-1
+		- xorg/xorg-libxrandr	1.5.0-2	 -> 1.5.1-1
+		- xorg/xorg-libxrender	0.9.9-1	 -> 0.9.10-1
+		- xorg/xorg-libxtst	1.2.2-2	 -> 1.2.3-1
+		- xorg/xorg-libxv	1.0.10-2 -> 1.0.11-1
+		- xorg/xorg-libxvmc	1.0.9-1	 -> 1.0.10-1
+		- xorg/xorg-server	1.18.0-1 -> 1.19.1-1
+		- xorg/xorg-util-macros	1.19.0-1 -> 1.19.1-1
+		- xorg/xorg-videoproto	2.3.2-1	 -> 2.3.3-1
+		- xorg/xorg-xauth	1.0.9-2	 -> 1.0.10-1
+		- xorg/xorg-xcb-proto	1.11-1	 -> 1.12-1
+		- xorg/xorg-xf86-input-evdev	2.10.0-2 -> 2.10.5-1
+		- xorg/xorg-xf86-input-keyboard	1.8.1-2	 -> 1.9.0-1
+		- xorg/xorg-xf86-input-mouse	1.9.1-2	 -> 1.9.2-1
+		- xorg/xorg-xf86-input-synaptics 1.8.3-1 -> 1.9.0-1
+		- xorg/xorg-xf86-video-ati	7.6.1-1	 -> 7.8.0-1
+		- xorg/xorg-xf86-video-dummy	0.3.7-1	 -> 0.3.8-1
+		- xorg/xorg-xf86-video-intel	20150923-1 -> 20161206-1
+		- xorg/xorg-xf86-video-nouveau	20150913-1 -> 1.0.13-1
+		- xorg/xorg-xproto		7.0.28-1 -> 7.0.31-1
+		- xorg/xorg-xrandr		1.4.3-2	 -> 1.5.0-1
+	- New packages:
+		- core/signify			0.1p1-1
+		- opt/autoconf-2.13		2.13-1
+		- opt/linux-firmware		20161122-1
+		- xorg/libinput			1.6.0-1
+		- xorg/xorg-libxfont2		2.0.1-1
+		- xorg/xorg-xf86-input-libinput	0.23.0-1
+	- Removed packages
+		- opt/gst-plugins-base
+		- opt/gstreamer
+		- xorg/xorg-xf86-video-glint
+		- xorg/xorg-xf86-video-mga
+		- xorg/xorg-xf86-video-nv
+		- xorg/xorg-xf86-video-savage
+		- xorg/xorg-xf86-video-trident
+
+
+3.2 - Released 2015-11-22
+	- Installation/Bootkernel:
+		- UEFI support during installation
+	- Updated packages:
+		- kernel/linux		3.12.24	 -> 4.1.13
+		- core/acl		2.2.52-1 -> 2.2.52-2
+		- core/attr		2.4.47-1 -> 2.4.47-2
+		- core/autoconf		2.69-1	 -> 2.69-2
+		- core/automake		1.14.1-1 -> 1.15-2
+		- core/bash		4.3.18-1 -> 4.3.42-1
+		- core/bc		1.06-3	 -> 1.06-4
+		- core/bindutils	9.9.5-1	 -> 9.9.7-P1-2
+		- core/binutils		2.24-2	 -> 2.25.1-2
+		- core/bison		3.0.2-1	 -> 3.0.4-2
+		- core/bzip2		1.0.6-1	 -> 1.0.6-2
+		- core/ca-certificates	20140422-1 -> 20151026-1
+		- core/coreutils	8.22-1	 -> 8.24-2
+		- core/cpio		2.11-2	 -> 2.12-1
+		- core/curl		7.37.0-1 -> 7.45.0-1
+		- core/dcron		4.5-1	 -> 4.5-3
+		- core/dhcpcd		6.4.0-1	 -> 6.9.3-1
+		- core/diffutils	3.3-1	 -> 3.3-2
+		- core/e2fsprogs	1.42.10-2 -> 1.42.13-2
+		- core/ed		1.10-1	 -> 1.12-2
+		- core/eudev		1.8-1	 -> 3.1.5-2
+		- core/exim		4.82.1-2 -> 4.86-1
+		- core/file		5.18-1	 -> 5.25-1
+		- core/filesystem	3.1-2	 -> 3.2-4
+		- core/findutils	4.4.2-1	 -> 4.4.2-2
+		- core/flex		2.5.39-1 -> 2.5.39-2
+		- core/gawk		4.1.1-2	 -> 4.1.3-2
+		- core/gcc		4.8.3-1	 -> 5.2.0-2
+		- core/gdbm		1.11-1	 -> 1.11-2
+		- core/gettext		0.19.1-1 -> 0.19.6-1
+		- core/glibc		2.19-2	 -> 2.22-1
+		- core/glibc-32		2.19-1	 -> 2.22-1
+		- core/gperf		3.0.4-1	 -> 3.0.4-2
+		- core/grep		2.20-1	 -> 2.22-1
+		- core/groff		1.22.2-2 -> 1.22.3-2
+		- core/gzip		1.6-1	 -> 1.6-2
+		- core/hdparm		9.43-1	 -> 9.48-2
+		- core/httpup		0.4.0l-1 -> 0.4.0l-2
+		- core/inetutils	1.9.2-4	 -> 1.9.4-3
+		- core/iproute2		3.15.0-2 -> 4.3.0-1
+		- core/iptables		1.4.21-1 -> 1.4.21-2
+		- core/iputils		s20121221-1 -> s20121221-2
+		- core/kbd		2.0.1-1	 -> 2.0.3-2
+		- core/kmod		18-1	 -> 21-2
+		- core/less		458-1	 -> 481-1
+		- core/libarchive	3.1.2-2	 -> 3.1.2-3
+		- core/libcap		2.24-1	 -> 2.24-2
+		- core/libdevmapper	1.02.86-1 -> 1.02.110-1
+		- core/libmpc		1.0.2-1	 -> 1.0.3-1
+		- core/libmpfr		3.1.2-p10-1 -> 3.1.3-p5-1
+		- core/libpcre		8.35-1	 -> 8.37-5
+		- core/libpipeline	1.3.0-1	 -> 1.4.1-1
+		- core/libtool		2.4.2-2	 -> 2.4.6-2
+		- core/lilo		24.0-1	 -> 24.1-3
+		- core/lzo		2.08-1	 -> 2.09-1
+		- core/m4		1.4.17-1 -> 1.4.17-2
+		- core/make		4.0-1	 -> 4.1-2
+		- core/man-db		2.6.7-1	 -> 2.7.5-1
+		- core/man-pages	3.69-1	 -> 4.02-1
+		- core/mlocate		0.26-1	 -> 0.26-2
+		- core/nasm		2.11.05-1 -> 2.11.08-2
+		- core/ncurses		5.9-1	 -> 6.0-2
+		- core/openrdate	1.2-1	 -> 1.2-2
+		- core/openssh		6.6p1-1	 -> 7.1p1-1
+		- core/openssl		1.0.1h-1 -> 1.0.2d-2
+		- core/patch		2.7.1-1	 -> 2.7.5-2
+		- core/pciutils		3.2.1-1	 -> 3.4.0-1
+		- core/perl		5.18.2-1 -> 5.22.0-3
+		- core/pkg-config	0.28-1	 -> 0.29-1
+		- core/pkgutils		5.35.6-1 -> 5.36-2
+		- core/ports		1.5-15	 -> 1.5-17
+		- core/procps		3.3.9-2	 -> 3.3.11-1
+		- core/prt-get		5.19-2	 -> 5.19-3
+		- core/psmisc		22.21-1	 -> 22.21-3
+		- core/readline		6.3.6-1	 -> 6.3.8-2
+		- core/rsync		3.1.1-1	 -> 3.1.1-3
+		- core/sed		4.2.2-1	 -> 4.2.2-2
+		- core/shadow		4.2.1-1	 -> 4.2.1-2
+		- core/sudo		1.8.10p3-1 -> 1.8.14p3-2
+		- core/sysfsutils	2.1.0-1	 -> 2.1.0-2
+		- core/sysklogd		1.5-4	 -> 1.5.1-3
+		- core/sysvinit		2.88-3	 -> 2.88-4
+		- core/tar		1.27.1-1 -> 1.28-3
+		- core/time		1.7-1	 -> 1.7-3
+		- core/tzdata		2014e-1	 -> 2015g-1
+		- core/usbutils		007-1	 -> 008-2
+		- core/util-linux	2.24.2-1 -> 2.27.1-1
+		- core/vim		7.4.316-1 -> 7.4.890-1
+		- core/wget		1.15-1	 -> 1.16.3-2
+		- core/which		2.20-1	 -> 2.21-2
+		- core/xz		5.0.5-1	 -> 5.2.2-1
+		- core/zlib		1.2.8-1	 -> 1.2.8-2
+		- opt/alsa-lib		1.0.27.2-1 -> 1.0.29-1
+		- opt/atk		2.12.0-1 -> 2.18.0-1
+		- opt/btrfs-progs	v3.14.2-1 -> 4.3-1
+		- opt/cairo		1.12.16-1 -> 1.14.4-1
+		- opt/cmake		2.8.12.2-1 -> 3.3.1-1
+		- opt/dialog		1.2-20140219-1 -> 1.2-20150225-1
+		- opt/efibootmgr	0.6.0-1	 -> 0.12-1
+		- opt/elfutils		0.159-1	 -> 0.164-1
+		- opt/fakeroot		1.20-1	 -> 1.20.2-1
+		- opt/firefox		30.0-1	 -> 42.0-1
+		- opt/freetype		2.4.11-1 -> 2.6.1-1
+		- opt/gdk-pixbuf	2.30.8-1 -> 2.32.2-1
+		- opt/glib		2.40.0-1 -> 2.46.2-1
+		- opt/gobject-introspection 1.40.0-1 -> 1.46.0-1
+		- opt/grub2		2.00-4	 -> 2.00-7
+		- opt/gtk		2.24.23-1 -> 2.24.28-1
+		- opt/harfbuzz		0.9.29-1 -> 1.0.5-1
+		- opt/hicolor-icon-theme 0.13-1	 -> 0.15-1
+		- opt/jfsutils		1.1.15-2 -> 1.1.15-3
+		- opt/libevent		2.0.21-1 -> 2.0.22-1
+		- opt/libffi		3.1-1	 -> 3.2.1-2
+		- opt/libjpeg-turbo	1.3.1-1	 -> 1.4.1-3
+		- opt/libnl		3.2.25-rc1-1 -> 3.2.27-1
+		- opt/libpng		1.6.12-1 -> 1.6.19-1
+		- opt/libtiff		4.0.3-4	 -> 4.0.6-1
+		- opt/libtirpc		0.2.4-1	 -> 1.0.1-1
+		- opt/libxml2		2.9.1-1	 -> 2.9.2-1
+		- opt/libxml2-python	2.9.1-1	 -> 2.9.2-1
+		- opt/libxslt		1.1.28-1 -> 1.1.28-2
+		- opt/llvm		3.4.1-1	 -> 3.6.2-1
+		- opt/lvm2		2.02.107-1 -> 2.02.133-1
+		- opt/mdadm		3.3.1-1	 -> 3.3.4-1
+		- opt/mutt		1.5.23-1 -> 1.5.24-1
+		- opt/nano		2.2.6-1	 -> 2.4.2-1
+		- opt/nfs-utils		1.3.0-1	 -> 1.3.3-1
+		- opt/nspr		4.10.6-1 -> 4.10.10-1
+		- opt/nss		3.16.3-1 -> 3.20.1-1
+		- opt/openbox		3.5.2-1	 -> 3.6.1-1
+		- opt/p5-xml-parser	2.41-2	 -> 2.41-3
+		- opt/pango		1.36.3-1 -> 1.38.1-1
+		- opt/ppp		2.4.6-1	 -> 2.4.7-2
+		- opt/python		2.7.8-1	 -> 2.7.10-1
+		- opt/reiserfsprogs	3.6.24-1 -> 3.6.24-3
+		- opt/rpcbind		0.2.1-2	 -> 0.2.3-2
+		- opt/sqlite3		3.8.5-1	 -> 3.9.2-1
+		- opt/syslinux		5.10-1	 -> 6.03-2
+		- opt/talloc		2.1.1-1	 -> 2.1.4-1
+		- opt/unzip		6.0-2	 -> 6.0-6
+		- opt/wpa_supplicant	2.2-1	 -> 2.5-2
+		- opt/xfsprogs		3.2.0-1	 -> 3.2.4-1
+		- opt/xterm		306-1	 -> 320-1
+		- opt/yasm		1.2.0-1	 -> 1.3.0-1
+		- opt/zip		3.0-1	 -> 3.0-2
+		- xorg/libdrm		2.4.54-1 -> 2.4.65-1
+		- xorg/libvdpau		0.8-1	 -> 1.1.1-1
+		- xorg/mesa3d		10.2.2-2 -> 11.0.5-1
+		- xorg/xkeyboard-config		2.12-1	 -> 2.16-1
+		- xorg/xorg-bdftopcf		1.0.4-1	 -> 1.0.5-2
+		- xorg/xorg-font-util		1.3.0-1	 -> 1.3.1-2
+		- xorg/xorg-fontsproto		2.1.2-1	 -> 2.1.3-1
+		- xorg/xorg-iceauth		1.0.6-1	 -> 1.0.7-2
+		- xorg/xorg-kbproto		1.0.6-1	 -> 1.0.7-1
+		- xorg/xorg-libdmx		1.1.3-1	 -> 1.1.3-2
+		- xorg/xorg-libevdev		1.2-1	 -> 1.2-2
+		- xorg/xorg-libfontenc		1.1.2-1	 -> 1.1.3-1
+		- xorg/xorg-libpciaccess	0.13.2-1 -> 0.13.4-1
+		- xorg/xorg-libpixman		0.32.6-1 -> 0.32.8-1
+		- xorg/xorg-libx11		1.6.2-1	 -> 1.6.3-2
+		- xorg/xorg-libxau		1.0.8-1	 -> 1.0.8-2
+		- xorg/xorg-libxaw		1.0.12-1 -> 1.0.13-2
+		- xorg/xorg-libxcb		1.10-1	 -> 1.11.1-1
+		- xorg/xorg-libxcomposite	0.4.4-1	 -> 0.4.4-2
+		- xorg/xorg-libxcursor		1.1.14-1 -> 1.1.14-2
+		- xorg/xorg-libxdmcp		1.1.1-1	 -> 1.1.2-1
+		- xorg/xorg-libxext		1.3.2-1	 -> 1.3.3-2
+		- xorg/xorg-libxfixes		5.0.1-1	 -> 5.0.1-2
+		- xorg/xorg-libxfont		1.4.8-1	 -> 1.5.1-1
+		- xorg/xorg-libxft		2.3.2-1	 -> 2.3.2-2
+		- xorg/xorg-libxi		1.7.2-1	 -> 1.7.5-1
+		- xorg/xorg-libxinerama		1.1.3-1	 -> 1.1.3-2
+		- xorg/xorg-libxkbfile		1.0.8-1	 -> 1.0.9-1
+		- xorg/xorg-libxpm		3.5.11-1 -> 3.5.11-2
+		- xorg/xorg-libxrandr		1.4.2-1	 -> 1.5.0-2
+		- xorg/xorg-libxrender		0.9.8-1	 -> 0.9.9-1
+		- xorg/xorg-libxres		1.0.7-1	 -> 1.0.7-2
+		- xorg/xorg-libxscrnsaver	1.2.2-1	 -> 1.2.2-2
+		- xorg/xorg-libxshmfence	1.1-1	 -> 1.2-1
+		- xorg/xorg-libxt		1.1.4-1	 -> 1.1.5-2
+		- xorg/xorg-libxtst		1.2.2-1	 -> 1.2.2-2
+		- xorg/xorg-libxv		1.0.10-1 -> 1.0.10-2
+		- xorg/xorg-libxvmc		1.0.8-1	 -> 1.0.9-1
+		- xorg/xorg-libxxf86dga		1.1.4-1	 -> 1.1.4-2
+		- xorg/xorg-libxxf86misc	1.0.3-1	 -> 1.0.3-2
+		- xorg/xorg-libxxf86vm		1.1.3-1	 -> 1.1.4-2
+		- xorg/xorg-makedepend		1.0.5-1	 -> 1.0.5-2
+		- xorg/xorg-mkfontdir		1.0.7-1	 -> 1.0.7-2
+		- xorg/xorg-mkfontscale		1.1.1-1	 -> 1.1.2-2
+		- xorg/xorg-randrproto		1.4.0-1	 -> 1.5.0-1
+		- xorg/xorg-rendercheck		1.4-1	 -> 1.5-2
+		- xorg/xorg-rgb			1.0.5-1	 -> 1.0.6-2
+		- xorg/xorg-server		1.15.2-1 -> 1.18.0-1
+		- xorg/xorg-sessreg		1.0.8-1	 -> 1.1.0-2
+		- xorg/xorg-setxkbmap		1.3.0-1	 -> 1.3.1-2
+		- xorg/xorg-x11perf		1.5.4-1	 -> 1.6.0-2
+		- xorg/xorg-xauth		1.0.9-1	 -> 1.0.9-2
+		- xorg/xorg-xbacklight		1.2.1-1	 -> 1.2.1-2
+		- xorg/xorg-xcb-proto		1.10-1	 -> 1.11-1
+		- xorg/xorg-xcb-util		0.3.9-2	 -> 0.4.0-1
+		- xorg/xorg-xcb-util-image	0.3.9-1	 -> 0.4.0-1
+		- xorg/xorg-xcb-util-keysyms	0.3.9-1	 -> 0.4.0-1
+		- xorg/xorg-xcompmgr		1.1.6-1	 -> 1.1.7-2
+		- xorg/xorg-xdpyinfo		1.3.1-1	 -> 1.3.2-2
+		- xorg/xorg-xdriinfo		1.0.4-1	 -> 1.0.5-2
+		- xorg/xorg-xev			1.2.1-1	 -> 1.2.2-2
+		- xorg/xorg-xf86-input-evdev		2.9.0-1	 -> 2.10.0-2
+		- xorg/xorg-xf86-input-keyboard		1.8.0-1	 -> 1.8.1-2
+		- xorg/xorg-xf86-input-mouse		1.9.0-1	 -> 1.9.1-2
+		- xorg/xorg-xf86-input-synaptics	1.8.0-1	 -> 1.8.3-1
+		- xorg/xorg-xf86-video-ati		7.4.0-1	 -> 7.6.1-1
+		- xorg/xorg-xf86-video-glint		1.2.8-2	 -> 1.2.8-3
+		- xorg/xorg-xf86-video-intel		2.99.912-1 -> 20150923-1
+		- xorg/xorg-xf86-video-mga		1.6.3-1	 -> 1.6.4-2
+		- xorg/xorg-xf86-video-neomagic		1.2.8-1	 -> 1.2.9-2
+		- xorg/xorg-xf86-video-nouveau		1.0.10-1 -> 20150913-1
+		- xorg/xorg-xf86-video-nv		2.1.20-2 -> 2.1.20-3
+		- xorg/xorg-xf86-video-savage		2.3.7-1	 -> 2.3.8-2
+		- xorg/xorg-xf86-video-trident		1.3.6-2	 -> 1.3.7-2
+		- xorg/xorg-xf86-video-vesa		2.3.3-1	 -> 2.3.4-2
+		- xorg/xorg-xfontsel		1.0.5-1	 -> 1.0.5-2
+		- xorg/xorg-xgamma		1.0.5-1	 -> 1.0.6-2
+		- xorg/xorg-xhost		1.0.6-1	 -> 1.0.7-2
+		- xorg/xorg-xinit		1.3.3-1	 -> 1.3.4-2
+		- xorg/xorg-xkbcomp		1.2.4-1	 -> 1.3.0-2
+		- xorg/xorg-xkill		1.0.4-1	 -> 1.0.4-2
+		- xorg/xorg-xlsfonts		1.0.4-1	 -> 1.0.5-2
+		- xorg/xorg-xmodmap		1.0.8-1	 -> 1.0.9-2
+		- xorg/xorg-xprop		1.2.2-1	 -> 1.2.2-2
+		- xorg/xorg-xproto		7.0.26-1 -> 7.0.28-1
+		- xorg/xorg-xrandr		1.4.2-1	 -> 1.4.3-2
+		- xorg/xorg-xrdb		1.1.0-1	 -> 1.1.0-2
+		- xorg/xorg-xset		1.2.3-1	 -> 1.2.3-2
+		- xorg/xorg-xsetroot		1.1.1-1	 -> 1.1.1-2
+		- xorg/xorg-xtrans		1.3.4-1	 -> 1.3.5-1
+		- xorg/xorg-xvinfo		1.1.2-1	 -> 1.1.3-2
+		- xorg/xorg-xwininfo		1.1.3-1	 -> 1.1.3-2
+	- New packages:
+		- core/dash			20150713-1
+		- core/gperf			3.0.4-2
+		- core/start-stop-daemon	20150921-1
+		- opt/at-spi2-atk		2.18.1-1
+		- opt/at-spi2-core		2.18.2-1
+		- opt/btrfs-progs		4.3-1
+		- opt/cryptsetup		1.6.8-1
+		- opt/dbus			1.10.2-1
+		- opt/dosfstools		3.0.26-1
+		- opt/efivar			0.21-1
+		- opt/grub2-efi			2.00-4
+		- opt/gst-plugins-base		1.6.1-1
+		- opt/gstreamer			1.6.1-1
+		- opt/gtk3			3.18.4-1
+		- opt/jfsutils			1.1.15-3
+		- opt/libgcrypt			1.6.4-1
+		- opt/libgpg-error		1.20-1
+		- opt/popt			1.16-1
+		- opt/ppp			2.4.7-2
+		- opt/reiserfsprogs		3.6.24-3
+		- opt/unzip			6.0-6
+		- opt/xfsprogs			3.2.4-1
+		- opt/zip			3.0-2
+		- xorg/libepoxy			1.2-1
+		- xorg/mtdev			1.1.5-1
+	- Removed packages
+		- core/btrfs-progs
+		- core/jfsutils
+		- core/ppp
+		- core/reiserfsprogs
+		- core/tcp_wrappers
+		- core/unzip
+		- core/xfsprogs
+		- core/zip
+		- opt/gperf
+		- opt/procmail
+		- opt/rp-pppoe
+		- xorg/xorg-glamor-egl
+
+
+3.1 - Released 2014-07-16
+	- Installation/Bootkernel:
+
+	- Updated packages:
+		- kernel/linux		3.6.11	 -> 3.12.24
+		- core/acl		2.2.51-1 -> 2.2.52-1
+		- core/attr		2.4.46-1 -> 2.4.47-1
+		- core/automake		1.13.1-1 -> 1.14.1-1
+		- core/bash		4.2.42-1 -> 4.3.18-1
+		- core/bin86		0.16.19-1 -> 0.16.21-1
+		- core/bindutils	9.9.2-1	 -> 9.9.5-1
+		- core/binutils		2.23.1-1 -> 2.24-2
+		- core/bison		2.7-1	 -> 3.0.2-1
+		- core/btrfs-progs	20121004-1 -> v3.14.2-1
+		- core/ca-certificates	20121229-1 -> 20140422-1
+		- core/coreutils	8.20-1	 -> 8.22-1
+		- core/curl		7.28.1-2 -> 7.37.0-1
+		- core/db		5.3.21-1 -> 5.3.28-1
+		- core/dhcpcd		5.6.6-1	 -> 6.4.0-1
+		- core/diffutils	3.2-2	 -> 3.3-1
+		- core/e2fsprogs	1.42.5-1 -> 1.42.10-2
+		- core/ed		1.7-1	 -> 1.10-1
+		- core/exim		4.80.1-1 -> 4.82.1-2
+		- core/file		5.12-1	 -> 5.18-1
+		- core/filesystem	3.0-1	 -> 3.1-2
+		- core/flex		2.5.37-1 -> 2.5.39-1
+		- core/gawk		4.0.2-1	 -> 4.1.1-2
+		- core/gcc		4.7.2-1	 -> 4.8.3-1
+		- core/gdbm		1.10-1	 -> 1.11-1
+		- core/gettext		0.18.2-1 -> 0.19.1-1
+		- core/glibc		2.16.0-3 -> 2.19-3
+		- core/glibc-32		2.16.0-3 -> 2.19-2
+		- core/grep		2.14-1	 -> 2.20-1
+		- core/groff		1.21-1	 -> 1.22.2-2
+		- core/gzip		1.5-2	 -> 1.6-1
+		- core/inetutils	1.9.1-2	 -> 1.9.2-4
+		- core/iproute2		3.7.0-2	 -> 3.15.0-2
+		- core/iptables		1.4.17-1 -> 1.4.21-1
+		- core/jfsutils		1.1.15-1 -> 1.1.15-2
+		- core/kbd		1.15.5-1 -> 2.0.1-1
+		- core/kmod		12-1	 -> 18-1
+		- core/less		451-1	 -> 458-1
+		- core/libarchive	3.0.4-1	 -> 3.1.2-2
+		- core/libcap		2.22-1	 -> 2.24-1
+		- core/libdevmapper	1.02.77-1 -> 1.02.86-1
+		- core/libgmp		5.1.0-1	 -> 6.0.0a-1
+		- core/libmpc		1.0.1-1	 -> 1.0.2-1
+		- core/libmpfr		3.1.1-p2-1 -> 3.1.2-p10-1
+		- core/libpcre		8.32-1	 -> 8.35-1
+		- core/libtool		2.4.2-1	 -> 2.4.2-2
+		- core/libusb		1.0.9-2	 -> 1.0.19-1
+		- core/libusb-compat	0.1.4-1	 -> 0.1.5-1
+		- core/lilo		23.2-1	 -> 24.0-1
+		- core/m4		1.4.16-2 -> 1.4.17-1
+		- core/make		3.82-3	 -> 4.0-1
+		- core/man-pages	3.45-1	 -> 3.69-1
+		- core/nasm		2.10.07-1 -> 2.11.05-1
+		- core/openssh		6.1p1-1	 -> 6.6p1-1
+		- core/openssl		1.0.1c-1 -> 1.0.1h-1
+		- core/pciutils		3.1.10-1 -> 3.2.1-1
+		- core/perl		5.16.2-1 -> 5.18.2-1
+		- core/pkg-config	0.27.1-1 -> 0.28-1
+		- core/pkgutils		5.35.3-1 -> 5.35.6-1
+		- core/ports		1.5-14	 -> 1.5-15
+		- core/ppp		2.4.5-2	 -> 2.4.6-1
+		- core/procps		3.3.4-1	 -> 3.3.9-2
+		- core/psmisc		22.20-1	 -> 22.21-1
+		- core/rc		2.28-1	 -> 2.29-1
+		- core/readline		6.2.4-1	 -> 6.3.6-1
+		- core/reiserfsprogs	3.6.21-1 -> 3.6.24-1
+		- core/rsync		3.0.9-1	 -> 3.1.1-1
+		- core/shadow		4.1.5.1-3 -> 4.2.1-1
+		- core/sudo		1.8.6p3-1 -> 1.8.10p3-1
+		- core/sysvinit		2.88-2	 -> 2.88-3
+		- core/tar		1.26-2	 -> 1.27.1-1
+		- core/tzdata		2012j-1	 -> 2014e-1
+		- core/usbutils		006-1	 -> 007-1
+		- core/util-linux	2.22.2-1 -> 2.24.2-1
+		- core/vim		7.3.754-1 -> 7.4.316-1
+		- core/wget		1.14-1	 -> 1.15-1
+		- core/xfsprogs		3.1.9-2	 -> 3.2.0-1
+		- core/xz		5.0.4-1	 -> 5.0.5-1
+		- core/zlib		1.2.7-2	 -> 1.2.8-1
+		- opt/alsa-lib		1.0.26-1 -> 1.0.27.2-1
+		- opt/atk		2.6.0-1	 -> 2.12.0-1
+		- opt/cairo		1.12.8-1 -> 1.12.16-1
+		- opt/cdrkit		1.1.11-1 -> 1.1.11-2
+		- opt/cmake		2.8.10-1 -> 2.8.12.2-1
+		- opt/dialog		1.1-20120706-1	 -> 1.2-20140219-1
+		- opt/fakeroot		1.18.4-1 -> 1.20-1
+		- opt/fetchmail		6.3.24-2 -> 6.3.26-1
+		- opt/firefox		18.0-1	 -> 30.0-1
+		- opt/fontconfig	2.10.2-1 -> 2.11.1-1
+		- opt/gdk-pixbuf	2.26.5-1 -> 2.30.8-1
+		- opt/glib		2.34.3-1 -> 2.40.0-1
+		- opt/grub2		2.00-3	 -> 2.00-4
+		- opt/gtk		2.24.14-1 -> 2.24.23-1
+		- opt/harfbuzz		0.9.10-1 -> 0.9.29-1
+		- opt/hicolor-icon-theme 0.12-1	 -> 0.13-1
+		- opt/intltool		0.41.1-1 -> 0.50.2-1
+		- opt/keyutils		1.5.5-1	 -> 1.5.9-1
+		- opt/libffi		3.0.11-2 -> 3.1-1
+		- opt/libnl		3.2.18-1 -> 3.2.25-rc1-1
+		- opt/libpng		1.5.13-2 -> 1.6.12-1
+		- opt/libtiff		4.0.3-1	 -> 4.0.3-4
+		- opt/libtirpc		0.2.2-4	 -> 0.2.4-1
+		- opt/libxml2		2.9.0-1	 -> 2.9.1-1
+		- opt/libxml2-python	2.9.0-2	 -> 2.9.1-1
+		- opt/libxslt		1.1.27-1 -> 1.1.28-1
+		- opt/lvm2		2.02.98-1 -> 2.02.107-1
+		- opt/mdadm		3.2.6-1	 -> 3.3.1-1
+		- opt/mtools		4.0.17-1 -> 4.0.18-1
+		- opt/mutt		1.5.21-2 -> 1.5.23-1
+		- opt/nfs-utils		1.2.7-1	 -> 1.3.0-1
+		- opt/nspr		4.9.4-1	 -> 4.10.6-1
+		- opt/nss		3.14.1-2 -> 3.16.3-1
+		- opt/openbox		3.5.0-1	 -> 3.5.2-1
+		- opt/p5-xml-parser	2.41-1	 -> 2.41-2
+		- opt/pango		1.32.4-1 -> 1.36.3-1
+		- opt/parted		3.1-1	 -> 3.1-2
+		- opt/python		2.7.3-3	 -> 2.7.8-1
+		- opt/rp-pppoe		3.11-3	 -> 3.11-4
+		- opt/rpcbind		0.2.0-2	 -> 0.2.1-2
+		- opt/sqlite3		3.7.15.1-1 -> 3.8.5-1
+		- opt/syslinux		4.05-2	 -> 5.10-1
+		- opt/talloc		2.0.8-1	 -> 2.1.1-1
+		- opt/wpa_supplicant	1.1-2	 -> 2.2-1
+		- opt/xterm		287-1	 -> 306-1
+		- xorg/libdrm		2.4.41-1 -> 2.4.54-1
+		- xorg/libpthread-stubs	0.2-1	 -> 0.3-1
+		- xorg/mesa3d		9.0.1-1	 -> 10.2.2-2
+		- xorg/xkeyboard-config	2.7-2	 -> 2.12-1
+		- xorg/xorg-bdftopcf		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-glproto		1.4.16-1 -> 1.4.17-1
+		- xorg/xorg-iceauth		1.0.5-1	 -> 1.0.6-1
+		- xorg/xorg-inputproto		2.2-1	 -> 2.3.1-1
+		- xorg/xorg-libdmx		1.1.2-1	 -> 1.1.3-1
+		- xorg/xorg-libfontenc		1.1.1-1	 -> 1.1.2-1
+		- xorg/xorg-libice		1.0.8-1	 -> 1.0.9-1
+		- xorg/xorg-libpciaccess	0.13.1-1 -> 0.13.2-1
+		- xorg/xorg-libpixman		0.28.2-1 -> 0.32.6-1
+		- xorg/xorg-libsm		1.2.1-1	 -> 1.2.2-1
+		- xorg/xorg-libx11		1.5.0-1	 -> 1.6.2-1
+		- xorg/xorg-libxau		1.0.7-1	 -> 1.0.8-1
+		- xorg/xorg-libxaw		1.0.11-1 -> 1.0.12-1
+		- xorg/xorg-libxcb		1.9-1	 -> 1.10-1
+		- xorg/xorg-libxcursor		1.1.13-1 -> 1.1.14-1
+		- xorg/xorg-libxext		1.3.1-1	 -> 1.3.2-1
+		- xorg/xorg-libxfixes		5.0-1	 -> 5.0.1-1
+		- xorg/xorg-libxfont		1.4.5-1	 -> 1.4.8-1
+		- xorg/xorg-libxft		2.3.1-1	 -> 2.3.2-1
+		- xorg/xorg-libxi		1.6.1-1	 -> 1.7.2-1
+		- xorg/xorg-libxinerama		1.1.2-1	 -> 1.1.3-1
+		- xorg/xorg-libxmu		1.1.1-1	 -> 1.1.2-1
+		- xorg/xorg-libxpm		3.5.10-1 -> 3.5.11-1
+		- xorg/xorg-libxrandr		1.4.0-1	 -> 1.4.2-1
+		- xorg/xorg-libxrender		0.9.7-1	 -> 0.9.8-1
+		- xorg/xorg-libxres		1.0.6-1	 -> 1.0.7-1
+		- xorg/xorg-libxt		1.1.3-1	 -> 1.1.4-1
+		- xorg/xorg-libxtst		1.2.1-1	 -> 1.2.2-1
+		- xorg/xorg-libxv		1.0.7-1	 -> 1.0.10-1
+		- xorg/xorg-libxvmc		1.0.7-1	 -> 1.0.8-1
+		- xorg/xorg-libxxf86dga		1.1.3-1	 -> 1.1.4-1
+		- xorg/xorg-libxxf86vm		1.1.2-1	 -> 1.1.3-1
+		- xorg/xorg-makedepend		1.0.4-1	 -> 1.0.5-1
+		- xorg/xorg-mkfontscale		1.1.0-1	 -> 1.1.1-1
+		- xorg/xorg-rgb			1.0.4-1	 -> 1.0.5-1
+		- xorg/xorg-server		1.13.1-1 -> 1.15.2-1
+		- xorg/xorg-sessreg		1.0.7-1	 -> 1.0.8-1
+		- xorg/xorg-util-macros		1.17-1	 -> 1.19.0-1
+		- xorg/xorg-videoproto		2.3.1-1	 -> 2.3.2-1
+		- xorg/xorg-xauth		1.0.7-1	 -> 1.0.9-1
+		- xorg/xorg-xbacklight		1.2.0-1	 -> 1.2.1-1
+		- xorg/xorg-xcb-proto		1.8-1	 -> 1.10-1
+		- xorg/xorg-xcb-util-renderutil	0.3.8-1	 -> 0.3.9-1
+		- xorg/xorg-xcb-util-wm		0.3.9-1	 -> 0.4.1-1
+		- xorg/xorg-xdpyinfo		1.3.0-1	 -> 1.3.1-1
+		- xorg/xorg-xev			1.2.0-1	 -> 1.2.1-1
+		- xorg/xorg-xextproto		7.2.1-1	 -> 7.3.0-1
+		- xorg/xorg-xf86-input-evdev	2.7.3-1	 -> 2.9.0-1
+		- xorg/xorg-xf86-input-keyboard	1.6.2-1	 -> 1.8.0-1
+		- xorg/xorg-xf86-input-mouse	1.8.1-1	 -> 1.9.0-1
+		- xorg/xorg-xf86-input-synaptics 1.6.2-1 -> 1.8.0-1
+		- xorg/xorg-xf86-video-ati	7.0.0-1	 -> 7.4.0-1
+		- xorg/xorg-xf86-video-dummy	0.3.6-1	 -> 0.3.7-1
+		- xorg/xorg-xf86-video-glint	1.2.8-1	 -> 1.2.8-2
+		- xorg/xorg-xf86-video-intel	2.20.17-1 -> 2.99.912-1
+		- xorg/xorg-xf86-video-mga	1.6.2-1	 -> 1.6.3-1
+		- xorg/xorg-xf86-video-neomagic	1.2.7-1	 -> 1.2.8-1
+		- xorg/xorg-xf86-video-nouveau	1.0.6-1	 -> 1.0.10-1
+		- xorg/xorg-xf86-video-nv	2.1.20-1 -> 2.1.20-2
+		- xorg/xorg-xf86-video-savage	2.3.6-1	 -> 2.3.7-1
+		- xorg/xorg-xf86-video-tga	1.2.2-1	 -> 1.2.2-2
+		- xorg/xorg-xf86-video-trident	1.3.6-1	 -> 1.3.6-2
+		- xorg/xorg-xf86-video-vesa	2.3.2-1	 -> 2.3.3-1
+		- xorg/xorg-xfontsel		1.0.4-1	 -> 1.0.5-1
+		- xorg/xorg-xhost		1.0.5-1	 -> 1.0.6-1
+		- xorg/xorg-xinit		1.3.2-1	 -> 1.3.3-1
+		- xorg/xorg-xkill		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-xmodmap		1.0.7-1	 -> 1.0.8-1
+		- xorg/xorg-xprop		1.2.1-1	 -> 1.2.2-1
+		- xorg/xorg-xproto		7.0.23-1 -> 7.0.26-1
+		- xorg/xorg-xrandr		1.3.5-1	 -> 1.4.2-1
+		- xorg/xorg-xrdb		1.0.9-1	 -> 1.1.0-1
+		- xorg/xorg-xset		1.2.2-1	 -> 1.2.3-1
+		- xorg/xorg-xsetroot		1.1.0-1	 -> 1.1.1-1
+		- xorg/xorg-xtrans		1.2.7-1	 -> 1.3.4-1
+		- xorg/xorg-xvinfo		1.1.1-1	 -> 1.1.2-1
+		- xorg/xorg-xwininfo		1.1.2-1	 -> 1.1.3-1
+	- New packages:
+		- core/eudev			1.8-1
+		- core/libpipeline		1.3.0-1
+		- core/lzo			2.08-1
+		- core/man-db			2.6.7-1
+		- opt/efibootmgr		0.6.0-1
+		- opt/elfutils			0.159-1
+		- opt/gnu-efi			3.0u.orig-1
+		- opt/gobject-introspection	1.40.0-1
+		- opt/libjpeg-turbo		1.3.1-1
+		- opt/llvm			3.4.1-1
+		- xorg/libvdpau			0.8-1
+		- xorg/xorg-dri3proto		1.0-1
+		- xorg/xorg-glamor-egl		0.6.0-1
+		- xorg/xorg-libevdev		1.2-1
+		- xorg/xorg-libxshmfence	1.1-1
+		- xorg/xorg-presentproto	1.0-1
+	- Removed packages
+		- core/man
+		- core/net-tools
+		- core/traceroute
+		- core/udev
+		- opt/libjpeg
+		- xorg/mtdev
+
+
+3.0 - Released 2013-01-18
+	- Installation/Bootkernel:
+
+	- Updated packages:
+		- kernel/linux		3.5.4	 -> 3.6.11
+		- core/automake		1.12.4-1 -> 1.13.1-1
+		- core/bash		4.2.37-1 -> 4.2.42-1
+		- core/binutils		2.22-1	 -> 2.23.1-1
+		- core/bison		2.6.2-1	 -> 2.7-1
+		- core/btrfs-progs	20120904-1 -> 20121004-1
+		- core/coreutils	8.19-1	 -> 8.20-1
+		- core/curl		7.28.0-1 -> 7.28.1-2
+		- core/dhcpcd		5.6.2-1	 -> 5.6.6-1
+		- core/ed		1.6-1	 -> 1.7-1
+		- core/exim		4.80-1	 -> 4.80.1-1
+		- core/file		5.11-1	 -> 5.12-1
+		- core/filesystem	2.8-3	 -> 3.0-1
+		- core/gawk		4.0.1-1	 -> 4.0.2-1
+		- core/gettext		0.18.1.1-2 -> 0.18.2-1
+		- core/glibc		2.16.0-2 -> 2.16.0-3
+		- core/gzip		1.5-1	 -> 1.5-2
+		- core/hdparm		9.42-1	 -> 9.43-1
+		- core/iproute2		3.6.0-1	 -> 3.7.0-2
+		- core/iptables		1.4.16.2-1 -> 1.4.17-1
+		- core/iputils		s20101006-1 -> s20121221-1
+		- core/kbd		1.15.3-1 -> 1.15.5-1
+		- core/kmod		10-1	 -> 12-1
+		- core/libdevmapper	1.02.76-1 -> 1.02.77-1
+		- core/libgmp		5.0.5-1	 -> 5.1.0-1
+		- core/libpcre		8.31-1	 -> 8.32-1
+		- core/make		3.82-2	 -> 3.82-3
+		- core/man-pages	3.42-1	 -> 3.45-1
+		- core/nasm		2.10.05-1 -> 2.10.07-1
+		- core/perl		5.16.1-1 -> 5.16.2-1
+		- core/pkgutils		5.35.2-1 -> 5.35.3-1
+		- core/ports		1.5-11	 -> 1.5-14
+		- core/procps		3.3.3-1	 -> 3.3.4-1
+		- core/prt-get		5.18-2	 -> 5.19-2
+		- core/rc		2.26-3	 -> 2.28-1
+		- core/sed		4.2.1-1	 -> 4.2.2-1
+		- core/tzdata		2012f-1	 -> 2012j-1
+		- core/udev		182-1	 -> 182-2
+		- core/util-linux	2.22.1-1 -> 2.22.2-1
+		- core/vim		7.3.659-1 -> 7.3.754-1
+		- core/xfsprogs		3.1.8-1	 -> 3.1.9-2
+		- opt/cairo		1.12.4-2 -> 1.12.8-1
+		- opt/cmake		2.8.8-2	 -> 2.8.10-1
+		- opt/fetchmail		6.3.22-1 -> 6.3.24-2
+		- opt/firefox		16.0.1-1 -> 18.0-1
+		- opt/fontconfig	2.10.0-2 -> 2.10.2-1
+		- opt/freetype		2.4.10-1 -> 2.4.11-1
+		- opt/gdk-pixbuf	2.26.4-1 -> 2.26.5-1
+		- opt/glib		2.34.0-1 -> 2.34.3-1
+		- opt/grub2		2.00-2	 -> 2.00-3
+		- opt/gtk		2.24.13-1 -> 2.24.14-1
+		- opt/libevent		2.0.20-1 -> 2.0.21-1
+		- opt/libnl		1.1-1	 -> 3.2.18-1
+		- opt/libpng		1.5.13-1 -> 1.5.13-2
+		- opt/libtirpc		0.2.2-3	 -> 0.2.2-4
+		- opt/libxml2-python	2.9.0-1	 -> 2.9.0-2
+		- opt/lvm2		2.02.97-1 -> 2.02.98-1
+		- opt/mdadm		3.2.5-1	 -> 3.2.6-1
+		- opt/nfs-utils		1.2.6-1	 -> 1.2.7-1
+		- opt/nspr		4.9.2-1	 -> 4.9.4-1
+		- opt/nss		3.13.6-1 -> 3.14.1-2
+		- opt/pango		1.30.1-1 -> 1.32.4-1
+		- opt/python		2.7.3-2	 -> 2.7.3-3
+		- opt/sqlite3		3.7.14.1-1 -> 3.7.15.1-1
+		- opt/talloc		2.0.7-1	 -> 2.0.8-1
+		- opt/wpa_supplicant	1.0-1	 -> 1.1-2
+		- opt/wvdial		1.61-4	 -> 1.61-5
+		- opt/xterm		283-1	 -> 287-1
+		- xorg/libdrm		2.4.39-1 -> 2.4.41-1
+		- xorg/mesa3d		9.0-1	 -> 9.0.1-1
+		- xorg/xorg-libpixman		0.26.2-2 -> 0.28.2-1
+		- xorg/xorg-libxcomposite	0.4.3-1	 -> 0.4.4-1
+		- xorg/xorg-libxdamage		1.1.3-1	 -> 1.1.4-1
+		- xorg/xorg-server		1.13.0-1 -> 1.13.1-1
+		- xorg/xorg-xf86-video-ati	6.14.6.53-1 -> 7.0.0-1
+		- xorg/xorg-xf86-video-intel	2.20.9-1 -> 2.20.17-1
+		- xorg/xorg-xf86-video-nouveau	1.0.2-1	 -> 1.0.6-1
+	- New packages:
+		- core/ca-certificates	20121229-1
+		- core/glibc-32		2.16.0-3
+		- opt/harfbuzz		0.9.10-1
+	- Removed packages
+		- core/libstdc++-compat
+
+
+2.8 - Released 2012-10-24
+	- Installation/Bootkernel:
+
+	- Updated packages:
+		- kernel/linux		2.6.39.4 -> 3.5.4
+		- core/autoconf		2.68-1	 -> 2.69-1
+		- core/automake		1.11.1-1 -> 1.12.4-1
+		- core/bash		4.2.10-1 -> 4.2.37-1
+		- core/bin86		0.16.18-1 -> 0.16.19-1
+		- core/bindutils	9.8.1-1	 -> 9.9.2-1
+		- core/binutils		2.20.1-1 -> 2.22-1
+		- core/bison		2.5-1	 -> 2.6.2-1
+		- core/btrfs-progs	075587c-3 -> 20120904-1
+		- core/coreutils	8.14-1	 -> 8.19-1
+		- core/cpio		2.11-1	 -> 2.11-2
+		- core/curl		7.23.0-1 -> 7.28.0-1
+		- core/db		4.8.30-1 -> 5.3.21-1
+		- core/dhcpcd		5.2.12-1 -> 5.6.2-1
+		- core/diffutils	3.2-1	 -> 3.2-2
+		- core/e2fsprogs	1.41.14-1 -> 1.42.5-1
+		- core/ed		1.5-1	 -> 1.6-1
+		- core/exim		4.77-1	 -> 4.80-1
+		- core/file		5.09-1	 -> 5.11-1
+		- core/filesystem	2.7-1	 -> 2.8-3
+		- core/flex		2.5.35-2 -> 2.5.37-1
+		- core/gawk		4.0.0-1	 -> 4.0.1-1
+		- core/gcc		4.5.3-1	 -> 4.7.2-1
+		- core/gdbm		1.8.3-3	 -> 1.10-1
+		- core/gettext		0.18.1.1-1 -> 0.18.1.1-2
+		- core/glibc		2.12.2-2 -> 2.16.0-2
+		- core/grep		2.9-1	 -> 2.14-1
+		- core/gzip		1.4-1	 -> 1.5-1
+		- core/hdparm		9.37-1	 -> 9.42-1
+		- core/httpup		0.4.0k-1 -> 0.4.0l-1
+		- core/inetutils	1.8-1	 -> 1.9.1-2
+		- core/iproute2		3.0.0-1	 -> 3.6.0-1
+		- core/iptables		1.4.12.1-1 -> 1.4.16.2-1
+		- core/less		444-1	 -> 451-1
+		- core/libarchive	2.8.5-1	 -> 3.0.4-1
+		- core/libdevmapper	1.02.67-1 -> 1.02.76-1
+		- core/libgmp		5.0.2-1	 -> 5.0.5-1
+		- core/libmpc		0.9-1	 -> 1.0.1-1
+		- core/libmpfr		3.1.0-p3-1 -> 3.1.1-p2-1
+		- core/libpcre		8.20-3	 -> 8.31-1
+		- core/libusb		1.0.8-1	 -> 1.0.9-2
+		- core/libusb-compat	0.1.3-2	 -> 0.1.4-1
+		- core/m4		1.4.16-1 -> 1.4.16-2
+		- core/man-pages	3.35-1	 -> 3.42-1
+		- core/mlocate		0.24-1	 -> 0.26-1
+		- core/nasm		2.09.10-1 -> 2.10.05-1
+		- core/openssh		5.9p1-1	 -> 6.1p1-1
+		- core/openssl		1.0.0e-1 -> 1.0.1c-1
+		- core/patch		2.6.1-1	 -> 2.7.1-1
+		- core/pciutils		3.1.8-1	 -> 3.1.10-1
+		- core/perl		5.12.4-1 -> 5.16.1-1
+		- core/pkg-config	0.26-1	 -> 0.27.1-1
+		- core/pkgutils		5.35.1-2 -> 5.35.2-1
+		- core/ports		1.5-10	 -> 1.5-11
+		- core/procps		3.2.8-3	 -> 3.3.3-1
+		- core/psmisc		22.14-1	 -> 22.20-1
+		- core/rc		2.26-1	 -> 2.26-3
+		- core/readline		6.2.1-1	 -> 6.2.4-1
+		- core/shadow		4.1.4.3-1 -> 4.1.5.1-3
+		- core/sudo		1.8.3p1-1 -> 1.8.6p3-1
+		- core/sysvinit		2.88-1	 -> 2.88-2
+		- core/tar		1.26-1	 -> 1.26-2
+		- core/udev		175-1	 -> 182-1
+		- core/unzip		6.0-1	 -> 6.0-2
+		- core/usbutils		005-1	 -> 006-1
+		- core/vim		7.3.353-1 -> 7.3.659-1
+		- core/wget		1.13.4-1 -> 1.14-1
+		- core/xfsprogs		3.1.7-1	 -> 3.1.8-1
+		- core/xz		5.0.3-1	 -> 5.0.4-1
+		- core/zlib		1.2.5-2	 -> 1.2.7-2
+		- opt/alsa-lib		1.0.24.1-1 -> 1.0.26-1
+		- opt/atk		1.30.0-1 -> 2.6.0-1
+		- opt/cairo		1.10.2-3 -> 1.12.4-2
+		- opt/cmake		2.8.6-1	 -> 2.8.8-2
+		- opt/dialog		1.1-20111020-1 -> 1.1-20120706-1
+		- opt/expat		2.0.1-2	 -> 2.1.0-1
+		- opt/fakeroot		1.18.1-1 -> 1.18.4-1
+		- opt/fetchmail		6.3.21-1 -> 6.3.22-1
+		- opt/firefox		8.0-1	 -> 16.0.1-1
+		- opt/fontconfig	2.8.0-1	 -> 2.10.0-2
+		- opt/freetype		2.4.4-1	 -> 2.4.10-1
+		- opt/gdk-pixbuf	2.22.1-2 -> 2.26.4-1
+		- opt/glib		2.28.8-1 -> 2.34.0-1
+		- opt/gtk		2.24.3-1 -> 2.24.13-1
+		- opt/hicolor-icon-theme0.11-1	 -> 0.12-1
+		- opt/keyutils		1.5.3-1	 -> 1.5.5-1
+		- opt/libevent		2.0.15-1 -> 2.0.20-1
+		- opt/libjpeg		8c-1	 -> 8d-1
+		- opt/libnfsidmap	0.24-1	 -> 0.25-1
+		- opt/libpng		1.4.8-1	 -> 1.5.13-1
+		- opt/libtiff		3.9.5-1	 -> 4.0.3-1
+		- opt/libtirpc		0.2.2-2	 -> 0.2.2-3
+		- opt/libxml2		2.7.8-1	 -> 2.9.0-1
+		- opt/libxml2-python	2.7.8-1	 -> 2.9.0-1
+		- opt/libxslt		1.1.26-1 -> 1.1.27-1
+		- opt/lvm2		2.02.88-1 -> 2.02.97-1
+		- opt/mdadm		3.2.2-1	 -> 3.2.5-1
+		- opt/mutt		1.5.21-1 -> 1.5.21-2
+		- opt/nfs-utils		1.2.5-1	 -> 1.2.6-1
+		- opt/openbox		3.4.11.2-1 -> 3.5.0-1
+		- opt/pango		1.26.2-2 -> 1.30.1-1
+		- opt/python		2.7.2-1	 -> 2.7.3-2
+		- opt/rp-pppoe		3.10-1	 -> 3.11-3
+		- opt/rpcbind		0.2.0-1	 -> 0.2.0-2
+		- opt/sqlite3		3.7.9-1	 -> 3.7.14.1-1
+		- opt/talloc		2.0.5-2	 -> 2.0.7-1
+		- opt/wpa_supplicant	0.7.3-1	 -> 1.0-1
+		- opt/wvdial		1.61-3	 -> 1.61-4
+		- opt/xterm		276-1	 -> 283-1
+		- xorg/libdrm			2.4.27-1 -> 2.4.39-1
+		- xorg/mesa3d			7.10.2-1 -> 9.0-1
+		- xorg/xkeyboard-config		2.3-1	 -> 2.7-2
+		- xorg/xorg			7.6-1	 -> 7.7-1
+		- xorg/xorg-bigreqsproto	1.1.1-1	 -> 1.1.2-1
+		- xorg/xorg-dri2proto		2.6-1	 -> 2.8-1
+		- xorg/xorg-font-alias		1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-font-util		1.2.0-1	 -> 1.3.0-1
+		- xorg/xorg-fontsproto		2.1.1-1	 -> 2.1.2-1
+		- xorg/xorg-glproto		1.4.14-1 -> 1.4.16-1
+		- xorg/xorg-inputproto		2.0.2-1	 -> 2.2-1
+		- xorg/xorg-kbproto		1.0.5-1	 -> 1.0.6-1
+		- xorg/xorg-libdmx		1.1.1-1	 -> 1.1.2-1
+		- xorg/xorg-libfontenc		1.1.0-1	 -> 1.1.1-1
+		- xorg/xorg-libice		1.0.7-1	 -> 1.0.8-1
+		- xorg/xorg-libpciaccess	0.12.1-1 -> 0.13.1-1
+		- xorg/xorg-libpixman		0.22.2-1 -> 0.26.2-2
+		- xorg/xorg-libsm		1.2.0-1	 -> 1.2.1-1
+		- xorg/xorg-libx11		1.4.4-1	 -> 1.5.0-1
+		- xorg/xorg-libxau		1.0.6-1	 -> 1.0.7-1
+		- xorg/xorg-libxaw		1.0.9-1	 -> 1.0.11-1
+		- xorg/xorg-libxcb		1.7-1	 -> 1.9-1
+		- xorg/xorg-libxcursor		1.1.11-1 -> 1.1.13-1
+		- xorg/xorg-libxdmcp		1.1.0-1	 -> 1.1.1-1
+		- xorg/xorg-libxext		1.3.0-1	 -> 1.3.1-1
+		- xorg/xorg-libxfont		1.4.4-1	 -> 1.4.5-1
+		- xorg/xorg-libxft		2.2.0-1	 -> 2.3.1-1
+		- xorg/xorg-libxi		1.4.3-1	 -> 1.6.1-1
+		- xorg/xorg-libxinerama		1.1.1-1	 -> 1.1.2-1
+		- xorg/xorg-libxkbfile		1.0.7-1	 -> 1.0.8-1
+		- xorg/xorg-libxmu		1.1.0-1	 -> 1.1.1-1
+		- xorg/xorg-libxpm		3.5.9-1	 -> 3.5.10-1
+		- xorg/xorg-libxrandr		1.3.1-1	 -> 1.4.0-1
+		- xorg/xorg-libxrender		0.9.6-1	 -> 0.9.7-1
+		- xorg/xorg-libxres		1.0.5-1	 -> 1.0.6-1
+		- xorg/xorg-libxscrnsaver	1.2.1-1	 -> 1.2.2-1
+		- xorg/xorg-libxt		1.1.1-1	 -> 1.1.3-1
+		- xorg/xorg-libxtst		1.2.0-1	 -> 1.2.1-1
+		- xorg/xorg-libxv		1.0.6-1	 -> 1.0.7-1
+		- xorg/xorg-libxvmc		1.0.6-1	 -> 1.0.7-1
+		- xorg/xorg-libxxf86dga		1.1.2-1	 -> 1.1.3-1
+		- xorg/xorg-libxxf86vm		1.1.1-1	 -> 1.1.2-1
+		- xorg/xorg-makedepend		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-mkfontdir		1.0.6-1	 -> 1.0.7-1
+		- xorg/xorg-mkfontscale		1.0.9-1	 -> 1.1.0-1
+		- xorg/xorg-randrproto		1.3.2-1	 -> 1.4.0-1
+		- xorg/xorg-recordproto		1.14.1-1 -> 1.14.2-1
+		- xorg/xorg-scrnsaverproto	1.2.1-1	 -> 1.2.2-1
+		- xorg/xorg-server		1.11.1-1 -> 1.13.0-1
+		- xorg/xorg-sessreg		1.0.6-1	 -> 1.0.7-1
+		- xorg/xorg-setxkbmap		1.2.0-1	 -> 1.3.0-1
+		- xorg/xorg-x11perf		1.5.3-1	 -> 1.5.4-1
+		- xorg/xorg-xauth		1.0.6-1	 -> 1.0.7-1
+		- xorg/xorg-xbacklight		1.1.2-1	 -> 1.2.0-1
+		- xorg/xorg-xcb-proto		1.6-2	 -> 1.8-1
+		- xorg/xorg-xcb-util		0.3.6-1	 -> 0.3.9-2
+		- xorg/xorg-xcmiscproto		1.2.1-1	 -> 1.2.2-1
+		- xorg/xorg-xcompmgr		1.1.5-1	 -> 1.1.6-1
+		- xorg/xorg-xdpyinfo		1.2.0-1	 -> 1.3.0-1
+		- xorg/xorg-xev			1.1.0-1	 -> 1.2.0-1
+		- xorg/xorg-xextproto		7.2.0-1	 -> 7.2.1-1
+		- xorg/xorg-xf86-input-evdev	2.6.0-1	 -> 2.7.3-1
+		- xorg/xorg-xf86-input-keyboard	1.6.0-1	 -> 1.6.2-1
+		- xorg/xorg-xf86-input-mouse	1.7.0-1	 -> 1.8.1-1
+		- xorg/xorg-xf86-input-synaptics1.5.0-1	 -> 1.6.2-1
+		- xorg/xorg-xf86-video-ati	6.14.2-1 -> 6.14.6.53-1
+		- xorg/xorg-xf86-video-dummy	0.3.4-1	 -> 0.3.6-1
+		- xorg/xorg-xf86-video-glint	1.2.5-1	 -> 1.2.8-1
+		- xorg/xorg-xf86-video-intel	2.15.0-1 -> 2.20.9-1
+		- xorg/xorg-xf86-video-mga	1.4.13-1 -> 1.6.2-1
+		- xorg/xorg-xf86-video-neomagic	1.2.5-1	 -> 1.2.7-1
+		- xorg/xorg-xf86-video-nv	2.1.18-1 -> 2.1.20-1
+		- xorg/xorg-xf86-video-savage	2.3.2-1	 -> 2.3.6-1
+		- xorg/xorg-xf86-video-tga	1.2.1-1	 -> 1.2.2-1
+		- xorg/xorg-xf86-video-trident	1.3.4-1	 -> 1.3.6-1
+		- xorg/xorg-xf86-video-vesa	2.3.0-1	 -> 2.3.2-1
+		- xorg/xorg-xfontsel		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-xgamma		1.0.4-1	 -> 1.0.5-1
+		- xorg/xorg-xhost		1.0.4-1	 -> 1.0.5-1
+		- xorg/xorg-xinit		1.3.0-1	 -> 1.3.2-1
+		- xorg/xorg-xkbcomp		1.2.3-1	 -> 1.2.4-1
+		- xorg/xorg-xlsfonts		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-xmodmap		1.0.5-1	 -> 1.0.7-1
+		- xorg/xorg-xprop		1.2.0-1	 -> 1.2.1-1
+		- xorg/xorg-xproto		7.0.22-1 -> 7.0.23-1
+		- xorg/xorg-xrandr		1.3.4-1	 -> 1.3.5-1
+		- xorg/xorg-xtrans		1.2.6-1	 -> 1.2.7-1
+		- xorg/xorg-xwininfo		1.1.1-1	 -> 1.1.2-1
+	- New packages:
+		- core/kmod			10-1
+		- core/tzdata			2012f-1
+		- core/util-linux		2.22.1-1
+		- opt/glib			2.34.0-1
+		- opt/grub2			2.00-2
+		- opt/libffi			3.0.11-2
+		- opt/libnl			1.1-1
+		- opt/mtools			4.0.17-1
+		- opt/nspr			4.9.2-1
+		- opt/nss			3.13.6-1
+		- opt/parted			3.1-1
+		- opt/syslinux			4.05-2
+		- xorg/glu			9.0.0-1
+		- xorg/libdrm			2.4.39-1
+		- xorg/mtdev			1.1.2-1
+		- xorg/xorg-util-macros		1.17-1
+		- xorg/xorg-xcb-util-image	0.3.9-1
+		- xorg/xorg-xcb-util-keysyms	0.3.9-1
+		- xorg/xorg-xcb-util-renderutil	0.3.8-1
+		- xorg/xorg-xcb-util-wm		0.3.9-1
+		- xorg/xorg-xf86-video-nouveau	1.0.2-1
+	- Removed packages
+		- core/glib
+		- core/module-init-tools
+		- core/util-linux-ng
+		- opt/grub
+		- opt/libdrm
+		- xorg/xorg-xf86-video-chips
+		- xorg/xorg-xf86-video-i128
+		- xorg/xorg-xf86-video-radeonhd
+		- xorg/xorg-xf86-video-tdfx
+		- xorg/xorg-xf86-video-tseng
+
+
+2.7.1 - Released 2011-11-25 
+	- Installation/Bootkernel:
+
+	- Updated packages:
+		- kernel/linux		2.6.35.6 -> 2.6.39.4
+		- core/acl		2.2.49-1 -> 2.2.51-1
+		- core/attr		2.4.44-1 -> 2.4.46-1
+		- core/autoconf		2.67-1	 -> 2.68-1
+		- core/bash		4.1.7-2	 -> 4.2.10-1
+		- core/bin86		0.16.17-1 -> 0.16.18-1
+		- core/bindutils	9.7.1-1	 -> 9.8.1-1
+		- core/bison		2.4.3-1	 -> 2.5-1
+		- core/bzip2		1.0.5-2	 -> 1.0.6-1
+		- core/coreutils	8.5-2	 -> 8.14-1
+		- core/curl		7.21.1-1 -> 7.23.0-1
+		- core/dcron		4.4-2	 -> 4.5-1
+		- core/dhcpcd		5.2.7-1	 -> 5.2.12-1
+		- core/diffutils	3.0-1	 -> 3.2-1
+		- core/e2fsprogs	1.41.12-1 -> 1.41.14-1
+		- core/exim		4.72-1	 -> 4.77-1
+		- core/file		5.04-1	 -> 5.09-1
+		- core/gawk		3.1.8-1	 -> 4.0.0-1
+		- core/gcc		4.5.1-1	 -> 4.5.3-1
+		- core/gdbm		1.8.3-2	 -> 1.8.3-3
+		- core/glib		2.24.2-1 -> 2.28.8-1
+		- core/glibc		2.12.1-1 -> 2.12.2-2
+		- core/grep		2.6.3-1	 -> 2.9-1
+		- core/groff		1.20.1-1 -> 1.21-1
+		- core/hdparm		9.30-1	 -> 9.37-1
+		- core/iproute2		2.6.35-1 -> 3.0.0-1
+		- core/iptables		1.4.9.1-1 -> 1.4.12.1-1
+		- core/iputils		s20100418-2 -> s20101006-1
+		- core/jfsutils		1.1.14-1 -> 1.1.15-1
+		- core/kbd		1.15.2-1 -> 1.15.3-1
+		- core/less		429-1	 -> 444-1
+		- core/libarchive	2.8.4-1	 -> 2.8.5-1
+		- core/libcap		2.19-1	 -> 2.22-1
+		- core/libdevmapper	1.02.54-1 -> 1.02.67-1
+		- core/libgmp		5.0.1-1	 -> 5.0.2-1
+		- core/libmpc		0.8.2-1	 -> 0.9-1
+		- core/libmpfr		3.0.0-p3-1 -> 3.1.0-p3-1
+		- core/libpcre		8.10-1	 -> 8.20-3
+		- core/libtool		2.2.10-1 -> 2.4.2-1
+		- core/lilo		23.0-1	 -> 23.2-1
+		- core/m4		1.4.15-1 -> 1.4.16-1
+		- core/make		3.81-1	 -> 3.82-2
+		- core/man		1.6f-1	 -> 1.6g-1
+		- core/man-pages	3.26-1	 -> 3.35-1
+		- core/mlocate		0.23-1	 -> 0.24-1
+		- core/module-init-tools 3.12-1	 -> 3.16-1
+		- core/nasm		2.08.02-1 -> 2.09.10-1
+		- core/ncurses		5.7-1	 -> 5.9-1
+		- core/openssh		5.6p1-1	 -> 5.9p1-1
+		- core/openssl		1.0.0a-1 -> 1.0.0e-1
+		- core/pciutils		3.1.7-1	 -> 3.1.8-1
+		- core/perl		5.12.1-1 -> 5.12.4-1
+		- core/pkg-config	0.25-2	 -> 0.26-1
+		- core/pkgutils		5.35.1-1 -> 5.35.1-2
+		- core/procps		3.2.8-1	 -> 3.2.8-3
+		- core/psmisc		22.13-1	 -> 22.14-1
+		- core/rc		2.25-1	 -> 2.26-1
+		- core/readline		6.1.2-2	 -> 6.2.1-1
+		- core/rsync		3.0.7-1	 -> 3.0.9-1
+		- core/shadow		4.1.4.2-1 -> 4.1.4.3-1
+		- core/sudo		1.7.4p4-1 -> 1.8.3p1-1
+		- core/sysvinit		2.86-6	 -> 2.88-1
+		- core/tar		1.23-1	 -> 1.26-1
+		- core/traceroute	1.4a12-1 -> 2.0.18-1
+		- core/udev		162-1	 -> 175-1
+		- core/usbutils		0.90-1	 -> 005-1
+		- core/util-linux-ng	2.18-2	 -> 2.20.1-1
+		- core/vim		7.3-1	 -> 7.3.353-1
+		- core/wget		1.12-1	 -> 1.13.4-1
+		- core/xfsprogs		3.1.3-1	 -> 3.1.7-1
+		- core/xz		4.999.9beta-174-g41bc-1	 -> 5.0.3-1
+		- core/zlib		1.2.5-1	 -> 1.2.5-2
+		- opt/alsa-lib		1.0.23-1 -> 1.0.24.1-1
+		- opt/cairo		1.8.10-3 -> 1.10.2-3
+		- opt/cdrkit		1.1.10-1 -> 1.1.11-1
+		- opt/cmake		2.8.2-1	 -> 2.8.6-1
+		- opt/dialog		1.1-20100119-1 -> 1.1-20111020-1
+		- opt/fakeroot		1.14.4-1 -> 1.18.1-1
+		- opt/fetchmail		6.3.17-1 -> 6.3.21-1
+		- opt/firefox		3.6.8-1	 -> 8.0-1
+		- opt/freetype		2.4.2-1	 -> 2.4.7-1
+		- opt/grub		0.97-5	 -> 0.97-6
+		- opt/gtk		2.20.1-1 -> 2.24.8-2
+		- opt/libdrm		2.4.21-1 -> 2.4.27-1
+		- opt/libevent		1.4.14b-1 -> 2.0.15-1
+		- opt/libjpeg		8b-1	 -> 8c-1
+		- opt/libnfsidmap	0.23-1	 -> 0.24-1
+		- opt/libpng		1.4.3-1	 -> 1.4.8-1
+		- opt/libtiff		3.9.4-1	 -> 3.9.5-1
+		- opt/libtirpc		0.2.1-1	 -> 0.2.2-2
+		- opt/libxml2		2.7.7-1	 -> 2.7.8-1
+		- opt/lvm2		2.02.73-1 -> 2.02.88-1
+		- opt/mdadm		3.1.4-1	 -> 3.2.2-1
+		- opt/mutt		1.5.20-2 -> 1.5.21-1
+		- opt/nano		2.2.5-1	 -> 2.2.6-1
+		- opt/nfs-utils		1.2.2-2	 -> 1.2.5-1
+		- opt/p5-xml-parser	2.36-4	 -> 2.41-1
+		- opt/pango		1.26.2-1 -> 1.26.2-2
+		- opt/python		2.7-1	 -> 2.7.2-1
+		- opt/sqlite3		3.7.2-1	 -> 3.7.9-1
+		- opt/wpa_supplicant	0.6.10-1 -> 0.7.3-1
+		- opt/xterm		262-1	 -> 276-1
+		- xorg/mesa3d		7.8.2-1	 -> 7.10.2-1
+		- xorg/xkeyboard-config	1.9-1	 -> 2.3-1
+		- xorg/xorg		7.5-1	 -> 7.6-1
+		- xorg/xorg-bdftopcf	1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-bigreqsproto	1.1.0-1	 -> 1.1.1-1
+		- xorg/xorg-compositeproto	0.4.1-1	 -> 0.4.2-1
+		- xorg/xorg-damageproto		1.2.0-1	 -> 1.2.1-1
+		- xorg/xorg-dmxproto		2.3-1	 -> 2.3.1-1
+		- xorg/xorg-dri2proto		2.3-1	 -> 2.6-1
+		- xorg/xorg-fixesproto		4.1.1-1	 -> 5.0-1
+		- xorg/xorg-font-misc-misc	1.1.0-1	 -> 1.1.2-1
+		- xorg/xorg-font-util		1.1.1-1	 -> 1.2.0-1
+		- xorg/xorg-fontsproto		2.1.0-1	 -> 2.1.1-1
+		- xorg/xorg-glproto		1.4.12-1 -> 1.4.14-1
+		- xorg/xorg-iceauth		1.0.3-1	 -> 1.0.5-1
+		- xorg/xorg-inputproto		2.0-1	 -> 2.0.2-1
+		- xorg/xorg-libdmx		1.1.0-1	 -> 1.1.1-1
+		- xorg/xorg-libfontenc		1.0.5-1	 -> 1.1.0-1
+		- xorg/xorg-libice		1.0.6-1	 -> 1.0.7-1
+		- xorg/xorg-libpciaccess	0.12.0-1 -> 0.12.1-1
+		- xorg/xorg-libpixman		0.18.4-1 -> 0.22.2-1
+		- xorg/xorg-libsm		1.1.1-1	 -> 1.2.0-1
+		- xorg/xorg-libx11		1.3.5-1	 -> 1.4.4-1
+		- xorg/xorg-libxaw		1.0.7-1	 -> 1.0.9-1
+		- xorg/xorg-libxcomposite	0.4.2-1	 -> 0.4.3-1
+		- xorg/xorg-libxcursor		1.1.10-1 -> 1.1.11-1
+		- xorg/xorg-libxdmcp		1.0.3-1	 -> 1.1.0-1
+		- xorg/xorg-libxext		1.1.2-1	 -> 1.3.0-1
+		- xorg/xorg-libxfixes		4.0.5-1	 -> 5.0-1
+		- xorg/xorg-libxfont		1.4.2-1	 -> 1.4.4-1
+		- xorg/xorg-libxft		2.1.14-1 -> 2.2.0-1
+		- xorg/xorg-libxi		1.3.2-1	 -> 1.4.3-1
+		- xorg/xorg-libxinerama		1.1-1	 -> 1.1.1-1
+		- xorg/xorg-libxkbfile		1.0.6-1	 -> 1.0.7-1
+		- xorg/xorg-libxmu		1.0.5-1	 -> 1.1.0-1
+		- xorg/xorg-libxpm		3.5.8-1	 -> 3.5.9-1
+		- xorg/xorg-libxrandr		1.3.0-1	 -> 1.3.1-1
+		- xorg/xorg-libxres		1.0.4-1	 -> 1.0.5-1
+		- xorg/xorg-libxscrnsaver	1.2.0-1	 -> 1.2.1-1
+		- xorg/xorg-libxt		1.0.8-1	 -> 1.1.1-1
+		- xorg/xorg-libxtst		1.1.0-2	 -> 1.2.0-1
+		- xorg/xorg-libxv		1.0.5-1	 -> 1.0.6-1
+		- xorg/xorg-libxxf86dga		1.1.1-1	 -> 1.1.2-1
+		- xorg/xorg-libxxf86misc	1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-libxxf86vm		1.1.0-1	 -> 1.1.1-1
+		- xorg/xorg-makedepend		1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-mkfontdir		1.0.5-1	 -> 1.0.6-1
+		- xorg/xorg-mkfontscale		1.0.7-1	 -> 1.0.9-1
+		- xorg/xorg-randrproto		1.3.1-1	 -> 1.3.2-1
+		- xorg/xorg-recordproto		1.14-1	 -> 1.14.1-1
+		- xorg/xorg-rendercheck		1.3-1	 -> 1.4-1
+		- xorg/xorg-resourceproto	1.1.0-1	 -> 1.2.0-1
+		- xorg/xorg-rgb			1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-scrnsaverproto	1.2.0-1	 -> 1.2.1-1
+		- xorg/xorg-server		1.9.0-2	 -> 1.11.1-1
+		- xorg/xorg-setxkbmap		1.1.0-1	 -> 1.2.0-1
+		- xorg/xorg-x11perf		1.5.1-1	 -> 1.5.3-1
+		- xorg/xorg-xauth		1.0.4-1	 -> 1.0.6-1
+		- xorg/xorg-xbacklight		1.1.1-1	 -> 1.1.2-1
+		- xorg/xorg-xbitmaps		1.1.0-1	 -> 1.1.1-1
+		- xorg/xorg-xcmiscproto		1.2.0-1	 -> 1.2.1-1
+		- xorg/xorg-xdpyinfo		1.1.0-1	 -> 1.2.0-1
+		- xorg/xorg-xdriinfo		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-xev			1.0.4-1	 -> 1.1.0-1
+		- xorg/xorg-xextproto		7.1.2-1	 -> 7.2.0-1
+		- xorg/xorg-xf86-input-evdev	2.5.0-1	 -> 2.6.0-1
+		- xorg/xorg-xf86-input-keyboard	1.4.0-1	 -> 1.6.0-1
+		- xorg/xorg-xf86-input-mouse	1.5.0-1	 -> 1.7.0-1
+		- xorg/xorg-xf86-input-synaptics 1.3.0-1 -> 1.5.0-1
+		- xorg/xorg-xf86-video-ati	6.13.1-1 -> 6.14.2-1
+		- xorg/xorg-xf86-video-chips	1.2.3-1	 -> 1.2.4-1
+		- xorg/xorg-xf86-video-glint	1.2.4-1	 -> 1.2.5-1
+		- xorg/xorg-xf86-video-intel	2.12.0-1 -> 2.15.0-1
+		- xorg/xorg-xf86-video-savage	2.3.1-1	 -> 2.3.2-1
+		- xorg/xorg-xf86driproto	2.1.0-1	 -> 2.1.1-1
+		- xorg/xorg-xf86vidmodeproto	2.3-1	 -> 2.3.1-1
+		- xorg/xorg-xfontsel		1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-xgamma		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-xhost		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-xineramaproto	1.2-1	 -> 1.2.1-1
+		- xorg/xorg-xinit		1.2.1-1	 -> 1.3.0-1
+		- xorg/xorg-xkbcomp		1.1.1-1	 -> 1.2.3-1
+		- xorg/xorg-xkill		1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-xmodmap		1.0.4-1	 -> 1.0.5-1
+		- xorg/xorg-xprop		1.1.0-1	 -> 1.2.0-1
+		- xorg/xorg-xproto		7.0.18-1 -> 7.0.22-1
+		- xorg/xorg-xrandr		1.3.3-1	 -> 1.3.4-1
+		- xorg/xorg-xrdb		1.0.6-1	 -> 1.0.9-1
+		- xorg/xorg-xset		1.2.0-1	 -> 1.2.2-1
+		- xorg/xorg-xsetroot		1.0.3-1	 -> 1.1.0-1
+		- xorg/xorg-xtrans		1.2.5-1	 -> 1.2.6-1
+		- xorg/xorg-xvinfo		1.1.0-1	 -> 1.1.1-1
+		- xorg/xorg-xwininfo		1.0.5-1	 -> 1.1.1-1
+	- New packages:
+		- core/glib		2.28.8-1
+		- opt/gdk-pixbuf	2.22.1-2
+		- opt/keyutils		1.5.3-1
+		- opt/libxml2-python	2.7.8-1
+		- opt/talloc		2.0.5-2
+		- opt/yasm		1.2.0-1
+	- Removed packages
+		- opt/dbus
+		- opt/dbus-glib
+		- opt/glib
+		- opt/nspr
+		- opt/nss
+		- opt/xulrunner
+
+
+2.7 - Released 2010-10-02
+	- Installation/Bootkernel:
+
+	- Updated packages:
+		- kernel/linux		2.6.30.5 -> 2.6.35.6
+		- core/autoconf		2.64-1	 -> 2.67-1
+		- core/automake		1.11-1	 -> 1.11.1-1
+		- core/bash		4.0.28-1 -> 4.1.7-2
+		- core/bindutils	9.6.1-1	 -> 9.7.1-1
+		- core/binutils		2.19.1-2 -> 2.20.1-1
+		- core/bison		2.4.1-1	 -> 2.4.3-1
+		- core/bzip2		1.0.5-2	 -> 1.0.6-1
+		- core/coreutils	7.5-1	 -> 8.5-2
+		- core/cpio		2.10-1	 -> 2.11-1
+		- core/curl		7.19.6-1 -> 7.21.1-1
+		- core/db		4.7.25-3 -> 4.8.30-1
+		- core/dcron		3.2-2	 -> 4.4-2
+		- core/dhcpcd		5.0.7-1	 -> 5.2.7-1
+		- core/diffutils	2.8.1-1	 -> 3.0-1
+		- core/e2fsprogs	1.41.9-1 -> 1.41.12-1
+		- core/ed		1.4-1	 -> 1.5-1
+		- core/exim		4.69-3	 -> 4.72-1
+		- core/file		5.03-1	 -> 5.04-1
+		- core/filesystem	2.6-4	 -> 2.7-1
+		- core/flex		2.5.35-1 -> 2.5.35-2
+		- core/gawk		3.1.7-1	 -> 3.1.8-1
+		- core/gcc		4.4.1-1	 -> 4.5.1-1
+		- core/gdbm		1.8.3-1	 -> 1.8.3-2
+		- core/gettext		0.17-3	 -> 0.18.1.1-1
+		- core/glibc		2.10.1-2 -> 2.12.1-1
+		- core/grep		2.5.4-1	 -> 2.6.3-1
+		- core/gzip		1.3.12-3 -> 1.4-1
+		- core/hdparm		9.27-1	 -> 9.30-1
+		- core/inetutils	1.6-1	 -> 1.8-1
+		- core/iproute2		2.6.28-1 -> 2.6.35-1
+		- core/iptables		1.4.4-1	 -> 1.4.9.1-1
+		- core/iputils		s20071127-2 -> s20100418-2
+		- core/kbd		1.15-2	 -> 1.15.2-1
+		- core/libarchive	2.7.1-1	 -> 2.8.4-1
+		- core/libcap		2.16-2	 -> 2.19-1
+		- core/libdevmapper	1.02.36-1 > 1.02.54-1
+		- core/libgmp		4.3.1-1	 -> 5.0.1-1
+		- core/libmpfr		2.4.1-2	 -> 3.0.0-p3-1
+		- core/libpcre		7.9-1	 -> 8.10-1
+		- core/libstdc++-compat	3.1-1	 -> 3.1-2
+		- core/libtool		2.2.6a-1 -> 2.2.10-1
+		- core/libusb		1.0.3-1	 -> 1.0.8-1
+		- core/lilo		22.8-2	 -> 23.0-1
+		- core/m4		1.4.13-1 -> 1.4.15-1
+		- core/man-pages	3.22-1	 -> 3.26-1
+		- core/mlocate		0.22-1	 -> 0.23-1
+		- core/module-init-tools 3.10-1	 -> 3.12-1
+		- core/nasm		2.07-1	 -> 2.08.02-1
+		- core/openssh		5.2p1-1	 -> 5.6p1-1
+		- core/openssl		0.9.8k-1 -> 1.0.0a-1
+		- core/patch		2.5.9-1	 -> 2.6.1-1
+		- core/pciutils		3.1.4-1	 -> 3.1.7-1
+		- core/perl		5.10.1-1 -> 5.12.1-1
+		- core/pkg-config	0.23-1	 -> 0.25-2
+		- core/pkgutils		5.34.2-1 -> 5.35.1-1
+		- core/ports		1.5-9	 -> 1.5-10
+		- core/ppp		2.4.4-1	 -> 2.4.5-2
+		- core/prt-get		5.16-2	 -> 5.18-2
+		- core/psmisc		22.8-1	 -> 22.13-1
+		- core/rc		2.24-1	 -> 2.25-1
+		- core/readline		6.0.4-1	 -> 6.1.2-2
+		- core/rsync		3.0.6-1	 -> 3.0.7-1
+		- core/sudo		1.7.2p1-1 -> 1.7.4p4-1
+		- core/sysklogd		1.5-3	 -> 1.5-4
+		- core/sysvinit		2.86-5	 -> 2.86-6
+		- core/tar		1.22-1	 -> 1.23-1
+		- core/tcp_wrappers	7.6-6	 -> 7.6-10
+		- core/udev		146-2	 -> 162-1
+		- core/usbutils		0.86-2	 -> 0.90-1
+		- core/util-linux-ng	2.16-1	 -> 2.18-2
+		- core/vim		7.2.209-1 -> 7.3-1
+		- core/wget		1.11.4-1 -> 1.12-1
+		- core/xfsprogs		3.0.3-1	 -> 3.1.3-1
+		- core/xz		4.999.9beta-1 -> 4.999.9beta-174-g41bc-1
+		- core/zlib		1.2.3-1	 -> 1.2.5-1
+		- opt/alsa-lib		1.0.20-2 -> 1.0.23-1
+		- opt/atk		1.26.0-1 -> 1.30.0-1
+		- opt/cairo		1.8.8-1	 -> 1.8.10-3
+		- opt/cdrkit		1.1.9-2	 -> 1.1.10-1
+		- opt/cmake		2.6.2-1	 -> 2.8.2-1
+		- opt/dbus		1.2.14-1 -> 1.2.24-1
+		- opt/dbus-glib		0.80-1	 -> 0.86-1
+		- opt/dialog		1.1-20080819-1 -> 1.1-20100119-1
+		- opt/expat		2.0.1-1	 -> 2.0.1-2
+		- opt/fakeroot		1.13-1	 -> 1.14.4-1
+		- opt/fetchmail		6.3.11-1 -> 6.3.17-1
+		- opt/firefox		3.5.2-1	 -> 3.6.10-1
+		- opt/fontconfig	2.6.0-1	 -> 2.8.0-1
+		- opt/freetype		2.3.9-1	 -> 2.4.2-1
+		- opt/glib		2.20.5-1 -> 2.24.2-1
+		- opt/gtk		2.16.6-1 -> 2.20.1-1
+		- opt/hicolor-icon-theme 0.10-1	 -> 0.11-1
+		- opt/intltool		0.40.6-1 -> 0.41.1-1
+		- opt/libdrm		2.4.13-1 -> 2.4.21-1
+		- opt/libidl		0.8.13-1 -> 0.8.14-1
+		- opt/libjpeg		6b-1	 -> 8b-1
+		- opt/libpng		1.2.39-1 -> 1.4.3-1
+		- opt/libtiff		3.8.2-2	 -> 3.9.4-1
+		- opt/libxml2		2.7.3-1	 -> 2.7.7-1
+		- opt/libxslt		1.1.24-1 -> 1.1.26-1
+		- opt/lvm2		2.02.51-1 -> 2.02.73-1
+		- opt/mdadm		3.0-1	 -> 3.1.4-1
+		- opt/mutt		1.5.20-1 -> 1.5.21-1
+		- opt/nano		2.0.9-1	 -> 2.2.5-1
+		- opt/nfs-utils		1.2.0-1	 -> 1.2.2-2
+		- opt/nspr		4.8-1	 -> 4.8.6-1
+		- opt/nss		3.12.3-1 -> 3.12.8-1
+		- opt/openbox		3.4.7.2-1 -> 3.4.11.2-1
+		- opt/p5-xml-parser	2.36-2	 -> 2.40-1
+		- opt/pango		1.24.5-1 -> 1.26.2-1
+		- opt/python		2.6.2-1	 -> 2.7-1
+		- opt/sqlite3		3.6.17-1 -> 3.7.2-1
+		- opt/wpa_supplicant	0.6.9-1	 -> 0.6.10-1
+		- opt/wvdial		1.60-6	 -> 1.61-3
+		- opt/xterm		247-1	 -> 262-1
+		- opt/xulrunner		1.9.1.2-1 -> 1.9.2.10-1
+		- xorg/libpthread-stubs	0.1-1	 -> 0.2-1
+		- xorg/mesa3d		7.4.4-1	 -> 7.8.2-1
+		- xorg/xkeyboard-config	1.6-1	 -> 1.9-1
+		- xorg/xorg			7.4-2	 -> 7.5-1
+		- xorg/xorg-bdftopcf		1.0.1-1	 -> 1.0.2-1
+		- xorg/xorg-bigreqsproto	1.0.2-1	 -> 1.1.0-1
+		- xorg/xorg-compositeproto	0.4-1	 -> 0.4.1-1
+		- xorg/xorg-damageproto		1.1.0-1	 -> 1.2.0-1
+		- xorg/xorg-dmxproto		2.2.2-1	 -> 2.3-1
+		- xorg/xorg-dri2proto		2.1-1	 -> 2.3-1
+		- xorg/xorg-fixesproto		4.0-1	 -> 4.1.1-1
+		- xorg/xorg-font-alias		1.0.1-1	 -> 1.0.2-1
+		- xorg/xorg-font-bitstream-vera	1.10-2	 -> 1.10-3
+		- xorg/xorg-font-misc-misc	1.0.0-2	 -> 1.1.0-1
+		- xorg/xorg-font-util		1.0.1-1	 -> 1.1.1-1
+		- xorg/xorg-fontsproto		2.0.2-1	 -> 2.1.0-1
+		- xorg/xorg-glproto		1.4.10-1 -> 1.4.12-1
+		- xorg/xorg-iceauth		1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-inputproto		1.5.1-1	 -> 2.0-1
+		- xorg/xorg-kbproto		1.0.3-1	 -> 1.0.5-1
+		- xorg/xorg-libdmx		1.0.2-1	 -> 1.1.0-1
+		- xorg/xorg-libfontenc		1.0.4-1	 -> 1.0.5-1
+		- xorg/xorg-libice		1.0.4-1	 -> 1.0.6-1
+		- xorg/xorg-libpciaccess	0.10.6-1 -> 0.12.0-1
+		- xorg/xorg-libpixman		0.16.0-1 -> 0.18.4-1
+		- xorg/xorg-libsm		1.1.0-1	 -> 1.1.1-1
+		- xorg/xorg-libx11		1.2.2-1	 -> 1.3.5-1
+		- xorg/xorg-libxau		1.0.4-1	 -> 1.0.6-1
+		- xorg/xorg-libxaw		1.0.6-1	 -> 1.0.7-1
+		- xorg/xorg-libxcb		1.4-1	 -> 1.7-1
+		- xorg/xorg-libxcomposite	0.4.0-1	 -> 0.4.2-1
+		- xorg/xorg-libxcursor		1.1.9-1	 -> 1.1.10-1
+		- xorg/xorg-libxdamage		1.1.1-1	 -> 1.1.3-1
+		- xorg/xorg-libxdmcp		1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-libxext		1.0.5-1	 -> 1.1.2-1
+		- xorg/xorg-libxfixes		4.0.3-1	 -> 4.0.5-1
+		- xorg/xorg-libxfont		1.4.0-2	 -> 1.4.2-1
+		- xorg/xorg-libxft		2.1.13-1 -> 2.1.14-1
+		- xorg/xorg-libxi		1.2.1-1	 -> 1.3.2-1
+		- xorg/xorg-libxinerama		1.0.3-1	 -> 1.1-1
+		- xorg/xorg-libxkbfile		1.0.5-1	 -> 1.0.6-1
+		- xorg/xorg-libxmu		1.0.4-1	 -> 1.0.5-1
+		- xorg/xorg-libxpm		3.5.7-1	 -> 3.5.8-1
+		- xorg/xorg-libxrender		0.9.4-1	 -> 0.9.6-1
+		- xorg/xorg-libxres		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-libxscrnsaver	1.1.3-1	 -> 1.2.0-1
+		- xorg/xorg-libxt		1.0.6-1	 -> 1.0.8-1
+		- xorg/xorg-libxtst		1.0.3-1	 -> 1.1.0-2
+		- xorg/xorg-libxv		1.0.4-1	 -> 1.0.5-1
+		- xorg/xorg-libxvmc		1.0.4-1	 -> 1.0.6-1
+		- xorg/xorg-libxxf86dga		1.0.2-1	 -> 1.1.1-1
+		- xorg/xorg-libxxf86misc	1.0.1-1	 -> 1.0.2-1
+		- xorg/xorg-libxxf86vm		1.0.2-1	 -> 1.1.0-1
+		- xorg/xorg-makedepend		1.0.1-1	 -> 1.0.2-1
+		- xorg/xorg-mkfontdir		1.0.4-1	 -> 1.0.5-1
+		- xorg/xorg-mkfontscale		1.0.6-1	 -> 1.0.7-1
+		- xorg/xorg-randrproto		1.3.0-1	 -> 1.3.1-1
+		- xorg/xorg-recordproto		1.13.2-1 -> 1.14-1
+		- xorg/xorg-renderproto		0.11-1	 -> 0.11.1-1
+		- xorg/xorg-resourceproto	1.0.2-1	 -> 1.1.0-1
+		- xorg/xorg-scrnsaverproto	1.1.0-1	 -> 1.2.0-1
+		- xorg/xorg-server		1.6.3-1	 -> 1.9.0-2
+		- xorg/xorg-sessreg		1.0.4-1	 -> 1.0.6-1
+		- xorg/xorg-videoproto		2.2.2-1	 -> 2.3.1-1
+		- xorg/xorg-x11perf		1.5-1	 -> 1.5.1-1
+		- xorg/xorg-xauth		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-xbacklight		1.1-1	 -> 1.1.1-1
+		- xorg/xorg-xbitmaps		1.0.1-1	 -> 1.1.0-1
+		- xorg/xorg-xcb-proto		1.5-1	 -> 1.6-2
+		- xorg/xorg-xcmiscproto		1.1.2-1	 -> 1.2.0-1
+		- xorg/xorg-xcompmgr		1.1.4-1	 -> 1.1.5-1
+		- xorg/xorg-xdpyinfo		1.0.3-1	 -> 1.1.0-1
+		- xorg/xorg-xdriinfo		1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-xev			1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-xextproto		7.0.5-1	 -> 7.1.2-1
+		- xorg/xorg-xf86-input-evdev	2.2.3-1	 -> 2.5.0-1
+		- xorg/xorg-xf86-input-keyboard	1.3.2-1	 -> 1.4.0-1
+		- xorg/xorg-xf86-input-mouse	1.4.0-1	 -> 1.5.0-1
+		- xorg/xorg-xf86-input-synaptics 1.1.2-1 -> 1.3.0-1
+		- xorg/xorg-xf86-video-ati	6.12.2-1 -> 6.13.1-1
+		- xorg/xorg-xf86-video-chips	1.2.1-1	 -> 1.2.3-1
+		- xorg/xorg-xf86-video-dummy	0.3.2-1	 -> 0.3.4-1
+		- xorg/xorg-xf86-video-i128	1.3.3-1	 -> 1.3.4-1
+		- xorg/xorg-xf86-video-intel	2.8.1-1	 -> 2.12.0-1
+		- xorg/xorg-xf86-video-mga	1.4.11-1 -> 1.4.13-1
+		- xorg/xorg-xf86-video-neomagic	1.2.4-1	 -> 1.2.5-1
+		- xorg/xorg-xf86-video-nv	2.1.14-1 -> 2.1.18-1
+		- xorg/xorg-xf86-video-radeonhd	1.2.5-1	 -> 1.3.0-1
+		- xorg/xorg-xf86-video-tga	1.2.0-1	 -> 1.2.1-1
+		- xorg/xorg-xf86-video-trident	1.3.2-1	 -> 1.3.4-1
+		- xorg/xorg-xf86-video-tseng	1.2.2-1	 -> 1.2.4-1
+		- xorg/xorg-xf86-video-vesa	2.2.1-1	 -> 2.3.0-1
+		- xorg/xorg-xf86bigfontproto	1.1.2-1	 -> 1.2.0-1
+		- xorg/xorg-xf86dgaproto	2.0.3-1	 -> 2.1-1
+		- xorg/xorg-xf86driproto	2.0.4-1	 -> 2.1.0-1
+		- xorg/xorg-xf86miscproto	0.9.2-1	 -> 0.9.3-1
+		- xorg/xorg-xf86vidmodeproto	2.2.2-1	 -> 2.3-1
+		- xorg/xorg-xgamma		1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-xhost		1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-xineramaproto	1.1.2-1	 -> 1.2-1
+		- xorg/xorg-xinit		1.1.0-1	 -> 1.2.1-1
+		- xorg/xorg-xkbcomp		1.1.0-1	 -> 1.1.1-1
+		- xorg/xorg-xkill		1.0.1-1	 -> 1.0.2-1
+		- xorg/xorg-xlsfonts		1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-xmodmap		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-xprop		1.0.4-1	 -> 1.1.0-1
+		- xorg/xorg-xproto		7.0.15-1 -> 7.0.18-1
+		- xorg/xorg-xrandr		1.3.0-1	 -> 1.3.3-1
+		- xorg/xorg-xrdb		1.0.5-1	 -> 1.0.6-1
+		- xorg/xorg-xset		1.0.4-2	 -> 1.2.0-1
+		- xorg/xorg-xsetroot		1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-xtrans		1.2.4-1	 -> 1.2.5-1
+		- xorg/xorg-xvinfo		1.0.2-1	 -> 1.1.0-1
+		- xorg/xorg-xwininfo		1.0.4-1	 -> 1.0.5-1
+	- New packages:
+		- core/acl		2.2.49-1
+		- core/attr		2.4.44-1
+		- core/btrfs-progs	075587c-3
+		- core/libcap		2.19-1
+		- core/libmpc		0.8.2-1
+		- opt/gperf		3.0.4-1
+		- opt/libevent		1.4.14b-1
+		- opt/libnfsidmap	0.23-1
+		- opt/libtirpc		0.2.1-1
+		- opt/nfs-utils		1.2.2-2
+		- opt/rpcbind		0.2.0-1
+		- xorg/xorg-xcb-util	0.3.6-1
+	- Removed packages
+		- core/nfs-utils
+		- core/portmap
+		- opt/glitz
+		- opt/libattr
+		- opt/libcap
+
+
+2.6 - Released 2009-09-08
+	- Installation/Bootkernel:
+
+	- Updated packages:
+		- kernel/linux		2.6.27.8 -> 2.6.30.5
+		- core/autoconf		2.63-1	 -> 2.64-1
+		- core/automake		1.10.2-1 -> 1.11-1
+		- core/bash		3.2.48-1 -> 4.0.28-1
+		- core/bindutils	9.4.2-1	 -> 9.6.1-1
+		- core/binutils		2.19-1	 -> 2.19.1-2
+		- core/bison		2.3-2	 -> 2.4.1-1
+		- core/bzip2		1.0.5-1	 -> 1.0.5-2
+		- core/coreutils	6.12-2	 -> 7.5-1
+		- core/cpio		2.9-2	 -> 2.10-1
+		- core/curl		7.19.2-1 -> 7.19.6-1
+		- core/db		4.7.25-1 -> 4.7.25-3
+		- core/dhcpcd		4.0.7-1	 -> 5.0.7-1
+		- core/e2fsprogs	1.41.3-1 -> 1.41.9-1
+		- core/ed		1.1-1	 -> 1.4-1
+		- core/file		4.26-1	 -> 5.03-1
+		- core/filesystem	2.5-3	 -> 2.6-4
+		- core/findutils	4.4.0-1	 -> 4.4.2-1
+		- core/gawk		3.1.6-2	 -> 3.1.7-1
+		- core/gcc		4.3.2-1	 -> 4.4.1-1
+		- core/glibc		2.8-1	 -> 2.10.1-2
+		- core/grep		2.5.3-2	 -> 2.5.4-1
+		- core/groff		1.19.2-5 -> 1.20.1-1
+		- core/hdparm		9.3-1	 -> 9.27-1
+		- core/httpup		0.4.0j-1 -> 0.4.0k-1
+		- core/inetutils	1.5-1	 -> 1.6-1
+		- core/iproute2		2.6.26-1 -> 2.6.28-1
+		- core/iptables		1.4.2-1	 -> 1.4.4-1
+		- core/jfsutils		1.1.13-1 -> 1.1.14-1
+		- core/kbd		1.12-2	 -> 1.15-2
+		- core/less		418-1	 -> 429-1
+		- core/libarchive	2.5.5-2	 -> 2.7.1-1
+		- core/libgmp		4.2.4-1	 -> 4.3.1-1
+		- core/libmpfr		2.3.2-1	 -> 2.4.1-2
+		- core/libpcre		7.8-1	 -> 7.9-1
+		- core/libusb		0.1.12-1 -> 1.0.3-1
+		- core/lilo		22.8-1	 -> 22.8-2
+		- core/m4		1.4.12-1 -> 1.4.13-1
+		- core/man-pages	3.15-1	 -> 3.22-1
+		- core/mlocate		0.21.1-1 -> 0.22-1
+		- core/module-init-tools	3.5-1 -> 3.10-1
+		- core/nasm		2.05.01-1 -> 2.07-1
+		- core/nfs-utils	1.1.4-1	 -> 1.2.0-1
+		- core/openssh		5.1p1-1	 -> 5.2p1-1
+		- core/openssl		0.9.8i-1 -> 0.9.8k-1
+		- core/patch		2.5.4-1	 -> 2.5.9-1
+		- core/pciutils		3.0.3-1	 -> 3.1.4-1
+		- core/perl		5.10.0-1 -> 5.10.1-1
+		- core/pkgutils		5.33.0-1 -> 5.34.2-1
+		- core/ports		1.5-8	 -> 1.5-9
+		- core/procps		3.2.7-1	 -> 3.2.8-1
+		- core/psmisc		22.6-1	 -> 22.8-1
+		- core/rc		2.21-1	 -> 2.24-1
+		- core/readline		5.2-1	 -> 6.0.4-1
+		- core/reiserfsprogs	3.6.20-1 -> 3.6.21-1
+		- core/rsync		3.0.4-1	 -> 3.0.6-1
+		- core/sed		4.1.5-1	 -> 4.2.1-1
+		- core/shadow		4.1.2.2-1 -> 4.1.4.2-1
+		- core/sudo		1.6.9p18-1 -> 1.7.2p1-1
+		- core/tar		1.20-1	 -> 1.22-1
+		- core/udev		135-1	 -> 146-2
+		- core/unzip		5.52-2	 -> 6.0-1
+		- core/usbutils		0.73-1	 -> 0.86-2
+		- core/util-linux-ng	2.14.1-2 -> 2.16-1
+		- core/vim		7.2.51-1 -> 7.2.209-1
+		- core/xfsprogs		2.10.2-1 -> 3.0.3-1
+		- core/zip		2.32-1	 -> 3.0-1
+		- opt/atk		1.24.0-1 -> 1.26.0-1
+		- opt/cairo		1.8.4-1	 -> 1.8.8-1
+		- opt/cdrkit		1.1.9-1	 -> 1.1.9-2
+		- opt/dbus		1.2.4-1	 -> 1.2.14-1
+		- opt/dbus-glib		0.76-1	 -> 0.80-1
+		- opt/fetchmail		6.3.9-1	 -> 6.3.11-1
+		- opt/firefox		3.0.4-1	 -> 3.5.2-1
+		- opt/freetype		2.3.7-1	 -> 2.3.9-1
+		- opt/glib		2.18.3-1 -> 2.20.5-1
+		- opt/gtk		2.14.5-1 -> 2.16.6-1
+		- opt/intltool		0.40.4-1 -> 0.40.6-1
+		- opt/libattr		2.4.43-1-1 -> 2.4.43-1-2
+		- opt/libcap		2.13-1	 -> 2.16-2
+		- opt/libdrm		2.4.1-1	 -> 2.4.13-1
+		- opt/libidl		0.8.11-1 -> 0.8.13-1
+		- opt/libpng		1.2.33-1 -> 1.2.39-1
+		- opt/libxml2		2.7.2-1	 -> 2.7.3-1
+		- opt/mdadm		2.6.8-1	 -> 3.0-1
+		- opt/mutt		1.5.18-1 -> 1.5.20-1
+		- opt/nspr		4.7.1-2	 -> 4.8-1
+		- opt/nss		3.12.0-1 -> 3.12.3-1
+		- opt/pango		1.22.3-1 -> 1.24.5-1
+		- opt/procmail		3.22-2	 -> 3.22-3
+		- opt/python		2.6.1-1	 -> 2.6.2-1
+		- opt/sqlite3		3.6.6.2-1 -> 3.6.17-1
+		- opt/wpa_supplicant	0.5.11-1 -> 0.6.9-1
+		- opt/wvdial		1.60-3	 -> 1.60-6
+		- opt/xterm		237-1	 -> 247-1
+		- opt/xulrunner		1.9.0.4-1 -> 1.9.1.2-1
+		- xorg/mesa3d		7.2-1	 -> 7.4.4-1
+		- xorg/xkeyboard-config	1.4-1	 -> 1.6-1
+		- xorg/xorg		7.4-1	 -> 7.4-2
+		- xorg/xorg-glproto		1.4.9-1	 -> 1.4.10-1
+		- xorg/xorg-inputproto		1.4.4-1	 -> 1.5.1-1
+		- xorg/xorg-libpciaccess	0.10.5-1 -> 0.10.6-1
+		- xorg/xorg-libpixman		0.12.0-1 -> 0.16.0-1
+		- xorg/xorg-libx11		1.1.5-1	 -> 1.2.2-1
+		- xorg/xorg-libxaw		1.0.5-1	 -> 1.0.6-1
+		- xorg/xorg-libxcb		1.1-1	 -> 1.4-1
+		- xorg/xorg-libxext		1.0.4-1	 -> 1.0.5-1
+		- xorg/xorg-libxfont		1.3.3-1	 -> 1.4.0-2
+		- xorg/xorg-libxi		1.1.4-1	 -> 1.2.1-1
+		- xorg/xorg-libxrandr		1.2.3-1	 -> 1.3.0-1
+		- xorg/xorg-libxt		1.0.5-1	 -> 1.0.6-1
+		- xorg/xorg-mkfontscale		1.0.5-1	 -> 1.0.6-1
+		- xorg/xorg-randrproto		1.2.2-1	 -> 1.3.0-1
+		- xorg/xorg-renderproto		0.9.3-1	 -> 0.11-1
+		- xorg/xorg-server		1.5.3-1	 -> 1.6.3-1
+		- xorg/xorg-setxkbmap		1.0.4-1	 -> 1.1.0-1
+		- xorg/xorg-xcb-proto		1.2-2	 -> 1.5-1
+		- xorg/xorg-xextproto		7.0.3-1	 -> 7.0.5-1
+		- xorg/xorg-xf86-input-evdev		2.1.0-1	 -> 2.2.3-1
+		- xorg/xorg-xf86-input-keyboard		1.3.1-1	 -> 1.3.2-1
+		- xorg/xorg-xf86-input-mouse		1.3.0-1	 -> 1.4.0-1
+		- xorg/xorg-xf86-input-synaptics	0.15.2-1 -> 1.1.2-1
+		- xorg/xorg-xf86-video-ati		6.9.0-1	 -> 6.12.2-1
+		- xorg/xorg-xf86-video-chips		1.2.0-1	 -> 1.2.1-1
+		- xorg/xorg-xf86-video-dummy		0.3.0-1	 -> 0.3.2-1
+		- xorg/xorg-xf86-video-glint		1.2.0-1	 -> 1.2.4-1
+		- xorg/xorg-xf86-video-i128		1.3.1-1	 -> 1.3.3-1
+		- xorg/xorg-xf86-video-intel		2.5.1-1	 -> 2.8.1-1
+		- xorg/xorg-xf86-video-mga		1.4.9-1	 -> 1.4.11-1
+		- xorg/xorg-xf86-video-neomagic		1.2.1-1	 -> 1.2.4-1
+		- xorg/xorg-xf86-video-nv		2.1.12-1 -> 2.1.14-1
+		- xorg/xorg-xf86-video-radeonhd		1.2.3-1	 -> 1.2.5-1
+		- xorg/xorg-xf86-video-savage		2.2.1-1	 -> 2.3.1-1
+		- xorg/xorg-xf86-video-tdfx		1.4.0-1	 -> 1.4.3-1
+		- xorg/xorg-xf86-video-trident		1.3.0-1	 -> 1.3.2-1
+		- xorg/xorg-xf86-video-tseng		1.2.0-1	 -> 1.2.2-1
+		- xorg/xorg-xf86-video-vesa		2.0.0-1	 -> 2.2.1-1
+		- xorg/xorg-xkbcomp		1.0.5-1	 -> 1.1.0-1
+		- xorg/xorg-xproto		7.0.14-1 -> 7.0.15-1
+		- xorg/xorg-xrandr		1.2.3-1	 -> 1.3.0-1
+		- xorg/xorg-xset		1.0.4-1	 -> 1.0.4-2
+		- xorg/xorg-xtrans		1.2.2-1	 -> 1.2.4-1
+	- New packages:
+		- core/libdevmapper	1.02.36-1
+		- core/libusb-compat	0.1.3-2
+		- core/openrdate	1.2-1
+		- core/sudo		1.7.2p1-1
+		- core/xz		4.999.9beta-1
+		- opt/alsa-lib		1.0.20-2
+		- opt/expat		2.0.1-1
+		- opt/fakeroot		1.13-1
+		- opt/lvm2		2.02.51-1
+		- xorg/xorg-dri2proto	2.1-1
+	- Removed packages
+		- core/expat
+		- core/rdate
+		- core/rpm2targz
+		- core/strace
+		- core/tcsh
+		- opt/cvs
+		- opt/sudo
+		- xorg/polyglotman
+		- xorg/xorg-cf-files
+		- xorg/xorg-evieext
+		- xorg/xorg-font-adobe-100dpi
+		- xorg/xorg-font-adobe-75dpi
+		- xorg/xorg-font-bh-100dpi
+		- xorg/xorg-font-bh-75dpi
+		- xorg/xorg-font-bitstream-100dpi
+		- xorg/xorg-font-bitstream-75dpi
+		- xorg/xorg-font-cursor-misc
+		- xorg/xorg-fontcacheproto
+		- xorg/xorg-gccmakedep
+		- xorg/xorg-imake
+		- xorg/xorg-libfs
+		- xorg/xorg-libxevie
+		- xorg/xorg-libxfontcache
+		- xorg/xorg-libxtrap
+		- xorg/xorg-trapproto
+		- xorg/xorg-util-macros
+		- xorg/xorg-xf86-video-nsc
+		- xorg/xorg-xf86-video-xgi
+		- xorg/xorg-xmag
+
+
+2.5 - Released 2008-12-18
+	- Installation/Bootkernel:
+
+	- Updated packages:
+		- kernel/linux		2.6.20.3 -> 2.6.27.8
+		- core/autoconf		2.61-1	 -> 2.63-1
+		- core/automake		1.10-1	 -> 1.10.2-1
+		- core/bash		3.2.25-2 -> 3.2.48-1
+		- core/binutils		2.18-1	 -> 2.19-1
+		- core/bzip2		1.0.4-1	 -> 1.0.5-1
+		- core/coreutils	6.9-2	 -> 6.12-2
+		- core/cpio		2.9-1	 -> 2.9-2
+		- core/curl		7.17.0-1 -> 7.19.2-1
+		- core/db		4.5.20-1 -> 4.7.25-1
+		- core/dcron		2.3.3-10 -> 3.2-2
+		- core/dhcpcd		3.1.8-1	 -> 4.0.7-1
+		- core/e2fsprogs	1.40.2-1 -> 1.41.3-1
+		- core/ed		0.8-1	 -> 1.1-1
+		- core/exim		4.68-1	 -> 4.69-3
+		- core/file		4.21-1	 -> 4.26-1
+		- core/filesystem	2.4-2	 -> 2.5-3
+		- core/findutils	4.2.31-1 -> 4.4.0-1
+		- core/flex		2.5.33-1 -> 2.5.35-1
+		- core/gawk		3.1.6-1	 -> 3.1.6-2
+		- core/gcc		4.2.2-1	 -> 4.3.2-1
+		- core/glibc		2.6.1-2	 -> 2.8-1
+		- core/grep		2.5.3-1	 -> 2.5.3-2
+		- core/hdparm		7.7-1	 -> 9.3-1
+		- core/httpup		0.4.0i-2 -> 0.4.0j-1
+		- core/iproute2		2.6.22-070710-1	 -> 2.6.26-1
+		- core/iptables		1.3.8-1	 -> 1.4.2-1
+		- core/iputils		ss021109-try-4 -> s20071127-2
+		- core/jfsutils		1.1.12-1 -> 1.1.13-1
+		- core/less		416-1	 -> 418-1
+		- core/libarchive	2.4.8-1	 -> 2.5.5-2
+		- core/libtool		1.5.24-1 -> 2.2.6a-1
+		- core/m4		1.4.10-1 -> 1.4.12-1
+		- core/man		1.6e-1	 -> 1.6f-1
+		- core/man-pages	2.69-1	 -> 3.15-1
+		- core/module-init-tools	3.2.2-1	 -> 3.5-1
+		- core/nasm		2.00-1	 -> 2.05.01-1
+		- core/ncurses		5.6-1	 -> 5.7-1
+		- core/nfs-utils	1.1.1-2	 -> 1.1.4-1
+		- core/openssh		4.7p1-2	 -> 5.1p1-1
+		- core/openssl		0.9.8g-1 -> 0.9.8i-1
+		- core/pciutils		2.2.9-1	 -> 3.0.3-1
+		- core/perl		5.8.8-3	 -> 5.10.0-1
+		- core/pkg-config	0.22-1	 -> 0.23-1
+		- core/pkgutils		5.31.0-1 -> 5.33.0-1
+		- core/ports		1.5-7	 -> 1.5-8
+		- core/prt-get		5.15-1	 -> 5.16-2
+		- core/rc		2.18-1	 -> 2.21-1
+		- core/reiserfsprogs	3.6.19-1 -> 3.6.20-1
+		- core/rsync		2.6.9-2	 -> 3.0.4-1
+		- core/shadow		4.0.18.1-5 -> 4.1.2.2-1
+		- core/strace		4.5.16-1 -> 4.5.18-1
+		- core/tar		1.19-1	 -> 1.20-1
+		- core/tcsh		6.15-1	 -> 6.16-1
+		- core/udev		117-1	 -> 135-1
+		- core/usbutils		0.72-1	 -> 0.73-1
+		- core/util-linux-ng	2.13.0.1-1 -> 2.14.1-2
+		- core/vim		7.1.123-1 -> 7.2.51-1
+		- core/wget		1.10.2-2 -> 1.11.4-1
+		- core/which		2.18-1	 -> 2.20-1
+		- core/xfsprogs		2.9.4-1	 -> 2.10.2-1
+		- opt/atk		1.20.0-1 -> 1.24.0-1
+		- opt/cairo		1.4.12-1 -> 1.8.4-1
+		- opt/cvs		1.11.22-1 -> 1.11.23-1
+		- opt/dialog		1.1-20070704-1 -> 1.1-20080819-1
+		- opt/fetchmail		6.3.8-2	 -> 6.3.9-1
+		- opt/firefox		2.0.0.11-1 -> 3.0.4-1
+		- opt/fontconfig	2.5.0-1	 -> 2.6.0-1
+		- opt/freetype		2.3.5-1	 -> 2.3.7-1
+		- opt/glib		2.14.4-1 -> 2.18.3-1
+		- opt/grub		0.97-2	 -> 0.97-5
+		- opt/gtk		2.12.2-1 -> 2.14.5-1
+		- opt/hicolor-icon-theme	0.9-1 -> 0.10-1
+		- opt/libdrm		2.3.0-1	 -> 2.4.1-1
+		- opt/libidl		0.8.7-1	 -> 0.8.11-1
+		- opt/libpng		1.2.24-1 -> 1.2.33-1
+		- opt/libxml2		2.6.30-1 -> 2.7.2-1
+		- opt/libxslt		1.1.20-1 -> 1.1.24-1
+		- opt/mdadm		2.6.4-1	 -> 2.6.8-1
+		- opt/mutt		1.5.17-1 -> 1.5.18-1
+		- opt/nano		2.0.6-1	 -> 2.0.9-1
+		- opt/p5-xml-parser	2.34-5	 -> 2.36-2
+		- opt/pango		1.18.3-1 -> 1.22.3-1
+		- opt/rp-pppoe		3.8-1	 -> 3.10-1
+		- opt/sudo		1.6.9p8-1 -> 1.6.9p18-1
+		- opt/wpa_supplicant	0.5.9-1	 -> 0.5.11-1
+		- opt/wvdial		1.60-2	 -> 1.60-3
+		- opt/xterm		229-1	 -> 237-1
+		- xorg/mesa3d			7.0.2-2	 -> 7.2-1
+		- xorg/xkeyboard-config		1.0-1	 -> 1.4-1
+		- xorg/xorg			7.3-1	 -> 7.4-1
+		- xorg/xorg-inputproto		1.4.2.1-1 -> 1.4.4-1
+		- xorg/xorg-libfs		1.0.0-1	 -> 1.0.1-1
+		- xorg/xorg-libpixman		0.9.6-2	 -> 0.12.0-1
+		- xorg/xorg-libsm		1.0.3-1	 -> 1.1.0-1
+		- xorg/xorg-libx11		1.1.3-1	 -> 1.1.5-1
+		- xorg/xorg-libxau		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-libxaw		1.0.4-2	 -> 1.0.5-1
+		- xorg/xorg-libxext		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-libxfont		1.3.1-1	 -> 1.3.3-1
+		- xorg/xorg-libxft		2.1.12-1 -> 2.1.13-1
+		- xorg/xorg-libxi		1.1.3-1	 -> 1.1.4-1
+		- xorg/xorg-libxinerama		1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-libxkbfile		1.0.4-1	 -> 1.0.5-1
+		- xorg/xorg-libxmu		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-libxrandr		1.2.2-1	 -> 1.2.3-1
+		- xorg/xorg-libxscrnsaver	1.1.2-1	 -> 1.1.3-1
+		- xorg/xorg-libxv		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-libxxf86vm		1.0.1-1	 -> 1.0.2-1
+		- xorg/xorg-mkfontdir		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-mkfontscale		1.0.3-1	 -> 1.0.5-1
+		- xorg/xorg-randrproto		1.2.1-1	 -> 1.2.2-1
+		- xorg/xorg-rendercheck		1.2-1	 -> 1.3-1
+		- xorg/xorg-rgb			1.0.1-1	 -> 1.0.3-1
+		- xorg/xorg-server		1.4-3	 -> 1.5.3-1
+		- xorg/xorg-sessreg		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-util-macros		1.1.5-1	 -> 1.1.6-1
+		- xorg/xorg-x11perf		1.4.1-1	 -> 1.5-1
+		- xorg/xorg-xauth		1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-xcb-proto		1.1-1	 -> 1.2-2
+		- xorg/xorg-xdpyinfo		1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-xev			1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-xextproto		7.0.2-1	 -> 7.0.3-1
+		- xorg/xorg-xf86-input-evdev		1.2.0-1	 -> 2.1.0-1
+		- xorg/xorg-xf86-input-keyboard		1.2.2-1	 -> 1.3.1-1
+		- xorg/xorg-xf86-input-mouse		1.2.3-1	 -> 1.3.0-1
+		- xorg/xorg-xf86-video-ati		6.6.3-1	 -> 6.9.0-1
+		- xorg/xorg-xf86-video-chips		1.1.1-1	 -> 1.2.0-1
+		- xorg/xorg-xf86-video-dummy		0.2.0-1	 -> 0.3.0-1
+		- xorg/xorg-xf86-video-glint		1.1.1-1	 -> 1.2.0-1
+		- xorg/xorg-xf86-video-i128		1.2.1-1	 -> 1.3.1-1
+		- xorg/xorg-xf86-video-intel		2.2.0-1	 -> 2.5.1-1
+		- xorg/xorg-xf86-video-mga		1.4.7-1	 -> 1.4.9-1
+		- xorg/xorg-xf86-video-neomagic		1.1.1-1	 -> 1.2.1-1
+		- xorg/xorg-xf86-video-nv		2.1.5-1	 -> 2.1.12-1
+		- xorg/xorg-xf86-video-radeonhd		1.0.0-1	 -> 1.2.3-1
+		- xorg/xorg-xf86-video-savage		2.1.3-1	 -> 2.2.1-1
+		- xorg/xorg-xf86-video-tdfx		1.3.0-1	 -> 1.4.0-1
+		- xorg/xorg-xf86-video-tga		1.1.0-1	 -> 1.2.0-1
+		- xorg/xorg-xf86-video-trident		1.2.3-1	 -> 1.3.0-1
+		- xorg/xorg-xf86-video-tseng		1.1.1-1	 -> 1.2.0-1
+		- xorg/xorg-xf86-video-vesa		1.3.0-1	 -> 2.0.0-1
+		- xorg/xorg-xf86driproto		2.0.3-1	 -> 2.0.4-1
+		- xorg/xorg-xinit		1.0.7-1	 -> 1.1.0-1
+		- xorg/xorg-xkbcomp		1.0.3-1	 -> 1.0.5-1
+		- xorg/xorg-xprop		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-xproto		7.0.11-1 -> 7.0.14-1
+		- xorg/xorg-xrandr		1.2.2-1	 -> 1.2.3-1
+		- xorg/xorg-xrdb		1.0.4-1	 -> 1.0.5-1
+		- xorg/xorg-xset		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-xtrans		1.0.4-1	 -> 1.2.2-1
+		- xorg/xorg-xwininfo		1.0.3-1	 -> 1.0.4-1
+	- New packages:
+		- core/inetutils	1.5-1
+		- core/libgmp		4.2.4-1
+		- core/libmpfr		2.3.2-1
+		- core/libpcre		7.8-1
+		- core/mlocate		0.21.1-1
+		- opt/cdrkit		1.1.9-1
+		- opt/cmake		2.6.2-1
+		- opt/dbus		1.2.4-1
+		- opt/dbus-glib		0.76-1
+		- opt/intltool		0.40.4-1
+		- opt/libattr		2.4.43-1-1
+		- opt/libcap		2.13-1
+		- opt/nspr		4.7.1-2
+		- opt/nss		3.12.0-1
+		- opt/openbox		3.4.7.2-1
+		- opt/python		2.6.1-1
+		- opt/sqlite3		3.6.6.2-1
+		- opt/xulrunner		1.9.0.4-1
+		- xorg/xorg-libpciaccess		0.10.5-1
+		- xorg/xorg-xcompmgr			1.1.4-1
+		- xorg/xorg-xf86-input-synaptics	0.15.2-1
+	- Removed packages
+		- core/hotplug
+		- core/inetd
+		- core/mktemp
+		- core/netkit-ftp
+		- core/netkit-telnet
+		- core/slocate
+		- opt/blackbox
+		- opt/cdrtools
+		- xorg/xorg-font-adobe-utopia-100dpi
+		- xorg/xorg-font-adobe-utopia-75dpi
+		- xorg/xorg-font-adobe-utopia-type1
+		- xorg/xorg-font-arabic-misc
+		- xorg/xorg-font-bh-lucidatypewriter-100dpi
+		- xorg/xorg-font-bh-lucidatypewriter-75dpi
+		- xorg/xorg-font-bh-ttf
+		- xorg/xorg-font-bh-type1
+		- xorg/xorg-font-bitstream-speedo
+		- xorg/xorg-font-bitstream-type1
+		- xorg/xorg-font-cronyx-cyrillic
+		- xorg/xorg-font-daewoo-misc
+		- xorg/xorg-font-dec-misc
+		- xorg/xorg-font-ibm-type1
+		- xorg/xorg-font-isas-misc
+		- xorg/xorg-font-jis-misc
+		- xorg/xorg-font-micro-misc
+		- xorg/xorg-font-misc-cyrillic
+		- xorg/xorg-font-misc-ethiopic
+		- xorg/xorg-font-misc-meltho
+		- xorg/xorg-font-mutt-misc
+		- xorg/xorg-font-schumacher-misc
+		- xorg/xorg-font-screen-cyrillic
+		- xorg/xorg-font-sony-misc
+		- xorg/xorg-font-sun-misc
+		- xorg/xorg-font-winitzki-cyrillic
+		- xorg/xorg-font-xfree86-type1
+		- xorg/xorg-liboldx
+		- xorg/xorg-xf86-input-acecad
+		- xorg/xorg-xf86-input-calcomp
+		- xorg/xorg-xf86-input-citron
+		- xorg/xorg-xf86-input-digitaledge
+		- xorg/xorg-xf86-input-dmc
+		- xorg/xorg-xf86-input-dynapro
+		- xorg/xorg-xf86-input-elo2300
+		- xorg/xorg-xf86-input-elographics
+		- xorg/xorg-xf86-input-fpit
+		- xorg/xorg-xf86-input-hyperpen
+		- xorg/xorg-xf86-input-jamstudio
+		- xorg/xorg-xf86-input-joystick
+		- xorg/xorg-xf86-input-magellan
+		- xorg/xorg-xf86-input-magictouch
+		- xorg/xorg-xf86-input-microtouch
+		- xorg/xorg-xf86-input-mutouch
+		- xorg/xorg-xf86-input-palmax
+		- xorg/xorg-xf86-input-penmount
+		- xorg/xorg-xf86-input-spaceorb
+		- xorg/xorg-xf86-input-summa
+		- xorg/xorg-xf86-input-tek4957
+		- xorg/xorg-xf86-input-ur98
+		- xorg/xorg-xf86-input-vmmouse
+		- xorg/xorg-xf86-input-void
+		- xorg/xorg-xf86-video-amd
+		- xorg/xorg-xf86-video-apm
+		- xorg/xorg-xf86-video-ark
+		- xorg/xorg-xf86-video-cirrus
+		- xorg/xorg-xf86-video-cyrix
+		- xorg/xorg-xf86-video-fbdev
+		- xorg/xorg-xf86-video-i740
+		- xorg/xorg-xf86-video-imstt
+		- xorg/xorg-xf86-video-newport
+		- xorg/xorg-xf86-video-rendition
+		- xorg/xorg-xf86-video-s3
+		- xorg/xorg-xf86-video-s3virge
+		- xorg/xorg-xf86-video-siliconmotion
+		- xorg/xorg-xf86-video-sis
+		- xorg/xorg-xf86-video-sisusb
+		- xorg/xorg-xf86-video-v4l
+		- xorg/xorg-xf86-video-vga
+		- xorg/xorg-xf86-video-via
+		- xorg/xorg-xf86-video-vmware
+		- xorg/xorg-xf86-video-voodoo
+		- xorg/xorg-xproxymanagementprotocol
+
+
+2.4 - Released 2007-12-22
+	- Installation/Bootkernel:
+		CRUX 2.4 uses a new ISO image with an initial RAM filesystem
+		(initramfs) that allows for some convenient features:
+
+		  * The boot sequence now tries to automatically detect
+		    the CDROM drive, no need to specify root=/dev/XXX
+		    anymore
+		  * The CD can be unmounted (to make way for a CD with
+		    alternative packages, for example)
+		  * Install can be completed remotely: boot the CD, set
+		    a root password, configure the network (dhcpcd
+		    included), start sshd
+	- Updated packages:
+		- kernel/linux		2.6.20.3 -> 2.6.23.9
+		- core/bash		3.2.10-1 -> 3.2.25-2
+		- core/bindutils	9.3.4-1	 -> 9.4.2-1
+		- core/binutils		2.17-1	 -> 2.18-1
+		- core/coreutils	6.7-2	 -> 6.9-2
+		- core/cpio		2.7-1	 -> 2.9-1
+		- core/curl		7.16.1-1 -> 7.17.0-1
+		- core/db		4.4.20-2 -> 4.5.20-1
+		- core/dhcpcd		3.0.16-1 -> 3.1.8-1
+		- core/e2fsprogs	1.39-1	 -> 1.40.2-1
+		- core/ed		0.5-1	 -> 0.8-1
+		- core/exim		4.66-2	 -> 4.68-1
+		- core/expat		2.0.0-1	 -> 2.0.1-1
+		- core/file		4.20-1	 -> 4.21-1
+		- core/filesystem	2.3-3	 -> 2.4-2
+		- core/findutils	4.2.30-1 -> 4.2.31-1
+		- core/gawk		3.1.5-3	 -> 3.1.6-1
+		- core/gcc		4.1.2-1	 -> 4.2.2-1
+		- core/gettext		0.16.1-1 -> 0.17-3
+		- core/glibc		2.5-1	 -> 2.6.1-2
+		- core/grep		2.5.1a-1 -> 2.5.3-1
+		- core/gzip		1.3.9-1	 -> 1.3.12-3
+		- core/hdparm		6.9-1	 -> 7.7-1
+		- core/iana-etc		2.3-1	 -> 2.4-1
+		- core/iproute2		2.6.19-061214-1	 -> 2.6.22-070710-1
+		- core/iptables		1.3.7-1	 -> 1.3.8-1
+		- core/jfsutils		1.1.11-1 -> 1.1.12-1
+		- core/less		394-1	 -> 416-1
+		- core/libtool		1.5.22-2 -> 1.5.24-1
+		- core/m4		1.4.8-1	 -> 1.4.10-1
+		- core/man-pages	2.43-1	 -> 2.69-1
+		- core/nasm		0.98.39-1 -> 2.00-1
+		- core/nfs-utils	1.0.12-1 -> 1.1.1-2
+		- core/openssh		4.6p1-1	 -> 4.7p1-2
+		- core/openssl		0.9.8e-1 -> 0.9.8g-1
+		- core/pciutils		2.2.4-2	 -> 2.2.9-1
+		- core/perl		5.8.8-2	 -> 5.8.8-3
+		- core/pkg-config	0.21-1	 -> 0.22-1
+		- core/pkgutils		5.22-1	 -> 5.31.0-1
+		- core/portmap		5beta-4	 -> 6.0-1
+		- core/ports		1.5-6	 -> 1.5-7
+		- core/psmisc		22.3-1	 -> 22.6-1
+		- core/rc		2.17-5	 -> 2.18-1
+		- core/rsync		2.6.9-1	 -> 2.6.9-2
+		- core/slocate		2.7-3	 -> 3.1-1
+		- core/strace		4.5.15-1 -> 4.5.16-1
+		- core/sysklogd		1.4.1-5	 -> 1.5-3
+		- core/tar		1.16.1-1 -> 1.19-1
+		- core/udev		096-4	 -> 117-1
+		- core/vim		7.0-6	 -> 7.1.123-1
+		- core/which		2.16-1	 -> 2.18-1
+		- core/xfsprogs		2.8.18-1 -> 2.9.4-1
+		- opt/atk		1.12.4-1 -> 1.20.0-1
+		- opt/cairo		1.4.0-1	 -> 1.4.12-1
+		- opt/cdrtools		2.01-2	 -> 2.01.01a36-1
+		- opt/dialog		1.0-20060221-1	 -> 1.1-20070704-1
+		- opt/fetchmail		6.3.7-1	 -> 6.3.8-2
+		- opt/firefox		2.0.0.3-1 -> 2.0.0.11-1
+		- opt/fontconfig	2.4.2-1	 -> 2.5.0-1
+		- opt/freetype		2.2.1-1	 -> 2.3.5-1
+		- opt/glib		2.12.9-1 -> 2.14.4-1
+		- opt/gtk		2.10.9-1 -> 2.12.2-1
+		- opt/libpng		1.2.16-1 -> 1.2.23-1
+		- opt/libxml2		2.6.27-1 -> 2.6.30-1
+		- opt/mdadm		2.6.1-1	 -> 2.6.4-1
+		- opt/mutt		1.5.14-1 -> 1.5.17-1
+		- opt/nano		2.0.3-1	 -> 2.0.6-1
+		- opt/pango		1.14.8-1 -> 1.18.3-1
+		- opt/sudo		1.6.8p12-1 -> 1.6.9p8-1
+		- opt/wireless-tools	28-1	 -> 29-1
+		- opt/xterm		223-1	 -> 229-1
+		- xorg/mesa3d		6.5.2-2	 -> 7.0.2-2
+		- xorg/xkeyboard-config	0.9-1	 -> 1.0-1
+		- xorg/xorg		7.2-1	 -> 7.3-1
+		- xorg/xorg-bdftopcf	1.0.0-1	 -> 1.0.1-1
+		- xorg/xorg-compositeproto	0.3.1-1	 -> 0.4-1
+		- xorg/xorg-glproto		1.4.8-1	 -> 1.4.9-1
+		- xorg/xorg-iceauth		1.0.1-1	 -> 1.0.2-1
+		- xorg/xorg-inputproto		1.3.2-1	 -> 1.4.2.1-1
+		- xorg/xorg-libice		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-libsm		1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-libx11		1.1.1-1	 -> 1.1.3-1
+		- xorg/xorg-libxaw		1.0.3-1	 -> 1.0.4-2
+		- xorg/xorg-libxcb		1.0-1	 -> 1.1-1
+		- xorg/xorg-libxcomposite	0.3.1-1	 -> 0.4.0-1
+		- xorg/xorg-libxcursor		1.1.8-1	 -> 1.1.9-1
+		- xorg/xorg-libxdamage		1.1-1	 -> 1.1.1-1
+		- xorg/xorg-libxfont		1.2.7-1	 -> 1.3.1-1
+		- xorg/xorg-libxi		1.0.2-1	 -> 1.1.3-1
+		- xorg/xorg-libxinerama		1.0.1-1	 -> 1.0.2-1
+		- xorg/xorg-libxpm		3.5.6-1	 -> 3.5.7-1
+		- xorg/xorg-libxrandr		1.1.2-1	 -> 1.2.2-1
+		- xorg/xorg-libxrender		0.9.2-1	 -> 0.9.4-1
+		- xorg/xorg-libxtst		1.0.1-1	 -> 1.0.3-1
+		- xorg/xorg-libxxf86dga		1.0.1-1	 -> 1.0.2-1
+		- xorg/xorg-makedepend		1.0.0-1	 -> 1.0.1-1
+		- xorg/xorg-mkfontdir		1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-randrproto		1.1.2-1	 -> 1.2.1-1
+		- xorg/xorg-renderproto		0.9.2-1	 -> 0.9.3-1
+		- xorg/xorg-server		1.2.0-2	 -> 1.4-3
+		- xorg/xorg-sessreg		1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-setxkbmap		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-xcb-proto		1.0-1	 -> 1.1-1
+		- xorg/xorg-xdpyinfo		1.0.1-1	 -> 1.0.2-1
+		- xorg/xorg-xdriinfo		1.0.1-1	 -> 1.0.2-1
+		- xorg/xorg-xf86-input-acecad	1.1.0-1	 -> 1.2.1-1
+		- xorg/xorg-xf86-input-calcomp	1.1.0-1	 -> 1.1.1-1
+		- xorg/xorg-xf86-input-citron	2.2.0-1	 -> 2.2.1-1
+		- xorg/xorg-xf86-input-dmc	1.1.0-1	 -> 1.1.1-1
+		- xorg/xorg-xf86-input-dynapro	1.1.0-1	 -> 1.1.1-1
+		- xorg/xorg-xf86-input-elo2300	1.1.0-1	 -> 1.1.1-1
+		- xorg/xorg-xf86-input-evdev	1.1.2-1	 -> 1.2.0-1
+		- xorg/xorg-xf86-input-joystick		1.1.0-1	 -> 1.3.0-1
+		- xorg/xorg-xf86-input-keyboard		1.1.1-1	 -> 1.2.2-1
+		- xorg/xorg-xf86-input-magellan		1.1.0-1	 -> 1.1.1-1
+		- xorg/xorg-xf86-input-microtouch	1.1.0-1	 -> 1.1.1-1
+		- xorg/xorg-xf86-input-mouse		1.1.2-1	 -> 1.2.3-1
+		- xorg/xorg-xf86-input-penmount		1.2.0-1	 -> 1.2.1-1
+		- xorg/xorg-xf86-input-spaceorb		1.1.0-1	 -> 1.1.1-1
+		- xorg/xorg-xf86-input-vmmouse		12.4.0-1 -> 12.4.2-1
+		- xorg/xorg-xf86-input-void		1.1.0-1	 -> 1.1.1-1
+		- xorg/xorg-xf86-video-mga		1.4.6.1-1 -> 1.4.7-1
+		- xorg/xorg-xf86-video-nsc		2.8.2-1	 -> 2.8.3-1
+		- xorg/xorg-xf86-video-nv		1.2.2.1-1 -> 2.1.5-1
+		- xorg/xorg-xf86-video-savage		2.1.2-1	 -> 2.1.3-1
+		- xorg/xorg-xf86-video-sis		0.9.3-1	 -> 0.9.4-1
+		- xorg/xorg-xf86-video-vmware		10.15.0-1 -> 10.15.1-1
+		- xorg/xorg-xf86dgaproto		2.0.2-1	 -> 2.0.3-1
+		- xorg/xorg-xhost		1.0.1-1	 -> 1.0.2-1
+		- xorg/xorg-xinit		1.0.3-1	 -> 1.0.7-1
+		- xorg/xorg-xmag		1.0.1-1	 -> 1.0.2-1
+		- xorg/xorg-xmodmap		1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-xprop		1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-xproto		7.0.10-1 -> 7.0.11-1
+		- xorg/xorg-xrandr		1.0.2-1	 -> 1.2.2-1
+		- xorg/xorg-xrdb		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-xset		1.0.2-1	 -> 1.0.3-1
+		- xorg/xorg-xsetroot		1.0.1-1	 -> 1.0.2-1
+		- xorg/xorg-xtrans		1.0.3-1	 -> 1.0.4-1
+		- xorg/xorg-xvinfo		1.0.1-1	 -> 1.0.2-1
+		- xorg/xorg-xwininfo		1.0.2-1	 -> 1.0.3-1
+	- New packages:
+		- core/libarchive		2.4.8-1
+		- core/util-linux-ng		2.13.0.1-1
+		- opt/p5-xml-parser		2.34-5
+		- opt/rp-pppoe			3.8-1
+		- opt/wpa_supplicant		0.5.9-1
+		- opt/wvdial			1.60-2
+		- xorg/xorg-libpixman		0.9.6-1
+		- xorg/xorg-xbacklight		1.1-1
+		- xorg/xorg-xf86-video-amd	2.7.7.0-1
+		- xorg/xorg-xf86-video-intel	2.2.0-1
+		- xorg/xorg-xf86-video-radeonhd	1.0.0-1
+		- xorg/xorg-xf86-video-xgi	1.5.0-1
+		- xorg/xorg-xgamma		1.0.2-1
+	- Removed packages
+		- core/util-linux
+		- xorg/xorg-applewmproto
+		- xorg/xorg-libapplewm
+		- xorg/xorg-libwindowswm
+		- xorg/xorg-libxp
+		- xorg/xorg-libxprintapputil
+		- xorg/xorg-libxprintutil
+		- xorg/xorg-printproto
+		- xorg/xorg-windowswmproto
+		- xorg/xorg-xf86-video-i810
+		- xorg/xorg-xf86-video-sunbw2
+		- xorg/xorg-xf86-video-suncg14
+		- xorg/xorg-xf86-video-suncg3
+		- xorg/xorg-xf86-video-suncg6
+		- xorg/xorg-xf86-video-sunffb
+		- xorg/xorg-xf86-video-sunleo
+		- xorg/xorg-xf86-video-suntcx
+
+
+2.3	- Released 2006-03-20
+	- Installation/Bootkernel:
+	
+	- Updated packages:
+		- kernel/linux		2.6.15.6 -> 2.6.20.3
+		- core/autoconf		2.59-1	 -> 2.61-1
+		- core/automake		1.9.6-1	 -> 1.10-1
+		- core/bash		3.0-2	 -> 3.2.10-1
+		- core/bin86		0.16.0-1 -> 0.16.17-1
+		- core/bindutils	9.3.2-1	 -> 9.3.4-1
+		- core/binutils		2.16.1-1 -> 2.17-1
+		- core/bison		2.1-1	 -> 2.3-2
+		- core/bzip2		1.0.3-2	 -> 1.0.4-1
+		- core/coreutils	5.94-1	 -> 6.7-2
+		- core/cpio		2.6-2	 -> 2.7-1
+		- core/curl		7.15.3-1 -> 7.16.1-1
+		- core/db		4.4.20-1 -> 4.4.20-2
+		- core/dhcpcd		1.3.22-pl4-2 -> 3.0.16-1
+		- core/e2fsprogs	1.38-1	 -> 1.39-1
+		- core/ed		0.2-2	 -> 0.5-1
+		- core/expat		1.95.8-1 -> 2.0.0-1
+		- core/file		4.17-1	 -> 4.20-1
+		- core/filesystem	2.2-2	 -> 2.3-3
+		- core/findutils	4.2.27-1 -> 4.2.30-1
+		- core/flex		2.5.31-2 -> 2.5.33-1
+		- core/gawk		3.1.5-1	 -> 3.1.5-3
+		- core/gcc		4.0.3-2	 -> 4.1.2-1
+		- core/gettext		0.14.5-1 -> 0.16.1-1
+		- core/glibc		2.3.6-2	 -> 2.5-1
+		- core/gzip		1.2.4b-1 -> 1.3.9-1
+		- core/hdparm		6.3-1	 -> 6.9-1
+		- core/httpup		0.4.0h-1 -> 0.4.0i-2
+		- core/iptables		1.3.5-1	 -> 1.3.7-1
+		- core/jfsutils		1.1.10-1 -> 1.1.11-1
+		- core/libtool		1.5.22-1 -> 1.5.22-2
+		- core/lilo		22.7.1-1 -> 22.8-1
+		- core/m4		1.4.4-1	 -> 1.4.8-1
+		- core/make		3.80-1	 -> 3.81-1
+		- core/man		1.6c-1	 -> 1.6e-1
+		- core/man-pages	2.28-1	 -> 2.43-1
+		- core/ncurses		5.5-1	 -> 5.6-1
+		- core/net-tools	1.60-5	 -> 1.60-6
+		- core/nfs-utils	1.0.7-3	 -> 1.0.12-1
+		- core/openssh		4.3p2-1	 -> 4.6p1-1
+		- core/openssl		0.9.8a-1 -> 0.9.8e-1
+		- core/pciutils		2.2.1-2	 -> 2.2.4-2
+		- core/perl		5.8.8-1	 -> 5.8.8-2
+		- core/pkg-config	0.20-1	 -> 0.21-1
+		- core/pkgutils		5.20-2	 -> 5.22-1
+		- core/ports		1.5-3	 -> 1.5-6
+		- core/ppp		2.4.3-1	 -> 2.4.4-1
+		- core/procps		3.2.6-1	 -> 3.2.7-1
+		- core/prt-get		0.5.11-5 -> 5.15-1
+		- core/psmisc		22.1-1	 -> 22.3-1
+		- core/rc		2.17-2	 -> 2.17-5
+		- core/readline		5.1-1	 -> 5.2-1
+		- core/rsync		2.6.7-1	 -> 2.6.9-1
+		- core/shadow		4.0.15-3 -> 4.0.18.1-5
+		- core/strace		4.5.14-1 -> 4.5.15-1
+		- core/sysfsutils	2.0.0-1	 -> 2.1.0-1
+		- core/tar		1.15.1-2 -> 1.16.1-1
+		- core/tcsh		6.14-1	 -> 6.15-1
+		- core/udev		087-1	 -> 096-4
+		- core/usbutils		0.70-1	 -> 0.72-1
+		- core/util-linux	2.12r-1	 -> 2.13-pre7-2
+		- core/vim		6.4-1	 -> 7.0-6
+		- core/xfsprogs		2.7.11-1 -> 2.8.18-1
+		- core/zip		2.31-2	 -> 2.32-1
+		- opt/atk		1.11.3-1 -> 1.12.4-1
+		- opt/cairo		1.0.2-1	 -> 1.4.0-1
+		- opt/cvs		1.11.20-1 -> 1.11.22-1
+		- opt/dialog		1.0-20060126-1 -> 1.0-20060221-1
+		- opt/fetchmail		6.3.2-2	 -> 6.3.7-1
+		- opt/firefox		1.5.0.1-2 -> 2.0.0.2-1
+		- opt/fontconfig	2.3.2-1	 -> 2.4.2-1
+		- opt/freetype		2.1.10-1 -> 2.2.1-1
+		- opt/glib		2.10.1-1 -> 2.12.9-1
+		- opt/glitz		0.4.4-2	 -> 0.5.6-1
+		- opt/grub		0.95-3	 -> 0.97-2
+		- opt/gtk		2.8.16-1 -> 2.10.9-1
+		- opt/libidl		0.8.5-1	 -> 0.8.7-1
+		- opt/libpng		1.2.8-1	 -> 1.2.16-1
+		- opt/libtiff		3.8.2-1	 -> 3.8.2-2
+		- opt/libtiff		3.8.2-1	 -> 3.8.2-2
+		- opt/mdadm		2.4.1-1	 -> 2.6.1-1
+		- opt/pango		1.10.3-1 -> 1.14.8-1
+		- opt/wireless-tools	27-1	 -> 28-1
+	- New packages:
+		- core/exim		4.66-2
+		- core/iana-etc		2.3-1
+		- core/inetd		0.17-1
+		- core/iproute2		2.6.19-061214-1
+		- core/iputils		ss021109-try-4
+		- core/rpm2targz	1.0.4-1
+		- opt/blackbox		0.70.1-1
+		- opt/grub		0.97-2
+		- opt/libdrm		2.3.0-1
+		- opt/libxml2		2.6.27-1
+		- opt/libxslt		1.1.20-1
+		- opt/mutt		1.5.14-1
+		- opt/nano		2.0.3-1
+		- opt/sudo		1.6.8p12-1
+		- opt/xterm		223-1
+		- xorg/libpthread-stubs			0.1-1
+		- xorg/mesa3d				6.5.2-2
+		- xorg/polyglotman			3.2-1
+		- xorg/xkeyboard-config			0.9-1
+		- xorg/xorg				7.2-1
+		- xorg/xorg-applewmproto		1.0.3-1
+		- xorg/xorg-bdftopcf			1.0.0-1
+		- xorg/xorg-bigreqsproto		1.0.2-1
+		- xorg/xorg-cf-files			1.0.2-1
+		- xorg/xorg-compositeproto		0.3.1-1
+		- xorg/xorg-damageproto			1.1.0-1
+		- xorg/xorg-dmxproto			2.2.2-1
+		- xorg/xorg-evieext			1.0.2-1
+		- xorg/xorg-fixesproto			4.0-1
+		- xorg/xorg-font-adobe-100dpi		1.0.0-2
+		- xorg/xorg-font-adobe-75dpi		1.0.0-2
+		- xorg/xorg-font-adobe-utopia-100dpi	1.0.1-2
+		- xorg/xorg-font-adobe-utopia-75dpi	1.0.1-2
+		- xorg/xorg-font-adobe-utopia-type1	1.0.1-2
+		- xorg/xorg-font-alias			1.0.1-1
+		- xorg/xorg-font-arabic-misc		1.0.0-2
+		- xorg/xorg-font-bh-100dpi		1.0.0-2
+		- xorg/xorg-font-bh-75dpi		1.0.0-2
+		- xorg/xorg-font-bh-lucidatypewriter-100dpi	1.0.0-2
+		- xorg/xorg-font-bh-lucidatypewriter-75dpi	1.0.0-2
+		- xorg/xorg-font-bh-ttf			1.0.0-2
+		- xorg/xorg-font-bh-type1		1.0.0-2
+		- xorg/xorg-font-bitstream-100dpi	1.0.0-2
+		- xorg/xorg-font-bitstream-75dpi	1.0.0-2
+		- xorg/xorg-font-bitstream-speedo	1.0.0-1
+		- xorg/xorg-font-bitstream-type1	1.0.0-2
+		- xorg/xorg-font-bitstream-vera		1.10-2
+		- xorg/xorg-font-cronyx-cyrillic	1.0.0-2
+		- xorg/xorg-font-cursor-misc		1.0.0-2
+		- xorg/xorg-font-daewoo-misc		1.0.0-2
+		- xorg/xorg-font-dec-misc		1.0.0-2
+		- xorg/xorg-font-ibm-type1		1.0.0-2
+		- xorg/xorg-font-isas-misc		1.0.0-2
+		- xorg/xorg-font-jis-misc		1.0.0-2
+		- xorg/xorg-font-micro-misc		1.0.0-2
+		- xorg/xorg-font-misc-cyrillic		1.0.0-2
+		- xorg/xorg-font-misc-ethiopic		1.0.0-2
+		- xorg/xorg-font-misc-meltho		1.0.0-2
+		- xorg/xorg-font-misc-misc		1.0.0-2
+		- xorg/xorg-font-mutt-misc		1.0.0-2
+		- xorg/xorg-font-schumacher-misc	1.0.0-2
+		- xorg/xorg-font-screen-cyrillic	1.0.1-1
+		- xorg/xorg-font-sony-misc		1.0.0-2
+		- xorg/xorg-font-sun-misc		1.0.0-2
+		- xorg/xorg-font-util			1.0.1-1
+		- xorg/xorg-font-winitzki-cyrillic	1.0.0-2
+		- xorg/xorg-font-xfree86-type1		1.0.0-2
+		- xorg/xorg-fontcacheproto		0.1.2-1
+		- xorg/xorg-fontsproto			2.0.2-1
+		- xorg/xorg-gccmakedep			1.0.2-1
+		- xorg/xorg-glproto			1.4.8-1
+		- xorg/xorg-iceauth			1.0.1-1
+		- xorg/xorg-imake			1.0.2-1
+		- xorg/xorg-inputproto			1.3.2-1
+		- xorg/xorg-kbproto			1.0.3-1
+		- xorg/xorg-libapplewm			1.0.0-1
+		- xorg/xorg-libdmx			1.0.2-1
+		- xorg/xorg-libfontenc			1.0.4-1
+		- xorg/xorg-libfs			1.0.0-1
+		- xorg/xorg-libice			1.0.3-1
+		- xorg/xorg-liboldx			1.0.1-1
+		- xorg/xorg-libsm			1.0.2-1
+		- xorg/xorg-libwindowswm		1.0.0-1
+		- xorg/xorg-libx11			1.1.1-1
+		- xorg/xorg-libxau			1.0.3-1
+		- xorg/xorg-libxaw			1.0.3-1
+		- xorg/xorg-libxcb			1.0-1
+		- xorg/xorg-libxcomposite		0.3.1-1
+		- xorg/xorg-libxcursor			1.1.8-1
+		- xorg/xorg-libxdamage			1.1-1
+		- xorg/xorg-libxdmcp			1.0.2-1
+		- xorg/xorg-libxevie			1.0.2-1
+		- xorg/xorg-libxext			1.0.3-1
+		- xorg/xorg-libxfixes			4.0.3-1
+		- xorg/xorg-libxfont			1.2.7-1
+		- xorg/xorg-libxfontcache		1.0.4-1
+		- xorg/xorg-libxft			2.1.12-1
+		- xorg/xorg-libxi			1.0.2-1
+		- xorg/xorg-libxinerama			1.0.1-1
+		- xorg/xorg-libxkbfile			1.0.4-1
+		- xorg/xorg-libxkbui			1.0.2-1
+		- xorg/xorg-libxmu			1.0.3-1
+		- xorg/xorg-libxp			1.0.0-1
+		- xorg/xorg-libxpm			3.5.6-1
+		- xorg/xorg-libxprintapputil		1.0.1-1
+		- xorg/xorg-libxprintutil		1.0.1-1
+		- xorg/xorg-libxrandr			1.1.2-1
+		- xorg/xorg-libxrender			0.9.2-1
+		- xorg/xorg-libxres			1.0.3-1
+		- xorg/xorg-libxscrnsaver		1.1.2-1
+		- xorg/xorg-libxt			1.0.5-1
+		- xorg/xorg-libxtrap			1.0.0-1
+		- xorg/xorg-libxtst			1.0.1-1
+		- xorg/xorg-libxv			1.0.3-1
+		- xorg/xorg-libxvmc			1.0.4-1
+		- xorg/xorg-libxxf86dga			1.0.1-1
+		- xorg/xorg-libxxf86misc		1.0.1-1
+		- xorg/xorg-libxxf86vm			1.0.1-1
+		- xorg/xorg-makedepend			1.0.0-1
+		- xorg/xorg-mkfontdir			1.0.2-1
+		- xorg/xorg-mkfontscale			1.0.3-1
+		- xorg/xorg-printproto			1.0.3-1
+		- xorg/xorg-randrproto			1.1.2-1
+		- xorg/xorg-recordproto			1.13.2-1
+		- xorg/xorg-rendercheck			1.2-1
+		- xorg/xorg-renderproto			0.9.2-1
+		- xorg/xorg-resourceproto		1.0.2-1
+		- xorg/xorg-rgb				1.0.1-1
+		- xorg/xorg-scrnsaverproto		1.1.0-1
+		- xorg/xorg-server			1.2.0-2
+		- xorg/xorg-sessreg			1.0.2-1
+		- xorg/xorg-setxkbmap			1.0.3-1
+		- xorg/xorg-trapproto			3.4.3-1
+		- xorg/xorg-util-macros			1.1.5-1
+		- xorg/xorg-videoproto			2.2.2-1
+		- xorg/xorg-windowswmproto		1.0.3-1
+		- xorg/xorg-x11perf			1.4.1-1
+		- xorg/xorg-xauth			1.0.2-1
+		- xorg/xorg-xbitmaps			1.0.1-1
+		- xorg/xorg-xcb-proto			1.0-1
+		- xorg/xorg-xcmiscproto			1.1.2-1
+		- xorg/xorg-xdpyinfo			1.0.1-1
+		- xorg/xorg-xdriinfo			1.0.1-1
+		- xorg/xorg-xev				1.0.2-1
+		- xorg/xorg-xextproto			7.0.2-1
+		- xorg/xorg-xf86-input-acecad		1.1.0-1
+		- xorg/xorg-xf86-input-calcomp		1.1.0-1
+		- xorg/xorg-xf86-input-citron		2.2.0-1
+		- xorg/xorg-xf86-input-digitaledge	1.1.0-1
+		- xorg/xorg-xf86-input-dmc		1.1.0-1
+		- xorg/xorg-xf86-input-dynapro		1.1.0-1
+		- xorg/xorg-xf86-input-elo2300		1.1.0-1
+		- xorg/xorg-xf86-input-elographics	1.1.0-1
+		- xorg/xorg-xf86-input-evdev		1.1.2-1
+		- xorg/xorg-xf86-input-fpit		1.1.0-1
+		- xorg/xorg-xf86-input-hyperpen		1.1.0-1
+		- xorg/xorg-xf86-input-jamstudio	1.1.0-1
+		- xorg/xorg-xf86-input-joystick		1.1.0-1
+		- xorg/xorg-xf86-input-keyboard		1.1.1-1
+		- xorg/xorg-xf86-input-magellan		1.1.0-1
+		- xorg/xorg-xf86-input-magictouch	1.0.0.5-1
+		- xorg/xorg-xf86-input-microtouch	1.1.0-1
+		- xorg/xorg-xf86-input-mouse		1.1.2-1
+		- xorg/xorg-xf86-input-mutouch		1.1.0-1
+		- xorg/xorg-xf86-input-palmax		1.1.0-1
+		- xorg/xorg-xf86-input-penmount		1.2.0-1
+		- xorg/xorg-xf86-input-spaceorb		1.1.0-1
+		- xorg/xorg-xf86-input-summa		1.1.0-1
+		- xorg/xorg-xf86-input-tek4957		1.1.0-1
+		- xorg/xorg-xf86-input-ur98		1.1.0-1
+		- xorg/xorg-xf86-input-vmmouse		12.4.0-1
+		- xorg/xorg-xf86-input-void		1.1.0-1
+		- xorg/xorg-xf86-video-apm		1.1.1-1
+		- xorg/xorg-xf86-video-ark		0.6.0-1
+		- xorg/xorg-xf86-video-ati		6.6.3-1
+		- xorg/xorg-xf86-video-chips		1.1.1-1
+		- xorg/xorg-xf86-video-cirrus		1.1.0-1
+		- xorg/xorg-xf86-video-cyrix		1.1.0-1
+		- xorg/xorg-xf86-video-dummy		0.2.0-1
+		- xorg/xorg-xf86-video-fbdev		0.3.1-1
+		- xorg/xorg-xf86-video-glint		1.1.1-1
+		- xorg/xorg-xf86-video-i128		1.2.1-1
+		- xorg/xorg-xf86-video-i740		1.1.0-1
+		- xorg/xorg-xf86-video-i810		1.7.4-1
+		- xorg/xorg-xf86-video-imstt		1.1.0-1
+		- xorg/xorg-xf86-video-mga		1.4.6.1-1
+		- xorg/xorg-xf86-video-neomagic		1.1.1-1
+		- xorg/xorg-xf86-video-newport		0.2.1-1
+		- xorg/xorg-xf86-video-nsc		2.8.2-1
+		- xorg/xorg-xf86-video-nv		1.2.2.1-1
+		- xorg/xorg-xf86-video-rendition	4.1.3-1
+		- xorg/xorg-xf86-video-s3		0.5.0-1
+		- xorg/xorg-xf86-video-s3virge		1.9.1-1
+		- xorg/xorg-xf86-video-savage		2.1.2-1
+		- xorg/xorg-xf86-video-siliconmotion	1.4.2-1
+		- xorg/xorg-xf86-video-sis		0.9.3-1
+		- xorg/xorg-xf86-video-sisusb		0.8.1-1
+		- xorg/xorg-xf86-video-sunbw2		1.1.0-1
+		- xorg/xorg-xf86-video-suncg14		1.1.0-1
+		- xorg/xorg-xf86-video-suncg3		1.1.0-1
+		- xorg/xorg-xf86-video-suncg6		1.1.0-1
+		- xorg/xorg-xf86-video-sunffb		1.1.0-1
+		- xorg/xorg-xf86-video-sunleo		1.1.0-1
+		- xorg/xorg-xf86-video-suntcx		1.1.0-1
+		- xorg/xorg-xf86-video-tdfx		1.3.0-1
+		- xorg/xorg-xf86-video-tga		1.1.0-1
+		- xorg/xorg-xf86-video-trident		1.2.3-1
+		- xorg/xorg-xf86-video-tseng		1.1.1-1
+		- xorg/xorg-xf86-video-v4l		0.1.1-1
+		- xorg/xorg-xf86-video-vesa		1.3.0-1
+		- xorg/xorg-xf86-video-vga		4.1.0-1
+		- xorg/xorg-xf86-video-via		0.2.2-1
+		- xorg/xorg-xf86-video-vmware		10.15.0-1
+		- xorg/xorg-xf86-video-voodoo		1.1.1-1
+		- xorg/xorg-xf86bigfontproto		1.1.2-1
+		- xorg/xorg-xf86dgaproto		2.0.2-1
+		- xorg/xorg-xf86driproto		2.0.3-1
+		- xorg/xorg-xf86miscproto		0.9.2-1
+		- xorg/xorg-xf86rushproto		1.1.2-1
+		- xorg/xorg-xf86vidmodeproto		2.2.2-1
+		- xorg/xorg-xfontsel			1.0.2-1
+		- xorg/xorg-xhost			1.0.1-1
+		- xorg/xorg-xineramaproto		1.1.2-1
+		- xorg/xorg-xinit			1.0.3-1
+		- xorg/xorg-xkbcomp			1.0.3-1
+		- xorg/xorg-xkill			1.0.1-1
+		- xorg/xorg-xlsfonts			1.0.2-1
+		- xorg/xorg-xmag			1.0.1-1
+		- xorg/xorg-xmodmap			1.0.2-1
+		- xorg/xorg-xprop			1.0.2-1
+		- xorg/xorg-xproto			7.0.10-1
+		- xorg/xorg-xproxymanagementprotocol	1.0.2-1
+		- xorg/xorg-xrandr			1.0.2-1
+		- xorg/xorg-xrdb			1.0.3-1
+		- xorg/xorg-xset			1.0.2-1
+		- xorg/xorg-xsetroot			1.0.1-1
+		- xorg/xorg-xtrans			1.0.3-1
+		- xorg/xorg-xvinfo			1.0.1-1
+		- xorg/xorg-xwininfo			1.0.2-1
+	- Removed packages
+		- core/grub
+		- core/netkit-base
+		- core/sendmail
+		- opt/gdb
+		- opt/linux-identd
+		- opt/madwifi
+		- opt/mc
+		- opt/pcmcia-cs
+		- opt/pine
+		- opt/rp-pppoe
+		- opt/sharutils
+		- opt/windowmaker
+		- opt/wvdial
+		- opt/x11
+
+
+2.2	- Released 2006-04-08
+	- Installation/Bootkernel:
+	
+	- Updated packages:
+		- kernel/linux		2.6.11.7 -> 2.6.15.6
+		- core/automake		1.8.4-1	 -> 1.9.6-1
+		- core/bindutils	9.3.1-1	 -> 9.3.2-1
+		- core/binutils		2.15.94.0.2.2-1	-> 2.16.1-1
+		- core/bison		2.0-1	 -> 2.1-1
+		- core/bzip2		1.0.2-1	 -> 1.0.3-1
+		- core/coreutils	5.2.1-1	 -> 5.94-1
+		- core/cpio		2.6-1	 -> 2.6-2
+		- core/db		4.3.27-2 -> 4.4.20-1
+		- core/e2fsprogs	1.37-1	 -> 1.38-1
+		- core/file		4.13-1	 -> 4.17-1
+		- core/filesystem	2.1-1	 -> 2.2-2
+		- core/findutils	4.2.20-2 -> 4.2.27-1
+		- core/gawk		3.1.4-1	 -> 3.1.5-1
+		- core/gcc		3.4.3-1	 -> 4.0.3-2
+		- core/gettext		0.14.4-1 -> 0.14.5-1
+		- core/glibc		2.3.5-1	 -> 2.3.6-2
+		- core/groff		1.19.1-1 -> 1.19.2-5
+		- core/grub		0.95-2	 -> 0.95-3
+		- core/hdparm		5.4-1	 -> 6.3-1
+		- core/iptables		1.3.1-1	 -> 1.3.5-1
+		- core/jfsutils		1.1.7-1	 -> 1.1.10-1
+		- core/kbd		1.12-1	 -> 1.12-2
+		- core/less		382-1	 -> 394-1
+		- core/libtool		1.5.14-1 -> 1.5.22-1
+		- core/lilo		22.7-1	 -> 22.7.1-1
+		- core/m4		1.4.3-1	 -> 1.4.4-1
+		- core/man		1.5p-1	 -> 1.6c-1
+		- core/man-pages	2.02-1	 -> 2.28-1
+		- core/module-init-tools 3.1-1	 -> 3.2.2-1
+		- core/ncurses		5.4-2	 -> 5.5-1
+		- core/netkit-base	0.17-7	 -> 0.17-8
+		- core/nfs-utils	1.0.7-2	 -> 1.0.7-3
+		- core/openssh		4.0p1-2	 -> 4.3p2-1
+		- core/openssl		0.9.7g-1 -> 0.9.8a-1
+		- core/perl		5.8.6-1	 -> 5.8.8-1
+		- core/pkg-config	0.15.0-1 -> 0.20-1
+		- core/pkgutils		5.19-1	 -> 5.20-2
+		- core/ports		1.5-1	 -> 1.5-3
+		- core/procps		3.2.5-1	 -> 3.2.6-1
+		- core/prt-get		0.5.9-1	 -> 0.5.11-5
+		- core/psmisc		21.6-1	 -> 22.1-1
+		- core/rc		2.17-1	 -> 2.17-2
+		- core/rdate		1.4-1	 -> 1.4-1
+		- core/readline		5.0-1	 -> 5.1-1
+		- core/sed		4.1.4-2	 -> 4.1.5-1
+		- core/sendmail		8.13.4-1 -> 8.13.6-1
+		- core/shadow		4.0.7-2	 -> 4.0.15-3
+		- core/strace		4.5.11-1 -> 4.5.14-1
+		- core/sysvinit		2.86-2	 -> 2.86-5
+		- core/unzip		5.52-1	 -> 5.52-2
+		- core/util-linux	2.12q-1	 -> 2.12r-1
+		- core/vim		6.3-2	 -> 6.4-1
+		- core/wget		1.9.1-2	 -> 1.10.2-1
+		- core/xfsprogs		2.6.25-1 -> 2.7.11-1
+		- core/zip		2.3-1	 -> 2.31-2
+		- core/zlib		1.2.2-1	 -> 1.2.3-1
+		- opt/atk		1.9.1-1	 -> 1.11.3-1
+		- opt/dialog		1.0-20050306-1	-> 1.0-20060126-1
+		- opt/fetchmail		6.2.5-1	 -> 6.3.2-2
+		- opt/firefox		1.0.3-1	 -> 1.5.0.1-1
+		- opt/fontconfig	2.2.3-1	 -> 2.3.2-1
+		- opt/freetype		2.1.9-1	 -> 2.1.10-1
+		- opt/glib		2.6.4-1	 -> 2.10.1-1
+		- opt/gtk		2.6.7-1	 -> 2.8.16-1
+		- opt/libtiff		3.8.0-1	 -> 3.8.2-1
+		- opt/mdadm		1.9.0-1	 -> 2.4-1
+		- opt/pango		1.8.1-1	 -> 1.10.3-1
+		- opt/rp-pppoe		3.7-1	 -> 3.8-1
+		- opt/windowmaker	0.91.0-1 -> 0.92.0-2
+		- opt/wvdial		1.54.0-1 -> 1.56-1
+		- opt/x11		6.8.2-1	 -> 6.9.0-3
+	- New packages:
+		- core/curl		7.15.2-1
+		- core/hotplug		2004_09_23-7
+		- core/httpup		0.4.0g-1
+		- core/libusb		0.1.12-1
+		- core/pciutils		2.2.1-2	
+		- core/rsync		2.6.7-1
+		- core/sysfsutils	2.0.0-1
+		- core/udev		085-1
+		- core/usbutils		0.70-1
+		- opt/cairo		1.0.2-1
+		- opt/fakeroot		1.5.8-1
+		- opt/glitz		0.4.4-2
+		- opt/hicolor-icon-theme 0.9-1
+		- opt/madwifi		current-1
+		- opt/mc		4.6.1-1
+		- opt/sharutils		4.6.2-1
+		- opt/sudo		1.6.8p12-1
+	- Removed packages:
+		- core/devfsd
+		- core/pkgconfig	(renamed to core/pkg-config)
+		- opt/audiofile
+		- opt/bftpd
+		- opt/cvsup
+		- opt/emacs
+		- opt/esound
+		- opt/libogg
+		- opt/libungif
+		- opt/libvorbis
+		- opt/webfs
+		- opt/xchat
+
+2.1	- Released 2005-04-25
+	- Installation/Bootkernel:
+		- Serial console now supported.
+		- Many new IDE/SATA/SCSI drivers added
+		  (see kernel/linux-2.6.11.6.config in CVS for details).
+		- Software RAID utility mdadm added.
+	- Updated packages:
+		- kernel/linux		2.6.6	 -> 2.6.11.7
+		- base/automake		1.8.4-1	 -> 1.9.5-1
+		- base/bash		2.05b-2	 -> 3.0-2
+		- base/binutils		2.15.90.0.3-1 -> 2.15.94.0.2.2-1
+		- base/bison		1.875-2	 -> 2.0-1
+		- base/cpio		2.5-1	 -> 2.6-1
+		- base/db		4.2.52-2 -> 4.3.27-2
+		- base/e2fsprogs	1.35-2	 -> 1.37-1
+		- base/file		4.09-1	 -> 4.13-1
+		- base/filesystem	2.0-1	 -> 2.1-1
+		- base/findutils	4.1.20-1 -> 4.2.20-2
+		- base/flex		2.5.31-1 -> 2.5.31-2
+		- base/gawk		3.1.3-1	 -> 3.1.4-1
+		- base/gcc		3.3.3-1	 -> 3.4.3-1
+		- base/glibc		2.3.3-1	 -> 2.3.5-1
+		- base/grep		2.5.1-2	 -> 2.5.1a-1
+		- base/libtool		1.5.6-1	 -> 1.5.14-1
+		- base/lilo		22.5.9-1 -> 22.7-1
+		- base/m4		1.4-1	 -> 1.4.3-1
+		- base/man		1.5m2-1	 -> 1.5p-1
+		- base/man-pages	1.66-1	 -> 2.02-1
+		- base/module-init-tools 3.0-1	 -> 3.1-1
+		- base/nasm		0.98.38-1 -> 0.98.39-1
+		- base/ncurses		5.4-1	 -> 5.4-2
+		- base/netkit-base	0.17-6	 -> 0.17-7
+		- base/perl		5.8.4-1	 -> 5.8.6-1
+		- base/pkgutils		5.17-1	 -> 5.19-1
+		- base/procps		3.2.1-1	 -> 3.2.5-1
+		- base/psmisc		21.4-1	 -> 21.6-1
+		- base/rc		2.14-1	 -> 2.17-1
+		- base/readline		4.3-2	 -> 5.0-1
+		- base/reiserfsprogs	3.6.17-1 -> 3.6.19-1
+		- base/sed		4.0.9-1	 -> 4.1.4-2
+		- base/sendmail		8.12.11-3 -> 8.13.6-1
+		- base/shadow		4.0.4.1-1 -> 4.0.15-1
+		- base/sysklogd		1.4.1-3	 -> 1.4.1-5
+		- base/sysvinit		2.85-1	 -> 2.86-2
+		- base/tar		1.14-1	 -> 1.15.1-2
+		- base/tcsh		6.12-3	 -> 6.14-1
+		- base/util-linux	2.12a-2	 -> 2.12q-1
+		- base/vim		6.2-3	 -> 6.3-2
+		- base/zlib		1.2.1-1	 -> 1.2.2-1
+		- opt/atk		1.6.1-1	 -> 1.9.1-1
+		- opt/bindutils		9.2.3-1	 -> 9.3.1-1
+		- opt/cdrtools		2.00.3-2 -> 2.01-1
+		- opt/cvs		1.11.15-1 -> 1.11.20-1
+		- opt/dialog		0.9b-20040421-1 -> 1.0-20050306-1
+		- opt/emacs		21.3-2	 -> 21.4a-1
+		- opt/esound		0.2.34-2 -> 0.2.35-1
+		- opt/expat		1.95.7-1 -> 1.95.8-1
+		- opt/firefox		0.8-2	 -> 1.0.3-1
+		- opt/fontconfig	2.2.2-1	 -> 2.2.3-1
+		- opt/freetype		2.1.8-1	 -> 2.1.9-1
+		- opt/gdb		6.1-1	 -> 6.3-1
+		- opt/gettext		0.14.1-1 -> 0.14.4-1
+		- opt/glib		2.4.1-1	 -> 2.6.4-1
+		- opt/gtk		2.4.1-1	 -> 2.6.7-1
+		- opt/hdparm		5.5-2	 -> 5.9-1
+		- opt/iptables		1.2.9-3	 -> 1.3.1-1
+		- opt/jfsutils		1.1.6-1	 -> 1.1.7-1
+		- opt/libidl		0.8.2-1	 -> 0.8.5-1
+		- opt/libogg		1.1-1	 -> 1.1.2-1
+		- opt/libpng		1.2.5-5	 -> 1.2.8-1
+		- opt/libstdc++-compat	3.0-1	 -> 3.1-1
+		- opt/libtiff		3.6.0-3	 -> 3.7.2-1
+		- opt/libvorbis		1.0.1-1	 -> 1.1.0-1
+		- opt/nfs-utils		1.0.6-4	 -> 1.0.7-2
+		- opt/openssh		3.8.1p1-2 -> 4.0p1-2
+		- opt/openssl		0.9.7d-1 -> 0.9.7g-1
+		- opt/pango		1.4.0-1	 -> 1.8.1-1
+		- opt/pcmcia-cs		3.2.7-2	 -> 3.2.8-1
+		- opt/pine		4.60-1	 -> 4.62-1
+		- opt/ports		1.4-1	 -> 1.5-1
+		- opt/ppp		2.4.2-1	 -> 2.4.3-1
+		- opt/rpm2targz		1.0.3-1	 -> 1.0.4-1
+		- opt/strace		4.5.3-1	 -> 4.5.11-1
+		- opt/unzip		5.50-2	 -> 5.52-1
+		- opt/webfs		1.20-2	 -> 1.21-2
+		- opt/windowmaker	0.80.2-2 -> 0.91.0-1
+		- opt/x11		6.7.0-1	 -> 6.8.2-1
+		- opt/xchat		2.0.8-1	 -> 2.4.3-1
+		- opt/xfsprogs		2.6.10-1 -> 2.6.25-1
+
+2.0	- Released 2004-05-20
+	- ISO boot kernel now supports SATA drives.
+	- Updated packages:
+		- kernel/linux		2.4.23	 -> 2.6.6
+		- base/autoconf		2.58-1	 -> 2.59-1
+		- base/automake		1.7.9-1	 -> 1.8.4-1
+		- base/binutils		2.14-2	 -> 2.15.90.0.3-1
+		- base/coreutils	5.0-1	 -> 5.2.1-1
+		- base/db		4.2.50-1 -> 4.2.52-2
+		- base/dcron		2.3.3-8	 -> 2.3.3-10
+		- base/e2fsprogs	1.34-1	 -> 1.35-2
+		- base/file		4.06-1	 -> 4.09-1
+		- base/filesystem	1.3-1	 -> 2.0-1
+		- base/findutils	4.1.7-2	 -> 4.1.20-1
+		- base/flex		2.5.4a-1 -> 2.5.31-1
+		- base/gcc		3.3.2-1	 -> 3.3.3-1
+		- base/glibc		2.3.2-3	 -> 2.3.3-1
+		- base/groff		1.19-1	 -> 1.19.1-1
+		- base/kbd		1.08-4	 -> 1.12-1
+		- base/less		381-1	 -> 382-1
+		- base/libtool		1.5-1	 -> 1.5.6-1
+		- base/lilo		22.5.8-1 -> 22.5.9-1
+		- base/man-pages	1.64-1	 -> 1.66-1
+		- base/ncurses		5.3-3	 -> 5.4-1
+		- base/net-tools	1.60-4	 -> 1.60-5
+		- base/netkit-base	0.17-5	 -> 0.17-6
+		- base/perl		5.8.2-1	 -> 5.8.4-1
+		- base/pkgutils		5.12-1	 -> 5.17-1
+		- base/procps		2.0.17-1 -> 3.2.1-1
+		- base/reiserfsprogs	3.6.11-1 -> 3.6.17-1
+		- base/sed		4.0.8-1	 -> 4.0.9-1
+		- base/sendmail		8.12.10-3 -> 8.12.11-3
+		- base/shadow		4.0.3-5	 -> 4.0.4.1-1
+		- base/slocate		2.7-1	 -> 2.7-3
+		- base/sysklogd		1.4.1-2	 -> 1.4.1-3
+		- base/tar		1.13.25-1 -> 1.14-1
+		- base/util-linux	2.11z-2	 -> 2.12a-2
+		- base/vim		6.2-2	 -> 6.2-3
+		- base/wget		1.9.1-1	 -> 1.9.1-2
+		- base/zlib		1.1.4-3	 -> 1.2.1-1
+		- opt/atk		1.4.1-1	 -> 1.6.1-1
+		- opt/audiofile		0.2.4-1	 -> 0.2.6-1
+		- opt/bc		1.06-1	 -> 1.06-2
+		- opt/bftpd		1.0.24-2 -> 1.0.24-3
+		- opt/cdrtools		2.0-1	 -> 2.00.3-2
+		- opt/cvs		1.11.9-1 -> 1.11.15-1
+		- opt/dialog		0.9b-20031130-1	-> 0.9b-20040421-1
+		- opt/esound		0.2.32-1 -> 0.2.34-2
+		- opt/fontconfig	2.2.1-1	 -> 2.2.2-1
+		- opt/gdb		6.0-1	 -> 6.1-1
+		- opt/gettext		0.13-1	 -> 0.14.1-1
+		- opt/glib		1.2.10-2 -> 2.4.1-1
+		- opt/gtk		1.2.10-3 -> 2.4.1-1
+		- opt/hdparm		5.4-1	 -> 5.5-2
+		- opt/iptables		1.2.9-2	 -> 1.2.9-3
+		- opt/jfsutils		1.1.4-1	 -> 1.1.6-1
+		- opt/libpng		1.2.5-4	 -> 1.2.5-5
+		- opt/libtiff		3.6.0-2	 -> 3.6.0-3
+		- opt/linux-identd	1.3-2	 -> 1.3-3
+		- opt/nfs-utils		1.0.6-2	 -> 1.0.6-4
+		- opt/openssh		3.7.1p2-2 -> 3.8.1p1-2
+		- opt/openssl		0.9.7c-2 -> 0.9.7d-1
+		- opt/pango		1.2.5-1	 -> 1.4.0-1
+		- opt/pcmcia-cs		3.2.5-2	 -> 3.2.7-2
+		- opt/pine		4.58-1	 -> 4.60-1
+		- opt/portmap		5beta-3	 -> 5beta-4
+		- opt/ports		1.3-1	 -> 1.4-1
+		- opt/ppp		2.4.1-1	 -> 2.4.2-1
+		- opt/rdate		1.3-2	 -> 1.4-1
+		- opt/rpm2targz		1.0.2-1	 -> 1.0.3-1
+		- opt/strace		4.5.1-1	 -> 4.5.3-1
+		- opt/webfs		1.20-1	 -> 1.20-2
+		- opt/windowmaker	0.80.2-1 -> 0.80.2-2
+		- opt/xchat		2.0.6-1	 -> 2.0.8-1
+	- New packages:
+		- base/module-init-tools 3.0
+		- base/rc		2.14
+		- opt/firefox		0.8
+		- opt/freetype		2.1.8
+		- opt/x11		6.7.0
+		- opt/xfsprogs		2.6.10
+	- Removed packages:
+		- base/bsdinit		(renamed to base/rc)
+		- base/modutils		(replaced by base/module-init-tools)
+		- opt/firebird		(renamed to opt/firefox)
+		- opt/freetype2		(renamed to opt/freetype)
+		- opt/gdk-pixbuf	(gtk-1.x no longer included)
+		- opt/glib2		(renamed to opt/glib)
+		- opt/gtk2		(renamed to opt/gtk)
+		- opt/imlib		(gtk-1.x no longer included)
+		- opt/xfree86		(replaced by opt/x11)
+		- opt/xmms		(required gtk-1.x)
+
+1.3	- Released 2003-12-06
+	- ISO boot kernel:
+		- USB 2.0 support added.
+		- USB storage support added.
+		- Modules for most network cards added.
+	- Updated packages:
+		- kernel/linux		2.4.21	  -> 2.4.23
+		- base/autoconf		2.57-1	  -> 2.58-1
+		- base/automake		1.7.6-1	  -> 1.7.9-1
+		- base/bash		2.05a-2	  -> 2.05b-2
+		- base/binutils		2.14-1	  -> 2.14-2
+		- base/bison		1.875-1	  -> 1.875-2
+		- base/bsdinit		2.7-1	  -> 2.11-1
+		- base/db		4.1.25-1  -> 4.2.50-1
+		- base/dcron		2.3.3-7	  -> 2.3.3-8
+		- base/e2fsprogs	1.33-1	  -> 1.34-1
+		- base/file		4.03-1	  -> 4.06-1
+		- base/filesystem	1.2-1	  -> 1.3-1
+		- base/gcc		3.2.3-1	  -> 3.3.2-1
+		- base/gdbm		1.8.0-1	  -> 1.8.3-1
+		- base/glibc		2.3.2-2	  -> 2.3.2-3
+		- base/kbd		1.08-3	  -> 1.08-4
+		- base/lilo		22.5.6-1  -> 22.5.8-1
+		- base/man		1.5l-1	  -> 1.5m2-1
+		- base/man-pages	1.58-1	  -> 1.64-1
+		- base/modutils		2.4.25-1  -> 2.4.26-1
+		- base/nasm		0.98.36-1 -> 0.98.38-1
+		- base/ncurses		5.3-1	  -> 5.3-3
+		- base/net-tools	1.60-3	  -> 1.60-4
+		- base/perl		5.8.0-2	  -> 5.8.2-1
+		- base/pkgutils		5.7-1	  -> 5.12-1
+		- base/procps		2.0.10-1  -> 2.0.17-1
+		- base/psmisc		21.3-1	  -> 21.4-1
+		- base/readline		4.3-1	  -> 4.3-2
+		- base/reiserfsprogs	3.6.10-1  -> 3.6.11-1
+		- base/sed		4.0.7-1	  -> 4.0.8-1
+		- base/sendmail		8.12.9-3  -> 8.12.10-3
+		- base/shadow		4.0.3-4	  -> 4.0.3-5
+		- base/tar		1.13-2	  -> 1.13.25-1
+		- base/tcsh		6.12-2	  -> 6.12-3
+		- base/vim		6.2-1	  -> 6.2-2
+		- base/wget		1.8.2-2	  -> 1.9.1-1
+		- base/which		2.14-1	  -> 2.16-1
+		- opt/atk		1.2.4-1	  -> 1.4.1-1
+		- opt/audiofile		0.2.3-2	  -> 0.2.4-1
+		- opt/bftpd		1.0.24-1  -> 1.0.24-2
+		- opt/bindutils		9.2.2-1	  -> 9.2.3-1
+		- opt/cvs		1.11.6-1  -> 1.11.9-1
+		- opt/dialog		0.9b-20030720-1 -> 0.9b-20031130-1
+		- opt/emacs		21.3-1	  -> 21.3-2
+		- opt/esound		0.2.29-1  -> 0.2.32-1
+		- opt/fetchmail		6.2.3-1	  -> 6.2.5-1
+		- opt/freetype2		2.1.3-1	  -> 2.1.5-1
+		- opt/gdb		5.3-1	  -> 6.0-1
+		- opt/gettext		0.11.5-1  -> 0.13-1
+		- opt/glib2		2.2.2-1	  -> 2.2.3-1
+		- opt/gtk2		2.2.2-1	  -> 2.2.4-1
+		- opt/imlib		1.9.14-4  -> 1.9.14-5
+		- opt/iptables		1.2.8-1	  -> 1.2.9-2
+		- opt/jfsutils		1.1.2-1	  -> 1.1.4-1
+		- opt/libidl		0.6.8-1	  -> 0.8.2-1
+		- opt/libogg		1.0-1	  -> 1.1-1
+		- opt/libpng		1.2.5-3	  -> 1.2.5-4
+		- opt/libtiff		3.5.7-2	  -> 3.6.0-2
+		- opt/libvorbis		1.0-1	  -> 1.0.1-1
+		- opt/linux-identd	1.3-1	  -> 1.3-2
+		- opt/netkit-telnet	0.17-2	  -> 0.17-3
+		- opt/nfs-utils		1.0.5-1	  -> 1.0.6-2
+		- opt/openssh		3.6.1p2-1 -> 3.7.1p2-2
+		- opt/openssl		0.9.7b-1  -> 0.9.7c-2
+		- opt/pango		1.2.3-1	  -> 1.2.5-1
+		- opt/pcmcia-cs		3.2.4-2	  -> 3.2.5-2
+		- opt/pine		4.56-1	  -> 4.58-1
+		- opt/portmap		5beta-2	  -> 5beta-3
+		- opt/ports		1.0-1	  -> 1.3-1
+		- opt/strace		4.4.94-1  -> 4.5.1-1
+		- opt/webfs		1.19-1	  -> 1.20-1
+		- opt/xchat		2.0.4-1	  -> 2.0.6-1
+		- opt/xfree86		4.3-2	  -> 4.3.0.1-1
+		- opt/xmms		1.2.7-1	  -> 1.2.8-2
+	- New packages:
+		- opt/expat		1.95.7
+		- opt/firebird		0.7
+		- opt/fontconfig	2.2.1
+	- Removed packages:
+		- opt/mozilla		(replaced by opt/firebird)
+
+1.2	- Released 2003-08-11
+	- Updated packages:
+		- kernel/linux		2.4.20     -> 2.4.21
+		- base/db		4.0.14-1   -> 4.1.25-1
+		- base/gcc		3.2.2-1    -> 3.2.3-1
+		- base/kbd		1.08-2     -> 1.08-3
+		- base/sed		4.0.5-1    -> 4.0.7-1
+		- base/vim		6.1-1      -> 6.2-1
+		- base/file		3.41-1     -> 4.03-1
+		- base/gawk		3.1.1-1    -> 3.1.3-1
+		- base/grep		2.5.1-1    -> 2.5.1-2
+		- base/gzip		1.2.4a-2   -> 1.2.4b-1
+		- base/lilo		22.4.1-1   -> 22.5.6-1
+		- base/perl		5.8.0-1    -> 5.8.0-2
+		- base/zlib		1.1.4-2    -> 1.1.4-3
+		- base/util-linux	2.11z-1    -> 2.11z-2
+		- base/binutils		2.13.2.1-3 -> 2.14-1
+		- base/glibc		2.3.2-1    -> 2.3.2-2
+		- base/groff		1.18.1-1   -> 1.19-1
+		- base/automake		1.7.3-1    -> 1.7.6-1
+		- base/libtool		1.4.3-1    -> 1.5-1
+		- base/modutils		2.4.23-1   -> 2.4.25-1
+		- base/filesystem	1.1-1      -> 1.2-1
+		- base/psmisc		21.2-1     -> 21.3-1
+		- base/e2fsprogs	1.32-2     -> 1.33-1
+		- base/sendmail		8.12.8-1   -> 8.12.9-3
+		- base/sysvinit		2.84-1     -> 2.85-1
+		- base/pkgutils		5.4-1      -> 5.7-1
+		- base/man-pages	1.56-2     -> 1.58-1
+		- base/reiserfsprogs	3.6.4-1    -> 3.6.10-1
+		- base/netkit-base	0.17-4     -> 0.17-5
+		- base/bsdinit		2.5-1      -> 2.7-1
+		- opt/cvs		1.11.5-1   -> 1.11.6-1
+		- opt/pine		4.53-1     -> 4.56-1
+		- opt/nfs-utils		1.0.1-1    -> 1.0.5-1
+		- opt/bftpd		1.0.23-1   -> 1.0.24-1
+		- opt/cvsup		16.1g-1    -> 16.1h-2
+		- opt/emacs		21.2-1     -> 21.3-1
+		- opt/ports		0.8-2      -> 1.0-1
+		- opt/xchat		1.8.11-1   -> 2.0.4-1
+		- opt/libtiff		3.5.7-1    -> 3.5.7-2
+		- opt/iptables		1.2.7a-1   -> 1.2.8-1
+		- opt/jfsutils		1.1.1-2    -> 1.1.2-1
+		- opt/dialog		0.9b-20030308-1 -> 0.9b-20030720-1
+		- opt/mozilla		1.3-1      -> 1.4-1
+		- opt/hdparm		5.3-1      -> 5.4-1
+		- opt/openssh		3.5p1-1    -> 3.6.1p2-1
+		- opt/openssl		0.9.7a-1   -> 0.9.7b-1
+		- opt/fetchmail		6.2.2-1    -> 6.2.3-1
+		- opt/linux-identd	1.2-1      -> 1.3-1
+		- opt/xfree86		4.3-1      -> 4.3-2
+		- opt/gdbm		(moved to base/gdbm)
+	- New packages:
+		- base/coreutils	5.0-1
+		- base/mktemp		1.5-1
+		- opt/gettext		0.11.5-1
+		- opt/glib2		2.2.2-1
+		- opt/pango		1.2.3-1
+		- opt/atk		1.2.4-1
+		- opt/gtk2		2.2.2-1
+	- Removed packages:
+		- base/fileutils	(replaced by base/coreutils)
+		- base/textutils	(replaced by base/coreutils)
+		- base/sh-utils		(replaced by base/coreutils)
+
+1.1	- Released 2003-03-22
+	- ISO boot kernel:
+		- RAID drivers added.
+	- Updated packages:
+		- base/gcc		3.2.1-1   -> 3.2.2-1
+		- base/man		1.5k-2	  -> 1.5l-1
+		- base/sed		4.0.3-1	  -> 4.0.5-1
+		- base/file		3.39-1	  -> 3.41-1
+		- base/grep		2.5-1	  -> 2.5.1-1
+		- base/less		378-2	  -> 381-1
+		- base/lilo		22.3.4-1  -> 22.4.1-1
+		- base/nasm		0.98.35-1 -> 0.98.36-1
+		- base/util-linux	2.11y-1	  -> 2.11z-1
+		- base/binutils		2.13.1-1  -> 2.13.2.1-3
+		- base/bison		1.35-1    -> 1.875-1
+		- base/glibc		2.3.1-1   -> 2.3.2-1
+		- base/tcp_wrappers	7.6-5     -> 7.6-6
+		- base/automake		1.7.2-1   -> 1.7.3-1
+		- base/modutils		2.4.22-1  -> 2.4.23-1
+		- base/slocate		2.6-1     -> 2.7-1
+		- base/filesystem	1.0-1     -> 1.1-1
+		- base/net-tools	1.60-2    -> 1.60-3
+		- base/e2fsprogs	1.32-1    -> 1.32-2
+		- base/sendmail		8.12.6-2  -> 8.12.8-1
+		- base/pkgutils		5.2-1     -> 5.4-1
+		- base/man-pages	1.53-1    -> 1.56-2
+		- base/netkit-base	0.17-3    -> 0.17-4
+		- base/bsdinit		2.4-1     -> 2.5-1
+		- opt/cvs		1.11.2-1  -> 1.11.5-1
+		- opt/esd		0.2.29-1  -> 0.2.29-2
+		- opt/gdb		5.2.1-1   -> 5.3-1
+		- opt/gtk		1.2.10-2  -> 1.2.10-3
+		- opt/glib		1.2.10-1  -> 1.2.10-2
+		- opt/pine		4.50-1    -> 4.53-1
+		- opt/bindutils		9.2.1-1   -> 9.2.2-1
+		- opt/bftpd		1.0.22-2  -> 1.0.23-1
+		- opt/cvsup		16.1e-1   -> 16.1g-1
+		- opt/imlib		1.9.14-3  -> 1.9.14-4
+		- opt/xchat		1.8.10-1  -> 1.8.11-1
+		- opt/gdk-pixbuf	0.21.0-1  -> 0.22.0-1
+		- opt/pcmcia-cs		3.2.3-1   -> 3.2.4-2
+		- opt/audiofile		0.2.3-1   -> 0.2.3-2
+		- opt/jfsutils		1.1.0-1   -> 1.1.1-2
+		- opt/dhcpcd		1.3.22-pl3-1 -> 1.3.22-pl4-2
+		- opt/dialog		0.9b-20020814-1 -> 0.9b-20030308-1
+		- opt/mozilla		1.2.1-1   -> 1.3-1
+		- opt/libpng		1.2.5-1   -> 1.2.5-3
+		- opt/strace		4.4-1     -> 4.4.94-1
+		- opt/openssl		0.9.6h-1  -> 0.9.7a-1
+		- opt/fetchmail		6.1.3-1   -> 6.2.2-1
+		- opt/portmap		5beta-1   -> 5beta-2
+		- opt/cdrtools		1.10-1    -> 2.0-1
+		- opt/xfree86		4.2.1-2   -> 4.3-1
+		- opt/esd		renamed to opt/esound
+	- New packages:
+		- opt/pkgconfig		0.15.0-1
+		- opt/freetype2		2.1.3-1
+	- Removed packages:
+		- opt/byacc
+		- opt/freetype
+		- opt/ttmkfdir
+	
+1.0	- Released 2002-12-14
+	- Updated packages:
+		- linux			2.4.19       -> 2.4.20
+		- base/autoconf		2.53-1       -> 2.57-1
+		- base/automake		1.6.3-1      -> 1.7.2-1 
+		- base/bash		2.05a-1      -> 2.05a-2
+		- base/binutils		2.13-1       -> 2.13.1-1
+		- base/bsdinit		2.3-1        -> 2.4-1
+		- base/dcron		2.3.3-6      -> 2.3.3-7
+		- base/e2fsprogs	1.27-1       -> 1.32-1
+		- base/filesystem	0.9.4-1      -> 1.0-1
+		- base/findutils	4.1.7-1      -> 4.1.7-2
+		- base/gcc		3.2-1        -> 3.2.1-1
+		- base/glibc		2.2.5-2      -> 2.3.1-1
+		- base/groff		1.17.2-1     -> 1.18.1-1
+		- base/kbd		1.06-1       -> 1.08-2
+		- base/less		376-1        -> 378-2
+		- base/libtool		1.4.2-1      -> 1.4.3-1
+		- base/lilo		22.3.3-1     -> 22.3.4-1
+		- base/make		3.79.1-1     -> 3.80-1
+		- base/man		1.5k-1       -> 1.5k-2
+		- base/modutils		2.4.20-1     -> 2.4.22-1
+		- base/nasm		0.98-1       -> 0.98.35-1
+		- base/ncurses		5.2-3        -> 5.3-1
+		- base/net-tools	1.60-1       -> 1.60-2
+		- base/pkgutils		5.0-1        -> 5.2-1
+		- base/procps		2.0.7-2      -> 2.0.10-1
+		- base/psmisc		21-1         -> 21.2-1
+		- base/reiserfsprogs	3.6.3-1      -> 3.6.4-1
+		- base/sed		3.02-1       -> 4.0.3-1
+		- base/sendmail		8.12.6-1     -> 8.12.6-2
+		- base/shadow		4.0.3-3      -> 4.0.3-4
+		- base/sysklogd		1.4.1-1      -> 1.4.1-2
+		- base/tcp_wrappers	7.6-2        -> 7.6-5
+		- base/tcsh		6.12-1       -> 6.12-2
+		- base/util-linux	2.11u-1      -> 2.11y-1
+		- base/zlib		1.1.4-1      -> 1.1.4-2
+		- opt/dhcpcd		1.3.22-pl1-1 -> 1.3.22-pl3-1
+		- opt/esd		0.2.28-1     -> 0.2.29-1
+		- opt/fetchmail		5.9.13-1     -> 6.1.3-1
+		- opt/gdbm		1.8.0-2      -> 1.8.0-1
+		- opt/gdk-pixbuf	0.18.0-1     -> 0.21.0-1
+		- opt/hdparm		5.2-1        -> 5.3-1
+		- opt/imlib		1.9.14-2     -> 1.9.14-3
+		- opt/libpng		1.2.4-1      -> 1.2.5-1
+		- opt/libstdc++-compat	2.9-2.1-2    -> 3.0-1
+		- opt/mozilla		1.1-1        -> 1.2.1-1
+		- opt/nfs-utils		0.3.3-1      -> 1.0.1-1
+		- opt/openssh		3.4p1-2      -> 3.5p1-1
+		- opt/openssl		0.9.6g-1     -> 0.9.6h-1
+		- opt/pine		4.44-1       -> 4.50-1
+		- opt/rdate		1.2-1        -> 1.3-2
+		- opt/webfs		1.18-1       -> 1.19-1
+		- opt/windowmaker	0.80.1-1     -> 0.80.2-1
+		- opt/xfree86		4.2.1-1      -> 4.2.1-2
+	- New packages:
+		- base/slocate		2.6-1
+		- opt/jfsutils		1.1.0-1
+		- opt/pcmcia-cs		3.2.3-1
+
+0.9.4	- Released 2002-09-12
+	- ISO boot kernel:
+		- APIC disabled (caused problems on some laptops).
+	- Updated packages:
+		- linux			2.4.18       -> 2.4.19
+		- base/glibc		2.2.5-1      -> 2.2.5-2
+		- base/gcc		2.95.3-2     -> 3.2-1
+		- base/modutils		2.4.15-1     -> 2.4.20-1
+		- base/binutils		2.12-1       -> 2.13-1
+		- base/pkgutils		4.1-1        -> 5.0-1
+		- base/bsdinit		2.1-1        -> 2.3-1
+		- base/readline		4.2a-1       -> 4.3-1
+		- base/perl		5.6.1-1      -> 5.8.0-1
+		- base/tcsh		6.11-2       -> 6.12-1
+		- base/lilo		22.2-1       -> 22.3.3-1
+		- base/bin86		0.16.2-1     -> 0.16.0-1
+		- base/sendmail		8.12.3-1     -> 8.12.6-1
+		- base/gawk		3.1.0-1      -> 3.1.1-1
+		- base/util-linux	2.11q-2      -> 2.11u-1
+		- base/textutils	2.0-1        -> 2.1-1
+		- base/reiserfsprogs	3.x.1b-1     -> 3.6.3-1
+		- base/filesystem	0.9.3-1      -> 0.9.4-1
+		- base/autoconf		2.52-1       -> 2.53-1
+		- base/automake		1.5-1        -> 1.6.3-1
+		- base/file		3.37-1       -> 3.39-1
+		- base/psmisc		20.2-1       -> 21-1
+		- base/devfsd		1.3.25-1     -> 1.3.25-2
+		- base/wget		1.8.1-1      -> 1.8.2-2
+		- base/which		2.13-1       -> 2.14-1
+		- base/man-pages	1.48-1       -> 1.53-1
+		- base/man		1.5j-1       -> 1.5k-1
+		- base/less		358-1        -> 376-1
+		- base/cpio		2.4.2-1      -> 2.5-1
+		- base/procps		2.0.7-1      -> 2.0.7-2
+		- opt/ports		0.5-1        -> 0.8-2
+		- opt/xfree86		4.2.0-2      -> 4.2.1-1
+		- opt/iptables		1.2.6a-1     -> 1.2.7a-1
+		- opt/openssh		3.1p1-2      -> 3.4p1-2
+		- opt/openssl		0.9.6c-2     -> 0.9.6g-1
+		- opt/procmail		3.22-1       -> 3.22-2
+		- opt/linux-identd	1.1-1        -> 1.2-1
+		- opt/gdb		5.1.1-1      -> 5.2.1-1
+		- opt/libpng		1.2.1-1      -> 1.2.4-1
+		- opt/gdk-pixbuf	0.16.0-1     -> 0.18.0-1
+		- opt/cvs		1.11.1p1-2   -> 1.11.2-1
+		- opt/mozilla		0.9.9-1      -> 1.1-1
+		- opt/esd		0.2.24-1     -> 0.2.28-1
+		- opt/hdparm		4.6-1        -> 5.2-1
+		- opt/bindutils		9.2.0-1      -> 9.2.1-1
+		- opt/windowmaker	0.80.0-1     -> 0.80.1-1
+		- opt/xchat		1.8.8-1      -> 1.8.10-1
+		- opt/fetchmail		5.9.0-1      -> 5.9.13-1
+		- opt/webfs		1.17-1       -> 1.18-1
+		- opt/byacc		1.9-1        -> 1.9-2
+		- opt/libogg		1.0rc3-1     -> 1.0-1
+		- opt/libvorbis		1.0rc3-1     -> 1.0-1
+		- opt/dialog		0.9a-20020309a-1 -> 0.9b-20020814-1
+
+0.9.3	- Released 2002-04-13
+	- Updated packages:
+		- linux			2.4.17       -> 2.4.18
+		- base/glibc		2.2.4-2      -> 2.2.5-1
+		- base/pkgutils		4.0-1        -> 4.1-1
+		- base/sendmail		8.11.6-1     -> 8.12.3-1
+		- base/binutils		2.11.2-1     -> 2.12-1
+		- base/util-linux	2.11n-1      -> 2.11q-2
+		- base/lilo		22.1-1       -> 22.2-1
+		- base/modutils		2.4.12-1     -> 2.4.15-1
+		- base/e2fsprogs	1.25-1       -> 1.27-1
+		- base/reiserfsprogs	3.x.1a-1     -> 3.x.1b-1
+		- base/devfsd		1.3.21-1     -> 1.3.25-1
+		- base/bzip2		1.0.1-1      -> 1.0.2-1
+		- base/bin86		0.16.1-1     -> 0.16.2-1
+		- base/grep		2.4.2-1      -> 2.5-1
+		- base/tcp_wrappers	7.6-1        -> 7.6-2
+		- base/shadow		4.0.0-1      -> 4.0.3-2
+		- base/man-pages	1.47-1       -> 1.48-1
+		- base/zlib		1.1.3-1      -> 1.1.4-1
+		- base/bison		1.31-1       -> 1.35-1
+		- base/netkit-base	0.17-2       -> 0.17-3
+		- base/diffutils	2.7-1        -> 2.8.1-1
+		- base/gzip		1.2.4a-1     -> 1.2.4a-2
+		- base/vim		6.0-1        -> 6.1-1
+		- opt/ports		0.2-1        -> 0.5-1
+		- opt/openssl		0.9.6c-1     -> 0.9.6c-2
+		- opt/gdbm		1.8.0-1      -> 1.8.0-2
+		- opt/iptables		1.2.5-1      -> 1.2.6a-1
+		- opt/openssh		3.0.2p1-1    -> 3.1p1-2
+		- opt/cvs		1.11.1p1-1   -> 1.11.1p1-2
+		- opt/gdb		5.1-1        -> 5.1.1-1
+		- opt/bftpd		1.0.22-1     -> 1.0.22-2
+		- opt/xfree86		4.1.0-2      -> 4.2.0-2
+		- opt/gdk-pixbuf	0.14.0-1     -> 0.16.0-1
+		- opt/dialog		0.9a-20011202-1 -> 0.9a-20020309a-1
+		- opt/gtk		1.2.10-1     -> 1.2.10-2
+		- opt/imlib		1.9.11-1     -> 1.9.13-1
+		- opt/esd		0.2.23-1     -> 0.2.24-1
+		- opt/ppp		2.4.1b2-1    -> 2.4.1-1
+		- opt/libstdc++-compat	2.9-2.1-1    -> 2.9-2.1-2
+		- opt/dhcpcd		1.3.21-pl2-1 -> 1.3.22-pl1-1
+		- opt/emacs		21.1-1       -> 21.2-1
+		- opt/webfs		1.16-1       -> 1.17-1
+		- opt/unzip		5.42-1       -> 5.50-2
+		- opt/xchat		1.8.7-1      -> 1.8.8-1
+		- opt/xmms		1.2.6-1      -> 1.2.7-1
+	- New packages:
+		- opt/freetype		1.3.1-2
+		- opt/mozilla		0.9.9-1
+		- opt/libidl		0.6.8-1
+		- opt/zip		2.3-1
+		- opt/ttmkfdir		1.0-1
+        - Removed packages:
+		- opt/netscape		(replaced by mozilla, moved to contrib)
+
+0.9.2	- Released 2002-01-20
+	- ISO boot kernel improvments:
+		- Ext3fs support.
+		- USB keyboard support.
+		- Uses tmpfs instead of ramfs for /tmp and /var.
+	- Package category "superf" removed (some packages were moved
+	  into "opt" and the rest into "contrib").
+	- Updated packages:
+		- base/linux		2.4.10     -> 2.4.17
+		- base/bash		2.05-1     -> 2.05a-1
+		- base/tcsh		6.11-1     -> 6.11-2
+		- base/readline		4.2-2      -> 4.2a-1
+		- base/modutils		2.4.9-1    -> 2.4.12-1
+		- base/sysvinit		2.82-1     -> 2.84-1
+		- base/pkgutils		3.2.0-1    -> 4.0-1
+		- base/devfsd		1.3.18-1   -> 1.3.21-1
+		- base/shadow		20001016-1 -> 4.0.0-1
+		- base/lilo		22.0-1     -> 22.1-1
+		- base/util-linux	2.11k-1    -> 2.11n-1
+		- base/bin86		0.16.0-1   -> 0.16.1-1
+		- base/file		3.36-1     -> 3.37-1
+		- base/traceroute	1.4a7-1    -> 1.4a12-1
+		- base/bsdinit		2.0-1      -> 2.1-1
+		- base/man		1.5i2-1    -> 1.5j-1
+		- base/man-pages	1.40-1     -> 1.47-1
+		- base/psmisc		20.1-2     -> 20.2-1
+		- base/wget		1.7-1      -> 1.8.1-1
+		- base/libdb		3.3.11-1   -> 4.0.14-1
+		- base/reiserfsprogs	3.x.0j-1   -> 3.x.1a-1
+		- base/bison		1.28-1     -> 1.31-1
+		- opt/openssh		2.9.9p2-1  -> 3.0.2p1-1
+		- opt/openssl		0.9.6a-1   -> 0.9.6c-1
+		- opt/iptables		1.2.3-1    -> 1.2.5-1
+		- opt/linux-identd	1.0-1      -> 1.1-1
+		- opt/libpng		1.2.0-1    -> 1.2.1-1
+		- opt/libtiff		3.5.6-1    -> 3.5.7-1
+		- opt/xfree86		4.1.0-1    -> 4.1.0-2
+		- opt/windowmaker	0.65.1-1   -> 0.80.0-1
+		- opt/pine		4.40-1     -> 4.44-1
+		- opt/gdb		5.0-1      -> 5.1-1
+		- opt/bftpd		1.0.21-1   -> 1.0.22-1
+		- opt/netscape		4.78-1     -> 4.79-1
+		- opt/rdate		1.0-1      -> 1.1-1
+		- opt/hdparm		4.1-1      -> 4.6-1
+		- opt/emacs		20.7-5     -> 21.1-1
+		- opt/webfs		1.13-1     -> 1.16-1
+		- opt/dialog		0.9a-20010811-1 -> 0.9a-20011202-1
+		- opt/gdk-pixbuf	0.11.0-1   -> 0.13.0-1
+		- opt/rpm2targz		1.0.1-1    -> 1.0.2-1
+		- opt/bindutils		9.1.3-1    -> 9.2.0-1
+		- opt/xmms		1.2.5-1    -> 1.2.6-1
+		- opt/xchat		1.8.4-1    -> 1.8.7-1
+		- opt/libogg		1.0rc2-1   -> 1.0rc3-1
+		- opt/libvorbis		1.0rc2-1   -> 1.0rc3-1
+	- New packages:
+		- opt/ports		0.2-1
+		- opt/cvsup		16.1e-1
+		- opt/portmap		5beta-1
+		- opt/nfs-utils		0.3.3-1
+		- opt/dhcpcd		1.3.21-pl2-1
+		- opt/ppp		2.4.1b2-1
+		- opt/audiofile		0.2.3-1
+		- opt/esd		0.2.23-1
+	- Removed packages:
+		- opt/libproplist	(not used by WindowMaker any more)
+		- superf/wavplay	(replaced by esdplay in opt/esd)
+
+0.9.1	- Released 2001-10-03
+	- Updated packages:
+		- base/linux		2.4.6     -> 2.4.10
+		- base/glibc		2.2.3-2   -> 2.2.4-1
+		- base/gcc		2.95.3-1  -> 2.95.3-2
+		- base/sysvinit		2.78-1    -> 2.82-1
+		- base/devfsd		1.3.11-1  -> 1.3.18-1
+		- base/e2fsprogs	1.22-1    -> 1.25-1
+		- base/modutils		2.4.6-1   -> 2.4.9-1
+		- base/vim		5.8-1     -> 6.0-1
+		- base/bsdinit		1.0.5-1   -> 2.0-1
+		- base/pkgutils		3.1.0-1   -> 3.2.0-1
+		- base/autoconf		2.50-1    -> 2.52-1
+		- base/automake		1.4-1     -> 1.5-1
+		- base/util-linux	2.11g-1   -> 2.11k-1
+		- base/sendmail		8.11.4-2  -> 8.11.6-1
+		- base/lilo		21.7.5-1  -> 22.0-1
+		- base/tcsh		6.10.01-1 -> 6.11-1
+		- base/readline		4.2-1     -> 4.2-2
+		- base/tar		1.13-1    -> 1.13-2
+		- base/groff		1.17.1-1  -> 1.17.2-1
+		- base/file		3.35-1    -> 3.36-1
+		- base/dcron		2.3.3-4   -> 2.3.3-6
+		- base/netkit-base	0.17-1    -> 0.17-2
+		- base/libdb		3.2.9-2   -> 3.3.11-1
+		- base/libtool		1.4-1     -> 1.4.2-1
+		- base/man-pages	1.38-1    -> 1.40-1
+		- base/psmisc		20.1-1    -> 20.1-2
+		- base/ed		0.2-1     -> 0.2-2
+		- base/which		2.12-1    -> 2.13-1
+		- base/man		1.5i1-1   -> 1.5i2-1
+		- opt/libpng		1.0.12-1  -> 1.2.0-1
+		- opt/windowmaker	0.65.0-1  -> 0.65.1-1
+		- opt/pine		4.33-2    -> 4.40-1
+		- opt/fetchmail		5.8.0-1   -> 5.9.0-1
+		- opt/bftpd		1.0.20-1  -> 1.0.21-1
+		- opt/webfs		1.12-1    -> 1.13-1
+		- opt/dialog		0.9a-20010527-1 -> 0.9a-20010811-1
+		- opt/strace		4.3-1     -> 4.4-1
+		- opt/procmail		3.21.1-1  -> 3.22-1
+		- opt/netscape		4.77-3    -> 4.78-1
+		- opt/openssh		2.9p2-1   -> 2.9.9p2-1
+		- superf/xchat		1.8.0-1   -> 1.8.4-1
+		- superf/xawtv		3.55-1    -> 3.62-1
+		- superf/xmms		1.2.4-3   -> 1.2.5-1
+		- superf/imlib		1.9.10-1  -> 1.9.11-1
+		- superf/libogg		1.0beta4-1 -> 1.0rc2-1
+		- superf/libvorbis	1.0beta4-1 -> 1.0rc2-1
+	- New packages:
+		- opt/iptables		1.2.3-1
+		- opt/linux-identd	1.0-1
+	- Removed packages:
+		- superf/gnapster	1.5.0-1
+
+0.9	- Released 2001-07-07
+	- Updated packages:
+		- base/linux		2.4.5    -> 2.4.6
+		- base/glibc		2.2.3-1  -> 2.2.3-2
+		- base/binutils		2.11-1   -> 2.11.2-1
+		- base/pkgutils		3.0.6-1  -> 3.1.0-1
+		- base/findutils	4.1-1    -> 4.1.7-1
+		- base/util-linux	2.11d-1  -> 2.11g-1
+		- base/e2fsprogs	1.20-1   -> 1.22-1
+		- base/dcron		2.3.3-3  -> 2.3.3-4
+		- base/man-pages	1.37-1   -> 1.38-1
+		- base/groff		1.17-1   -> 1.17.1-1
+		- base/libdb		3.2.9-1  -> 3.2.9-2
+		- base/bsdinit		1.0.4-1  -> 1.0.5-1
+		- base/etc		1.0.2-1  -> 1.0.3-1
+		- base/sendmail		8.11.4-1 -> 8.11.4-2
+		- base/sh-utils		2.0-2	 -> 2.0-3
+		- base/filesystem	1.0.3-1  -> 1.0.4-1
+		- opt/bindutils		9.1.2-1  -> 9.1.3-1
+		- opt/libpng		1.0.11-1 -> 1.0.12-1
+		- opt/netscape		4.77-2   -> 4.77-3
+		- opt/emacs		20.7-4   -> 20.7-5
+		- opt/openssh		2.9p1-1  -> 2.9p2-1
+		- opt/procmail		3.15.1-1 -> 3.21-1
+		- superf/xchat		1.6.4-2  -> 1.8.0-1
+		- superf/xawtv		3.50-1   -> 3.55-1
+		- superf/mixer.app	1.6.0-2  -> 1.7.0-1
+		- superf/temperature.app 1.0-2   -> 1.2-1
+	- New packages:
+		- base/shadow		20001016-1
+		- base/vim		5.8-1
+		- opt/cdrdao		1.1.5-1
+		- opt/libstdc++-compat	2.9-2.1-1
+		- superf/wmmail.app	0.64-1
+	- Removed packages:
+		- base/elvis		2.1.4-1 (replaced by vim)
+		- opt/indent		2.2.6-1
+		- superf/bonnie		1.2-1
+
+0.8	- Released 2001-06-10
+	- Updated packages:
+		- base/linux		2.4.3    -> 2.4.5
+		- base/glibc		2.2.1-2  -> 2.2.3-1
+		- base/bash		2.04-1   -> 2.05-1
+		- base/readline		4.1-2    -> 4.2-1
+		- base/pkgutils		3.0.5-1  -> 3.0.6-1
+		- base/util-linux	2.11b-1  -> 2.11d-1
+		- base/binutils		2.10.1-1 -> 2.11-1
+		- base/net-tools	1.59-1   -> 1.60-1
+		- base/tcsh		6.10-1   -> 6.10.01-1
+		- base/groff		1.15-1   -> 1.17-1
+		- base/libtool		1.3.5-1  -> 1.4-1
+		- base/autoconf		2.13-1   -> 2.50-1
+		- base/modutils		2.4.5-1  -> 2.4.6-1
+		- base/fileutils	4.0-1    -> 4.1-1
+		- base/man-pages	1.35-1   -> 1.37-1
+		- base/man		1.5i-1   -> 1.5i1-1
+		- base/e2fsprogs	1.19-2   -> 1.20-1
+		- base/file		3.34-1   -> 3.35-1
+		- base/lilo		21.7.3-1 -> 21.7.5-1
+		- base/kbd		1.05-1   -> 1.06-1
+		- base/sendmail		8.11.3-1 -> 8.11.4-1
+		- base/bin86		0.15.4-1 -> 0.16.0-1
+		- base/perl		5.6.0-2  -> 5.6.1-1
+		- base/dcron		2.3.3-2  -> 2.3.3-3
+		- base/filesystem	1.0.2-1  -> 1.0.3-1
+		- base/etc		1.0.1-1  -> 1.0.2-1
+		- opt/xfree86		4.0.3-1  -> 4.1.0-1
+		- opt/windowmaker	0.64.0-1 -> 0.65.0-1
+		- opt/emacs		20.7-3   -> 20.7-4
+		- opt/pine		4.33-1   -> 4.33-2
+		- opt/bindutils		9.1.1-1  -> 9.1.2-1
+		- opt/fetchmail		5.6.0-1  -> 5.8.0-1
+		- opt/openssh		2.5.2p2-1 -> 2.9p1-1
+		- opt/openssl		0.9.6-1  -> 0.9.6a-1
+		- opt/libpng		1.0.10-1 -> 1.0.11-1
+		- opt/cvs		1.11-1   -> 1.11.1p1-1
+		- opt/cdrecord		renamed to opt/cdrtools
+		- opt/cdrtools		1.9-1    -> 1.10-1
+		- opt/libgtk		1.2.9-1  -> 1.2.10-1
+		- opt/imlib		1.9.9-1  -> 1.9.10-1
+		- opt/netscape		4.76-1   -> 4.77-1
+		- opt/bftpd		1.0.17-1 -> 1.0.20-1
+		- opt/strace		4.2-1    -> 4.3-1
+		- opt/webfs		1.6-1    -> 1.12-1
+		- opt/wget		1.6-1    -> 1.7-1
+		- opt/dialog		0.9a-1   -> 0.9a-20010527-1
+		- superf/xmms		1.2.4-2  -> 1.2.4-3
+		- superf/gnapster	1.4.2-1  -> 1.5.0-1
+		- superf/mixer.app	1.6.0-1  -> 1.6.0-2
+		- superf/temperature.app 1.0-1   -> 1.0-2
+		- superf/xchat		1.6.4-1  -> 1.6.4-2
+	- New packages:
+		- base/reiserfsprogs	3.x.0j-1
+		- opt/indent		2.2.6-1
+		- opt/gdbm		1.8.0-1
+		- opt/gdk-pixbuf	0.11.0-1
+		- superf/xawtv		3.50-1
+		- superf/gqview		0.10.1-1
+		- superf/wmclock	1.0.12.2-1
+		- superf/libogg		1.0beta4-1
+		- superf/libvorbis	1.0beta4-1
+
+0.7	- Released 2001-04-06
+	- Improved bootable ISO image.
+	- Updated packages:
+		- base/linux		2.4.1   ->  2.4.3
+		- base/pkgutils		3.0.3-1 ->  3.0.5-1
+		- base/gcc		2.95.2.1-1 -> 2.95.3-1
+		- base/e2gsprogs	1.19-1  ->  1.19-2
+		- base/filesystem	1.0.1-1	->  1.0.2-1
+		- base/file		3.33-1	->  3.34-1
+		- base/sysklogd		1.4-1	->  1.4.1-1
+		- base/bsdinit		1.0.1-1	->  1.0.4-1
+		- base/readline		4.1-1   ->  4.1-2
+		- base/perl		5.6.0-1 ->  5.6.0-2
+		- base/man-pages	1.34-1  ->  1.35-1
+		- base/man		1.5h1-1 ->  1.5i-1
+		- base/util-linux	2.11a-1 ->  2.11b-1
+		- base/dcron		2.3.3-1 ->  2.3.3-2
+		- base/modutils		2.4.2-1 ->  2.4.5-1
+		- base/bsdinit		1.0.2-1 ->  1.0.3-1
+		- base/lilo		21.7-1  ->  21.7.3-1
+		- base/psmisc		19-1    ->  20.1-1
+		- opt/xfree86		4.0.2-3 ->  4.0.3-1
+		- opt/openssh		2.5.1p2-1 -> 2.5.2p2-1
+		- opt/host		renamed to opt/bindutils
+		- opt/bindutils		9.1.0-1 ->  9.1.1-1
+		- superf/mixer.app	1.5.0-1 ->  1.6.0-1
+		- superf/temperature.app 0.4-1  ->  1.0-1
+
+0.6	- Released 2001-03-11
+	- Bootable ISO image is now available.
+	- Added package group superf (superfluous), moved some
+	  packages from opt into it.
+	- Improved package installation script.
+	- Updated packages:
+		- base/pkgutils		3.0.2-1  ->  3.0.3-1
+		- base/util-linux	2.10s-1  ->  2.11a-1
+		- opt/libgtk		1.2.8-1  ->  1.2.9-1
+		- opt/hdparm		3.9-1    ->  4.1-1
+
+0.5.4	- Released 2001-03-04
+	- Changed/Improved package build procedure. All packages affected.
+		- pkgutils completely rewritten.
+		- pkg.conf renamed to pkg.build, merged compile() and
+		  install() into build().
+		- Added support for simple regression testing and sanity
+		  checks.
+	- Updated packages:
+		- base/pkgutils		2.0.0-1  ->  3.0.2-1
+		- base/kbd		1.04-1   ->  1.05-1
+		- base/net-tools	1.58-1   ->  1.59-1
+		- base/lilo		21.6.1-1 ->  21.7-1
+		- base/modutils		2.4.2-1  ->  2.4.3-1
+		- base/sendmail		8.11.2-2 ->  8.11.3-1
+		- opt/xchat             1.6.3-1  ->  1.6.4-1
+		- opt/fetchmail         5.6.4-1  ->  5.6.0-1
+		- opt/rdate		990821-1 ->  1.0-1
+		- opt/imlib		1.9.8-1  ->  1.9.9-1
+		- opt/libxml2		2.3.0-1  ->  2.3.3-1
+		- opt/xfree86		4.0.2-2  ->  4.0.2-3
+	- New packages:
+		- base/which		2.12-1
+		- opt/openssl		0.9.6-1
+		- opt/openssh		2.5.1p2-1
+		- opt/dialog		0.9a-1
+		- opt/bftpd		1.0.17-1
+	- Removed packages:
+		- opt/ssh		2.3.0-1 (replaced by openssh)
+
+0.5.3	- Released 2001-02-11
+	- Simplified package structure. It now looks like this:
+		- base    (Required and highly recommended packages)
+		- opt     (Optional packages)
+		- contrib (Contributed and unsupported packages)
+	- Updated packages:
+		- base/pkgutils		1.2.2-1  ->  2.0.0-1
+		- base/devfsd		1.3.10-1 ->  1.3.11-1
+		- base/sendmail		8.11.2-1 ->  8.11.2-2
+		- base/net-tools	1.54-1   ->  1.58-1
+		- opt/rpm2targz		1.0-1    ->  1.0.1-1
+		- opt/libxml		renamed to opt/libxml2
+		- opt/libxml2		2.2.12-1 ->  2.3.0-1
+		- opt/xmms		1.2.4-1  ->  1.2.4-2
+		- opt/windowmaker	0.63.1-1 ->  0.64.0-1
+		- contrib/netscape	moved to opt/netscape
+	- New packages:
+		- base/readline		4.1-1
+		- base/ed		0.2-1
+		- opt/bc		1.06-1
+		- opt/imlib		1.9.8-1
+		- opt/gnapster		1.4.2-1
+		- opt/mixer.app		1.5.0-1
+		- opt/temperature.app	0.4-1
+		- opt/libxml		1.8.11-1
+		- opt/bonnie		1.2-1
+		- opt/fetchmail		5.6.4-1
+
+0.5.2	- Released 2001-02-04
+	- Updated packages:
+		- app/pine		4.32-1   ->  4.33-1
+		- app/emacs		20.7-2   ->  20.7-3
+		- app/elvis		moved to util/elvis
+		- util/pkgutils		1.2.1-1  ->  1.2.2-1
+		- lib/libpng		1.0.8-1  ->  1.0.9-1
+		- lib/libdb		3.1.17-1 ->  3.2.9-1
+		- lib/ncurses		5.2-1    ->  5.2-2
+	- New packages:
+		- app/xmms		1.2.4-1
+		- app/xchat		1.6.3-1
+		- lib/libgtk		1.2.8-1
+		- lib/libxml		2.2.12-1
+		- contrib/netscape	4.76-1
+
+0.5.1	- Released 2001-01-30
+	- Updated packages:
+		- app/xfree86		4.0.2-1  ->  4.0.2-2
+		- app/emacs		20.7-1   ->  20.7-2
+		- util/pkgutils		1.2.0-1  ->  1.2.1-1
+		- util/util-linux 	2.10r-1  ->  2.10s-1
+		- util/modutils		2.4.1-1  ->  2.4.2-1
+		- util/sh-utils		2.0-1	 ->  2.0-2
+		- util/unzip		5.41-1	 ->  5.42-1
+		- lib/glibc		2.2.1-1  ->  2.2.1-2
+		- dev/gcc		2.95.2-1 ->  2.95.2.1-1
+		- sys/bsdinit		1.0.0-1  ->  1.0.1-1
+		- sys/filesystem	1.0.0-1  ->  1.0.1-1
+		- sys/etc		1.0.0-1  ->  1.0.1-1
+		- sys/linux		2.4.0	 ->  2.4.1
+	- New packages:
+		- app/windowmaker	0.63.1-1
+		- app/elvis		2.1.4-1
+		- lib/libproplist	0.10.1-1
+		- utils/cdrecord	1.9-1
+		- net/webfs		1.6-1
+
+0.5	- Released 2001-01-20
+	- First official/public version.
+
+0.1-0.4	- Development started 2000-05-10
+	- No change log was maintained during this time.
+
+# vim:noexpandtab:ts=8

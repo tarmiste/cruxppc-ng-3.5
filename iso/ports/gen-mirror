@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# gen-mirror - generate a directory tree for upload to a netinst mirror
+#
+
+usage () {
+	echo "usage: create a new mirror in <dir> like so:"
+	echo ""
+	echo "$0 <dir>"
+}
+
+if [ -z "$1" ]
+then
+	usage
+	exit
+else
+	echo -n "Generating package list... "
+	./gen-pkglist
+	echo "done."
+
+	mkdir -p "$1"/crux/{core,opt,xorg,kernel}
+	cp -v core/*/*.pkg.tar.* "$1"/crux/core/
+	cp -v opt/*/*.pkg.tar.* "$1"/crux/opt/
+	cp -v xorg/*/*.pkg.tar.* "$1"/crux/xorg/
+	cp -v packages.lst MD5SUMS "$1"/crux/
+	cp -v ../kernel/linux-*.tar.* "$1"/crux/kernel/
+
+	echo "$1 is ready to upload to your netinst mirror."
+fi

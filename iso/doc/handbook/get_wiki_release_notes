@@ -1,0 +1,20 @@
+#!/bin/bash
+# Quick hack to generate handbook.txt from pmwiki
+# Johannes Winkelmann, jw at tks6 dot net
+
+INFILE=releasenotes.in
+OUTFILE=releasenotes.txt
+CRUX_VERSION=3.5
+URL="https://crux.nu/Main/ReleaseNotes${CRUX_VERSION//\./-}?action=print"
+
+set -x
+links -dump $URL > $INFILE
+cat $INFILE|while read n; do
+	if [ -n "$intext" ]; then
+		cat
+	elif [ "$n" = "Main: ReleaseNotes${CRUX_VERSION//\./-}" ]; then
+		intext="yes";
+	fi
+done > $OUTFILE
+
+rm $INFILE

@@ -1,0 +1,8 @@
+3.1:
+
+    USB with 3.8.x+ kernels:
+        There's a strange race condition or similar when using busybox and
+         mdev to load storage modules during the installation boot. Until
+         that's fixed the X-,E-,O-, and UHCI options are builtin rather than
+         modular.
+

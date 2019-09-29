@@ -1,0 +1,5 @@
+core
+opt
+xorg
+*.pkg.tar.gz
+linux-2.6*.tar*
