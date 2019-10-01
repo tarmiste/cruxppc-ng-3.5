@@ -1483,7 +1483,7 @@ CONFIG_PREVENT_FIRMWARE_BUILD=y
 # Firmware loader
 #
 CONFIG_FW_LOADER=y
-CONFIG_EXTRA_FIRMWARE="radeon/R200_cp.bin"
+CONFIG_EXTRA_FIRMWARE="radeon/R200_cp.bin b43/ucode5.fw b43/pcm5.fw b43/b0g0initvals5.fw b43/b0g0bsinitvals5.fw"
 CONFIG_EXTRA_FIRMWARE_DIR="/lib/firmware"
 # CONFIG_FW_LOADER_USER_HELPER is not set
 CONFIG_WANT_DEV_COREDUMP=y
