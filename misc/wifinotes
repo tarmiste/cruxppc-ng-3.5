@@ -1,5 +1,5 @@
 
 # Bring up wifi
 wpa_passphrase [ESSID] [password] |sed '/#psk=/d' >> /etc/wifi.conf
-wpa_supplicant -B -D wext -i wlan0 -c /etc/wifi.conf
+wpa_supplicant -B -D nl80211,wext -i wlan0 -c /etc/wifi.conf
 dhcpcd wlan0
