@@ -1,6 +1,6 @@
 # Description: Python interpreter, version 2.7
 # URL:         http://www.python.org
-# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Maintainer:  TBA
 # Depends on:  db gdbm openssl bzip2 zlib sqlite3
 
 name=python

@@ -1,6 +1,6 @@
 # Description: Widely used set of C/C++ libraries providing Unicode and Globalization support.
 # URL: http://www.icu-project.org/
-# Maintainer: Danny Rawlins, crux at romster dot me
+# Maintainer:  TBA
 
 name=icu
 version=63.1

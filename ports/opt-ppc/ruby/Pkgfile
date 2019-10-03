@@ -1,4 +1,4 @@
-# Maintainer:  Juergen Daubert, jue at crux dot nu
+# Maintainer:  TBA
 # Description: Ruby interpreter
 # URL:         http://www.ruby-lang.org
 # Depends on:  gdbm libgmp openssl zlib libffi libyaml

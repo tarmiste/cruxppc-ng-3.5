@@ -1,6 +1,6 @@
 # Description: Mozilla Network Security Services (NSS)
 # URL:         https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS
-# Maintainer:  Fredrik Rinnestam, fredrik at rinnestam dot se
+# Maintainer:  TBA
 # Depends on:  nspr sqlite3
 
 name=nss

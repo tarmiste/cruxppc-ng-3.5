@@ -1,7 +1,6 @@
 # Description: Unique is a library for writing single instance application
 # URL: https://wiki.gnome.org/Attic/LibUnique
-# Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Packager: Jose V Beneyto, sepen at crux dot nu
+# Maintainer:  TBA
 # Depends on: gtk xorg-libxdamage
 
 name=libunique

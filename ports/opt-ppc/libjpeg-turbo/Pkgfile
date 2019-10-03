@@ -1,6 +1,6 @@
 # Description:	Library of JPEG support functions.
 # URL:		http://www.libjpeg-turbo.org/
-# Maintainer:	Fredrik Rinnestam, fredrik at crux dot nu
+# Maintainer:  TBA
 # Depends on:	cmake, nasm
 
 name=libjpeg-turbo
