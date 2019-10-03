@@ -1,7 +1,6 @@
 # Description: Yaboot is a Power Architecture bootloader for Open Firmware based machines
 # URL:         http://yaboot.ozlabs.org/
 # Maintainer:  TBA
-# Depends on:  util-linux, hfsutils, e2fsprogs, reiserfsprogs, xfsprogs, nvsetenv
 # PPC!=
 
 name=yaboot
