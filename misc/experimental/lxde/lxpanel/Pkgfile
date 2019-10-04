@@ -4,7 +4,7 @@
 # Depends on: alsa-lib libwnck keybinder lxmenu-data menu-cache libxml2 wireless-tools
 
 name=lxpanel
-version=0.9.3
+version=0.10.0
 release=1
 source=(https://downloads.sourceforge.net/lxde/$name-$version.tar.xz)
 

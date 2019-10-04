@@ -4,7 +4,7 @@
 # Depends on: gtk xorg-xrandr
 
 name=lxrandr
-version=0.3.1
+version=0.3.2
 release=1
 source=(https://downloads.sourceforge.net/lxde/lxrandr-0.3.1.tar.xz)
 
