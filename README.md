@@ -1,6 +1,6 @@
 # cruxppc-ng-3.5
 
-25Sep2019
+04Oct2019
 
 ## CRUX 3.5 port to powerpc (32bit)
 
