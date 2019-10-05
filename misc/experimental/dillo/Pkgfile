@@ -6,10 +6,12 @@
 name=dillo
 version=3.0.5
 release=1
-source=(http://www.dillo.org/download/$name-$version.tar.bz2)
+source=(http://www.dillo.org/download/$name-$version.tar.bz2
+        dillo-openssl.patch)
 
 build () {
     cd $name-$version
+    cat ../dillo-openssl.patch |patch -Np1
     ./configure --prefix=/usr \
                 --mandir=/usr/man \
                 --enable-ipv6 \
