@@ -58,7 +58,8 @@ Release Notes for CRUX PPC 3.5
    it is best to not spend the (long) time needed to build it and it's
    dependency chain.
 
-   Only a subset of opt and xorg packages have been built with CRUX PPC.
+   All of the applicable core packages have been built on powerpc but 
+   only a subset of opt and xorg packages have been built with CRUX PPC.
    Some of the packages have not been built at all, and others have had
    to be downreved to build.   opt and xorg packages particularly are a 
    work in progress for CRUX PPC.
@@ -78,4 +79,3 @@ Release Notes for CRUX PPC 3.5
    The lynx or links browser can also be installed quickly if a text based
    browser is sufficient for the users needs.
 
-   
