@@ -167,7 +167,7 @@ Introduction
    Package build scripts in  CRUX PPC (initially  in package categories *-ppc)
    are Copyright (c) by  CRUX PPC-NG Team and  licensed through the GNU General
    Public License. Other  build scripts (in  package categories core  and
-   opt) are Copyright (c) 2000-2018 by Per Liden and the CRUX development
+   opt) are Copyright (c) 2000-2019 by Per Liden and the CRUX development
    team and licensed through the GNU General Public License.
 
     GPL
@@ -210,7 +210,14 @@ Introduction
    to perform the installation of the CRUX-PPC files.   Gentoo, in 
    particular, produces a bootable ppc iso image that is intended to 
    install gentoo but can also be used, to download and install 
-   the initial cruxppc root file system and kernel.
+   the initial cruxppc root file system and kernel.  Any recent install media
+   that allows the user to break into shell (e.g. rescue mode) and provides
+   tools to partition, format, extract tar archives, and chroot should work for
+   a CRUX-PPC installation.
+
+   Also if your system is already running a Linux distro and there is 
+   a spare partition for CRUX ppc, then it is quite easy to use the
+   distos tool set to install CRUX PPC into the spare partition.
 
 
   The CRUX-PPC Tarball
@@ -286,7 +293,9 @@ Introduction
 
    A sample ppc32 kernel configuration file is provided.   It can be used
    as a starting point for configuring and building a kernel for the 
-   crux ppc system.   
+   crux ppc system.   If desired, the prebuilt kernel can be installed
+   to get up and running quickly and then the user can build their
+   own kernel later as time permits.
 
    If the machine has a seperate boot partition, copy the CRUX-PPC 
    kernel into the appropriate /boot partition.
@@ -296,12 +305,25 @@ Introduction
    is satisfactory, run 'ybin' and the CRUX-PPC system will be a bootable
    option at the next reboot.
 
+   Once booted, the user should run 'dbus-uuidgen --ensure' to setup
+   the unique machine id.  The dbus package is included in the rootfs
+   and the installation script of dbus requires this step.
+
  Extra packages.
 
-   None provided at this time but as this project progresses, some precompiled
-   packages from the opt and xorg ports will be provided.  Users must build 
+   Some opt and xorg packages are provided at this time and as this 
+   project progresses, additional precompiled packages from the 
+   opt and xorg ports may be provided.  Users must build 
    and install any additional packages from /usr/opt* and /usr/opt/xorg* 
    (and /usr/port/contrib) as desired.
+
+   Note that some packages have pre or post install scripts and/or
+   README files associated with them.   The pkgadd utility does NOT
+   run these sripts (or even is aware of their existence).   When 
+   installing binary packages, the user should always check for the
+   existence of scripts or READMEs and perform the needed additional
+   steps required by the package.
+
 
  Configuring a new CRUX-PPC system
 
@@ -353,8 +375,10 @@ Introduction
    the generic version.   This is not ideal but for now is the way it
    works.   Manually deleting the generic ports where the equivalent
    powerpc specific port exists may make it easier to avoid mistakes.
+
    The prt-get tool should automatically find and use the ppc version
-   of ports when they exist.
+   of ports when they exist.   prt-get is an easier method of adding
+   packages than the pkgmk utility.
 
    
 
@@ -363,7 +387,7 @@ The Package System
   Introduction
 
    The package system (pkgutils) is made  with simplicity in mind, where  all
-   packages are plain  tar.gz files  (i.e. without  any kind  of meta  data).
+   packages are plain  tar.xz files  (i.e. without  any kind  of meta  data).
    Packages          follow          the          naming           convention
    <name>#<version>-<release>.pkg.tar.gz, where  <name> is  the name  of  the
    program, <version> is the version number of the program, and <release>  is

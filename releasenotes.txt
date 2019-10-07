@@ -11,7 +11,7 @@ Release Notes for CRUX PPC 3.5
  compatible with CRUX PPC 3.5 but are untested. Use on non-MAC machines will 
  likely require the user to improvise installation (and at the least
  will require the user to obtain/build a kernel for their machine).
- 
+
  Non supported machines:
  64bit PowerPC
 
@@ -29,7 +29,7 @@ Release Notes for CRUX PPC 3.5
    for upgrading from any earlier CRUX PPC releases to 3.5.  
 
    CRUX PPC 3.5 is released as a root filesystem tar archive.
-   An install ISO is not provided.
+   An install ISO is not provided at the current time.
 
 
   Miscellaneous notes
@@ -41,6 +41,30 @@ Release Notes for CRUX PPC 3.5
 
    CRUX PPC does not provide .signature checking on the ppc specific packages.
 
+   It is not uncommon for the footprints to mismatch when building on powerpc.
+   The package build utilities provide an option to ignore footprints. 
+
+   The contents of core-ppc, opt-ppc, and xorg-ppc are not automatically
+   updated when 'ports -u' is run.  For now, the user will have to 
+   manually pull their contents from this repository and update their
+   system with any changes.
+
+   On some monitors, the left most characters are not visible.  Until this
+   is solved, a workaround is to install the xorg server packages and then
+   run 'startx'.  The whole output will then be visible in the x windows.
+
  
   Tips
 
+   Package build times can be quite long even on faster powerpc machines.
+   Allow for some hours (maybe days on slower machines) when building 
+   big packages.
+
+   For now, there is no pre-built browser provided.   The shortest path
+   to a (somewhat functional) gui browser on CRUX-PPC is the "dillo" browser. 
+   The "dillo" port is not present in 3.5 but previously existed and
+   has been adjusted for 3.5.   It can be found under "misc".
+
+   THe lynx or links browser can also be installed quickly if a character based
+   browser is sufficient for the users needs.
+   

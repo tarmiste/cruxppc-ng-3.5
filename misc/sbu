@@ -1,0 +1,2626 @@
+    <glossentry id="gSBU">
+        <acronym>SBU</acronym>
+  <!ENTITY DeviceKit-time          "0.1 SBU">
+  <!ENTITY accountsservice-time          "0.1 SBU">
+  <!ENTITY acl-time          "0.1 SBU">
+  <!ENTITY agg-time          "1.2 SBU">
+  <!ENTITY alpine-time          "1.0 SBU">
+  <!ENTITY amarok-time          "9.2 SBU">
+  <!ENTITY appdata-tools-time          "less than 0.1 SBU">
+  <!ENTITY appstream-glib-time          "0.4 SBU (with tests)">
+  <!ENTITY appstream-glib-time          "0.1 SBU (with tests)">
+  <!ENTITY ash-time          "less than 0.1 SBU">
+  <!ENTITY attr-time          "0.1 SBU">
+  <!ENTITY autogen-time          "0.7 SBU">
+  <!ENTITY avifile-time          "2.5 SBU">
+  <!ENTITY bazaar-time          "0.2 SBU">
+  <!ENTITY bc-time "less than 0.1 SBU (0.2 SBU if running the testsuite)">
+  <!ENTITY Beaker-time          "less than 0.1 SBU">
+  <!ENTITY blueman-time          "0.2 SBU">
+  <!ENTITY cargo-time          "1.8 SBU plus 2.4 SBU for the testsuite on a machine with 4 cores">
+  <!ENTITY celt051-time          "0.1 SBU">
+  <!ENTITY check-time          "0.1 SBU (add 3.6 SBU for the tests)">
+  <!ENTITY chromium-time          "120 SBU (with parallelism=4)">
+  <!-- Ninja defaults to parallel build unless supplying -jx, SBU measured on
+  <!ENTITY chrpath-time          "less than 0.1 SBU">
+  <!ENTITY colord-time          "0.4 SBU (without tests)">
+  <!ENTITY consolekit-time          "0.2 SBU">
+  <!ENTITY courier-time "2.62 SBU">
+  <!ENTITY curlftpfs-time          "0.6 SBU">
+  <!ENTITY cvs-time          "0.3 SBU (additional ~20 SBU to run the test suite)">
+  <!ENTITY dbus-glib-time          "0.1 SBU">
+  <!ENTITY dbus-python-time          "0.2 SBU">
+  <!ENTITY dillo-time          "0.2 SBU">
+  <!ENTITY dvb-apps-time          "0.1 SBU">
+  <!ENTITY eject-time          "less than 0.1 SBU">
+  <!ENTITY ekiga-time          "3.5 SBU">
+  <!ENTITY elfutils-time          "0.9 SBU (with tests)">
+  <!ENTITY esound-time          "0.3 SBU">
+  <!ENTITY espgs-time          "2.3 SBU (includes building and installing libgs.so)">
+  <!ENTITY expat-time          "0.1 SBU">
+  <!ENTITY farsight2-time          "0.4 SBU">
+  <!ENTITY farstream-time          "0.2 SBU">
+  <!ENTITY freetts-time          "0.3 SBU">
+  <!ENTITY funcsigs-time          "less than 0.1 SBU">
+  <!ENTITY fuse2-time          "0.1 SBU">
+  <!ENTITY galeon-time          "1.3 SBU">
+  <!ENTITY gamin-time          "0.1 SBU">
+  <!ENTITY gcab-time          "0.1 SBU (with tests)">
+  <!ENTITY gcc-ada-time          "25 SBU (with parallelism=4, add 92 SBU for tests)">
+  <!ENTITY gcc-java-time           "34 SBU (with tests and parallelism=4)">
+  <!ENTITY geoclue-time          "0.1 SBU">
+  <!ENTITY ggz-client-libs-time          "0.2 SBU">
+  <!ENTITY gimp-print-time          "0.32 SBU (additional 4.37 SBUs to run the test suite)">
+  <!ENTITY gnash-time          "11.1 SBU">
+  <!ENTITY gnet-time          "0.2 SBU">
+  <!ENTITY gnome-tweaks-time          "less than 0.1 SBU">
+  <!ENTITY gnucash-time           "2.0 SBU">
+  <!ENTITY gnucash-docs-time      "0.5 SBU">
+  <!ENTITY gnupg-time          "0.4 SBU">
+  <!ENTITY goffice-time          "1.2 SBU">
+  <!ENTITY gperf-time          "less than 0.1 SBU">
+  <!ENTITY gst-ffmpeg-time          "2.9 SBU">
+  <!ENTITY gst-plugins-bad-time          "2.0 SBU">
+  <!ENTITY gst-plugins-base-time          "1.7 SBU">
+  <!ENTITY gst-plugins-good-time          "1.2 SBU">
+  <!ENTITY gst-plugins-ugly-time          "0.3 SBU">
+  <!ENTITY gstreamer-time          "1.2 SBU">
+  <!ENTITY gsview-time          "0.1 SBU">
+  <!ENTITY gtk-xfce-engine-time          "less than 0.1 SBU">
+  <!ENTITY gtkhtml-time          "0.5 SBU">
+  <!ENTITY gtksourceview2-time          "0.3 SBU">
+  <!ENTITY gvolwheel-time          "less than 0.1 SBU">
+  <!ENTITY gwrap-time          "0.2 SBU">
+  <!ENTITY hal-time               "0.5 SBU">
+  <!ENTITY hdwids-time          "less than 0.1 SBU">
+  <!ENTITY heimdal-time          "3.9 SBU (additional 2.3 SBU to run the test suite)">
+  <!ENTITY ibus-time          "0.5 SBU">
+  <!ENTITY icedtea-sound-time          "0.1 SBU">
+  <!ENTITY icedtea-web-time          "0.3 SBU">
+  <!ENTITY ijs-time          "less than 0.1 SBU">
+  <!ENTITY inetutils-time          "0.4 SBU">
+  <!ENTITY initd-tools-time          "less than 0.1 SBU">
+  <!ENTITY intltool-time          "less than 0.1 SBU">
+  <!ENTITY ispell-time "less than 0.1 SBU">
+  <!ENTITY jadetex-time          "less than 0.1 SBU">
+  <!ENTITY jdk-time                  "12.5 SBU (for both installations)">
+  <!ENTITY jdk-build-time      "0.1 SBU">
+  <!ENTITY JS-time          "5.0 SBU">
+  <!ENTITY JS2-time          "4.2 SBU (additional 1.6 SBU for the tests)">
+  <!ENTITY js38-time          "3.3 SBU">
+  <!ENTITY js52-time          "6.4 SBU">
+  <!ENTITY juffed-time          "0.8 SBU">
+  <!ENTITY junit-time          "0.2 SBU (with documentation, using 4 cores; add maven <quote>artifacts</quote> download time)">
+  <!ENTITY keybinder3-time          "less than 0.1 SBU">
+  <!ENTITY ksh-time           "1.5 SBU">
+  <!ENTITY leafnode-time "0.1 SBU">
+  <!ENTITY lesstif-time          "4.1 SBU (includes building the test suite)">
+  <!ENTITY libXp-time          "less than 0.1 SBU">
+  <!ENTITY libart_lgpl-time          "0.1 SBU">
+  <!ENTITY libelf-time          "0.1 SBU">
+  <!ENTITY libfame-time          "0.2 SBU">
+  <!ENTITY libffi-time          "less than 0.1 SBU (additional 0.4 SBU for the tests)">
+  <!ENTITY libgee-time          "0.2 SBU">
+  <!ENTITY libggz-time          "0.1 SBU">
+  <!ENTITY libgnome-keyring-time          "0.1 SBU">
+  <!ENTITY libgtkhtml-time          "0.8 SBU">
+  <!ENTITY libidl-time          "0.1 SBU">
+  <!ENTITY libjpeg-time "0.3 SBU">
+  <!ENTITY libmikmod-time          "0.3 SBU">
+  <!ENTITY libmpeg3-time          "0.1 SBU">
+  <!ENTITY libmusicbrainz3-time          "less than 0.1 SBU">
+  <!ENTITY libnice-time          "1.6 SBU">
+  <!ENTITY liboil-time          "0.5 SBU">
+  <!ENTITY libosinfo-time          "0.2 SBU">
+  <!ENTITY libproxy-time          "0.2 SBU">
+  <!ENTITY libsexy-time          "0.2 SBU">
+  <!ENTITY libusb-compat-time          "less than 0.1 SBU">
+  <!ENTITY libvirt-glib-time          "0.4 SBU">
+  <!ENTITY libvirt-time          "1.6 SBU">
+  <!ENTITY libxfcegui4-time          "0.3 SBU">
+  <!ENTITY libzeitgeist-time          "0.1 SBU">
+  <!ENTITY libzeitgeist-time          "0.1 SBU">
+  <!ENTITY llvm-old-time          "6.9 SBU (plus 1.8 SBU for the testsuite, both with parallelism=4)">
+  <!ENTITY LPRng-time          "0.1 SBU">
+  <!ENTITY lsb-release-time          "less than 0.1 SBU">
+  <!ENTITY lxshortcut-time          "0.1 SBU">
+  <!ENTITY makedepend-time          "less than 0.1 SBU">
+  <!ENTITY mako-time          "less than 0.1 SBU">
+  <!ENTITY maven-time          "0.4 SBU">
+  <!ENTITY midori-time          "0.8 SBU">
+  <!ENTITY mod_dnssd-time          "less than 0.1 SBU">
+  <!ENTITY mx-time          "0.8 SBU">
+  <!ENTITY mysql-time          "6.3 SBU">
+  <!ENTITY nas-time          "0.3 SBU">
+  <!ENTITY ncpfs-time          "0.52 SBU">
+  <!ENTITY nepomuk-core-time          "1.9 SBU">
+  <!ENTITY nepomuk-widgets-time          "0.2 SBU">
+  <!ENTITY ninja-time          "0.2 SBU">
+  <!ENTITY notify-python-time          "less than 0.1 SBU">
+  <!ENTITY noto-fonts-time          "less than 0.1 SBU">
+  <!ENTITY npapi-sdk-time          "less than 0.1 SBU">
+  <!ENTITY obex-data-server-time          "less than 0.1 SBU">
+  <!ENTITY obexd-time          "0.2 SBU">
+  <!ENTITY opal-time          "2.0 SBU">
+  <!ENTITY openjpeg-time          "0.2 SBU">
+  <!ENTITY openobex-time          "less than 0.1 SBU">
+  <!ENTITY openquicktime-time          "0.11 SBU">
+  <!ENTITY openssl-time          "1.5 SBU (with tests)">
+  <!ENTITY openssl10-time          "1.2 SBU (with tests)">
+  <!ENTITY oxygen-fonts-time          "less than 0.1 SBU">
+  <!ENTITY oxygen-icons-time          "less than 0.1 SBU">
+  <!ENTITY pan-time          "2.3 SBU">
+  <!ENTITY pdl-time          "2.56 SBU">
+  <!ENTITY pilot-link-time          "0.4 SBU">
+  <!ENTITY pine-time          "0.6 SBU">
+  <!ENTITY pkgconfig-time          "0.3 SBU">
+  <!ENTITY poppler-014-time           "1.3 SBU">
+  <!ENTITY portmap-time          "0.01 SBU">
+  <!ENTITY ppp-time          "0.1 SBU">
+  <!ENTITY printproto-time          "less than 0.1 SBU">
+  <!ENTITY py2cairo-time          "less than 0.1 SBU">
+  <!ENTITY pyatspi2-time          "less than 0.1 SBU">
+  <!ENTITY pycrypto-time          "0.1 SBU">
+  <!ENTITY pyrex-time          "less than 0.1 SBU">
+  <!ENTITY qjson-time          "less than 0.1 SBU">
+  <!ENTITY qpopper-time "0.1 SBU">
+  <!ENTITY qscintilla-time          "0.4 SBU (using parallelism=4; with documentation)">
+  <!ENTITY qt4-time          "12 SBU, using parallelism=4">
+  <!ENTITY qt-time          "8.6 SBU">
+  <!ENTITY qtchooser-time          "less than 0.1 SBU">
+  <!ENTITY qtwebkit-time          "11 SBU (using parallelism=4)">
+  <!ENTITY qupzilla-time          "5.4 SBU">
+  <!ENTITY re-alpine-time          "1.0 SBU">
+  <!ENTITY recode-time          "0.1 SBU">
+  <!ENTITY rman-time          "0.1 SBU">
+  <!ENTITY scrollkeeper-time          "0.1 SBU">
+  <!ENTITY sddm-time          "0.6 SBU ">
+  <!ENTITY setuptools-time          "less than 0.1 SBU">
+  <!ENTITY setuptools-time          "less than 0.1 SBU (additional 2.1 SBU for tests)">
+  <!ENTITY shared-desktop-ontologies-time          "less than 0.1 SBU">
+  <!ENTITY simpleburn-time          "less than 0.1 SBU">
+  <!ENTITY slib-time          "0.5 SBU">
+  <!ENTITY slrn-time          "0.19 SBU">
+  <!ENTITY soprano-time          "0.6 SBU">
+  <!ENTITY sound-theme-freedesktop-time          "less than 0.1 SBU">
+  <!ENTITY spice-gtk-time          "0.8 SBU">
+  <!ENTITY strigi-time          "1.2 SBU">
+  <!ENTITY tcpwrappers-time          "less than 0.1 SBU">
+  <!ENTITY tetex-time          "2.1 SBU">
+  <!ENTITY texlive-time                 "9.0 SBU">
+  <!ENTITY tin-time          "0.4 SBU">
+  <!ENTITY systemd-time          "3.5 SBU">
+  <!ENTITY eudev-time          "0.3 SBU">
+  <!ENTITY udev-time          "~1.8 SBU">
+  <!ENTITY udftools-time          "0.1 SBU">
+  <!ENTITY udisks-time          "0.1 SBU">
+  <!ENTITY virtuoso-time          "3.3 SBU (additional 22 SBU to run the test suite)">
+  <!ENTITY w3m-time          "0.3 SBU">
+  <!ENTITY webkitgtk-time          "55 SBU">
+  <!ENTITY webkitgtk2-time          "50 SBU (using parallelism=4, both built, webkitgtk-3.0 takes a little longer than webkitgtk-1.0)">
+  <!ENTITY webkitgtk2-time          "80 SBU (using parallelism=4, both built, webkitgtk-3.0 takes a little longer than webkitgtk-1.0)">
+  <!ENTITY weston-time          "0.5 SBU (with tests)">
+  <!ENTITY wicd-time          "less than 0.1 SBU">
+  <!ENTITY xorg-cirrus-driver-time          "0.1 SBU">
+  <!ENTITY glamor-egl-time          "0.2 SBU">
+  <!ENTITY xorg-mach64-driver-time          "0.1 SBU">
+  <!ENTITY xorg-mga-driver-time          "0.2 SBU">
+  <!ENTITY xorg-openchrome-driver-time          "0.1 SBU">
+  <!ENTITY xorg-r128-driver-time          "0.1 SBU">
+  <!ENTITY xorg-savage-driver-time          "0.1 SBU">
+  <!ENTITY xorg-sis-driver-time          "0.2 SBU">
+  <!ENTITY xorg-tdfx-driver-time          "less than 0.1 SBU">
+  <!ENTITY xorg-vesa-driver-time          "less than 0.1 SBU">
+  <!ENTITY xorg-vmmouse-driver-time          "less than 0.1 SBU">
+  <!ENTITY x7proto-time          "0.8 SBU">
+  <!ENTITY xchat-time          "0.4 SBU">
+  <!ENTITY xfce4-mixer-time          "0.2 SBU">
+  <!ENTITY xfce4-xkb-plugin-time          "less than 0.1 SBU">
+  <!ENTITY xinetd-time          "less than 0.1 SBU">
+  <!ENTITY xpdf-time          "0.5 SBU">
+  <!ENTITY xulrunner-time          "46 SBU">
+   <!ENTITY extra-cmake-modules-time          "less than 0.1 SBU">
+  <!ENTITY libdbusmenu-qt-time          "0.4 SBU">
+  <!ENTITY phonon-backend-gstreamer-time          "0.1 SBU (Using paraleleism=4)">
+  <!ENTITY phonon-backend-vlc-time          "0.1 SBU (Using parallism=4)">
+  <!ENTITY phonon-time          "0.2 SBU (Using parallelism=4)">
+  <!ENTITY polkit-qt-time          "0.1 SBU">
+  <!ENTITY TEMPLATE-time          "?? SBU">
+<!-- SBU should be rounded to integer if greater than 10, to one
+     decimal if below 10, and should be "less than 0.1 SBU" if
+     below 0.1. If the SBU without parallelisation is too long,
+  <title>SBU values in BLFS</title>
+    Build Units (SBUs).   These times are relative to the time it took to build
+    tested on multi-core systems have SBU times listed with comments such
+    <para>Where even a parallel build takes more than 15 SBU, on certain
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+      (over 119 SBU at -j4) and use a very large amount of disk space
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <command moreinfo="none">g++</command> also takes longer than the estimated SBU shown.
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+     [bdubbs 2019-92-09]  Reduced SBU and disk space for libraries only.
+     the book, but with the configure command as below, I got 179 MB (2.3 SBU)
+     (and 472 KB (0.8 SBU) for the validation suite).
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+      The test SBU highly depends on the speed of the internet connection.
+      Profile Guided Optimizations). This adds around 20 SBU, but can
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+      languages installed on your machine, so the disk space and SBU values
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+      Valgrind (up to 10%), but build time increases to about 5.5 SBU.
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+      builder at around 290 SBU and over a gigabyte of disk space, and you
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+      in test time by each failed test is about 10%. Tests SBU above was
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+      over 3700 tests are run in about 14 SBU with N=4.  Three tests 
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+            Estimated build time
+            Estimated build time
+          Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated GLU build time
+          Estimated build time
+          Estimated build time
+      Window, the tests should take less than 0.3 SBU.
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+      <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+      <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        As with other large packages which use C++ (or rust), the SBU times
+        of real memory is used during the final link and the SBUs can increase
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+  <!ENTITY gimp-help-time       "0.8 SBU (en only), average of 1.2 SBU per
+                                 SBU, with parallelism=8, for all languages">
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+    <emphasis>very</emphasis> long time (up to 300 SBUs) and use about 375 MB
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+      "Package Information" do not include the download SBU. Some samples may
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+    (version 5.2.15 in June 2019) this needed 75 SBU and 13.5 GB
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+    <glossentry id="gSBU">
+        <acronym>SBU</acronym>
+  <title>SBU values in BLFS</title>
+    Build Units (SBUs).   These times are relative to the time it took to build
+    tested on multi-core systems have SBU times listed with comments such
+    <para>Where even a parallel build takes more than 15 SBU, on certain
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+      (over 119 SBU at -j4) and use a very large amount of disk space
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <command moreinfo="none">g++</command> also takes longer than the estimated SBU shown.
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+     [bdubbs 2019-92-09]  Reduced SBU and disk space for libraries only.
+     the book, but with the configure command as below, I got 179 MB (2.3 SBU)
+     (and 472 KB (0.8 SBU) for the validation suite).
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+      The test SBU highly depends on the speed of the internet connection.
+      Profile Guided Optimizations). This adds around 20 SBU, but can
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+      languages installed on your machine, so the disk space and SBU values
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+      Valgrind (up to 10%), but build time increases to about 5.5 SBU.
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+      builder at around 290 SBU and over a gigabyte of disk space, and you
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+      in test time by each failed test is about 10%. Tests SBU above was
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+      over 3700 tests are run in about 14 SBU with N=4.  Three tests 
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+            Estimated build time
+            Estimated build time
+          Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+            Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated GLU build time
+          Estimated build time
+          Estimated build time
+      Window, the tests should take less than 0.3 SBU.
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+      <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+      <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        As with other large packages which use C++ (or rust), the SBU times
+        of real memory is used during the final link and the SBUs can increase
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+  <!ENTITY gimp-help-time       "0.8 SBU (en only), average of 1.2 SBU per
+                                 SBU, with parallelism=8, for all languages">
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+    <emphasis>very</emphasis> long time (up to 300 SBUs) and use about 375 MB
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+      "Package Information" do not include the download SBU. Some samples may
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+    (version 5.2.15 in June 2019) this needed 75 SBU and 13.5 GB
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+        <para>Estimated build time
+          Estimated build time
+        <para>Estimated build time
+          Estimated build time
+    <glossentry id="gSBU">
+        <acronym>SBU</acronym>
+  <!ENTITY ark-time          "0.4 SBU">
+  <!ENTITY gwenview-time          "1.2 SBU">
+  <!ENTITY kate-time          "3.0 SBU">
+  <!ENTITY kdepim-runtime-time          "7.4 SBU">
+  <!ENTITY kdepim-time          "28 SBU">
+  <!ENTITY kdeplasma-addons-time          "3.0 SBU">
+  <!ENTITY kmix-time          "1.0 SBU">
+  <!ENTITY konsole-time          "0.6 SBU">
+  <!ENTITY libkdcraw-time          "0.1 SBU">
+  <!ENTITY libkexiv2-time          "0.3 SBU">
+  <!ENTITY okular-time          "1.4 SBU">
+  <!ENTITY akonadi-time          "3.5 SBU, additional 1.5 SBU for tests">
+  <!ENTITY attica-time          "0.5 SBU">
+  <!ENTITY automoc4-time          "0.1 SBU">
+  <!ENTITY baloo-widgets-time          "0.1 SBU">
+  <!ENTITY baloo-time          "1.8 SBU">
+  <!ENTITY kactivities-time          "0.8 SBU">
+  <!ENTITY kde-base-artwork-time          "less than 0.1 SBU">
+  <!ENTITY kde-baseapps-time          "4.2 SBU">
+  <!ENTITY kde-runtime-time          "4.3 SBU">
+  <!ENTITY kde-workspace-time          "13.3 SBU">
+  <!ENTITY kdelibs-time          "18 SBU">
+  <!ENTITY kdepimlibs-time          "8.3 SBU">
+  <!ENTITY kfilemetadata-time          "0.2 SBU">
+  <!ENTITY polkit-kde-agent-time          "0.1 SBU">
+  <!ENTITY qimageblitz-time          "0.1 SBU">
+  <!ENTITY gnome-mime-data-time          "0.1 SBU">
+  <!ENTITY gnome-vfs-time          "1.0 SBU">
+  <!ENTITY libbonobo-time          "0.6 SBU">
+  <!ENTITY libbonoboui-time          "0.9 SBU">
+  <!ENTITY libgnome-time          "0.2 SBU">
+  <!ENTITY libgnomecanvas-time          "0.3 SBU">
+  <!ENTITY libgnomeui-time          "0.7 SBU">
+  <!ENTITY ORBit2-time          "0.6 SBU">
+  <!ENTITY at-spi-time          "0.4 SBU">
+  <!ENTITY bug-buddy-time          "0.4 SBU">
+  <!ENTITY dasher-time          "1.0 SBU">
+  <!ENTITY deskbar-applet-time          "0.3 SBU">
+  <!ENTITY eel-time          "0.5 SBU">
+  <!ENTITY gail-time          "0.5 SBU">
+  <!ENTITY gal-time "1.5 SBU">
+  <!ENTITY gconf-editor-time          "0.2 SBU">
+  <!ENTITY ggv-time          "0.3 SBU">
+  <!ENTITY gnome-audio-time          "less than 0.1 SBU">
+  <!ENTITY gnome-keyring-manager-time          "0.2 SBU">
+  <!ENTITY gnome-mag-time          "0.2 SBU">
+  <!ENTITY gnome-mount-time          "0.1 SBU">
+  <!ENTITY gnome-netstatus-time          "0.5 SBU">
+  <!ENTITY gnome-speech-time          "0.1 SBU">
+  <!ENTITY gnome-system-tools-time          "0.4 SBU">
+  <!ENTITY gnome-themes-time          "0.2 SBU">
+  <!ENTITY gnome-vfs-monikers-time          ".1 SBU">
+  <!ENTITY gnome-volume-manager-time          "0.1 SBU">
+  <!ENTITY gnopernicus-time          "0.7 SBU">
+  <!ENTITY gok-time          "0.5 SBU">
+  <!ENTITY gpdf-time "0.5 SBU">
+  <!ENTITY hamster-applet-time          "0.1 SBU">
+  <!ENTITY java-access-bridge-time          "1.3 SBU">
+  <!ENTITY libgail-gnome-time          "0.1 SBU">
+  <!ENTITY libgnomecups-time          "0.1 SBU">
+  <!ENTITY libgnomeprint-time          "0.6 SBU">
+  <!ENTITY libgnomeprintui-time          "0.3 SBU">
+  <!ENTITY liboobs-time          "0.2 SBU">
+  <!ENTITY nautilus-cd-burner-time          "0.3 SBU">
+<!ENTITY nautilus-media-time "0.22 SBU">
+  <!ENTITY seahorse-plugins-time          "1.0 SBU">
+  <!ENTITY system-tools-backends-time          "less than 0.1 SBU">
+  <!ENTITY accerciser-time          "0.4 SBU">
+  <!ENTITY aisleriot-time          "0.5 SBU">
+  <!ENTITY alacarte-time          "less than 0.1 SBU">
+  <!ENTITY anjuta-time          "4.0 SBU">
+  <!ENTITY cantarell-fonts-time          "less than 0.1 SBU">
+  <!ENTITY caribou-time          "less than 0.1 SBU">
+  <!ENTITY caribou-time          "0.1 SBU">
+  <!ENTITY colord-gtk-time          "less than 0.1 SBU">
+  <!ENTITY devhelp-time          "0.3 SBU">
+  <!ENTITY empathy-time          "1.1 SBU">
+  <!ENTITY epiphany-extensions-time       "0.2 SBU">
+  <!ENTITY evolution-data-server-time          "2.2 SBU">
+  <!ENTITY evolution-time          "4.5 SBU">
+  <!ENTITY folks-time          "0.7 SBU">
+  <!ENTITY gdl-time          "0.2 SBU">
+  <!ENTITY gdlmm-time          "0.2 SBU">
+  <!ENTITY gdm-time          "0.5 SBU">
+  <!ENTITY geocode-glib-time          "less than 0.1 SBU">
+  <!ENTITY ghex-time          "0.3 SBU">
+  <!ENTITY glade-time          "0.7 SBU">
+  <!ENTITY gnome-applets-time          "1.8 SBU">
+  <!ENTITY gnome-backgrounds-time          "less than 0.1 SBU">
+  <!ENTITY gnome-bluetooth-time          "0.2 SBU">
+  <!ENTITY gnome-boxes-time          "0.3 SBU">
+  <!ENTITY gnome-color-manager-time          "0.2 SBU">
+  <!ENTITY gnome-contacts-time          "0.2 SBU">
+  <!ENTITY gnome-control-center-time          "1.0 SBU">
+  <!ENTITY gnome-devel-docs-time          "1.8 SBU">
+  <!ENTITY gnome-dictionary-time          "0.2 SBU">
+  <!ENTITY gnome-disk-utility-time          "0.1 SBU">
+  <!ENTITY gnome-doc-utils-time          "0.2 SBU">
+  <!ENTITY gnome-documents-time          "0.4 SBU">
+  <!ENTITY gnome-font-viewer-time          "0.1 SBU">
+  <!ENTITY gnome-games-time                     "1.2 SBU">
+  <!ENTITY gnome-js-common-time          "0.1 SBU">
+  <!ENTITY gnome-media-time          "0.5 SBU">
+  <!ENTITY gnome-menus-time          "less than 0.1 SBU">
+  <!ENTITY gnome-online-accounts-time          "0.2 SBU">
+  <!ENTITY gnome-panel-time          "0.6 SBU">
+  <!ENTITY gnome-power-manager-time          "less than 0.1 SBU">
+  <!ENTITY gnome-screensaver-time          "0.1 SBU">
+  <!ENTITY gnome-search-tool-time          "0.1 SBU">
+  <!ENTITY gnome-session-time          "0.3 SBU">
+  <!ENTITY gnome-settings-daemon-time          "0.7 SBU">
+  <!ENTITY gnome-shell-time          "0.6 SBU">
+  <!ENTITY gnome-system-log-time          "0.1 SBU">
+  <!ENTITY gnome-tweak-tool-time          "less than 0.1 SBU">
+  <!ENTITY gnome-user-docs-time          "1.0 SBU">
+  <!ENTITY gnome-user-share-time          "0.1 SBU">
+  <!ENTITY grilo-plugins-time         "0.3 SBU">
+  <!ENTITY grilo-time         "0.2 SBU">
+  <!ENTITY gssdp-time          "0.1 SBU">
+  <!ENTITY gtk-vnc-time          "0.2 SBU">
+  <!ENTITY gtkhtml-time          "0.5 SBU">
+  <!ENTITY gtksourceviewmm-time          "0.5 SBU">
+  <!ENTITY gupnp-av-time          "0.1 SBU">
+  <!ENTITY gupnp-dlna-time          "0.1 SBU">
+  <!ENTITY gupnp-vala-time          "less than 0.1 SBU">
+  <!ENTITY gupnp-time          "0.2 SBU">
+  <!ENTITY libchamplain-time          "0.4 SBU">
+  <!ENTITY libgda-time          "3.8 SBU">
+  <!ENTITY libgdata-time          "0.5 SBU">
+  <!ENTITY libgnomekbd-time          "0.1 SBU">
+  <!ENTITY libgweather-time          "1.8 SBU">
+  <!ENTITY libgxps-time          "0.2 SBU">
+  <!ENTITY liboauth-time          "less than 0.1 SBU">
+  <!ENTITY libpwquality-time          "less than 0.1 SBU">
+  <!ENTITY librest-time          "0.2 SBU">
+  <!ENTITY libunique3-time          "0.2 SBU">
+  <!ENTITY libwacom-time          "less than 0.1 SBU">
+  <!ENTITY metacity-time          "0.4 SBU">
+  <!ENTITY mobile-broadband-provider-info-time          "less than 0.1 SBU">
+  <!ENTITY mousetweaks-time          "less than 0.1 SBU">
+  <!ENTITY mutter-time          "0.4 SBU">
+  <!ENTITY nautilus-sendto-time          "less than 0.1 SBU">
+  <!ENTITY nemiver-time          "2.5 SBU">
+  <!ENTITY orca-time          "0.2 SBU">
+  <!ENTITY rygel-time          "1.0 SBU">
+  <!ENTITY seed-time          "0.1 SBU">
+  <!ENTITY sound-juicer-time          "0.6 SBU">
+  <!ENTITY sushi-time          "0.3 SBU">
+  <!ENTITY telepathy-farstream-time          "0.1 SBU">
+  <!ENTITY telepathy-glib-time          "1.2 SBU">
+  <!ENTITY telepathy-logger-time          "0.2 SBU">
+  <!ENTITY telepathy-mission-control-time          "0.2 SBU">
+  <!ENTITY totem-time          "0.6 SBU">
+  <!ENTITY tracker-time          "1.5 SBU">
+  <!ENTITY vinagre-time          "0.2 SBU">
+  <!ENTITY vino-time          "0.2 SBU">
+  <!ENTITY yelp-tools-time          "less than 0.1 SBU">
+  <!ENTITY zenity-time          "0.1 SBU">
+  <!ENTITY lxpolkit-time          "0.1 SBU">
+  <!ENTITY koffice-time          "44 SBU (additional 4.4 SBU for API docs)">
+  <!ENTITY openoffice-time                 "96-109 SBU (depending on configured options)">
+  <!ENTITY apr-util-time          "less than 0.1 SBU (add 0.3 SBU for tests)">
+  <!ENTITY apr-time          "0.2 SBU (add 1.7 SBU for tests)">
+  <!ENTITY aspell-time          "0.4 SBU">
+  <!ENTITY boost-time          "1.5 SBU (Using parallelism=4; add 1.1 SBU for tests)">
+      (over 119 SBU at -j4) and use a very large amount of disk space
+  <!ENTITY clucene-time          "0.8 SBU">
+  <!ENTITY dbus-glib-time          "0.1 SBU (with tests)">
+  <!ENTITY enchant-time          "0.2 SBU">
+  <!ENTITY exempi-time          "0.6 SBU (using parallelism=4; add 0.4 SBU for tests)">
+  <!ENTITY fftw-time          "1.6 SBU (using parallelism=4; add 1.9 SBU for tests)">
+  <!ENTITY glib2-time          "0.5 SBU (add 0.6 SBU for tests; both using parallelism=4)">
+  <!ENTITY glibmm-time          "1.3 SBU (Using parallelism=4; with tests)">
+  <!ENTITY gmime-time          "0.5 SBU (with tests)">
+  <!ENTITY gmime3-time          "0.3 SBU (with tests)">
+  <!ENTITY gobject-introspection-time          "0.2 SBU (Using parallelism=4; with tests)">
+  <!ENTITY grantlee-time          "1.2 SBU">
+  <!ENTITY gsl-time          "1.7 SBU (with tests, without docs)">
+  <!ENTITY gspell-time          "0.2 SBU (with tests)">
+  <!ENTITY icu-time          "0.8 SBU (add 1.9 SBU for tests)">
+        <command>g++</command> also takes longer than the estimated SBU shown.
+  <!ENTITY jansson-time          "0.1 SBU">
+  <!ENTITY js60-time          "6.6 SBU">
+  <!ENTITY json-c-time          "less than 0.1 SBU (add 1.7 SBU for tests)">
+  <!ENTITY json-glib-time          "less than 0.1 SBU (with tests)">
+  <!ENTITY keyutils-time          "less than 0.1 SBU (add 0.8 SBU for tests)">
+  <!ENTITY libaio-time          "less than 0.1 SBU">
+  <!ENTITY libarchive-time          "0.4 SBU (add 1.1 SBU for tests)">
+  <!ENTITY libassuan-time          "0.1 SBU (with tests)">
+  <!ENTITY libatasmart-time          "less than 0.1 SBU">
+  <!ENTITY libatomic_ops-time          "0.2 SBU (with tests)">
+  <!ENTITY libblockdev-time          "0.2 SBU">
+  <!ENTITY libbytesize-time          "0.1 SBU">
+  <!ENTITY libcroco-time          "0.1 SBU (with tests)">
+  <!ENTITY libdaemon-time          "0.1 SBU">
+  <!ENTITY libesmtp-time          "0.1 SBU">
+  <!ENTITY libgcrypt-time          "0.3 SBU (with docs; add 0.5 SBU for tests)">
+  <!ENTITY libgpg-error-time          "0.1 SBU (with tests)">
+  <!ENTITY libgrss-time          "0.1 SBU">
+  <!ENTITY libgsf-time          "0.3 SBU (with tests)">
+  <!ENTITY libgudev-time          "less than 0.1 SBU">
+  <!ENTITY libgusb-time          "less than 0.1 SBU (with tests)">
+  <!ENTITY libical-time          "0.2 SBU (Using parallelism=5; with tests)">
+  <!ENTITY libidn-time          "0.2 SBU (using parallelim=4)">
+  <!ENTITY libidn2-time          "0.2 SBU (with tests)">
+  <!ENTITY libiodbc-time          "0.3 SBU">
+  <!ENTITY libksba-time          "0.1 SBU (with tests)">
+  <!ENTITY liblinear-time          "less than 0.1 SBU">
+  <!ENTITY libmbim-time          "0.1 SBU (with tests)">
+  <!ENTITY libnfsidmap-time          "less than 0.1 SBU">
+  <!ENTITY libpaper-time          "less than 0.1 SBU">
+  <!ENTITY libqmi-time          "0.2 SBU (Using parallelism=4; with tests)">
+  <!ENTITY libseccomp-time          "less than 0.1 SBU (additional 2.9 SBU for tests)">
+  <!ENTITY libsigc-time          "0.2 SBU (with tests)">
+  <!ENTITY libsigsegv-time          "less than 0.1 SBU (with checks)">
+  <!ENTITY libssh2-time          "0.2 SBU (with tests)">
+  <!ENTITY libstatgrab-time          "0.1 SBU (add 1.6 SBU for tests)">
+  <!ENTITY libtasn1-time          "0.1 SBU (with tests)">
+  <!ENTITY libunique-time          "0.2 SBU">
+  <!ENTITY libunistring-time          "0.9 SBU (add 1.0 SBU for tests)">
+  <!ENTITY libusb-time          "less than 0.1 SBU">
+  <!ENTITY libuv-time          "0.1 SBU (add 0.4 SBU for tests)">
+  <!ENTITY libwacom-time          "0.1 SBU (with tests)">
+  <!ENTITY libxkbcommon-time          "0.2 SBU (with tests)">
+  <!ENTITY libxml2-time          "0.2 SBU (add 0.3 SBU for tests)">
+  <!ENTITY libxslt-time          "0.3 SBU (with tests)">
+  <!ENTITY yaml-time          "0.1 SBU (with tests)">
+  <!ENTITY lzo-time          "0.3 SBU (with tests)">
+  <!ENTITY mtdev-time          "less than 0.1 SBU">
+  <!ENTITY nodejs-time          "5.3 SBU (using parallelism=4; add 1.3 SBU for tests)">
+  <!ENTITY npth-time          "less than 0.1 SBU (with checks)">
+  <!ENTITY nspr-time          "less than 0.1 SBU">
+  <!ENTITY pcre-time          "0.3 SBU (with tests)">
+  <!ENTITY pcre2-time          "0.5 SBU (with tests)">
+  <!ENTITY popt-time          "0.1 SBU">
+  <!ENTITY pth-time          "0.2 SBU">
+  <!ENTITY ptlib-time          "0.9 SBU">
+  <!ENTITY qca-time          "0.6 SBU (using parallelism=4; add 1.0 SBU for tests)">
+  <!ENTITY talloc-time          "0.4 SBU (with tests)">
+  <!ENTITY telepathy-glib-time          "1.2 SBU">
+  <!ENTITY wayland-protocols-time          "less than 0.1 SBU (with tests)">
+  <!ENTITY wayland-time          "0.2 SBU (with tests)">
+  <!ENTITY wv-time            "0.4 SBU">
+  <!ENTITY xapian-time          "0.6 SBU (using parallelism=4; add estimated 180 SBU for tests)">
+  <!ENTITY asciidoc-time          "less than 0.1 SBU">
+  <!ENTITY bogofilter-time          "0.1 SBU">
+  <!ENTITY compface-time          "less than 0.1 SBU">
+  <!ENTITY desktop-file-utils-time          "less than 0.1 SBU">
+  <!ENTITY graphviz-time          "1.0 SBU (using parallelism=4)">
+  <!ENTITY gtk-doc-time          "0.2 SBU (with tests)">
+<!ENTITY hd2u-time          "less than 0.1 SBU">
+  <!ENTITY highlight-time          "0.3 SBU (Using paralllelism=4; with gui)">
+  <!ENTITY ibus-time          "0.5 SBU (iUsing parallelism=4; with tests)">
+  <!ENTITY imagemagick-time          "0.9 SBU - typical build with parallelism=4 (add 1.8 SBU for make check and the validation suite)">
+  <!ENTITY imagemagick6-time          "0.9 SBU (Using parallelism=4; add 1.5 SBU for tests)">
+     [bdubbs 2019-92-09]  Reduced SBU and disk space for libraries only.
+     the book, but with the configure command as below, I got 179 MB (2.3 SBU)
+     (and 472 KB (0.8 SBU) for the validation suite).
+  <!ENTITY iso-codes-time          "0.2 SBU (with tests)">
+<!ENTITY lsof-time          "less than 0.1 SBU">
+  <!ENTITY pinentry-time          "less than 0.1 SBU">
+  <!ENTITY rarian-time          "0.2 SBU">
+  <!ENTITY rep-gtk-time          "0.1 SBU">
+  <!ENTITY screen-time          "0.1 SBU">
+  <!ENTITY shared-mime-info-time          "0.1 SBU">
+  <!ENTITY sharutils-time          "0.4 SBU (with the test suite)">
+  <!ENTITY telepathy-logger-time          "0.2 SBU">
+  <!ENTITY telepathy-mission-control-time          "0.3 SBU">
+  <!ENTITY tidy-html5-time          "0.2 SBU">
+  <!ENTITY time-time          "0.1 SBU (with tests)">
+<!ENTITY tree-time          "less than 0.1 SBU">
+  <!ENTITY unixodbc-time          "0.2 SBU (using parallelism=4)">
+  <!ENTITY xdg-user-dirs-time          "less than 0.1 SBU">
+  <!ENTITY aalib-time          "0.1 SBU">
+  <!ENTITY babl-time          "less than 0.1 SBU (Using parallelism=4; with tests)">
+  <!ENTITY exiv2-time          "0.2 SBU (Using parallelism=4)">
+  <!ENTITY fontconfig-time          "0.3 SBU (with tests)">
+  <!ENTITY freetype2-time          "0.2 SBU (with additional documentation)">
+  <!ENTITY fribidi-time          "less than 0.1 SBU">
+  <!ENTITY gegl-time          "1.0 SBU (Using parallelism=4; add 0.5 SBU for tests)">
+  <!ENTITY giflib-time          "less than 0.1 SBU (with documentation)">
+  <!ENTITY glm-time          "less than 0.1 SBU">
+  <!ENTITY graphite2-time          "0.2 SBU (with tests and docs)">
+  <!ENTITY harfbuzz-time          "0.4 SBU (Using parallelism=4; add 0.4 SBU for tests)">
+  <!ENTITY jasper-time          "0.3 SBU (with tests)">
+  <!ENTITY lcms-time          "0.5 SBU">
+  <!ENTITY lcms2-time          "0.2 SBU (with the tests)">
+  <!ENTITY libexif-time          "0.2 SBU">
+  <!ENTITY libgxps-time          "0.1 SBU">
+  <!ENTITY libjpeg-time          "0.3 SBU (using parallelism=4; with tests)">
+  <!ENTITY libmng-time          "0.1 SBU">
+  <!ENTITY libmypaint-time          "less than 0.1 SBU (add 0.5 SBU for tests)">
+  <!ENTITY libpng-time          "less than 0.1 SBU (using parallelism=4; add 0.7 SBU for tests)">
+  <!ENTITY libraw-time          "0.2 SBU">
+  <!ENTITY librsvg-time          "1.8 SBU (add 1.2 SBU for tests)">
+  <!ENTITY libtiff-time          "less than 0.1 SBU (with tests)">
+  <!ENTITY libwebp-time          "0.3 SBU">
+  <!ENTITY mypaint-brushes-time          "less than 0.1 SBU">
+  <!ENTITY newt-time          "less than 0.1 SBU">
+  <!ENTITY opencv-time              "4.1 SBU (using parallelism=4)">
+  <!ENTITY openjpeg2-time          "0.3 SBU">
+  <!ENTITY pixman-time          "0.8 SBU (with tests)">
+  <!ENTITY poppler-time          "0.8 SBU (with parallelism=4, Qt5 library, and tests)">
+  <!ENTITY poppler-data-time          "less than 0.1 SBU">
+  <!ENTITY potrace-time          "less than 0.1 SBU (including tests)">
+  <!ENTITY qpdf-time          "0.4 SBU (using parallelism=4; add 1.4 SBU for tests)">
+  <!ENTITY sassc-time          "0.1 SBU">
+  <!ENTITY libsass-time          "1.4 SBU">
+  <!ENTITY apache-ant-time          "0.3 SBU (excluding download time)">
+  <!ENTITY autoconf213-time          "less than 0.1 SBU (additional 0.1 SBU for the tests)">
+  <!ENTITY cbindgen-time          "1.2 SBU (Using paralleism=4; add 0.5 SBU for tests)">
+  <!ENTITY clisp-time          "0.9 SBU (1.2 SBU with tests)">
+  <!ENTITY cmake-time          "2.6 SBU (add 3.3 SBU for tests, both using parallelism=4)">
+  <!ENTITY dbus-python-time          "0.2 SBU (both versions, with tests)">
+  <!ENTITY dejagnu-time          "less than 0.1 SBU (with tests)">
+  <!ENTITY docutils-time          "0.4 SBU">
+  <!ENTITY doxygen-time          "0.9 SBU (using parallelism=4; with tests)">
+  <!ENTITY expect-time          "0.2 SBU (with tests)">
+  <!ENTITY gc-time          "0.2 SBU (with tests)">
+  <!ENTITY gcc-time           "25 SBU (with parallelism=4, add 62 SBU for tests with parallelism=4)">
+  <!ENTITY gdb-time          "1.9 SBU (Using parallelism=4; add 66 SBU for tests, add 0.6 SBU for docs)">
+  <!ENTITY git-time          "0.4 SBU (with parallelism=4; add 9.4 SBU for tests)">
+  <!ENTITY guile-time          "3.2 SBU (Using parallelism=4; with tests)">
+  <!ENTITY Jinja2-time          "less than 0.1 SBU">
+  <!ENTITY librep-time "0.3 SBU">
+  <!ENTITY libxml2py2-time          "less than 0.1 SBU">
+  <!ENTITY llvm-time          "27 SBU (with Clang and parallelism=4, add 5 SBU for tests)">
+  <!ENTITY lua-time          "less than 0.1 SBU (with Basic tests)">
+  <!ENTITY lua-time          "less than 0.1 SBU">
+  <!ENTITY lxml-time          "2.3 SBU (add 2.2 SBU for the testsuites)">
+  <!ENTITY Mako-time          "less than 0.1 SBU">
+  <!ENTITY MarkupSafe-time          "less than 0.1 SBU">
+  <!ENTITY mercurial-time          "0.4 SBU (with docs, add 10 SBU for tests using -j4)">
+  <!ENTITY nasm-time          "0.2 SBU">
+  <!ENTITY ojdk-time                 "5.9 SBU with 4 jobs (an additional 79 SBU for tests with 4 jobs)">
+  <!ENTITY php-time          "1.9 SBU (with parallelism=4; add 2.7 SBU for tests)">
+  <!ENTITY pyatspi2-time          "less than 0.1 SBU">
+  <!ENTITY pycairo-time          "less than 0.1 SBU">
+  <!ENTITY pycryptodome-time          "0.2 SBU">
+  <!ENTITY pygments-time          "less than 0.1 SBU">
+  <!ENTITY pygobject2-time          "0.1 SBU">
+  <!ENTITY pygobject3-time          "0.1 SBU (Using parallelism=4)">
+  <!ENTITY pygtk-time          "0.7 SBU">
+  <!ENTITY python2-time          "0.7 SBU (Using parallelism=4; add 6.6 SBU for tests)">
+  <!ENTITY python3-time          "1.0 SBU (add 1.1 SBU for tests)">
+      The test SBU highly depends on the speed of the internet connection.
+      Profile Guided Optimizations). This adds around 20 SBU, but can
+  <!ENTITY pyxdg-time          "less than 0.1 SBU">
+  <!ENTITY PyYAML-time          "0.1 SBU">
+  <!ENTITY ruby-time          "1.2 SBU (using parallelism=4; add 3.8 SBU for tests; add 0.5 SBU for C API docs)">
+  <!ENTITY rust-time          "24 SBU (add 15 SBU for tests, both with 4 processors)">
+  <!ENTITY scons-time          "less than 0.1 SBU">
+  <!ENTITY scour-time          "less than 0.1 SBU">
+  <!ENTITY six-time          "less than 0.1 SBU">
+  <!ENTITY slang-time          "0.4 SBU (add 0.2 SBU for tests)">
+       make javahl
+       swig-pl
+  <!ENTITY subversion-time          "0.5 SBU (Using parallelism=4; add 2.1 SBU for bindings, 30 SBU for tests)">
+  <!ENTITY swig-time          "0.2 SBU (add 9.4 SBU for tests; both using parallelism=4)">
+      languages installed on your machine, so the disk space and SBU values
+  <!ENTITY tcl-time          "0.6 SBU (add 3.0 SBU for tests)">
+  <!ENTITY tk-time          "0.3 SBU (add 1.8 SBU for tests)">
+  <!ENTITY vala-time          "0.5 SBU (using parallelism=4; add 1.6 SBU for tests)">
+  <!ENTITY valgrind-time          "0.6 SBU (Using parallelism=4; add 11 SBU for tests)">
+      Valgrind (up to 10%), but build time increases to about 5.5 SBU.
+  <!ENTITY yasm-time          "0.1 SBU (additional 0.1 SBU for the tests)">
+  <!ENTITY accountsservice-time          "0.1 SBU">
+  <!ENTITY acpid-time          "less than 0.1 SBU">
+  <!ENTITY at-time          "less than 0.1 SBU">
+  <!ENTITY autofs-time          "0.1 SBU">
+  <!ENTITY bluez-time          "0.2 SBU (using parallelism=4; add 0.3 SBU for tests)">
+  <!ENTITY bubblewrap-time          "less than 0.1 SBU">
+  <!ENTITY colord-time          "0.1 SBU (with tests)">
+  <!ENTITY cpio-time          "0.3 SBU (with tests and docs)">
+  <!ENTITY cups-pk-helper-time          "less than 0.1 SBU">
+  <!ENTITY dbus-time          "0.3 SBU (add 8.5 SBU for the tests)">
+  <!-- The former value was 0.8 SBU, which was far more sensible. -->
+  <!ENTITY elogind-time          "0.2 SBU">
+  <!ENTITY fcron-time "0.1 SBU">
+  <!ENTITY gpm-time          "0.1 SBU">
+  <!ENTITY hdparm-time          "less than 0.1 SBU">
+  <!ENTITY lm_sensors-time          "less than 0.1 SBU">
+  <!ENTITY logrotate-time          "0.2 SBU (with tests)">
+  <!ENTITY lsb-tools-time          "0.1 SBU">
+  <!ENTITY mc-time          "0.6 SBU (using parallelism=4; with tests)">
+  <!ENTITY ModemManager-time          "0.6 SBU (Using parallelism=4; with tests)">
+  <!ENTITY p7zip-time          "1.3 SBU (with tests)">
+  <!ENTITY pax-time          "less than 0.1 SBU">
+  <!ENTITY pciutils-time          "less than 0.1 SBU">
+  <!ENTITY pm-utils-time          "0.1 SBU">
+  <!ENTITY raptor-time          "0.2 SBU (additional 0.5 SBU for the tests)">
+  <!ENTITY rasqal-time          "0.3 SBU (additional 0.7 SBU for the tests)">
+  <!ENTITY redland-time          "0.2 SBU">
+  <!ENTITY sg3_utils-time          "0.2 SBU">
+  <!ENTITY sysstat-time          "0.1 SBU">
+  <!ENTITY systemd-time          "2.7 SBU (with tests)">
+  <!ENTITY udisks2-time          "0.3 SBU (with tests)">
+  <!ENTITY unrar-time          "0.1 SBU">
+  <!ENTITY unzip-time          "less than 0.1 SBU">
+  <!ENTITY upower-time          "0.1 SBU (add 0.1 SBU for tests)">
+  <!ENTITY usbutils-time          "0.2 SBU">
+  <!ENTITY which-time          "less than 0.1 SBU">
+  <!ENTITY zip-time          "0.1 SBU">
+  <!ENTITY baobab-time          "less than 0.1 SBU (Using parallelism=4)">
+  <!ENTITY brasero-time          "1.7 SBU">
+  <!ENTITY cheese-time          "0.1 SBU (Using paralleism=4)">
+  <!ENTITY eog-time          "0.2 SBU">
+  <!ENTITY evince-time          "0.4 SBU (Using parallelism=4)">
+  <!ENTITY evolution-time          "1.1 SBU (Using parallelism=4)">
+  <!ENTITY file-roller-time          "0.1 SBU (Using parallelism=4)">
+  <!ENTITY gnome-calculator-time          "0.2 SBU (with tests)">
+  <!ENTITY gnome-color-manager-time          "0.2 SBU">
+  <!ENTITY gnome-disk-utility-time          "less than 0.1 SBU (Using parallelism=4)">
+  <!ENTITY gnome-logs-time          "0.1 SBU">
+  <!ENTITY gnome-maps-time          "less than 0.1 SBU">
+  <!ENTITY gnome-nettool-time          "0.1 SBU">
+  <!ENTITY gnome-power-manager-time          "less than 0.1 SBU (with tests)">
+  <!ENTITY gnome-screenshot-time          "less than 0.1 SBU">
+  <!ENTITY gnome-system-monitor-time          "0.5 SBU">
+  <!ENTITY gnome-terminal-time          "0.1 SBU (using parallelism=4)">
+  <!ENTITY gnome-tweaks-time          "less than 0.1 SBU">
+  <!ENTITY gnome-weather-time          "less than 0.1 SBU">
+  <!ENTITY gucharmap-time          "0.4 SBU (with a fast internet connection)">
+  <!ENTITY network-manager-applet-time      "0.4 SBU (with tests)">
+  <!ENTITY seahorse-time          "0.1 SBU">
+  <!ENTITY vinagre-time          "0.2 SBU">
+  <!ENTITY vino-time          "0.2 SBU">
+  <!ENTITY dconf-time          "0.1 SBU (with tests)">
+  <!ENTITY dconf-editor-time          "0.1 SBU">
+  <!ENTITY evolution-data-server-time          "0.6 SBU (Using parallelism=4)">
+  <!ENTITY folks-time          "0.1 SBU (Using parallelism=4)">
+  <!ENTITY GConf-time          "0.3 SBU">
+  <!ENTITY gcr-time          "0.9 SBU (with tests)">
+  <!ENTITY gdm-time          "0.3 SBU">
+  <!ENTITY geocode-glib-time          "0.1 SBU (with tests)">
+  <!ENTITY gexiv2-time          "0.1 SBU">
+  <!ENTITY gfbgraph-time          "less than 0.1 SBU">
+  <!ENTITY gjs-time          "0.4 SBU (using parallelism=4; with tests)">
+  <!ENTITY gnome-autoar-time          "0.1 SBU">
+  <!ENTITY gnome-backgrounds-time          "less than 0.1 SBU">
+  <!ENTITY gnome-bluetooth-time          "less than 0.1 SBU (Using parallelism=4)">
+  <!ENTITY gnome-control-center-time          "0.4 SBU (Using parallelism=4; with tests)">
+  <!ENTITY gnome-desktop-time          "0.1 SBU (using parallelism=4; with tests)">
+  <!ENTITY gnome-keyring-time          "0.3 SBU (Using parallelism=4i; add 0.3 SBU for tests)">
+  <!ENTITY gnome-menus-time          "less than 0.1 SBU">
+  <!ENTITY gnome-online-accounts-time          "0.2 SBU">
+  <!ENTITY gnome-session-time          "less than 0.1 SBU (Using parallelism=4)">
+  <!ENTITY gnome-settings-daemon-time          "0.1 SBU (Using parallelism=4)">
+  <!ENTITY gnome-shell-extensions-time          "less than 0.1 SBU">
+  <!ENTITY gnome-shell-time          "0.1 SBU (Using parallelism=4)">
+  <!ENTITY gnome-user-docs-time          "0.7 SBU (using parallelism=4)">
+  <!ENTITY gnome-video-effects-time          "less than 0.1 SBU">
+  <!ENTITY grilo-time          "less than 0.1 SBU">
+  <!ENTITY gsettings-desktop-schemas-time          "less than 0.1 SBU">
+  <!ENTITY gsound-time          "less than 0.1 SBU">
+  <!ENTITY gvfs-time          "0.1 SBU (using parallelism=4)">
+  <!ENTITY libchamplain-time          "0.1 SBU">
+  <!ENTITY libgdata-time          "0.8 SBU (with tests)">
+  <!ENTITY libgee-time          "0.1 SBU (using parallelism=4; add 0.1 SBU for tests)">
+  <!ENTITY libgtop-time          "0.2 SBU">
+  <!ENTITY libgweather-time          "0.2 SBU">
+  <!ENTITY libpeas-time          "less than 0.1 SBU (with tests)">
+  <!ENTITY libsecret-time          "0.1 SBU (add 0.3 SBU for tests)">
+  <!ENTITY libwnck-time          "less than 0.1 SBU">
+  <!ENTITY mutter-time          "0.7 SBU (Using parallelism=4)">
+  <!ENTITY nautilus-time          "0.3 SBU (using parallelism=4; with tests)">
+  <!ENTITY notification-daemon-time          "less than 0.1 SBU">
+  <!ENTITY polkit-gnome-time          "0.1 SBU">
+  <!ENTITY rest-time          "0.2 SBU (with tests)">
+  <!ENTITY totem-pl-parser-time          "less than 0.1 SBU (with tests)">
+  <!ENTITY tracker-miners-time          "0.2 SBU (add 0.8 SBU for tests)">
+  <!ENTITY tracker-time          "0.4 SBU (add 0.9 SBU for tests)">
+  <!ENTITY vte-time          "0.3 SBU (using parallelism=4; with tests)">
+  <!ENTITY yelp-xsl-time          "less than 0.1 SBU">
+  <!ENTITY yelp-time          "0.1 SBU">
+  <!ENTITY zenity-time          "0.1 SBU">
+  <title>SBU values in BLFS</title>
+    Build Units (SBUs).   These times are relative to the time it took to build
+    tested on multi-core systems have SBU times listed with comments such
+    <para>Where even a parallel build takes more than 15 SBU, on certain
+  <!ENTITY ark5-time          "0.4 SBU (using parallelism=4)">
+  <!ENTITY gwenview5-time          "0.6 SBU (using parallelism=4)">
+  <!ENTITY k3b-time          "1.4 SBU (using parallelism=4)">
+  <!ENTITY kdenlive5-time          "2.0 SBU (using parallelism=4)">
+  <!ENTITY khelpcenter-time          "0.2 SBU (using parallelism=4)">
+  <!ENTITY kmix5-time          "0.3 SBU (using parallelism=4)">
+  <!ENTITY konsole5-time          "0.4 SBU (using parallism=4)">
+  <!ENTITY libkcddb-time          "0.4 SBU">
+  <!ENTITY libkdcraw-time          "less than 0.1 SBU">
+  <!ENTITY libkexiv2-time          "0.2 SBU">
+  <!ENTITY okular5-time          "1.1 SBU (using parallelism=4)">
+  <!ENTITY kf5-time          "16 SBU (using parallelism=4)">
+  <!ENTITY kf5-time          "0.4 SBU">
+  <!ENTITY plasma5-time          "20 SBU (using parallelism=4)">
+  <!ENTITY gpicview-time          "less than 0.1 SBU">
+  <!ENTITY lxappearance-obconf-time          "0.1 SBU">
+  <!ENTITY lxinput-time          "less than 0.1 SBU">
+  <!ENTITY lxrandr-time          "less than 0.1 SBU">
+  <!ENTITY lxtask-time          "less than 0.1 SBU">
+  <!ENTITY lxterminal-time          "less than 0.1 SBU">
+  <!ENTITY vte2-time          "0.5 SBU">
+  <!ENTITY libfm-time          "less than 0.1 SBU">
+  <!ENTITY libfm-time          "0.4 SBU">
+  <!ENTITY libwnck2-time          "0.2 SBU">
+  <!ENTITY lxappearance-time          "less than 0.1 SBU">
+  <!ENTITY lxde-common-time          "less than 0.1 SBU">
+  <!ENTITY lxmenu-data-time          "less than 0.1 SBU">
+  <!ENTITY lxpanel-time          "0.3 SBU">
+  <!ENTITY lxsession-time          "0.1 SBU">
+  <!ENTITY menu-cache-time          "less than 0.1 SBU">
+  <!ENTITY pcmanfm-time          "less than 0.1 SBU">
+  <!ENTITY audacious-time                 "0.3 SBU (with Gtk user interface)">
+  <!ENTITY audacious-plugins-time         "0.7 SBU (with Gtk user interface)">
+  <!ENTITY CDParanoia-time          "less than 0.1 SBU">
+  <!ENTITY kwave-time          "1.2 SBU (using parallelism=4)">
+  <!ENTITY lame-time          "0.1 SBU">
+  <!ENTITY mpg123-time          "0.2 SBU">
+  <!ENTITY pnmixer-time          "less than 0.1 SBU">
+  <!ENTITY vorbistools-time          "0.1 SBU">
+  <!ENTITY cdrdao-time          "0.1 SBU">
+  <!ENTITY cdrtools-time          "0.7 SBU">
+  <!ENTITY dvd-rw-tools-time          "less than 0.1 SBU">
+  <!ENTITY libburn-time          "0.1 SBU">
+  <!ENTITY libisoburn-time          "0.2 SBU (with Tk and HTML documentation)">
+  <!ENTITY libisofs-time          "0.1 SBU">
+  <!ENTITY alsa-firmware-time          "less than 0.1 SBU">
+  <!ENTITY alsa-lib-time          "0.3 SBU (with tests)">
+  <!ENTITY alsa-oss-time          "less than 0.1 SBU">
+  <!ENTITY alsa-plugins-time          "less than 0.1 SBU">
+  <!ENTITY alsa-tools-time          "0.5 SBU">
+  <!ENTITY alsa-utils-time          "0.1 SBU">
+  <!ENTITY audiofile-time          "0.6 SBU">
+  <!ENTITY faac-time          "less than 0.1 SBU">
+  <!ENTITY faad2-time          "0.2 SBU">
+  <!ENTITY fdk-aac-time          "0.8 SBU">
+  <!ENTITY flac-time          "0.1 SBU (additional 0.7 SBU to run the test suite)">
+    <emphasis>very</emphasis> long time (up to 300 SBUs) and use about 375 MB
+  <!ENTITY frei0r-time          "0.5 SBU">
+  <!ENTITY gavl-time          "0.8 SBU">
+  <!ENTITY gst10-libav-time          "less than 0.1 SBU (Using parallelism=4)">
+  <!ENTITY gst10-plugins-bad-time          "0.9 SBU (Using parallelism=4; with tests)">
+  <!ENTITY gst10-plugins-base-time          "0.8 SBU (Using parallelism=4; with tests; without docs)">
+  <!ENTITY gst10-plugins-good-time          "0.5 SBU (Using parallelism=4; with tests)">
+  <!ENTITY gst10-plugins-ugly-time          "less than 0.1 SBU (with tests)">
+  <!ENTITY gstreamer10-vaapi-time          "0.1 SBU">
+  <!ENTITY gstreamer10-time          "0.4 SBU (Using parallelism=4; with tests; add 1.5 SBU for docs)">
+  <!ENTITY id3lib-time          "0.2 SBU">
+  <!ENTITY liba52-time          "less than 0.1 SBU">
+  <!ENTITY libao-time          "less than 0.1 SBU">
+  <!ENTITY libass-time          "0.1 SBU">
+  <!ENTITY libcanberra-time          "0.1 SBU">
+  <!ENTITY libcddb-time          "0.2 SBU (with tests)">
+  <!ENTITY libcdio-time          "0.3 SBU (using parallelism=4; both packages, including checks)">
+  <!ENTITY libdiscid-time          "0.1 SBU (with tests)">
+  <!ENTITY libdv-time          "0.2 SBU">
+  <!ENTITY libdvdcss-time          "less than 0.1 SBU">
+  <!ENTITY libdvdnav-time          "less than 0.1 SBU">
+  <!ENTITY libdvdread-time          "less than 0.1 SBU">
+  <!ENTITY libmad-time          "0.1 SBU">
+  <!ENTITY libmpeg2-time          "0.1 SBU">
+  <!ENTITY libmusicbrainz-time          "0.4 SBU">
+  <!ENTITY libmusicbrainz5-time          "0.1 SBU">
+  <!ENTITY libogg-time          "less than 0.1 SBU (with tests)">
+  <!ENTITY libquicktime-time          "0.7 SBU (includes building all codec modules)">
+  <!ENTITY libsamplerate-time          "0.1 SBU">
+  <!ENTITY libsndfile-time          "0.6 SBU (with tests)">
+  <!ENTITY libtheora-time          "0.2 SBU">
+  <!ENTITY libvorbis-time          "0.1 SBU">
+  <!ENTITY libvpx-time          "0.5 SBU (using parallelism=4)">
+  <!ENTITY mlt-time          "0.5 SBU">
+  <!ENTITY opus-time          "0.8 SBU  (with tests)">
+  <!ENTITY pipewire-time          "0.1 SBU (Using parallelism=4)">
+  <!ENTITY pulseaudio-time          "0.5 SBU (Using parallelism=4; add 0.6 SBU for tests)">
+  <!ENTITY sbc-time          "Less than 0.1 SBU">
+  <!ENTITY sdl-time          "0.6 SBU">
+  <!ENTITY sdl2-time          "0.4 SBU (using parallelism=4; with docs)">
+  <!ENTITY sound-theme-freedesktop-time          "less than 0.1 SBU">
+  <!ENTITY soundtouch-time          "0.1 SBU">
+  <!ENTITY speex-time          "less than 0.1 SBU">
+  <!ENTITY speexdsp-time          "less than 0.1 SBU">
+  <!ENTITY taglib-time          "0.4 SBU">
+  <!ENTITY v4l-time          "0.5 SBU (using parallelism=4)">
+  <!ENTITY x264-time          "0.8 SBU">
+  <!ENTITY x265-time          "0.9 SBU (using parallelism=4)">
+  <!ENTITY xine-lib-time          "1.5 SBU (add 0.1 SBU for API documentation)">
+  <!ENTITY xvid-time          "0.1 SBU">
+  <!ENTITY ffmpeg-time          "1.4 SBU (using parallelism=4; add 5.9 SBU (with THREADS=4) to run the FATE suite after sample files are downloaded; add 0.5 SBU for docs)">
+      "Package Information" do not include the download SBU. Some samples may
+  <!ENTITY mplayer-time          "1.4 SBU (Using parallelism=4)">
+  <!ENTITY transcode-time          "0.6 SBU">
+  <!ENTITY vlc-time          "2.1 SBU (using parallelism=4; add 0.2 SBU for tests)">
+  <!ENTITY xine-ui-time          "0.2 SBU">
+  <!ENTITY dhcp-time          "0.8 SBU">
+  <!ENTITY dhcpcd-time          "less than 0.1 SBU">
+  <!ENTITY fetchmail-time          "0.1 SBU">
+  <!ENTITY mailx-time          "less than 0.1 SBU">
+  <!ENTITY mutt-time          "0.4 SBU (add 0.2 SBU for the PDF manual)">
+  <!ENTITY procmail-time          "less than 0.1 SBU">
+  <!ENTITY c-ares-time          "0.1 SBU">
+  <!ENTITY curl-time          "0.4 SBU (add 15 SBU for tests)">
+      in test time by each failed test is about 10%. Tests SBU above was
+  <!ENTITY geoclue2-time          "less than 0.1 SBU">
+  <!ENTITY glib-networking-time          "less than 0.1 SBU (with tests)">
+  <!ENTITY ldns-time          "0.2 SBU (with docs)">
+  <!ENTITY libevent-time          "0.3 SBU (add 11 SBU for tests)">
+  <!ENTITY libndp-time          "less than 0.1 SBU">
+  <!ENTITY libnl-time          "0.5 SBU (with tests and API documentation)">
+  <!ENTITY libnsl-time          "0.2 SBU">
+  <!ENTITY libpcap-time          "less than 0.1 SBU">
+  <!ENTITY libpsl-time          "Less than 0.1 SBU (including tests)">
+  <!ENTITY libsoup-time          "0.3 SBU (with tests)">
+  <!ENTITY libtirpc-time          "0.1 SBU">
+  <!ENTITY neon-time          "0.1 SBU (additional 0.3 SBU for the tests)">
+  <!ENTITY nghttp2-time          "0.1 SBU">
+  <!ENTITY rpcsvc-proto-time          "less than 0.1 SBU">
+  <!ENTITY serf-time          "less than 0.1 SBU">
+  <!ENTITY uhttpmock-time          "less than 0.1 SBU">
+  <!ENTITY bridge-time          "less than 0.1 SBU">
+  <!ENTITY cifsutils-time          "less than 0.1 SBU">
+  <!ENTITY iw-time          "less than 0.1 SBU">
+  <!ENTITY ncftp-time          "0.2 SBU">
+  <!ENTITY net-tools-time          "less than 0.1 SBU">
+  <!ENTITY nfs-utils-time          "0.2 SBU">
+  <!ENTITY ntp-time          "0.8 SBU (with tests)">
+  <!ENTITY rpcbind-time          "less than 0.1 SBU">
+  <!ENTITY rsync-time          "0.5 SBU (with tests)">
+  <!ENTITY samba-time          "2.8 SBU (using parallelism=4; add 0.8 SBU for quicktest)">
+      builder at around 290 SBU and over a gigabyte of disk space, and you
+  <!ENTITY wget-time          "0.4 SBU (with tests)">
+  <!ENTITY wireless-time          "less than 0.1 SBU">
+  <!ENTITY wpa_supplicant-time          "0.5 SBU (with optional gui)">
+  <!ENTITY avahi-time          "0.3 SBU">
+  <!ENTITY bind-utils-time      "0.7 SBU">
+  <!ENTITY NetworkManager-time          "0.9 SBU (with tests; both using parallelism=4)">
+  <!ENTITY nmap-time          "0.9 SBU (add 0.1 SBU for tests)">
+  <!ENTITY traceroute-time          "less than 0.1 SBU">
+  <!ENTITY whois-time          "less than 0.1 SBU">
+  <!ENTITY wireshark-time          "2.4 SBU (with parallelism=4 and all optional dependencies available in the BLFS book)">
+  <!ENTITY links-time          "0.3 SBU">
+  <!ENTITY lynx-time          "0.3 SBU">
+  <!ENTITY bluefish-time          "0.4 SBU">
+  <!ENTITY ed-time          "less than 0.1 SBU">
+  <!ENTITY emacs-time          "0.6 SBU (Using parallelism=4)">
+  <!ENTITY gedit-time          "0.4 SBU (using parallelism=4; with tests)">
+  <!ENTITY joe-time          "0.2 SBU">
+  <!ENTITY kate5-time          "1.1 SBU (using parallelism=4)">
+  <!ENTITY mousepad-time          "0.1 SBU">
+  <!ENTITY nano-time          "0.2 SBU">
+  <!ENTITY vim-time          "0.3 SBU (Using parallelism=4; add 1.2 SBU for tests)">
+  <!ENTITY btrfs-progs-time          "0.2 SBU (add 13 SBU for tests)">
+  <!ENTITY dosfstools-time          "less than 0.1 SBU">
+  <!ENTITY fuse3-time          "0.1 SBU">
+  <!ENTITY gptfdisk-time          "less than 0.1 SBU">
+  <!ENTITY jfsutils-time          "0.1 SBU">
+  <!ENTITY lvm2-time          "0.2 SBU (using parallelism=4; add 15 SBU for tests)">
+  <!ENTITY mdadm-time          "0.1 SBU (tests take about an hour, only partially processor dependent)">
+  <!ENTITY ntfs-3g-time          "0.2 SBU">
+  <!ENTITY parted-time          "0.4 SBU (additional 0.6 SBU for the tests)">
+  <!ENTITY reiser-time          "0.2 SBU">
+  <!ENTITY smartmontools-time          "0.2 SBU">
+  <!ENTITY sshfs-time          "less than 0.1 SBU">
+  <!ENTITY xfsprogs-time          "0.3 SBU (Using parallelism=4)">
+  <!ENTITY cracklib-time          "less than 0.1 SBU">
+  <!ENTITY cryptsetup-time          "0.2 SBU (add 12 SBU for tests)">
+  <!ENTITY cyrus-sasl-time          "0.1 SBU">
+  <!ENTITY gnupg2-time          "0.4 SBU (using parallelism=4; add 1.6 SBU for tests)">
+  <!ENTITY gnutls-time          "0.6 SBU (using parallelism=4; add 7.8 SBU for tests)">
+  <!ENTITY gpgme-time          "0.7 SBU (with parallelism=4; with all bindings, add 0.5 SBU for tests)">
+  <!ENTITY haveged-time          "0.1 SBU (with tests)">
+  <!ENTITY iptables-time          "0.2 SBU">
+  <!ENTITY libcap-time          "less than 0.1 SBU">
+  <!ENTITY liboauth-time          "less than 0.1 SBU">
+  <!ENTITY libpwquality-time          "less than 0.1 SBU">
+  <!ENTITY linux-pam-time          "0.3 SBU (with tests)">
+  <!ENTITY make-ca-time          "0.1 SBU (with all runtime deps)">
+  <!ENTITY mitkrb-time          "0.4 SBU (using parallelism=4; add 2.2 SBU for tests)">
+  <!ENTITY nettle-time          "0.4 SBU (with tests)">
+  <!ENTITY nss-time          "2.7 SBU">
+  <!ENTITY openssh-time          "0.4 SBU (running the tests takes 17+ minutes,
+  <!ENTITY p11-kit-time          "0.4 SBU (add 0.6 SBU for tests)">
+  <!ENTITY polkit-time          "0.4 SBU (with tests)">
+  <!ENTITY shadow-time          "0.2 SBU">
+  <!ENTITY ssh-askpass-time          "less than 0.1 SBU">
+  <!ENTITY stunnel-time          "0.1 SBU">
+  <!ENTITY sudo-time          "0.4 SBU (with tests)">
+  <!ENTITY tripwire-time          "1.6 SBU (scripting install)">
+  <!ENTITY volume_key-time          "0.2 SBU">
+  <!ENTITY dash-time          "less than 0.1 SBU">
+  <!ENTITY tcsh-time          "0.2 SBU (with tests)">
+  <!ENTITY zsh-time          "1.5 SBU (Using parallelism=4; includes documentation and tests)">
+  <!ENTITY qemu-time          "1.0 SBU (using parallelism=4; add 2.4 SBU for tests)">
+  <!ENTITY cups-filters-time          "0.4 SBU (with tests)">
+  <!ENTITY cups-time          "0.5 SBU (Add 0.9 SBU for tests)">
+  <!ENTITY gs-time          "1.7 SBU (Using parallelism=4; with libgs.so)">
+  <!ENTITY gutenprint-time          "0.2 SBU (without tests)">
+  <!-- Tests add 75 SBU and 13GB to the equation - updated info in the tests below -->
+    (version 5.2.15 in June 2019) this needed 75 SBU and 13.5 GB
+  <!ENTITY a2ps-time          "0.3 SBU">
+  <!ENTITY enscript-time          "0.1 SBU">
+  <!ENTITY epdfview-time          "less than 0.1 SBU">
+  <!ENTITY fop-time          "1.1 SBU">
+  <!ENTITY mupdf-time          "0.1 SBU (Using parallelism=4)">
+  <!ENTITY paps-time          "less than 0.1 SBU">
+  <!ENTITY psutils-time          "less than 0.1 SBU">
+  <!ENTITY sane-be-time          "1.0 SBU (with tests)">
+  <!ENTITY sane-fe-time          "less than 0.1 SBU">
+  <!ENTITY xsane-time          "0.2 SBU">
+  <!ENTITY docbook-dsssl-time          "less than 0.1 SBU">
+  <!ENTITY docbook-utils-time          "less than 0.1 SBU">
+  <!ENTITY openjade-time          "0.7 SBU">
+  <!ENTITY opensp-time          "1.0 SBU">
+  <!ENTITY sgml-common-time          "less than 0.1 SBU">
+  <!ENTITY sgml-dtd-3-time          "less than 0.1 SBU">
+  <!ENTITY sgml-dtd-time          "less than 0.1 SBU">
+  <!ENTITY asymptote-time          "2.5 SBU">
+  <!ENTITY biber-time          "0.5 SBU including tests">
+  <!ENTITY texlive-time           "5.6 SBU including the additional download and the tests, building with parallelism=4">
+  <!ENTITY xindy-time          "less than 0.1 SBU">
+  <!ENTITY docbook-xsl-time          "less than 0.1 SBU">
+  <!ENTITY DocBook-time          "less than 0.1 SBU">
+  <!ENTITY docbook5-time          "0.1 SBU">
+  <!ENTITY docbook51-time          "less than 0.1 SBU">
+  <!ENTITY itstool-time          "less than 0.1 SBU">
+  <!ENTITY xmlto-time          "less than 0.1 SBU (with tests)">
+  <!ENTITY db-time          "0.6 SBU">
+  <!ENTITY lmdb-time          "less than 0.1 SBU">
+  <!ENTITY mariadb-time          "9.7 SBU (with parallelism=4, add 0.4 SBU for tests)">
+      over 3700 tests are run in about 14 SBU with N=4.  Three tests 
+  <!ENTITY postgresql-time          "1.0 SBU (with parallelism=4, add 0.1 SBU for tests)">
+  <!ENTITY sqlite-time          "0.4 SBU (Using parallelism=4)">
+  <!ENTITY dovecot-time          "3.9 SBU">
+  <!ENTITY exim-time            "0.2 SBU">
+  <!ENTITY postfix-time          "0.5 SBU">
+  <!ENTITY sendmail-time          "0.2 SBU">
+  <!ENTITY apache-time          "0.9 SBU">
+  <!ENTITY bind-time          "0.9 SBU (with parallelism=4; add 30+ minutes, processor independent, to run the complete test suite)">
+  <!ENTITY proftpd-time          "0.3 SBU">
+  <!ENTITY vsftpd-time          "less than 0.1 SBU">
+  <!ENTITY openldap-time          "0.4 SBU (client using parallelism=4), 1.2 SBU (server)">
+  <!ENTITY unbound-time          "0.4 SBU (Using parallelism=4; with docs; add 0.3 SBU for tests)">
+  <!ENTITY lightdm-time          "0.2 SBU ">
+  <!ENTITY lightdm-gtk-greeter-time          "less than 0.1 SBU ">
+  <!ENTITY lxdm-time          "less than 0.1 SBU ">
+  <!ENTITY adwaita-icon-theme-time          "0.7 SBU">
+  <!ENTITY breeze-icons-time          "0.1 SBU">
+  <!ENTITY gnome-icon-theme-extras-time          "less than 0.1 SBU">
+  <!ENTITY gnome-icon-theme-symbolic-time          "less than 0.1 SBU">
+  <!ENTITY gnome-icon-theme-time          "0.5 SBU">
+  <!ENTITY gnome-themes-extra-time          "0.3 SBU">
+  <!ENTITY hicolor-icon-theme-time          "less than 0.1 SBU">
+  <!ENTITY icon-naming-utils-time          "less than 0.1 SBU">
+  <!ENTITY lxde-icon-theme-time          "less than 0.1 SBU">
+  <!ENTITY oxygen-icons5-time          "less than 0.1 SBU">
+  <!ENTITY libXau-time          "less than 0.1 SBU">
+  <!ENTITY libXdmcp-time          "less than 0.1 SBU">
+  <!ENTITY libevdev-time          "0.2 SBU (with tests)">
+  <!ENTITY libinput-time          "less than 0.1 SBU">
+  <!ENTITY libva-time          "less than 0.1 SBU">
+  <!ENTITY libva-intel-driver-time          "0.3 SBU">
+  <!ENTITY libvdpau-va-gl-time          "less than 0.1 SBU">
+  <!ENTITY libvdpau-time          "less than 0.1 SBU (with tests)">
+  <!ENTITY libxcb-time          "0.2 SBU (with tests, add 1.4 SBU for doxygen docs)">
+  <!ENTITY mesa-time          "2.4 SBU (with parallelism=4, demos, and docs), add 0.4 SBU for tests">
+  <!ENTITY twm-time          "less than 0.1 SBU">
+  <!ENTITY util-macros-time          "less than 0.1 SBU">
+  <!ENTITY x7apps-time          "1.5 SBU (ignoring the time to download)">
+  <!ENTITY xorg-amdgpu-driver-time          "less than 0.1 SBU">
+  <!ENTITY xorg-ati-driver-time          "0.2 SBU">
+  <!ENTITY xorg-evdev-driver-time          "less than 0.1 SBU">
+  <!ENTITY xorg-fbdev-driver-time          "less than 0.1 SBU">
+  <!ENTITY xorg-intel-driver-time          "0.7 SBU">
+  <!ENTITY xorg-libinput-driver-time          "less than 0.1 SBU (with tests)">
+  <!ENTITY xorg-nouveau-driver-time          "0.1 SBU">
+  <!ENTITY xorg-synaptics-driver-time          "less than 0.1 SBU">
+  <!ENTITY xorg-vmware-driver-time          "0.1 SBU">
+  <!ENTITY xorg-wacom-driver-time          "0.1 SBU (with tests)">
+  <!ENTITY x7fonts-time          "0.1 SBU">
+  <!ENTITY x7legacy-time          "0.3 SBU">
+  <!ENTITY x7libs-time          "2.4 SBU">
+  <!ENTITY xbitmaps-time          "less than 0.1 SBU">
+  <!ENTITY xcb-proto-time          "less than 0.1 SBU">
+  <!ENTITY xcb-util-cursor-time          "less than 0.1 SBU">
+  <!ENTITY xcb-util-image-time          "less than 0.1 SBU">
+  <!ENTITY xcb-util-keysyms-time          "less than 0.1 SBU">
+  <!ENTITY xcb-util-renderutil-time          "less than 0.1 SBU">
+  <!ENTITY xcb-util-wm-time          "less than 0.1 SBU">
+  <!ENTITY xcb-util-time          "less than 0.1 SBU">
+  <!ENTITY xclock-time          "less than 0.1 SBU">
+  <!ENTITY xcursor-themes-time          "less than 0.1 SBU">
+  <!ENTITY xinit-time          "less than 0.1 SBU">
+  <!ENTITY xkeyboard-config-time          "less than 0.1 SBU">
+  <!ENTITY xorg-server-time          "0.8 SBU (using parallelism=4; with tests)">
+  <!ENTITY xorgproto-time          "less than 0.1 SBU">
+  <!ENTITY xterm-time          "0.2 SBU">
+  <!ENTITY at-spi2-atk-time          "less than 0.1 SBU (with tests)">
+  <!ENTITY at-spi2-core-time          "0.1 SBU (with tests)">
+  <!ENTITY atk-time          "less than 0.1 SBU">
+  <!ENTITY atkmm-time          "0.2 SBU">
+  <!ENTITY cairo-time          "0.4 SBU (using parallelism=4)">
+  <!ENTITY cairomm-time          "0.1 SBU">
+  <!ENTITY clutter-gst-time          "0.2 SBU">
+  <!ENTITY clutter-gtk-time          "0.1 SBU">
+  <!ENTITY clutter-time          "1.2 SBU (with tests)">
+  <!ENTITY cogl-time          "0.3 SBU (Using parallelism=4; add 0.5 SBU for tests)">
+  <!ENTITY colord-gtk-time          "less than 0.1 SBU">
+  <!ENTITY fltk-time          "0.2 SBU (Using parallelism=4)">
+  <!ENTITY freeglut-time          "less than 0.1 SBU">
+  <!ENTITY gdk-pixbuf-time          "0.4 SBU (Using parallelism=4; with tests)">
+  <!ENTITY glew-time          "less than 0.1 SBU">
+  <!ENTITY glu-time          "0.2 SBU">
+  <!ENTITY goffice010-time          "0.4 SBU (Using parallelism=4; add 1.0 SBU for tests)">
+  <!ENTITY gtk2-time          "1.0 SBU (using parallelism=4; add 0.1 SBU for tests)">
+      Window, the tests should take less than 0.3 SBU.
+  <!ENTITY gtk3-time          "1.1 SBU (using parallelism=4, add 0.1 SBU for tests)">
+  <!ENTITY gtk-engines-time          "0.4 SBU">
+  <!ENTITY gtk-vnc-time          "0.2 SBU">
+  <!ENTITY gtkmm2-time          "3.4 SBU (with tests)">
+  <!ENTITY gtkmm3-time          "2.0 SBU (Using parallelism=4; with tests)">
+  <!ENTITY gtksourceview-time          "0.2 SBU (using parallelism=4; with tests)">
+  <!ENTITY gtksourceview4-time          "0.1 SBU (with tests; both using parallelism=4)">
+  <!ENTITY imlib2-time          "0.2 SBU">
+  <!ENTITY keybinder2-time          "less than 0.1 SBU">
+  <!ENTITY libdazzle-time          "0.2 SBU (uning parallelism=4; with tests)">
+  <!ENTITY libdrm-time          "less than 0.1 SBU (add 0.8 SBU for tests)">
+  <!ENTITY libepoxy-time          "0.1 SBU (with tests)">
+  <!ENTITY libglade-time          "0.1 SBU">
+  <!ENTITY libnotify-time          "0.1 SBU">
+  <!ENTITY libxklavier-time          "less than 0.1 SBU">
+  <!ENTITY pango-time          "0.1 SBU (with tests)">
+  <!ENTITY pangomm-time          "0.3 SBU">
+  <!ENTITY qt5-time          "35 SBU (using parallelism=4)">
+  <!ENTITY qtwebengine-time          "61 SBU (using 4 cores)">
+  <!ENTITY startup-notification-time          "less than 0.1 SBU">
+  <!ENTITY webkitgtk-time          "22 SBU (using parallelism=4, estimated 75 SBUs using one core)">
+  <!ENTITY fluxbox-time          "0.9 SBU">
+  <!ENTITY icewm-time          "0.3 SBU (Using parallelixm=4)">
+  <!ENTITY openbox-time          "0.3 SBU">
+  <!ENTITY sawfish-time          "0.4 SBU">
+  <!ENTITY parole-time          "0.2 SBU">
+  <!ENTITY ristretto-time          "0.1 SBU">
+  <!ENTITY xfburn-time          "0.1 SBU">
+  <!ENTITY xfce4-notifyd-time          "0.1 SBU">
+  <!ENTITY xfce4-terminal-time          "0.1 SBU">
+  <!ENTITY exo-time          "0.4 SBU (with tests)">
+  <!ENTITY garcon-time          "0.1 SBU">
+  <!ENTITY libxfce4ui-time          "0.1 SBU">
+  <!ENTITY libxfce4util-time          "less than 0.1 SBU">
+  <!ENTITY thunar-volman-time          "less than 0.1 SBU">
+  <!ENTITY thunar-time          "0.6 SBU">
+  <!ENTITY tumbler-time          "0.2 SBU">
+  <!ENTITY xfce4-appfinder-time          "less than 0.1 SBU">
+  <!ENTITY xfce4-panel-time          "0.4 SBU">
+  <!ENTITY xfce4-power-manager-time          "0.2 SBU">
+  <!ENTITY xfce4-session-time          "0.2 SBU">
+  <!ENTITY xfce4-settings-time          "0.2 SBU">
+  <!ENTITY xfconf-time          "less than 0.1 SBU">
+  <!ENTITY xfdesktop-time          "0.2 SBU">
+  <!ENTITY xfwm4-time          "0.2 SBU">
+  <!ENTITY epiphany-time          "0.3 SBU (Using parallelism=4)"> 
+  <!ENTITY falkon-time          "1.2 SBU (Using parallelism=4)">
+  <!ENTITY firefox-time          "32 SBU (with parallelism=4) without tests">
+        As with other large packages which use C++ (or rust), the SBU times
+        of real memory is used during the final link and the SBUs can increase
+  <!ENTITY seamonkey-time          "18 SBU (using parallelism=4)">
+  <!ENTITY AbiWord-time          "6.5 SBU - additional 0.5 SBU for docs">
+  <!ENTITY gnumeric-time          "1.0 SBU (Using parallelism=4; add 3.5 SBU for tests)">
+  <!-- for 6.1.2.1 I allowed 2 SBU for downloads, my total was 
+       64.76 SBU with fast downloads 
+  <!ENTITY libreoffice-time "58 SBU with parallelism=4 including typical download time">
+  <!ENTITY balsa-time          "0.5 SBU">
+  <!ENTITY feh-time          "less than 0.1 SBU (with tests)">
+  <!ENTITY fontforge-time          "2.2 SBU (with tests)">
+  <!ENTITY gimp-time          "2.1 SBU (Using parallelism=4; add 0.8 SBU for tests)">
+  <!ENTITY gimp-help-time       "0.8 SBU (en only), 13 SBU, with parallelism=4,
+  <!ENTITY gimp-help-time       "0.8 SBU (en only), average of 1.2 SBU per
+                                 SBU, with parallelism=8, for all languages">
+  <!ENTITY gparted-time          "0.4 SBU (using parallelism=4)">
+  <!ENTITY hexchat-time          "0.1 SBU (using parallelism=4)">
+  <!ENTITY inkscape-time          "4.8 SBU (add 0.2 SBU for tests, both with parallelism=4)">
+  <!ENTITY pidgin-time          "0.7 SBU (using parallelism=4; with tests and docs)">
+  <!ENTITY rox-filer-time          "0.3 SBU">
+  <!ENTITY rxvt-unicode-time          "0.2 SBU">
+  <!ENTITY thunderbird-time          "26 SBU (with -j4, estimated 84 SBU with -j1)">
+  <!ENTITY tigervnc-time          "1.3 SBU">
+  <!ENTITY transmission-time          "0.4 SBU (with Qt and GTK gui interfaces; using parallelism=4)">
+  <!ENTITY xarchiver-time          "0.1 SBU">
+  <!ENTITY xdg-utils-time          "0.3 SBU (with tests)">
+  <!ENTITY xscreensaver-time          "1.0 SBU">
+  <!ENTITY kdeaccessibility-time          "1.6 SBU">
+  <!ENTITY kdeaddons-time          "2.2 SBU">
+  <!ENTITY kdeadmin-time          "1.4 SBU">
+  <!ENTITY akode-time          "0.3 SBU">
+  <!ENTITY kdeartwork-time          "0.5 SBU">
+  <!ENTITY kdeedu-time          "6.6 SBU">
+  <!ENTITY kdegames-time          "3.4 SBU">
+  <!ENTITY kdegraphics-time          "2.7 SBU">
+  <!ENTITY kdemultimedia-time          "6.7 SBU">
+  <!ENTITY kdenetwork-time          "5.1 SBU">
+  <!ENTITY kdepim-time          "6.4 SBU">
+  <!ENTITY kdetoys-time          "0.6 SBU">
+  <!ENTITY kdeutils-time          "3.3 SBU">
+  <!ENTITY arts-time          "0.6 SBU">
+  <!ENTITY kdebase-time          "6.6 SBU">
+  <!ENTITY kdelibs-time          "5.5 SBU">
+  <!ENTITY tqtinterface-time          "0.6 SBU">
+  <!ENTITY kdebindings-time          "20 SBU">
+  <!ENTITY kdesdk-time          "7.5 SBU">
+  <!ENTITY kdevelop-time          "16.8 SBU (additional 0.3 SBU for API docs)">
+  <!ENTITY kdewebdev-time          "6.1 SBU">
+  <!ENTITY liblxqt-mount-time          "less than 0.1 SBU">
+  <!ENTITY lximage-qt-time          "0.3 SBU">
+  <!ENTITY obconf-qt-time          "0.2 SBU">
+  <!ENTITY pavucontrol-qt-time          "0.2 SBU">
+  <!ENTITY qterminal-time          "0.3 SBU (with the API documentation)">
+  <!ENTITY qtermwidget-time          "0.3 SBU">
+  <!ENTITY libfm-qt-time          "0.9 SBU">
+  <!ENTITY liblxqt-time          "0.2 SBU">
+  <!ENTITY libqtxdg-time          "0.2 SBU">
+  <!ENTITY libsysstat-time          "less than 0.1 SBU">
+  <!ENTITY lxqt-about-time          "less than 0.1 SBU">
+  <!ENTITY lxqt-admin-time          "0.2 SBU">
+  <!ENTITY lxqt-build-tools-time          "less than 0.1 SBU">
+  <!ENTITY lxqt-config-time          "0.7 SBU">
+  <!ENTITY lxqt-globalkeys-time          "0.3 SBU">
+  <!ENTITY kguiaddons-time          "0.1 SBU">
+  <!ENTITY kidletime-time          "0.2 SBU">
+  <!ENTITY kwayland-time          "0.4 SBU (Using parallelism=4)">
+  <!ENTITY kwindowsystem-time          "0.2 SBU">
+  <!ENTITY lxqt-l10n-time          "0.1 SBU">
+  <!ENTITY libkscreen-time          "0.2 SBU (using parallelism=4)">
+  <!ENTITY lxqt-notificationd-time          "0.2 SBU">
+  <!ENTITY lxqt-panel-time          "1.3 SBU">
+  <!ENTITY lxqt-policykit-time          "less than 0.1 SBU">
+  <!ENTITY lxqt-powermanagement-time          "0.3 SBU">
+  <!ENTITY lxqt-qtplugin-time          "0.1 SBU">
+  <!ENTITY lxqt-runner-time          "0.1 SBU">
+  <!ENTITY lxqt-session-time          "0.3 SBU">
+  <!ENTITY solid-time          "1.8 SBU">
+  <!ENTITY lxqt-themes-time          "less than 0.1 SBU">
+  <!ENTITY pcmanfm-qt-time          "0.3 SBU">
+          around 6 SBU
