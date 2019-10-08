@@ -35,14 +35,17 @@ Release Notes for CRUX PPC 3.5
   Miscellaneous notes
 
    Please be sure you are using the  latest version of firmware for your  own
-   machine.
+   machine.  If you are converting a MACOS machine to a Linux only machine, be 
+   aware that Linux does not provide the firmware update tools and so it is 
+   important to update the firmware before wiping out MACOS.
 
   Known issues
 
    CRUX PPC does not provide .signature checking on the ppc specific packages.
 
    It is not uncommon for the footprints to mismatch when building on powerpc.
-   The package build utilities provide an option to ignore footprints. 
+   The package build utilities provide an option to ignore footprints.  Also
+   /etc/prt-get.conf can be adjusted to ignore footprints by default.
 
    The contents of core-ppc, opt-ppc, and xorg-ppc are not automatically
    updated when 'ports -u' is run.  For now, the user will have to 
@@ -51,7 +54,8 @@ Release Notes for CRUX PPC 3.5
 
    On some monitors, the left most characters are not visible.  Until this
    is solved, a workaround is to install the xorg server packages and then
-   run 'startx'.  The whole output will then be visible in the x windows.
+   run 'startx'.  The xorg server provides a rudimentary set of windows
+   and the whole output will be visible.
 
    The midori browser does not seem to function properly with https
    connections (on ppc only, works fine on x86..).  Until this is solved, 
@@ -60,16 +64,21 @@ Release Notes for CRUX PPC 3.5
 
    All of the applicable core packages have been built on powerpc but 
    only a subset of opt and xorg packages have been built with CRUX PPC.
-   Some of the packages have not been built at all, and others have had
-   to be downreved to build.   opt and xorg packages particularly are a 
-   work in progress for CRUX PPC.
+   Some of the opt and xorg packages have not been built at all, and others 
+   have had to be downreved to build.   Be aware that opt and xorg packages 
+   particularly are a work in progress for CRUX PPC and that you may be
+   the very first person building a particular opt or xorg package in
+   CRUXPPC 3.5.
+
+   The mesa3d package install may fail due to an overlap with files from
+   another package.   Use the -f option to pkgadd to force the installation.
  
   Tips
 
    Package build times can be quite long even on faster powerpc machines.
    Allow for some hours (maybe days on slower machines) when building 
    big packages.  Ensure that your machine has the maximum RAM that it
-   can support.
+   can support.   
 
    For now, there is no pre-built browser provided.   The shortest path
    to a (somewhat functional) gui browser on CRUX-PPC is the "dillo" browser. 

@@ -1,9 +1,9 @@
 
-25Sep2019S
+10Oct2019
 
 ## General development and usage ideas and notes:
 
-A hodge podge of crux ppc thoughts and notes without much organization.
+A hodge podge of crux ppc thoughts and notes without much organization....
 
 ### General ports
 
@@ -24,12 +24,15 @@ release but I couldn't find a bug report in the gcc data base regarding it.
 x86 specific core ports are glibc-32 (multilib), bin86.
 
 The powerpc yaboot cannot be built from source.   The port in here simply downloads the most recent working debian yaboot binary package and
-repackages it into a crux package.  This is not ideal but works for now.   It looks like gentoo now uses grub instead of yaboot so grub might be usable as a replacement 
-for yaboot.  
+repackages it into a crux package.  This is not ideal but works for now.   It looks like gentoo now uses grub instead of yaboot so grub might 
+be usable as a replacement for yaboot.  
 
 
 
 ### Opt ports
+
+Several packages in opt (and maybe contrib) use the "gold" linker.   The powerpc version of the "gold" linker may have issues (sometimes
+throws relocation overflow errors..).   
 
 ### Xorg ports
 
