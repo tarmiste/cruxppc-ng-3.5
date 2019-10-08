@@ -34,6 +34,7 @@ build() {
 		-DPORT=GTK \
 		-DENABLE_MINIBROWSER=ON \
 		-DUSE_SYSTEM_MALLOC=ON \
+		-DUSE_LD_GOLD=OFF \
 		-Wno-dev
 
 	ninja -j ${JOBS-1}
