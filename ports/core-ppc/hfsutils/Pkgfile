@@ -7,12 +7,14 @@ name=hfsutils
 version=3.2.6
 release=1
 source=(ftp://ftp.mars.org/pub/hfs/$name-$version.tar.gz \
+	$name-$version-fix-tcl-8.6.patch \
 	$name-$version.patch $name-$version-fixes-1.patch)
 
 build() {
     cd $name-$version
 	patch -p1 -i $SRC/$name-$version.patch
 	patch -p1 -i $SRC/$name-$version-fixes-1.patch
+	patch -p1 -i $SRC/$name-$version-fix-tcl-8.6.patch
 
     ./configure --prefix=/usr --disable-nls
     make
