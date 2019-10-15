@@ -1,0 +1,33 @@
+
+prebuild candidates:
+
+clang
+spidermonkey  (autoconf-2.13)
+gdb
+spirv-tools
+imagemagick
+ffmpeg
+dar
+dovecot
+krb5
+mariadb
+mplayer
+mysql
+libxkbcommon
+libexif
+libvpx (already in...?)
+ocaml
+protobuf
+qpdf
+squid
+valgrind
+woff2
+
+
+maybes:
+
+qemus
+scummvm
+vulkan-* 
+
+
