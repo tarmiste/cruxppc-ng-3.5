@@ -62,7 +62,6 @@ build() {
 		-opensource \
 		-openssl-linked \
 		-optimized-qmake \
-		-reduce-relocations \
 		-release \
 		-shared \
 		-plugin-sql-sqlite \
