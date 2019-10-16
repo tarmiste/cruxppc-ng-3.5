@@ -10,6 +10,7 @@ source=(http://$name.sourceforge.net/files/$name-$version.tar.gz)
 
 build () {
   cd $name-$version
+  sed -i s'@have_altivec=yes@have_altivec=no@' configure
   ./configure --prefix=/usr \
   --with-gnu-ld --enable-shared \
   --disable-nls
