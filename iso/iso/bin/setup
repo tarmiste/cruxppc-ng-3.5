@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# CRUX Setup
+# CRUX PPC Setup
 #
 # Copyright (c) 2001-2005 by Per Liden <per@fukt.bth.se>
 #
@@ -23,7 +23,7 @@
 VERSION="3.5"
 
 do_dialog() {
-    dialog --backtitle "CRUX $VERSION Setup" --no-shadow "$@"
+    dialog --backtitle "CRUX PPC $VERSION Setup" --no-shadow "$@"
 }
 
 do_abort() {
@@ -42,13 +42,13 @@ do_select() {
 }
 
 welcome() {
-    do_select --aspect 5 --yesno "Welcome!\n\nThis script will guide you through the installation of CRUX packages.\n\nBefore starting the installation make sure you have read and understood the \"CRUX Installation Guide\". If you have done that then please continue, else abort the installation and come back later.\n\nAre you really sure you want to continue?" 0 0
+    do_select --aspect 5 --yesno "Welcome!\n\nThis script will guide you through the installation of CRUX PPC packages.\n\nBefore starting the installation make sure you have read and understood the \"CRUX PPC Installation Guide\". If you have done that then please continue, else abort the installation and come back later.\n\nAre you really sure you want to continue?" 0 0
 }
 
 select_action() {
     do_select --menu "Install or upgrade?" 9 45 2 \
-	             "1" "Install CRUX $VERSION" \
-                     "2" "Upgrade to CRUX $VERSION" 2> $tmpfile
+	             "1" "Install CRUX PPC $VERSION" \
+                     "2" "Upgrade to CRUX PPC $VERSION" 2> $tmpfile
     ACTION=`cat $tmpfile`
     if [ "$ACTION" = "1" ]; then
 	ACTION="INSTALL"
@@ -60,13 +60,13 @@ select_action() {
 
 select_root() {
     while true; do
-	do_select --aspect 40 --inputbox "Enter directory where your CRUX root partition is mounted:" 0 0 "/mnt" 2> $tmpfile
+	do_select --aspect 40 --inputbox "Enter directory where your CRUX PPC root partition is mounted:" 0 0 "/mnt" 2> $tmpfile
 	ROOT=`cat $tmpfile`
 	if [ -d "$ROOT" ]; then
 	    if [ "$ACTION" = "INSTALL" ] || [ -f "$ROOT/var/lib/pkg/db" ]; then
 		break
 	    fi
-	    do_dialog --aspect 50 --msgbox "Directory does not look like a CRUX root directory. Try again." 0 0
+	    do_dialog --aspect 50 --msgbox "Directory does not look like a CRUX PPC root directory. Try again." 0 0
 	else
 	    do_dialog --aspect 50 --msgbox "Directory not found. Try again." 0 0
 	fi

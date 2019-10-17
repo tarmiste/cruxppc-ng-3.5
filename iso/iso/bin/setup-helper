@@ -95,7 +95,7 @@ fi
 
 
 ##### # 3.4 -> 3.5 #####
-echo "* CRUX 3.4 -> 3.5 setup-helper"
+echo "* CRUX PPC 3.4 -> 3.5 setup-helper"
 
 inject_packages linux-pam
 

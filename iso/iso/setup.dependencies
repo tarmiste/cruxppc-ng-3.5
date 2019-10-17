@@ -4,7 +4,6 @@ autoconf: autoconf
 automake: ncurses libgmp db autoconf readline libmpfr gdbm gawk perl automake 
 bash: ncurses readline bash 
 bc: ncurses readline bc 
-bin86: bin86 
 bindutils: openssl zlib bindutils 
 binutils: zlib flex binutils 
 bison: bison 
@@ -38,6 +37,7 @@ grep: libpcre grep
 groff: groff 
 gzip: gzip 
 hdparm: hdparm 
+hfsutils: hfsutils
 httpup: openssl zlib curl httpup 
 iana-etc: iana-etc 
 inetutils: ncurses readline inetutils 
@@ -50,6 +50,7 @@ libarchive: bzip2 xz zlib attr lzo acl libarchive
 libcap: attr linux-pam libcap 
 libdevmapper: kmod ncurses zlib eudev util-linux libdevmapper 
 libgmp: libgmp 
+hfsutils: hfsutils
 libmpc: libgmp libmpfr libmpc 
 libmpfr: libgmp libmpfr 
 libpcre: libpcre 
@@ -59,12 +60,14 @@ libusb: kmod eudev libusb
 linux-pam: linux-pam 
 lzo: lzo 
 m4: m4 
+mac-fdisk: mac-fdisk
 make: make 
 man-db: zlib ncurses libpipeline readline gdbm man-db 
 man-pages: man-pages 
 mlocate: mlocate 
 nasm: nasm 
 ncurses: ncurses 
+nvsetenv: nvsetenv
 openrdate: openrdate 
 openssh: openssl zlib openssh 
 openssl: openssl 
@@ -96,6 +99,7 @@ util-linux: kmod ncurses zlib eudev util-linux
 vim: ncurses attr acl vim 
 wget: openssl wget 
 which: which 
+yaboot: yaboot
 xz: xz 
 zlib: zlib 
 alsa-lib: alsa-lib 
@@ -116,7 +120,6 @@ efivar: ncurses attr acl gettext popt efivar
 expat: expat 
 fakeroot: fakeroot 
 fetchmail: openssl fetchmail 
-firefox-bin: libpcre libffi db ncurses openssl bzip2 zlib expat libtirpc mpdecimal xz attr lzo nasm xorg-xorgproto libpthread-stubs mtdev xorg-util-macros xorg-libpixman fribidi xorg-libpciaccess readline libpng curl dbus libxml2 elfutils acl xorg-libxdmcp xorg-libxau xorg-xtrans xorg-libxshmfence libdrm gdbm sqlite3 freetype libxslt libarchive xorg-libice perl python python3 fontconfig cmake xorg-libsm p5-xml-parser ninja xorg-xcb-proto xorg-libevdev python3-setuptools libjpeg-turbo intltool llvm meson python3-markupsafe libtiff glib libinput python3-mako gobject-introspection shared-mime-info dbus-glib xorg-libxcb atk xorg-libx11 xorg-xcb-util gdk-pixbuf xorg-libxext xorg-libxrender xorg-libxfixes libglvnd libvdpau xorg-libxv xorg-libxxf86vm cairo xorg-libxrandr xorg-libxi xorg-libxdamage xorg-libxvmc harfbuzz xorg-libxtst mesa3d xorg-libxft at-spi2-core libepoxy pango at-spi2-atk gtk3 firefox-bin 
 fontconfig: zlib expat libpng freetype fontconfig 
 freetype: zlib libpng freetype 
 fribidi: fribidi 
@@ -124,8 +127,6 @@ gdk-pixbuf: libpcre libffi db ncurses openssl bzip2 zlib expat libtirpc mpdecima
 glib: libpcre libffi db ncurses openssl bzip2 zlib expat libtirpc mpdecimal xz readline gdbm sqlite3 python python3 ninja python3-setuptools meson glib 
 gnu-efi: gnu-efi 
 gobject-introspection: libpcre libffi db ncurses openssl bzip2 zlib expat libtirpc mpdecimal xz readline gdbm sqlite3 python python3 ninja python3-setuptools meson glib gobject-introspection 
-grub2: kmod ncurses zlib db openssl bzip2 eudev readline libpng util-linux gdbm sqlite3 freetype libdevmapper python grub2 
-grub2-efi: kmod ncurses zlib db openssl bzip2 eudev readline libpng util-linux gdbm sqlite3 freetype libdevmapper python grub2 grub2-efi 
 gtk: libpcre libffi db ncurses openssl bzip2 zlib expat libtirpc mpdecimal xz hicolor-icon-theme attr lzo nasm xorg-xorgproto libpthread-stubs mtdev xorg-util-macros xorg-libpixman fribidi readline libpng curl libxml2 acl xorg-libxdmcp xorg-libxau xorg-xtrans gdbm sqlite3 freetype libxslt libarchive xorg-libice perl python python3 fontconfig cmake xorg-libsm p5-xml-parser ninja xorg-xcb-proto xorg-libevdev python3-setuptools libjpeg-turbo intltool meson libtiff glib libinput gobject-introspection shared-mime-info xorg-libxcb atk xorg-libx11 xorg-xcb-util gdk-pixbuf xorg-libxext xorg-libxrender xorg-libxfixes xorg-libxinerama cairo xorg-libxrandr xorg-libxcursor xorg-libxcomposite harfbuzz xorg-libxft pango gtk 
 gtk3: libpcre libffi db ncurses openssl bzip2 zlib expat libtirpc mpdecimal xz attr lzo nasm xorg-xorgproto libpthread-stubs mtdev xorg-util-macros xorg-libpixman fribidi xorg-libpciaccess readline libpng curl dbus libxml2 elfutils acl xorg-libxdmcp xorg-libxau xorg-xtrans xorg-libxshmfence libdrm gdbm sqlite3 freetype libxslt libarchive xorg-libice perl python python3 fontconfig cmake xorg-libsm p5-xml-parser ninja xorg-xcb-proto xorg-libevdev python3-setuptools libjpeg-turbo intltool llvm meson python3-markupsafe libtiff glib libinput python3-mako gobject-introspection shared-mime-info xorg-libxcb atk xorg-libx11 xorg-xcb-util gdk-pixbuf xorg-libxext xorg-libxrender xorg-libxfixes libglvnd libvdpau xorg-libxv xorg-libxxf86vm cairo xorg-libxrandr xorg-libxi xorg-libxdamage xorg-libxvmc harfbuzz xorg-libxtst mesa3d xorg-libxft at-spi2-core libepoxy pango at-spi2-atk gtk3 
 harfbuzz: zlib expat db ncurses openssl bzip2 xorg-xorgproto xz libpthread-stubs mtdev libffi libtirpc mpdecimal xorg-util-macros xorg-libpixman libpcre libpng readline xorg-libxdmcp xorg-libxau libxml2 xorg-xtrans freetype gdbm sqlite3 libxslt fontconfig python python3 xorg-xcb-proto xorg-libevdev ninja python3-setuptools meson libinput glib xorg-libxcb xorg-libx11 xorg-xcb-util xorg-libxext xorg-libxrender cairo harfbuzz 
@@ -149,7 +150,6 @@ libtirpc: libtirpc
 libxml2: zlib xz libxml2 
 libxml2-python: db ncurses openssl bzip2 zlib xz readline libxml2 gdbm sqlite3 python libxml2-python 
 libxslt: zlib xz libxml2 libxslt 
-lilo: kmod ncurses zlib eudev util-linux libdevmapper lilo 
 linux-firmware: linux-firmware 
 llvm: openssl zlib bzip2 xz attr lzo expat ncurses libffi db curl acl readline libarchive gdbm sqlite3 cmake python ninja llvm 
 lvm2: kmod ncurses zlib libaio eudev util-linux libdevmapper lvm2 
