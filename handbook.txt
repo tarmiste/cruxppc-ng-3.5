@@ -1,7 +1,24 @@
 
-NOTE: All information pertaining to non Apple machines or Apple 64bit machines is not applicable:
-This handbook is mostly correct for the 3.5 release.   However, be aware that there are a 
-number of inaccurate.
+NOTE: This handbook is generally useful for the 3.5 CRUX PPC release.  However, 
+it has not yet been carefully adjusted to reflect CRUX PPC.   When
+using this handbook, keep in mind:
+
+1) CRUX PPC 3.5 only supports Apple 32bit PowerPC machines.  All references
+  to non Apple machines in this handbook should be disregarded.
+
+2) Alenia was part of the previous CRUX PPC project.   It is not part of
+  3.5 nor is it planned to be.  The regular CRUX prt-get utility is 
+  included in CRUX PPC 3.5 and it should be used instead of Alenia.
+
+3) For now at least, the user must manually maintain the ppc specific
+  portion of their ports tree by using git to pull a copy from the 
+  cruxppc-ng-3.5 repository and then cp the ppc ports into the /usr/ports
+  tree.  "ports -u" updates the non-ppc ports but does not update the
+  the ppc ports.
+
+  git can be installed from the install CD by either selecting the entire
+  opt set or by selecting git manually.  
+
 
 HANDBOOK FOR CRUX PPC 3.5
 
