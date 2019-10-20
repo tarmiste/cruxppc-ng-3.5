@@ -406,7 +406,7 @@ Fix this.  Only 32 bit is supported:
    13. Edit /etc/rc.d/net, /etc/hosts and /etc/resolv.conf to configure  your
    network (ip-address/gateway/hostname/domain/dns).
 
-   14. Go  to  /usr/src/linux-2.6.36.x,  patch  (if  needed),  configure  and
+   14. Go  to  /usr/src/linux-4.19.24.x,  patch  (if  needed),  configure  and
    compile a new kernel.  
 
    Alternatively, a prebuilt starter kernel for Apple 32 bit machines is 
@@ -423,7 +423,7 @@ Fix this.  Only 32 bit is supported:
 
      * for IBM RS/6000
 
-  $ cd /usr/src/linux-2.6.36.x
+  $ cd /usr/src/linux-4.19.24.x
   $ patch -p1 < ../your_patch
   $ make menuconfig
   $ make all
@@ -433,7 +433,7 @@ Fix this.  Only 32 bit is supported:
 
      * for Apple
 
-  $ cd /usr/src/linux-2.6.36.x
+  $ cd /usr/src/linux-4.19.24.x
   $ patch -p1 < ../your_patch
   $ make menuconfig
   $ make all
@@ -443,7 +443,7 @@ Fix this.  Only 32 bit is supported:
 
      * for PegasosII, Efika
 
-  $ cd /usr/src/linux-2.6.36.x
+  $ cd /usr/src/linux-4.19.24.x
   $ patch -p1 < ../your_patch
   $ make menuconfig
   $ make all
@@ -453,7 +453,7 @@ Fix this.  Only 32 bit is supported:
 
      * for Sam4x0
 
-  $ cd /usr/src/linux-2.6.36.x
+  $ cd /usr/src/linux-4.19.24.x
   $ patch -p1 < ../your_patch
   $ make menuconfig
   $ make all
@@ -467,7 +467,7 @@ Fix this.  Only 32 bit is supported:
 
    On a 64 bit system:
 
-  $ cd /usr/src/linux-2.6.36.x
+  $ cd /usr/src/linux-4.19.24.x
   $ patch -p1 < ../your_patch
   $ make menuconfig
   $ make all
@@ -606,7 +606,7 @@ Fix this.  Only 32 bit is supported:
   $ mount -o bind /dev /mnt/dev
   $ chroot /mnt /bin/bash
 
-   8. Go to /usr/src/linux-2.6.36.x, patch (if needed), configure and compile
+   8. Go to /usr/src/linux-4.19.24.x, patch (if needed), configure and compile
    a new kernel.
    Useful kernel  config  files and  patches  are placed  into  the  /usr/src
    directory. They  are the  config files  used to  build the  boot  kernels.
@@ -1483,6 +1483,9 @@ Configuration
   # localedef -i sv_SE -f ISO-8859-1 sv_SE.ISO-8859-1
   # localedef -i sv_SE -f UTF-8 sv_SE.utf8
 
+   A 'makelocales' helper script can be found under /crux which may be 
+   useful as a starting point for creating whatever locales you require.
+
     Network Configuration
 
    The network configuration is found in the service script /etc/rc.d/net. To
@@ -1572,7 +1575,7 @@ Configuration
 
   Upgrading the Kernel
 
-   The kernel  source,  which  is  found  in  /usr/src/linux-2.6.xx/  is  not
+   The kernel  source,  which  is  found  in  /usr/src/linux-4.19.xx/  is  not
    installed using  pkgadd. If  you decide  to upgrade  your kernel  you  can
    safely do so by manually replacing the kernel source with a newer  version
    (or place it  somewhere else).  This will  not make  the package  database
@@ -1629,6 +1632,3 @@ Appendix
    termination) it is most likely becuase  the font cache files are  missing.
    Run  fc-cache  (as  root)  to  create/update  the  cache  files.  See  the
    fc-cache(1) man page for information about this program.
-
-   Retrieved from http://cruxppc.org/Handbook2-7
-   Page last modified on July 17, 2011, at 08:35 PM

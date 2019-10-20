@@ -1,11 +1,11 @@
-Release Notes for CRUX PPC 3.5
+Release Notes for CRUX PPC 3.5 Alpha release 
 
   Introduction
 
    This page discusses the relevant changes introduced in CRUX PPC 3.5.
 
  Supported machines:
- Apple 32bit "NewWorld" G3/G4 
+ Apple 32bit "NewWorld" G4 (G4 only at this time, G3 support will be later)
 
  Other machines which use the G3, G4, or 60X PowerPC processors may be 
  compatible with CRUX PPC 3.5 but are untested. Use on non-MAC machines will 
@@ -27,10 +27,6 @@ Release Notes for CRUX PPC 3.5
 
    CRUX PPC 3.5 is a new port of CRUX to the PowerPC.  There is no support
    for upgrading from any earlier CRUX PPC releases to 3.5.  
-
-   CRUX PPC 3.5 is released as a root filesystem tar archive.
-   An install ISO is not provided at the current time.
-
 
   Miscellaneous notes
 
@@ -71,7 +67,9 @@ Release Notes for CRUX PPC 3.5
    CRUXPPC 3.5.
 
    The mesa3d package install may fail due to an overlap with files from
-   another package.   Use the -f option to pkgadd to force the installation.
+   another package.   If mesa is not desired, then just ignore the error
+   Otherwise, after install is complete Use the -f option to pkgadd to 
+   force the installation of mesa.
  
   Tips
 
