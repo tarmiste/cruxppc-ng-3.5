@@ -32,7 +32,7 @@ build() {
 		-Ddri-drivers=r100,r200 \
 		-Dgallium-drivers=r300,r600,swrast \
 		-Dvulkan-drivers= \
-		-Dglvnd=false \
+		-Dglvnd=true \
 		-Dglx=dri \
 		-Dlmsensors=false \
 		-Dlibunwind=false \
