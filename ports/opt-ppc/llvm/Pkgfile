@@ -39,6 +39,6 @@ build() {
   DESTDIR=$PKG ninja install
 
   # multilib stub
-  mv $PKG/usr/include/llvm/Config/llvm-config{,-64}.h
-  install -m 0644 $SRC/llvm-config.h $PKG/usr/include/llvm/Config/
+#  mv $PKG/usr/include/llvm/Config/llvm-config{,-64}.h
+#  install -m 0644 $SRC/llvm-config.h $PKG/usr/include/llvm/Config/
 }
