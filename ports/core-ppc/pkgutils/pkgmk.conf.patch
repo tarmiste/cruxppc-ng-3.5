@@ -7,7 +7,7 @@ diff -Naur a/pkgmk.conf b/pkgmk.conf
  
 -export CFLAGS="-O2 -march=x86-64 -pipe"
 -export CXXFLAGS="${CFLAGS}"
-+export CFLAGS="-O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt"
++export CFLAGS="-O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec"
 +#export CFLAGS="-O2 -pipe -mcpu=powerpc64 -mtune=970 -msecure-plt"
 +export CXXFLAGS="$CFLAGS"
  
