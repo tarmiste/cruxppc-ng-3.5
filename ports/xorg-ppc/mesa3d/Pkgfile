@@ -18,7 +18,7 @@ build() {
 		--sysconfdir=/etc \
 		-Dllvm=false \
 		-Dgbm=true \
-		-Dgles1=false \
+		-Dgles1=true \
 		-Dgles2=true \
 		-Dosmesa=none \
 		-Dgallium-xa=false \
