@@ -1,6 +1,6 @@
 # Description: MPEG1/MPEG2 decoder (includes libmpeg2)
 # URL:         http://libmpeg2.sourceforge.net/
-# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Maintainer:  TBA
 # Depends on:  libsdl
 
 name=libmpeg2

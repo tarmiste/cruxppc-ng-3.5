@@ -1,6 +1,6 @@
 # Description: The Rust language with Cargo included.
 # URL: http://www.rust-lang.org/
-# Maintainer: Danny Rawlins, crux at romster dot me
+# Maintainer:  TBA
 # Depends on: llvm python3
 # Optional: sccache llvm-32
 

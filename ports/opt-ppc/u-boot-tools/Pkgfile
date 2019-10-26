@@ -1,7 +1,6 @@
 # Description: U-Boot tools
 # URL: http://www.denx.de/wiki/U-Boot/WebHome
-# Maintainer: Jose V Beneyto, sepen at crux dot nu
-# Packager: Jose V Beneyto, sepen at crux dot nu
+# Maintainer:  TBA
 # Depends on:
 
 name=u-boot-tools

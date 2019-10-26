@@ -1,6 +1,6 @@
 # Description: Small, efficient and fast rendering engine for Web Browsers.
 # URL: https://www.webkitgtk.org/
-# Maintainer: Danny Rawlins, crux at romster dot me
+# Maintainer:  TBA
 # Depends on: gst-plugins-base gtk gtk3 harfbuzz-icu hyphen libsecret libsoup libwebp ruby woff2 xorg-libxt bubblewrap xdg-dbus-proxy libseccomp
 # Optional: enchant libnotify geoclue openjpeg2
 

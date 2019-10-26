@@ -1,6 +1,6 @@
 # Description: LLVM + clang compiler
 # URL:         http://llvm.org/
-# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Maintainer:  TBA
 # Depends on:  llvm
 
 name=clang

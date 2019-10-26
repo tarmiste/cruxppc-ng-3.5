@@ -1,6 +1,6 @@
 # Description: LLVM compiler backend
 # URL:         http://llvm.org/
-# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Maintainer:  TBA
 # Depends on:  cmake libffi libxml2 ninja
 
 name=llvm
