@@ -15,9 +15,9 @@ _cargo=0.38.0
 release=1
 source=(
 	https://static.rust-lang.org/dist/${name}c-$version-src.tar.gz
-	https://static.rust-lang.org/dist/$_date/rust-std-$_rustc-x86_64-unknown-linux-gnu.tar.gz
-	https://static.rust-lang.org/dist/$_date/rustc-$_rustc-x86_64-unknown-linux-gnu.tar.gz
-	https://static.rust-lang.org/dist/$_date/cargo-$_cargo-x86_64-unknown-linux-gnu.tar.gz
+	https://static.rust-lang.org/dist/$_date/rust-std-$_rustc-powerpc-unknown-linux-gnu.tar.gz
+	https://static.rust-lang.org/dist/$_date/rustc-$_rustc-powerpc-unknown-linux-gnu.tar.gz
+	https://static.rust-lang.org/dist/$_date/cargo-$_cargo-powerpc-unknown-linux-gnu.tar.gz
 )
  
 build() {
@@ -43,16 +43,16 @@ build() {
 	unset DATE RUSTC CARGO ERROR
 
 	mkdir -p build/cache/$_date
-	cp $PKGMK_SOURCE_DIR/rust-std-$_rustc-x86_64-unknown-linux-gnu.tar.gz build/cache/$_date/
-	cp $PKGMK_SOURCE_DIR/rustc-$_rustc-x86_64-unknown-linux-gnu.tar.gz build/cache/$_date/
-	cp $PKGMK_SOURCE_DIR/cargo-$_cargo-x86_64-unknown-linux-gnu.tar.gz build/cache/$_date/
+	cp $PKGMK_SOURCE_DIR/rust-std-$_rustc-powerpc-unknown-linux-gnu.tar.gz build/cache/$_date/
+	cp $PKGMK_SOURCE_DIR/rustc-$_rustc-powerpc-unknown-linux-gnu.tar.gz build/cache/$_date/
+	cp $PKGMK_SOURCE_DIR/cargo-$_cargo-powerpc-unknown-linux-gnu.tar.gz build/cache/$_date/
 
 	prt-get isinst sccache && export RUSTC_WRAPPER=/usr/bin/sccache
 
 cat <<- EOF > $SRC/config.toml
 	[llvm]
 	ninja = true
-	targets = "X86"
+	targets = "ppc"
 	experimental-targets = ""
 	link-shared = true
 
@@ -72,7 +72,7 @@ cat <<- EOF > $SRC/config.toml
 EOF
 	# part of [build] options
         if [ -e '/usr/bin/rustc' ]; then
-		if [ -z "$(/usr/bin/ldd /usr/lib/rustlib/x86_64-unknown-linux-gnu/codegen-backends/librustc_codegen_llvm-llvm.so | egrep '.*libLLVM-.*.so => not found')" ]; then
+		if [ -z "$(/usr/bin/ldd /usr/lib/rustlib/powerpc-unknown-linux-gnu/codegen-backends/librustc_codegen_llvm-llvm.so | egrep '.*libLLVM-.*.so => not found')" ]; then
 cat <<- EOF >> $SRC/config.toml
 	cargo = "/usr/bin/cargo"
 	rustc = "/usr/bin/rustc"
@@ -83,16 +83,16 @@ EOF
         fi
 
 cat <<- EOF >> $SRC/config.toml
-	[target.x86_64-unknown-linux-gnu]
+	[target.powerpc-unknown-linux-gnu]
 	llvm-config = "/usr/bin/llvm-config"
 EOF
 
-	if [ -e '/usr/bin/llvm-config-32' ]; then
-cat <<- EOF >> $SRC/config.toml
-	[target.i686-unknown-linux-gnu]
-	llvm-config = "/usr/bin/llvm-config-32"
-EOF
-	fi
+#	if [ -e '/usr/bin/llvm-config-32' ]; then
+#cat <<- EOF >> $SRC/config.toml
+#	[target.i686-unknown-linux-gnu]
+#	llvm-config = "/usr/bin/llvm-config-32"
+#EOF
+#	fi
 
 	cat $SRC/config.toml
 
