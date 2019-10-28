@@ -312,3 +312,5 @@ xorg-xf86-video-siliconmotion: xorg-xf86-video-siliconmotion
 xorg-xf86-video-sis: xorg-xf86-video-sis
 xorg-xf86-video-vboxvideo: xorg-xf86-video-vboxvideo
 xorg-xf86-video-vmware: xorg-xf86-video-vmware
+xorg-xf86-video-r128: xorg-xf86-video-r128
+u-boot-tools: u-boot-tools
