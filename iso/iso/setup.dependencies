@@ -122,7 +122,7 @@ freetype: zlib libpng freetype
 fribidi: fribidi 
 fuse: fuse
 gdk-pixbuf: libpcre libffi db ncurses openssl bzip2 zlib expat libtirpc mpdecimal xz attr lzo nasm xorg-xorgproto libpthread-stubs mtdev xorg-util-macros readline libpng curl libxml2 acl xorg-libxdmcp xorg-libxau xorg-xtrans gdbm sqlite3 libxslt libarchive perl python python3 cmake p5-xml-parser ninja xorg-xcb-proto xorg-libevdev python3-setuptools libjpeg-turbo intltool meson libtiff glib libinput gobject-introspection shared-mime-info xorg-libxcb xorg-libx11 gdk-pixbuf 
-git: expat curl python git
+git: sqlite3 git
 glib: libpcre libffi db ncurses openssl bzip2 zlib expat libtirpc mpdecimal xz readline gdbm sqlite3 python python3 ninja python3-setuptools meson glib 
 gobject-introspection: libpcre libffi db ncurses openssl bzip2 zlib expat libtirpc mpdecimal xz readline gdbm sqlite3 python python3 ninja python3-setuptools meson glib gobject-introspection 
 gtk: libpcre libffi db ncurses openssl bzip2 zlib expat libtirpc mpdecimal xz hicolor-icon-theme attr lzo nasm xorg-xorgproto libpthread-stubs mtdev xorg-util-macros xorg-libpixman fribidi readline libpng curl libxml2 acl xorg-libxdmcp xorg-libxau xorg-xtrans gdbm sqlite3 freetype libxslt libarchive xorg-libice perl python python3 fontconfig cmake xorg-libsm p5-xml-parser ninja xorg-xcb-proto xorg-libevdev python3-setuptools libjpeg-turbo intltool meson libtiff glib libinput gobject-introspection shared-mime-info xorg-libxcb atk xorg-libx11 xorg-xcb-util gdk-pixbuf xorg-libxext xorg-libxrender xorg-libxfixes xorg-libxinerama cairo xorg-libxrandr xorg-libxcursor xorg-libxcomposite harfbuzz xorg-libxft pango gtk 
@@ -145,8 +145,8 @@ libjpeg-turbo: openssl zlib bzip2 xz attr lzo expat ncurses nasm curl acl libarc
 libnl: libnl 
 libpng: zlib libpng 
 libtiff: openssl zlib bzip2 xz attr lzo expat ncurses nasm curl acl libarchive cmake libjpeg-turbo libtiff 
-libunique: gtk3 xorg-libxdamage`libunique
-libvpx: yasm libvpx
+libunique: libunique
+libvpx: libvpx
 libyaml: libyaml
 libtirpc: libtirpc 
 libxml2: zlib xz libxml2 
@@ -164,7 +164,7 @@ nano: zlib ncurses file nano
 nfs-utils: kmod ncurses zlib attr linux-pam libtirpc openssl keyutils eudev readline libcap rpcbind libevent util-linux sqlite3 libdevmapper nfs-utils 
 ninja: db ncurses openssl bzip2 zlib readline gdbm sqlite3 python ninja 
 nspr: nspr
-nss: nspr sqlite3 nss
+nss: nspr nss
 openbox: db ncurses openssl bzip2 zlib xorg-xorgproto xz libpthread-stubs mtdev expat libffi libtirpc mpdecimal xorg-util-macros xorg-libpixman libpcre fribidi readline libpng xorg-libxdmcp xorg-libxau libxml2 xorg-xtrans gdbm sqlite3 freetype libxslt xorg-libice python python3 fontconfig xorg-libsm xorg-xcb-proto xorg-libevdev ninja python3-setuptools meson libinput glib xorg-libxcb gobject-introspection xorg-libx11 xorg-xcb-util xorg-libxext xorg-libxrender xorg-libxinerama xorg-libxrandr cairo harfbuzz xorg-libxft pango openbox 
 p5-xml-parser: expat db ncurses readline gdbm perl p5-xml-parser 
 pango: xorg-xorgproto xorg-util-macros zlib expat db ncurses openssl bzip2 xz libpthread-stubs mtdev libffi libtirpc mpdecimal xorg-libpixman libpcre fribidi xorg-libxdmcp xorg-libxau xorg-xtrans libpng readline libxml2 xorg-libice freetype gdbm sqlite3 libxslt xorg-libsm fontconfig python python3 xorg-xcb-proto xorg-libevdev ninja python3-setuptools meson libinput glib xorg-libxcb gobject-introspection xorg-libx11 xorg-xcb-util xorg-libxext xorg-libxrender cairo harfbuzz xorg-libxft pango 
@@ -173,20 +173,21 @@ popt: ncurses attr acl gettext popt
 ppp: zlib openssl ppp 
 prt-utils: bzip2 xz zlib elfutils prt-utils 
 python: db ncurses openssl bzip2 zlib readline gdbm sqlite3 python 
-python-pyparsing: python-setuptools python-pyparsing
-python-setuptools: python python-setuptools
+python-pyparsing: python-pyparsing
+python-setuptools: python-setuptools
 python3: bzip2 expat ncurses libffi libtirpc mpdecimal zlib xz readline gdbm sqlite3 python3 
 python3-setuptools: bzip2 expat ncurses libffi libtirpc mpdecimal zlib xz readline gdbm sqlite3 python3 python3-setuptools 
 python3-mako: bzip2 expat ncurses libffi libtirpc mpdecimal zlib xz readline gdbm sqlite3 python3 python3-setuptools python3-markupsafe python3-mako 
 python3-markupsafe: bzip2 expat ncurses libffi libtirpc mpdecimal zlib xz readline gdbm sqlite3 python3 python3-setuptools python3-markupsafe 
 reiserfsprogs: kmod ncurses zlib eudev util-linux e2fsprogs reiserfsprogs 
 rpcbind: libtirpc rpcbind 
-ruby: gdbm libgmp openssl zlib libffi libyaml ruby
+ruby: ruby
 shared-mime-info: libpcre libffi db ncurses openssl bzip2 zlib expat libtirpc mpdecimal xz readline libxml2 gdbm sqlite3 perl python python3 p5-xml-parser ninja python3-setuptools intltool meson glib shared-mime-info 
 smartmontools: smartmontools
-spice-protocol: python-pyparsing spice-protocol
+spice-protocol: spice-protocol
 sqlite3: ncurses zlib readline sqlite3 
 talloc: bzip2 expat ncurses libffi libtirpc mpdecimal zlib xz readline gdbm sqlite3 python3 talloc 
+u-boot-tools: u-boot-tools
 unzip: unzip 
 wireless-tools: wireless-tools 
 wpa_supplicant: openssl ncurses libnl expat readline dbus wpa_supplicant 
@@ -313,4 +314,3 @@ xorg-xf86-video-sis: xorg-xf86-video-sis
 xorg-xf86-video-vboxvideo: xorg-xf86-video-vboxvideo
 xorg-xf86-video-vmware: xorg-xf86-video-vmware
 xorg-xf86-video-r128: xorg-xf86-video-r128
-u-boot-tools: u-boot-tools
