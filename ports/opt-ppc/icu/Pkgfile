@@ -1,14 +1,16 @@
 # Description: Widely used set of C/C++ libraries providing Unicode and Globalization support.
 # URL: http://www.icu-project.org/
-# Maintainer:  TBA
+# Maintainer: Danny Rawlins, crux at romster dot me
 
 name=icu
-version=63.1
+version=64.2
 release=1
-source=(https://ssl.icu-project.org/files/icu4c/$version/icu4c-${version//./_}-src.tgz)
+source=(https://sourceforge.net/projects/icu/files/ICU4C/$version/icu4c-${version//./_}-src.tgz
+     icu-64-data-bigendian.patch)
 
 build() {
 	cd icu/source
+        cat $SRC/icu-64-data-bigendian.patch |patch -Np2
 
 	# icu tries to use clang by default
 	[ "$CC" ] || export CC=gcc
