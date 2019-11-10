@@ -21,6 +21,12 @@ source=(
 )
  
 build() {
+
+# This package build fails (after hours of compiling) and so is disabled for now.  Remove
+# the following exit if you wish to attempt the build anyway.
+# 
+	exit 1
+
 	cd "${name}c-$version-src"
 
 	local ERROR
