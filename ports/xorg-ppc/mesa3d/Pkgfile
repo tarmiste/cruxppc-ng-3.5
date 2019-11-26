@@ -18,7 +18,7 @@ build() {
 		-Dgbm=true \
 		-Dgles1=true \
 		-Dgles2=true \
-		-Dosmesa=none \
+		-Dosmesa=gallium \
 		-Dgallium-xa=true \
 		-Dshared-llvm=true \
 		-Dplatforms=x11,drm \
