@@ -1,5 +1,5 @@
 /*
-	This simple piece of code simply turns your ix86 into a i586 -
+	This simple piece of code simply turns your 64bit into a 32bit machine
 	useful if you're cross-compiling for a weaker platform.
 
 	Based on the program contained in the cross compiling hint by
@@ -25,8 +25,14 @@
 
 */
 
+#if	0
 #ifndef uname_hack_fake_machine
 # define uname_hack_fake_machine "i486"
+#endif
+#endif
+
+#ifndef uname_hack_fake_machine
+# define uname_hack_fake_machine "ppc"
 #endif
 
 #include <linux/module.h>

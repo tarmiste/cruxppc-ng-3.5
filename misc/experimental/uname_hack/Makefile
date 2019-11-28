@@ -3,7 +3,7 @@ KERNEL_DIR := /lib/modules/$(shell uname -r)/build
 
 obj-m += uname_hack.o
 
-uname_hack_fake_machine := i486
+uname_hack_fake_machine := ppc
 EXTRA_CFLAGS += -Duname_hack_fake_machine=\"$(uname_hack_fake_machine)\"
 
 modules clean:
