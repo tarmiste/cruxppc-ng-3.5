@@ -1,0 +1,144 @@
+
+# ./rustup.sh --verbose
+info: downloading installer
+
+Welcome to Rust!
+
+This will download and install the official compiler for the Rust
+programming language, and its package manager, Cargo.
+
+It will add the cargo, rustc, rustup and other commands to
+Cargo's bin directory, located at:
+
+  /root/.cargo/bin
+
+This can be modified with the CARGO_HOME environment variable.
+
+Rustup metadata and toolchains will be installed into the Rustup
+home directory, located at:
+
+  /root/.rustup
+
+This can be modified with the RUSTUP_HOME environment variable.
+
+This path will then be added to your PATH environment variable by
+modifying the profile file located at:
+
+  /root/.profile
+
+You can uninstall at any time with rustup self uninstall and
+these changes will be reverted.
+
+Current installation options:
+
+
+   default host triple: powerpc-unknown-linux-gnu
+     default toolchain: stable
+               profile: default
+  modify PATH variable: yes
+
+1) Proceed with installation (default)
+2) Customize installation
+3) Cancel installation
+>2
+
+I'm going to ask you the value of each of these installation options.
+You may simply press the Enter key to leave unchanged.
+
+Default host triple?
+
+
+Default toolchain? (stable/beta/nightly/none)
+
+
+Profile (which tools and data to install)? (minimal/default/complete)
+
+
+Modify PATH variable? (y/n)
+
+
+
+Current installation options:
+
+
+   default host triple: powerpc-unknown-linux-gnu
+     default toolchain: stable
+               profile: default
+  modify PATH variable: yes
+
+1) Proceed with installation (default)
+2) Customize installation
+3) Cancel installation
+> 
+
+info: profile set to 'default'
+verbose: creating update-hash directory: '/root/.rustup/update-hashes'
+verbose: installing toolchain 'stable-powerpc-unknown-linux-gnu'
+verbose: toolchain directory: '/root/.rustup/toolchains/stable-powerpc-unknown-linux-gnu'
+info: syncing channel updates for 'stable-powerpc-unknown-linux-gnu'
+verbose: creating temp root: /root/.rustup/tmp
+verbose: creating temp file: /root/.rustup/tmp/zzrb8fmidgqycaw__file
+verbose: downloading file from: 'https://static.rust-lang.org/dist/channel-rust-stable.toml.sha256'
+verbose: downloading with reqwest
+verbose: deleted temp file: /root/.rustup/tmp/zzrb8fmidgqycaw__file
+verbose: no update hash at: '/root/.rustup/update-hashes/stable-powerpc-unknown-linux-gnu'
+verbose: creating temp file: /root/.rustup/tmp/pooxqbitk6yl7_4n_file.toml
+verbose: downloading file from: 'https://static.rust-lang.org/dist/channel-rust-stable.toml'
+verbose: downloading with reqwest
+verbose: checksum passed
+verbose: deleted temp file: /root/.rustup/tmp/pooxqbitk6yl7_4n_file.toml
+info: latest update on 2019-11-07, rust version 1.39.0 (4560ea788 2019-11-04)
+warning: Force-skipping unavailable component 'clippy-powerpc-unknown-linux-gnu'
+warning: Force-skipping unavailable component 'rustfmt-powerpc-unknown-linux-gnu'
+info: downloading component 'cargo'
+verbose: creating Download Directory directory: '/root/.rustup/downloads'
+verbose: downloading file from: 'https://static.rust-lang.org/dist/2019-11-07/cargo-0.40.0-powerpc-unknown-linux-gnu.tar.xz'
+verbose: downloading with reqwest
+  4.2 MiB /   4.2 MiB (100 %)   1.4 MiB/s in  3s ETA:  0s
+verbose: checksum passed
+info: downloading component 'rust-std'
+verbose: downloading file from: 'https://static.rust-lang.org/dist/2019-11-07/rust-std-1.39.0-powerpc-unknown-linux-gnu.tar.xz'
+verbose: downloading with reqwest
+178.6 MiB / 178.6 MiB (100 %)   1.3 MiB/s in  2m 40s ETA:  0s     
+verbose: checksum passed
+info: downloading component 'rustc'
+verbose: downloading file from: 'https://static.rust-lang.org/dist/2019-11-07/rustc-1.39.0-powerpc-unknown-linux-gnu.tar.xz'
+verbose: downloading with reqwest
+ 49.6 MiB /  49.6 MiB (100 %)   1.1 MiB/s in 39s ETA:  0s
+verbose: checksum passed
+info: installing component 'cargo'
+verbose: creating temp directory: /root/.rustup/tmp/nk2kn5ddzqfd1kwn_dir
+  4.2 MiB /   4.2 MiB (100 %)   4.2 MiB/s in  1s ETA:  0s
+verbose: deleted temp directory: /root/.rustup/tmp/nk2kn5ddzqfd1kwn_dir
+info: installing component 'rust-std'
+verbose: creating temp directory: /root/.rustup/tmp/w6r1zn5vk1t3cwz2_dir
+178.6 MiB / 178.6 MiB (100 %)   8.5 MiB/s in 19s ETA:  0s
+verbose: creating temp file: /root/.rustup/tmp/gej1wi0mz6dshvcy_file
+verbose: creating temp file: /root/.rustup/tmp/wdp3n33r_dkop2x8_file
+verbose: deleted temp directory: /root/.rustup/tmp/w6r1zn5vk1t3cwz2_dir
+info: installing component 'rustc'
+verbose: creating temp directory: /root/.rustup/tmp/uthtz6i4epsi4zmk_dir
+ 49.6 MiB /  49.6 MiB (100 %)   4.4 MiB/s in 12s ETA:  0s
+verbose: creating temp file: /root/.rustup/tmp/r61c0ipk2hn6ee0o_file
+verbose: creating temp file: /root/.rustup/tmp/c4xtjvvzj9b9zppi_file
+verbose: deleted temp directory: /root/.rustup/tmp/uthtz6i4epsi4zmk_dir
+verbose: deleted temp file: /root/.rustup/tmp/gej1wi0mz6dshvcy_file
+verbose: deleted temp file: /root/.rustup/tmp/wdp3n33r_dkop2x8_file
+verbose: deleted temp file: /root/.rustup/tmp/r61c0ipk2hn6ee0o_file
+verbose: deleted temp file: /root/.rustup/tmp/c4xtjvvzj9b9zppi_file
+verbose: toolchain 'stable-powerpc-unknown-linux-gnu' installed
+info: default toolchain set to 'stable'
+
+  stable installed - rustc 1.39.0 (4560ea788 2019-11-04)
+
+
+Rust is installed now. Great!
+
+To get started you need Cargo's bin directory ($HOME/.cargo/bin) in your PATH
+environment variable. Next time you log in this will be done
+automatically.
+
+To configure your current shell run source $HOME/.cargo/env
+# 
+
+
