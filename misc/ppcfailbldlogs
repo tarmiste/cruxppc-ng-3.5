@@ -1,0 +1,1361 @@
+
+12/05/19
+prt-get depinst of all opt packages:   Last 50 lines of each failed build log follows:
+
+
+=========== last 50 lines of failing build bitlbee.log:
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+conf.c:308:5: warning: 'strncpy' output may be truncated copying 128 bytes from a string of length 511 [-Wstringop-truncation]
+     strncpy(proxypass, url->pass, sizeof(proxypass));
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Compiling log.c
+make[1]: Entering directory '/usr/ports/opt/bitlbee/work/src/bitlbee-3.5.1/lib'
+* Compiling arc.c
+* Compiling base64.c
+* Compiling events_glib.c
+events_glib.c: In function 'b_main_init':
+events_glib.c:53:13: warning: g_main_loop_new
+   loop = g_main_new(FALSE);
+             ^~~~~~~~~~~~~~~  
+events_glib.c: In function 'b_main_run':
+events_glib.c:59:13: warning: g_main_loop_run
+  g_main_run(loop);
+             ^~~~~~           
+events_glib.c: In function 'b_main_quit':
+events_glib.c:64:13: warning: g_main_loop_quit
+  g_main_quit(loop);
+             ^~~~~~~           
+* Compiling ftutil.c
+* Compiling http_client.c
+* Compiling ini.c
+* Compiling json.c
+json.c: In function 'new_value':
+json.c:142:36: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+    value->_reserved.object_mem = (*(char **) &value->u.object.values) + values_size;
+                                    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+json.c: In function 'json_parse_ex':
+json.c:409:10: warning: dereferencing type-punned pointer will break strict-aliasing rules [-Wstrict-aliasing]
+        (*(json_char **) &top->u.object.values) += string_length + 1;
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+* Compiling json_util.c
+* Compiling md5.c
+* Compiling misc.c
+* Compiling oauth.c
+* Compiling oauth2.c
+* Compiling proxy.c
+* Compiling sha1.c
+* Compiling ssl_openssl.c
+ssl_openssl.c: In function 'ssl_des3_encrypt':
+ssl_openssl.c:303:17: error: storage size of 'ctx' isn't known
+  EVP_CIPHER_CTX ctx;
+                 ^~~
+ssl_openssl.c:303:17: warning: unused variable 'ctx' [-Wunused-variable]
+make[1]: *** [Makefile:44: ssl_openssl.o] Error 1
+make[1]: Leaving directory '/usr/ports/opt/bitlbee/work/src/bitlbee-3.5.1/lib'
+make: *** [Makefile:165: lib] Error 2
+=======> ERROR: Building '/usr/ports/opt/bitlbee/bitlbee#3.5.1-1.pkg.tar.xz' failed.
+=========== last 50 lines of failing build bubblewrap.log:
+checking if gcc supports flag -Wall in envvar CFLAGS... yes
+checking if gcc supports flag -Werror=empty-body in envvar CFLAGS... yes
+checking if gcc supports flag -Werror=strict-prototypes in envvar CFLAGS... yes
+checking if gcc supports flag -Werror=missing-prototypes in envvar CFLAGS... yes
+checking if gcc supports flag -Werror=implicit-function-declaration in envvar CFLAGS... yes
+checking if gcc supports flag -Werror=format=2 -Werror=format-security -Werror=format-nonliteral in envvar CFLAGS... yes
+checking if gcc supports flag -Werror=pointer-arith in envvar CFLAGS... yes
+checking if gcc supports flag -Werror=init-self in envvar CFLAGS... yes
+checking if gcc supports flag -Werror=missing-declarations in envvar CFLAGS... yes
+checking if gcc supports flag -Werror=return-type in envvar CFLAGS... yes
+checking if gcc supports flag -Werror=overflow in envvar CFLAGS... yes
+checking if gcc supports flag -Werror=int-conversion in envvar CFLAGS... yes
+checking if gcc supports flag -Werror=parenthesis in envvar CFLAGS... no
+checking if gcc supports flag -Werror=incompatible-pointer-types in envvar CFLAGS... yes
+checking if gcc supports flag -Werror=misleading-indentation in envvar CFLAGS... yes
+checking if gcc supports flag -Werror=missing-include-dirs in envvar CFLAGS... yes
+checking if gcc supports flag -Werror=aggregate-return in envvar CFLAGS... yes
+checking for cap_from_text in -lcap... yes
+checking for gawk... (cached) gawk
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+
+    bubblewrap 0.4.0
+    ===================
+
+    man pages (xsltproc):                         yes
+    SELinux:                                      no
+    setuid mode on make install:                  setuid
+    require default userns:                       no
+    mysteriously satisfying to pop:               yes
+
++ make
+make  all-am
+make[1]: Entering directory '/usr/ports/opt/bubblewrap/work/src/bubblewrap-0.4.0'
+  CC       bwrap-bubblewrap.o
+  CC       bwrap-bind-mount.o
+  CC       bwrap-network.o
+  CC       bwrap-utils.o
+  CCLD     bwrap
+xsltproc --nonet --stringparam man.output.quietly 1 --stringparam funcsynopsis.style ansi --stringparam man.th.extra1.suppress 1 --stringparam man.authors.section.enabled 0 --stringparam man.copyright.section.enabled 0 http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl bwrap.xml
+I/O error : Attempt to load network entity http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl
+warning: failed to load external entity "http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl"
+cannot parse http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl
+make[1]: *** [Makefile:1364: bwrap.1] Error 4
+make[1]: Leaving directory '/usr/ports/opt/bubblewrap/work/src/bubblewrap-0.4.0'
+make: *** [Makefile:561: all] Error 2
+=======> ERROR: Building '/usr/ports/opt/bubblewrap/bubblewrap#0.4.0-1.pkg.tar.xz' failed.
+=========== last 50 lines of failing build clisp.log:
+installing clisplow_de.gmo as ../locale/de/LC_MESSAGES/clisplow.mo
+installing fr.gmo as ../locale/fr/LC_MESSAGES/clisp.mo
+installing clisplow_fr.gmo as ../locale/fr/LC_MESSAGES/clisplow.mo
+installing es.gmo as ../locale/es/LC_MESSAGES/clisp.mo
+installing clisplow_es.gmo as ../locale/es/LC_MESSAGES/clisplow.mo
+installing nl.gmo as ../locale/nl/LC_MESSAGES/clisp.mo
+installing clisplow_nl.gmo as ../locale/nl/LC_MESSAGES/clisplow.mo
+installing ru.gmo as ../locale/ru/LC_MESSAGES/clisp.mo
+installing clisplow_ru.gmo as ../locale/ru/LC_MESSAGES/clisplow.mo
+make[1]: Leaving directory '/usr/ports/opt/clisp/work/src/clisp-2.49/src/po'
+rm -rf data
+mkdir data
+cd data && ln -s ../../utils/unicode/UnicodeDataFull.txt .
+cd data && ln -s ../../doc/Symbol-Table.text .
+gcc -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -W -Wswitch -Wcomment -Wpointer-arith -Wimplicit -Wreturn-type -Wmissing-declarations -O2 -DENABLE_UNICODE -DDYNAMIC_MODULES -I.  -Wl,--export-dynamic spvw.o spvwtabf.o spvwtabs.o spvwtabo.o eval.o control.o encoding.o pathname.o stream.o socket.o io.o funarg.o array.o hashtabl.o list.o package.o record.o weak.o sequence.o charstrg.o debug.o error.o misc.o time.o predtype.o symbol.o lisparit.o i18n.o unixaux.o built.o modules.o /usr/lib/libreadline.so -lncurses -ldl   -L/usr/lib -lsigsegv -L/usr/lib -lc libgnu_cl.a -o lisp.run
+./lisp.run -B . -N locale -E UTF-8 -Epathname 1:1 -Emisc 1:1 -norc -m 2MW -lp  -x '(and (load "init.lisp") (sys::%saveinitmem) (ext::exit)) (ext::exit t)'
+  i i i i i i i       ooooo    o        ooooooo   ooooo   ooooo
+  I I I I I I I      8     8   8           8     8     o  8    8
+  I  \ `+' /  I      8         8           8     8        8    8
+   \  `-+-'  /       8         8           8      ooooo   8oooo
+    `-__|__-'        8         8           8           8  8
+        |            8     o   8           8     o     8  8
+  ------+------       ooooo    8oooooo  ooo8ooo   ooooo   8
+
+Welcome to GNU CLISP 2.49 (2010-07-07) <http://clisp.cons.org/>
+
+Copyright (c) Bruno Haible, Michael Stoll 1992, 1993
+Copyright (c) Bruno Haible, Marcus Daniels 1994-1997
+Copyright (c) Bruno Haible, Pierpaolo Bernardi, Sam Steingold 1998
+Copyright (c) Bruno Haible, Sam Steingold 1999-2000
+Copyright (c) Sam Steingold, Bruno Haible 2001-2010
+
+Type :h and hit Enter for context help.
+
+;; Loading file defseq.lisp ...
+;; Loaded file defseq.lisp
+;; Loading file backquote.lisp ...
+;; Loaded file backquote.lisp
+*** - handle_fault error2 ! address = 0x4 not in [0x1a6c4000,0x1a6c4000) !
+SIGSEGV cannot be cured. Fault address = 0x4.
+GC count: 1
+Space collected by GC: 0 0
+Run time: 0 210986
+Real time: 0 862083
+GC time: 0 0
+Permanently allocated: 87232 bytes.
+Currently in use: 524120 bytes.
+Free space: 168 bytes.
+make: *** [Makefile:1398: interpreted.mem] Segmentation fault
+=======> ERROR: Building '/usr/ports/opt/clisp/clisp#2.49-1.pkg.tar.xz' failed.
+=========== last 50 lines of failing build cmus.log:
+   snprintf(filename, sizeof(filename), "%s/%s", plugin_dir, d->d_name);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   CC     job.o
+   CC     keys.o
+   CC     keyval.o
+   CC     lib.o
+   CC     load_dir.o
+   CC     locking.o
+   CC     mergesort.o
+   CC     misc.o
+   CC     options.o
+   CC     output.o
+output.c: In function 'op_load_plugins':
+output.c:109:46: warning: 'snprintf' output may be truncated before the last format character [-Wformat-truncation=]
+   snprintf(filename, sizeof(filename), "%s/%s", plugin_dir, d->d_name);
+                                              ^
+output.c:109:3: note: 'snprintf' output 2 or more bytes (assuming 257) into a destination of size 256
+   snprintf(filename, sizeof(filename), "%s/%s", plugin_dir, d->d_name);
+   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   CC     pcm.o
+   CC     player.o
+   CC     play_queue.o
+   CC     pl.o
+   CC     rbtree.o
+   CC     read_wrapper.o
+   CC     search_mode.o
+   CC     search.o
+   CC     server.o
+   CC     spawn.o
+   CC     tabexp_file.o
+   CC     tabexp.o
+   CC     track_info.o
+   CC     track.o
+   CC     tree.o
+   CC     uchar.o
+   CC     u_collate.o
+   CC     ui_curses.o
+   CC     window.o
+   CC     worker.o
+   CC     xstrjoin.o
+   CC     file.o
+   CC     path.o
+   CC     prog.o
+   CC     xmalloc.o
+   LD     cmus
+/usr/bin/ld: track_info.o: in function `track_info_new':
+track_info.c:(.text+0x3c): undefined reference to `__atomic_fetch_add_8'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:52: cmus] Error 1
+=======> ERROR: Building '/usr/ports/opt/cmus/cmus#2.8.0-1.pkg.tar.xz' failed.
+=========== last 50 lines of failing build elilo.log:
+prt-get: installing /usr/ports/opt/elilo
+prt-get: starting build Wed Dec  4 23:02:00 2019
+=======> Building '/usr/ports/opt/elilo/elilo#3.16-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/opt/elilo/work/src -xf /sources/elilo-3.16-all.tar.gz
++ build
++ tar xzf elilo-3.16-source.tar.gz
++ cd elilo-3.16-source
++ sed -i 's|dpkg-architecture -qDEB_BUILD_ARCH|uname -m|g' Make.defaults
++ make -j1
+mkdir -p fs
+make -C fs -f ./../fs/Makefile SRCDIR=./../fs ARCH=ppc
+make[1]: Entering directory '/usr/ports/opt/elilo/work/src/elilo-3.16-source/fs'
+/usr/bin/gcc -I. -I./../fs/.. -I/usr/include/efi -I/usr/include/efi/ppc -I/usr/include/efi/protocol -I./../fs/../efi110  -O2  -fno-stack-protector -fno-strict-aliasing -fpic -fshort-wchar -Wall -DENABLE_MACHINE_SPECIFIC_NETCONFIG -DCONFIG_LOCALFS -DCONFIG_NETFS -DCONFIG_CHOOSER_SIMPLE -DCONFIG_CHOOSER_TEXTMENU -DCONFIG_ppc  -c localfs.c -o localfs.o
+localfs.c:30:10: fatal error: efi.h: No such file or directory
+ #include <efi.h>
+          ^~~~~~~
+compilation terminated.
+make[1]: *** [../fs/../Make.rules:34: localfs.o] Error 1
+make[1]: Leaving directory '/usr/ports/opt/elilo/work/src/elilo-3.16-source/fs'
+make: *** [Makefile:95: fs] Error 2
+=======> ERROR: Building '/usr/ports/opt/elilo/elilo#3.16-1.pkg.tar.xz' failed.
+=========== last 50 lines of failing build freerdp.log:
+prt-get: installing /usr/ports/opt/freerdp
+prt-get: starting build Thu Dec  5 00:28:33 2019
+=======> ERROR: Md5sum mismatch found:
+MISSING   9415c2533c02d39924050aa49025a9c9  freerdp-2.0.0-rc4.tar.gz
+NEW       08f0e07d8d77e142f7dc39e4033a458d  freerdp-1.0.2.tar.gz
+=======> ERROR: Building '/usr/ports/opt/freerdp/freerdp#1.0.2-2.pkg.tar.xz' failed.
+=========== last 50 lines of failing build git-bashcompletion.log:
+prt-get: installing /usr/ports/opt/git-bashcompletion
+prt-get: starting build Thu Dec  5 01:12:37 2019
+=======> Building '/usr/ports/opt/git-bashcompletion/git-bashcompletion#2.19.1-1.pkg.tar.xz'.
++ build
++ wget http://repo.or.cz/git.git/blob_plain/refs/tags/v2.19.1:/contrib/completion/git-completion.bash
+--2019-12-05 01:12:37--  http://repo.or.cz/git.git/blob_plain/refs/tags/v2.19.1:/contrib/completion/git-completion.bash
+Resolving repo.or.cz... failed: Temporary failure in name resolution.
+wget: unable to resolve host address 'repo.or.cz'
+=======> ERROR: Building '/usr/ports/opt/git-bashcompletion/git-bashcompletion#2.19.1-1.pkg.tar.xz' failed.
+=========== last 50 lines of failing build gnuplot.log:
+prt-get: installing /usr/ports/opt/gnuplot
+prt-get: starting build Thu Dec  5 01:27:38 2019
+=======> Downloading 'http://downloads.sourceforge.net/project/gnuplot/gnuplot/5.2.8/gnuplot-5.2.8.tar.gz'.
+--2019-12-05 01:27:38--  http://downloads.sourceforge.net/project/gnuplot/gnuplot/5.2.8/gnuplot-5.2.8.tar.gz
+Resolving downloads.sourceforge.net... failed: Temporary failure in name resolution.
+wget: unable to resolve host address 'downloads.sourceforge.net'
+=======> ERROR: Downloading 'http://downloads.sourceforge.net/project/gnuplot/gnuplot/5.2.8/gnuplot-5.2.8.tar.gz' failed.
+=========== last 50 lines of failing build hpcups.log:
+mv -f .deps/hpcups-dj4100ColorMaps.Tpo .deps/hpcups-dj4100ColorMaps.Po
+g++ -DPACKAGE_NAME=\"HP\ Linux\ Imaging\ and\ Printing\" -DPACKAGE_TARNAME=\"hplip\" -DPACKAGE_VERSION=\"3.19.11\" -DPACKAGE_STRING=\"HP\ Linux\ Imaging\ and\ Printing\ 3.19.11\" -DPACKAGE_BUGREPORT=\"3.19.11\" -DPACKAGE_URL=\"\" -DPACKAGE=\"hplip\" -DVERSION=\"3.19.11\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LIBDL=1 -DHAVE_PTHREAD_H=1 -DHAVE_JPEGLIB_H=1 -DWORDS_BIGENDIAN=1 -DHAVE_UINT32_T=1 -DHAVE_LIBHPIP=1 -I. -Iip -Iio/hpmud -Iscan/sane -Iprnt/hpijs -Icommon/     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DCONFDIR=\"\" -MT hpcups-BreakTables.o -MD -MP -MF .deps/hpcups-BreakTables.Tpo -c -o hpcups-BreakTables.o `test -f 'prnt/hpcups/BreakTables.cpp' || echo './'`prnt/hpcups/BreakTables.cpp
+mv -f .deps/hpcups-BreakTables.Tpo .deps/hpcups-BreakTables.Po
+g++ -DPACKAGE_NAME=\"HP\ Linux\ Imaging\ and\ Printing\" -DPACKAGE_TARNAME=\"hplip\" -DPACKAGE_VERSION=\"3.19.11\" -DPACKAGE_STRING=\"HP\ Linux\ Imaging\ and\ Printing\ 3.19.11\" -DPACKAGE_BUGREPORT=\"3.19.11\" -DPACKAGE_URL=\"\" -DPACKAGE=\"hplip\" -DVERSION=\"3.19.11\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LIBDL=1 -DHAVE_PTHREAD_H=1 -DHAVE_JPEGLIB_H=1 -DWORDS_BIGENDIAN=1 -DHAVE_UINT32_T=1 -DHAVE_LIBHPIP=1 -I. -Iip -Iio/hpmud -Iscan/sane -Iprnt/hpijs -Icommon/     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DCONFDIR=\"\" -MT hpcups-Utils.o -MD -MP -MF .deps/hpcups-Utils.Tpo -c -o hpcups-Utils.o `test -f 'prnt/hpcups/Utils.cpp' || echo './'`prnt/hpcups/Utils.cpp
+mv -f .deps/hpcups-Utils.Tpo .deps/hpcups-Utils.Po
+g++ -DPACKAGE_NAME=\"HP\ Linux\ Imaging\ and\ Printing\" -DPACKAGE_TARNAME=\"hplip\" -DPACKAGE_VERSION=\"3.19.11\" -DPACKAGE_STRING=\"HP\ Linux\ Imaging\ and\ Printing\ 3.19.11\" -DPACKAGE_BUGREPORT=\"3.19.11\" -DPACKAGE_URL=\"\" -DPACKAGE=\"hplip\" -DVERSION=\"3.19.11\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LIBDL=1 -DHAVE_PTHREAD_H=1 -DHAVE_JPEGLIB_H=1 -DWORDS_BIGENDIAN=1 -DHAVE_UINT32_T=1 -DHAVE_LIBHPIP=1 -I. -Iip -Iio/hpmud -Iscan/sane -Iprnt/hpijs -Icommon/     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DCONFDIR=\"\" -MT hpcups-SystemServices.o -MD -MP -MF .deps/hpcups-SystemServices.Tpo -c -o hpcups-SystemServices.o `test -f 'prnt/hpcups/SystemServices.cpp' || echo './'`prnt/hpcups/SystemServices.cpp
+mv -f .deps/hpcups-SystemServices.Tpo .deps/hpcups-SystemServices.Po
+g++ -DPACKAGE_NAME=\"HP\ Linux\ Imaging\ and\ Printing\" -DPACKAGE_TARNAME=\"hplip\" -DPACKAGE_VERSION=\"3.19.11\" -DPACKAGE_STRING=\"HP\ Linux\ Imaging\ and\ Printing\ 3.19.11\" -DPACKAGE_BUGREPORT=\"3.19.11\" -DPACKAGE_URL=\"\" -DPACKAGE=\"hplip\" -DVERSION=\"3.19.11\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LIBDL=1 -DHAVE_PTHREAD_H=1 -DHAVE_JPEGLIB_H=1 -DWORDS_BIGENDIAN=1 -DHAVE_UINT32_T=1 -DHAVE_LIBHPIP=1 -I. -Iip -Iio/hpmud -Iscan/sane -Iprnt/hpijs -Icommon/     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DCONFDIR=\"\" -MT hpcups-QuickConnect.o -MD -MP -MF .deps/hpcups-QuickConnect.Tpo -c -o hpcups-QuickConnect.o `test -f 'prnt/hpcups/QuickConnect.cpp' || echo './'`prnt/hpcups/QuickConnect.cpp
+mv -f .deps/hpcups-QuickConnect.Tpo .deps/hpcups-QuickConnect.Po
+g++ -DPACKAGE_NAME=\"HP\ Linux\ Imaging\ and\ Printing\" -DPACKAGE_TARNAME=\"hplip\" -DPACKAGE_VERSION=\"3.19.11\" -DPACKAGE_STRING=\"HP\ Linux\ Imaging\ and\ Printing\ 3.19.11\" -DPACKAGE_BUGREPORT=\"3.19.11\" -DPACKAGE_URL=\"\" -DPACKAGE=\"hplip\" -DVERSION=\"3.19.11\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LIBDL=1 -DHAVE_PTHREAD_H=1 -DHAVE_JPEGLIB_H=1 -DWORDS_BIGENDIAN=1 -DHAVE_UINT32_T=1 -DHAVE_LIBHPIP=1 -I. -Iip -Iio/hpmud -Iscan/sane -Iprnt/hpijs -Icommon/     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DCONFDIR=\"\" -MT hpcups-ModeJpeg.o -MD -MP -MF .deps/hpcups-ModeJpeg.Tpo -c -o hpcups-ModeJpeg.o `test -f 'prnt/hpcups/ModeJpeg.cpp' || echo './'`prnt/hpcups/ModeJpeg.cpp
+mv -f .deps/hpcups-ModeJpeg.Tpo .deps/hpcups-ModeJpeg.Po
+gcc -DPACKAGE_NAME=\"HP\ Linux\ Imaging\ and\ Printing\" -DPACKAGE_TARNAME=\"hplip\" -DPACKAGE_VERSION=\"3.19.11\" -DPACKAGE_STRING=\"HP\ Linux\ Imaging\ and\ Printing\ 3.19.11\" -DPACKAGE_BUGREPORT=\"3.19.11\" -DPACKAGE_URL=\"\" -DPACKAGE=\"hplip\" -DVERSION=\"3.19.11\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LIBDL=1 -DHAVE_PTHREAD_H=1 -DHAVE_JPEGLIB_H=1 -DWORDS_BIGENDIAN=1 -DHAVE_UINT32_T=1 -DHAVE_LIBHPIP=1 -I. -Iip -Iio/hpmud -Iscan/sane -Iprnt/hpijs -Icommon/    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DCONFDIR=\"\" -MT jccolor.o -MD -MP -MF .deps/jccolor.Tpo -c -o jccolor.o `test -f 'prnt/hpcups/jccolor.c' || echo './'`prnt/hpcups/jccolor.c
+mv -f .deps/jccolor.Tpo .deps/jccolor.Po
+gcc -DPACKAGE_NAME=\"HP\ Linux\ Imaging\ and\ Printing\" -DPACKAGE_TARNAME=\"hplip\" -DPACKAGE_VERSION=\"3.19.11\" -DPACKAGE_STRING=\"HP\ Linux\ Imaging\ and\ Printing\ 3.19.11\" -DPACKAGE_BUGREPORT=\"3.19.11\" -DPACKAGE_URL=\"\" -DPACKAGE=\"hplip\" -DVERSION=\"3.19.11\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LIBDL=1 -DHAVE_PTHREAD_H=1 -DHAVE_JPEGLIB_H=1 -DWORDS_BIGENDIAN=1 -DHAVE_UINT32_T=1 -DHAVE_LIBHPIP=1 -I. -Iip -Iio/hpmud -Iscan/sane -Iprnt/hpijs -Icommon/    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DCONFDIR=\"\" -MT jdatadbf.o -MD -MP -MF .deps/jdatadbf.Tpo -c -o jdatadbf.o `test -f 'prnt/hpcups/jdatadbf.c' || echo './'`prnt/hpcups/jdatadbf.c
+mv -f .deps/jdatadbf.Tpo .deps/jdatadbf.Po
+g++ -DPACKAGE_NAME=\"HP\ Linux\ Imaging\ and\ Printing\" -DPACKAGE_TARNAME=\"hplip\" -DPACKAGE_VERSION=\"3.19.11\" -DPACKAGE_STRING=\"HP\ Linux\ Imaging\ and\ Printing\ 3.19.11\" -DPACKAGE_BUGREPORT=\"3.19.11\" -DPACKAGE_URL=\"\" -DPACKAGE=\"hplip\" -DVERSION=\"3.19.11\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LIBDL=1 -DHAVE_PTHREAD_H=1 -DHAVE_JPEGLIB_H=1 -DWORDS_BIGENDIAN=1 -DHAVE_UINT32_T=1 -DHAVE_LIBHPIP=1 -I. -Iip -Iio/hpmud -Iscan/sane -Iprnt/hpijs -Icommon/     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DCONFDIR=\"\" -MT hpcups-Lidil.o -MD -MP -MF .deps/hpcups-Lidil.Tpo -c -o hpcups-Lidil.o `test -f 'prnt/hpcups/Lidil.cpp' || echo './'`prnt/hpcups/Lidil.cpp
+mv -f .deps/hpcups-Lidil.Tpo .deps/hpcups-Lidil.Po
+g++ -DPACKAGE_NAME=\"HP\ Linux\ Imaging\ and\ Printing\" -DPACKAGE_TARNAME=\"hplip\" -DPACKAGE_VERSION=\"3.19.11\" -DPACKAGE_STRING=\"HP\ Linux\ Imaging\ and\ Printing\ 3.19.11\" -DPACKAGE_BUGREPORT=\"3.19.11\" -DPACKAGE_URL=\"\" -DPACKAGE=\"hplip\" -DVERSION=\"3.19.11\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LIBDL=1 -DHAVE_PTHREAD_H=1 -DHAVE_JPEGLIB_H=1 -DWORDS_BIGENDIAN=1 -DHAVE_UINT32_T=1 -DHAVE_LIBHPIP=1 -I. -Iip -Iio/hpmud -Iscan/sane -Iprnt/hpijs -Icommon/     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DCONFDIR=\"\" -MT hpcups-LidilCompress.o -MD -MP -MF .deps/hpcups-LidilCompress.Tpo -c -o hpcups-LidilCompress.o `test -f 'prnt/hpcups/LidilCompress.cpp' || echo './'`prnt/hpcups/LidilCompress.cpp
+mv -f .deps/hpcups-LidilCompress.Tpo .deps/hpcups-LidilCompress.Po
+g++ -DPACKAGE_NAME=\"HP\ Linux\ Imaging\ and\ Printing\" -DPACKAGE_TARNAME=\"hplip\" -DPACKAGE_VERSION=\"3.19.11\" -DPACKAGE_STRING=\"HP\ Linux\ Imaging\ and\ Printing\ 3.19.11\" -DPACKAGE_BUGREPORT=\"3.19.11\" -DPACKAGE_URL=\"\" -DPACKAGE=\"hplip\" -DVERSION=\"3.19.11\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LIBDL=1 -DHAVE_PTHREAD_H=1 -DHAVE_JPEGLIB_H=1 -DWORDS_BIGENDIAN=1 -DHAVE_UINT32_T=1 -DHAVE_LIBHPIP=1 -I. -Iip -Iio/hpmud -Iscan/sane -Iprnt/hpijs -Icommon/     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DCONFDIR=\"\" -MT hpcups-dj3320ColorMaps.o -MD -MP -MF .deps/hpcups-dj3320ColorMaps.Tpo -c -o hpcups-dj3320ColorMaps.o `test -f 'prnt/hpcups/dj3320ColorMaps.cpp' || echo './'`prnt/hpcups/dj3320ColorMaps.cpp
+mv -f .deps/hpcups-dj3320ColorMaps.Tpo .deps/hpcups-dj3320ColorMaps.Po
+g++ -DPACKAGE_NAME=\"HP\ Linux\ Imaging\ and\ Printing\" -DPACKAGE_TARNAME=\"hplip\" -DPACKAGE_VERSION=\"3.19.11\" -DPACKAGE_STRING=\"HP\ Linux\ Imaging\ and\ Printing\ 3.19.11\" -DPACKAGE_BUGREPORT=\"3.19.11\" -DPACKAGE_URL=\"\" -DPACKAGE=\"hplip\" -DVERSION=\"3.19.11\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LIBDL=1 -DHAVE_PTHREAD_H=1 -DHAVE_JPEGLIB_H=1 -DWORDS_BIGENDIAN=1 -DHAVE_UINT32_T=1 -DHAVE_LIBHPIP=1 -I. -Iip -Iio/hpmud -Iscan/sane -Iprnt/hpijs -Icommon/     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DCONFDIR=\"\" -MT hpcups-dj3600ColorMaps.o -MD -MP -MF .deps/hpcups-dj3600ColorMaps.Tpo -c -o hpcups-dj3600ColorMaps.o `test -f 'prnt/hpcups/dj3600ColorMaps.cpp' || echo './'`prnt/hpcups/dj3600ColorMaps.cpp
+mv -f .deps/hpcups-dj3600ColorMaps.Tpo .deps/hpcups-dj3600ColorMaps.Po
+g++ -DPACKAGE_NAME=\"HP\ Linux\ Imaging\ and\ Printing\" -DPACKAGE_TARNAME=\"hplip\" -DPACKAGE_VERSION=\"3.19.11\" -DPACKAGE_STRING=\"HP\ Linux\ Imaging\ and\ Printing\ 3.19.11\" -DPACKAGE_BUGREPORT=\"3.19.11\" -DPACKAGE_URL=\"\" -DPACKAGE=\"hplip\" -DVERSION=\"3.19.11\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LIBDL=1 -DHAVE_PTHREAD_H=1 -DHAVE_JPEGLIB_H=1 -DWORDS_BIGENDIAN=1 -DHAVE_UINT32_T=1 -DHAVE_LIBHPIP=1 -I. -Iip -Iio/hpmud -Iscan/sane -Iprnt/hpijs -Icommon/     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DCONFDIR=\"\" -MT hpcups-Hbpl1.o -MD -MP -MF .deps/hpcups-Hbpl1.Tpo -c -o hpcups-Hbpl1.o `test -f 'prnt/hpcups/Hbpl1.cpp' || echo './'`prnt/hpcups/Hbpl1.cpp
+mv -f .deps/hpcups-Hbpl1.Tpo .deps/hpcups-Hbpl1.Po
+gcc -DPACKAGE_NAME=\"HP\ Linux\ Imaging\ and\ Printing\" -DPACKAGE_TARNAME=\"hplip\" -DPACKAGE_VERSION=\"3.19.11\" -DPACKAGE_STRING=\"HP\ Linux\ Imaging\ and\ Printing\ 3.19.11\" -DPACKAGE_BUGREPORT=\"3.19.11\" -DPACKAGE_URL=\"\" -DPACKAGE=\"hplip\" -DVERSION=\"3.19.11\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LIBDL=1 -DHAVE_PTHREAD_H=1 -DHAVE_JPEGLIB_H=1 -DWORDS_BIGENDIAN=1 -DHAVE_UINT32_T=1 -DHAVE_LIBHPIP=1 -I. -Iip -Iio/hpmud -Iscan/sane -Iprnt/hpijs -Icommon/    -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DCONFDIR=\"\" -MT utils.o -MD -MP -MF .deps/utils.Tpo -c -o utils.o `test -f 'common/utils.c' || echo './'`common/utils.c
+common/utils.c: In function 'IsChromeOs':
+common/utils.c:38:8: warning: implicit declaration of function 'strcasestr'; did you mean 'strcasecmp'? [-Wimplicit-function-declaration]
+     if(strcasestr(os_name,"chrome os")!=NULL)
+        ^~~~~~~~~~
+        strcasecmp
+common/utils.c:38:39: warning: comparison between pointer and integer
+     if(strcasestr(os_name,"chrome os")!=NULL)
+                                       ^~
+mv -f .deps/utils.Tpo .deps/utils.Po
+g++ -DPACKAGE_NAME=\"HP\ Linux\ Imaging\ and\ Printing\" -DPACKAGE_TARNAME=\"hplip\" -DPACKAGE_VERSION=\"3.19.11\" -DPACKAGE_STRING=\"HP\ Linux\ Imaging\ and\ Printing\ 3.19.11\" -DPACKAGE_BUGREPORT=\"3.19.11\" -DPACKAGE_URL=\"\" -DPACKAGE=\"hplip\" -DVERSION=\"3.19.11\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LIBDL=1 -DHAVE_PTHREAD_H=1 -DHAVE_JPEGLIB_H=1 -DWORDS_BIGENDIAN=1 -DHAVE_UINT32_T=1 -DHAVE_LIBHPIP=1 -I. -Iip -Iio/hpmud -Iscan/sane -Iprnt/hpijs -Icommon/     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DCONFDIR=\"\" -MT hpcups-Hbpl1_Wrapper.o -MD -MP -MF .deps/hpcups-Hbpl1_Wrapper.Tpo -c -o hpcups-Hbpl1_Wrapper.o `test -f 'prnt/hpcups/Hbpl1_Wrapper.cpp' || echo './'`prnt/hpcups/Hbpl1_Wrapper.cpp
+mv -f .deps/hpcups-Hbpl1_Wrapper.Tpo .deps/hpcups-Hbpl1_Wrapper.Po
+g++ -DPACKAGE_NAME=\"HP\ Linux\ Imaging\ and\ Printing\" -DPACKAGE_TARNAME=\"hplip\" -DPACKAGE_VERSION=\"3.19.11\" -DPACKAGE_STRING=\"HP\ Linux\ Imaging\ and\ Printing\ 3.19.11\" -DPACKAGE_BUGREPORT=\"3.19.11\" -DPACKAGE_URL=\"\" -DPACKAGE=\"hplip\" -DVERSION=\"3.19.11\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LIBDL=1 -DHAVE_PTHREAD_H=1 -DHAVE_JPEGLIB_H=1 -DWORDS_BIGENDIAN=1 -DHAVE_UINT32_T=1 -DHAVE_LIBHPIP=1 -I. -Iip -Iio/hpmud -Iscan/sane -Iprnt/hpijs -Icommon/     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DCONFDIR=\"\" -MT hpcups-genPCLm.o -MD -MP -MF .deps/hpcups-genPCLm.Tpo -c -o hpcups-genPCLm.o `test -f 'prnt/hpcups/genPCLm.cpp' || echo './'`prnt/hpcups/genPCLm.cpp
+mv -f .deps/hpcups-genPCLm.Tpo .deps/hpcups-genPCLm.Po
+g++ -DPACKAGE_NAME=\"HP\ Linux\ Imaging\ and\ Printing\" -DPACKAGE_TARNAME=\"hplip\" -DPACKAGE_VERSION=\"3.19.11\" -DPACKAGE_STRING=\"HP\ Linux\ Imaging\ and\ Printing\ 3.19.11\" -DPACKAGE_BUGREPORT=\"3.19.11\" -DPACKAGE_URL=\"\" -DPACKAGE=\"hplip\" -DVERSION=\"3.19.11\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LIBDL=1 -DHAVE_PTHREAD_H=1 -DHAVE_JPEGLIB_H=1 -DWORDS_BIGENDIAN=1 -DHAVE_UINT32_T=1 -DHAVE_LIBHPIP=1 -I. -Iip -Iio/hpmud -Iscan/sane -Iprnt/hpijs -Icommon/     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DCONFDIR=\"\" -MT hpcups-genJPEGStrips.o -MD -MP -MF .deps/hpcups-genJPEGStrips.Tpo -c -o hpcups-genJPEGStrips.o `test -f 'prnt/hpcups/genJPEGStrips.cpp' || echo './'`prnt/hpcups/genJPEGStrips.cpp
+mv -f .deps/hpcups-genJPEGStrips.Tpo .deps/hpcups-genJPEGStrips.Po
+g++ -DPACKAGE_NAME=\"HP\ Linux\ Imaging\ and\ Printing\" -DPACKAGE_TARNAME=\"hplip\" -DPACKAGE_VERSION=\"3.19.11\" -DPACKAGE_STRING=\"HP\ Linux\ Imaging\ and\ Printing\ 3.19.11\" -DPACKAGE_BUGREPORT=\"3.19.11\" -DPACKAGE_URL=\"\" -DPACKAGE=\"hplip\" -DVERSION=\"3.19.11\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -DHAVE_LIBDL=1 -DHAVE_PTHREAD_H=1 -DHAVE_JPEGLIB_H=1 -DWORDS_BIGENDIAN=1 -DHAVE_UINT32_T=1 -DHAVE_LIBHPIP=1 -I. -Iip -Iio/hpmud -Iscan/sane -Iprnt/hpijs -Icommon/     -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DCONFDIR=\"\" -MT hpcups-RunLenEncoding.o -MD -MP -MF .deps/hpcups-RunLenEncoding.Tpo -c -o hpcups-RunLenEncoding.o `test -f 'prnt/hpcups/RunLenEncoding.cpp' || echo './'`prnt/hpcups/RunLenEncoding.cpp
+mv -f .deps/hpcups-RunLenEncoding.Tpo .deps/hpcups-RunLenEncoding.Po
+/bin/sh ./libtool --tag=CXX   --mode=link g++   -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DCONFDIR=\"\"   -o hpcups hpcups-HPCupsFilter.o hpcups-dbuscomm.o hpcups-Compressor.o hpcups-Mode2.o hpcups-Mode3.o hpcups-Mode9.o hpcups-Mode10.o hpcups-ModeDeltaPlus.o hpcups-ModeJbig.o hpcups-ErnieFilter.o hpcups-EncapsulatorFactory.o hpcups-Encapsulator.o hpcups-Pcl3.o hpcups-Pcl3Gui.o hpcups-Pcl3Gui2.o hpcups-LJMono.o hpcups-LJColor.o hpcups-LJFastRaster.o hpcups-LJJetReady.o hpcups-LJZjStream.o hpcups-LJZxStream.o hpcups-Job.o hpcups-Pipeline.o hpcups-Processor.o hpcups-RasterSender.o hpcups-ColorMatcher.o hpcups-Halftoner.o hpcups-Scaler.o hpcups-dj400ColorMaps.o hpcups-dj600ColorMaps.o hpcups-dj970ColorMaps.o hpcups-dj8xxColorMaps.o hpcups-dj4100ColorMaps.o hpcups-BreakTables.o hpcups-Utils.o hpcups-SystemServices.o hpcups-QuickConnect.o hpcups-ModeJpeg.o jccolor.o jdatadbf.o hpcups-Lidil.o hpcups-LidilCompress.o hpcups-dj3320ColorMaps.o hpcups-dj3600ColorMaps.o hpcups-Hbpl1.o utils.o hpcups-Hbpl1_Wrapper.o hpcups-genPCLm.o hpcups-genJPEGStrips.o hpcups-RunLenEncoding.o -L./prnt/hpcups/ -ljpeg -ldl -lImageProcessor -lcups -lcupsimage -lz  
+libtool: link: g++ -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -DCONFDIR=\"\" -o hpcups hpcups-HPCupsFilter.o hpcups-dbuscomm.o hpcups-Compressor.o hpcups-Mode2.o hpcups-Mode3.o hpcups-Mode9.o hpcups-Mode10.o hpcups-ModeDeltaPlus.o hpcups-ModeJbig.o hpcups-ErnieFilter.o hpcups-EncapsulatorFactory.o hpcups-Encapsulator.o hpcups-Pcl3.o hpcups-Pcl3Gui.o hpcups-Pcl3Gui2.o hpcups-LJMono.o hpcups-LJColor.o hpcups-LJFastRaster.o hpcups-LJJetReady.o hpcups-LJZjStream.o hpcups-LJZxStream.o hpcups-Job.o hpcups-Pipeline.o hpcups-Processor.o hpcups-RasterSender.o hpcups-ColorMatcher.o hpcups-Halftoner.o hpcups-Scaler.o hpcups-dj400ColorMaps.o hpcups-dj600ColorMaps.o hpcups-dj970ColorMaps.o hpcups-dj8xxColorMaps.o hpcups-dj4100ColorMaps.o hpcups-BreakTables.o hpcups-Utils.o hpcups-SystemServices.o hpcups-QuickConnect.o hpcups-ModeJpeg.o jccolor.o jdatadbf.o hpcups-Lidil.o hpcups-LidilCompress.o hpcups-dj3320ColorMaps.o hpcups-dj3600ColorMaps.o hpcups-Hbpl1.o utils.o hpcups-Hbpl1_Wrapper.o hpcups-genPCLm.o hpcups-genJPEGStrips.o hpcups-RunLenEncoding.o  -L./prnt/hpcups/ -ljpeg -ldl -lImageProcessor -lcups -lcupsimage -lz
+/usr/bin/ld: skipping incompatible ./prnt/hpcups//libImageProcessor.so when searching for -lImageProcessor
+/usr/bin/ld: cannot find -lImageProcessor
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:5445: hpcups] Error 1
+=======> ERROR: Building '/usr/ports/opt/hpcups/hpcups#3.19.11-1.pkg.tar.xz' failed.
+=========== last 50 lines of failing build libesmtp.log:
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking how to run the C preprocessor... gcc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for library containing dlsym... -ldl
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... no
+checking whether pthreads work with -Kthread... no
+checking whether pthreads work with -kthread... no
+checking for the pthreads library -llthread... no
+checking whether pthreads work with -pthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking for cc_r... gcc
+checking whether to use Posix Threads... yes
+checking for library containing getaddrinfo... none required
+checking openssl/ssl.h usability... yes
+checking openssl/ssl.h presence... yes
+checking for openssl/ssl.h... yes
+checking for SSL_library_init in -lssl... no
+configure: error: cannot find the ssl library
+=======> ERROR: Building '/usr/ports/opt/libesmtp/libesmtp#1.0.6-1.pkg.tar.xz' failed.
+=========== last 50 lines of failing build librsvg.log:
+checking whether byte ordering is bigendian... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 1572864
+checking how to convert powerpc-unknown-linux-gnu file names to powerpc-unknown-linux-gnu format... func_convert_file_noop
+checking how to convert powerpc-unknown-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for cos in -lm... yes
+checking for dlopen... no
+checking for dlopen in -ldl... yes
+checking for cargo... no
+configure: error: cargo is required.  Please install the Rust toolchain from https://www.rust-lang.org/
+=======> ERROR: Building '/usr/ports/opt/librsvg/librsvg#2.46.4-1.pkg.tar.xz' failed.
+=========== last 50 lines of failing build libsdl2.log:
+  CC     build/SDL_qsort.lo
+  CC     build/SDL_stdlib.lo
+  CC     build/SDL_string.lo
+  CC     build/SDL_thread.lo
+  CC     build/SDL_timer.lo
+  CC     build/SDL_RLEaccel.lo
+  CC     build/SDL_blit.lo
+  CC     build/SDL_blit_0.lo
+  CC     build/SDL_blit_1.lo
+  CC     build/SDL_blit_A.lo
+  CC     build/SDL_blit_N.lo
+/usr/ports/opt/libsdl2/work/src/SDL2-2.0.10/src/video/SDL_blit_N.c: In function 'calc_swizzle32':
+/usr/ports/opt/libsdl2/work/src/SDL2-2.0.10/src/video/SDL_blit_N.c:122:18: warning: duplicate 'const' declaration specifier [-Wduplicate-decl-specifier]
+     const static const struct SDL_PixelFormat default_pixel_format = {
+                  ^~~~~
+  CC     build/SDL_blit_auto.lo
+  CC     build/SDL_blit_copy.lo
+  CC     build/SDL_blit_slow.lo
+  CC     build/SDL_bmp.lo
+  CC     build/SDL_clipboard.lo
+  CC     build/SDL_egl.lo
+  CC     build/SDL_fillrect.lo
+  CC     build/SDL_pixels.lo
+  CC     build/SDL_rect.lo
+  CC     build/SDL_shape.lo
+  CC     build/SDL_stretch.lo
+  CC     build/SDL_surface.lo
+  CC     build/SDL_video.lo
+In file included from include/SDL_opengles.h:33,
+                 from /usr/ports/opt/libsdl2/work/src/SDL2-2.0.10/src/video/SDL_video.c:41:
+/usr/include/GLES/gl.h:63:25: error: conflicting types for 'GLsizeiptr'
+ typedef khronos_ssize_t GLsizeiptr;
+                         ^~~~~~~~~~
+In file included from include/SDL_opengl.h:2105,
+                 from /usr/ports/opt/libsdl2/work/src/SDL2-2.0.10/src/video/SDL_video.c:37:
+include/SDL_opengl_glext.h:472:19: note: previous declaration of 'GLsizeiptr' was here
+ typedef ptrdiff_t GLsizeiptr;
+                   ^~~~~~~~~~
+In file included from include/SDL_opengles.h:33,
+                 from /usr/ports/opt/libsdl2/work/src/SDL2-2.0.10/src/video/SDL_video.c:41:
+/usr/include/GLES/gl.h:64:26: error: conflicting types for 'GLintptr'
+ typedef khronos_intptr_t GLintptr;
+                          ^~~~~~~~
+In file included from include/SDL_opengl.h:2105,
+                 from /usr/ports/opt/libsdl2/work/src/SDL2-2.0.10/src/video/SDL_video.c:37:
+include/SDL_opengl_glext.h:473:19: note: previous declaration of 'GLintptr' was here
+ typedef ptrdiff_t GLintptr;
+                   ^~~~~~~~
+make: *** [Makefile:551: build/SDL_video.lo] Error 1
+=======> ERROR: Building '/usr/ports/opt/libsdl2/libsdl2#2.0.10-1.pkg.tar.xz' failed.
+=========== last 50 lines of failing build libwnck-gtk3.log:
+make[1]: Nothing to be done for 'install'.
+make[1]: Leaving directory '/usr/ports/opt/libwnck-gtk3/work/src/libwnck-3.20.1/po'
+make[1]: Entering directory '/usr/ports/opt/libwnck-gtk3/work/src/libwnck-3.20.1'
+make[2]: Entering directory '/usr/ports/opt/libwnck-gtk3/work/src/libwnck-3.20.1'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/usr/ports/opt/libwnck-gtk3/work/pkg/usr/lib/pkgconfig'
+ /usr/bin/install -c -m 644 libwnck-3.0.pc '/usr/ports/opt/libwnck-gtk3/work/pkg/usr/lib/pkgconfig'
+make[2]: Leaving directory '/usr/ports/opt/libwnck-gtk3/work/src/libwnck-3.20.1'
+make[1]: Leaving directory '/usr/ports/opt/libwnck-gtk3/work/src/libwnck-3.20.1'
++ rm -rf /usr/ports/opt/libwnck-gtk3/work/pkg/usr/share
+=======> Build result:
+drwxr-xr-x  0 root   root        0 Dec  5 04:11 usr/
+drwxr-xr-x  0 root   root        0 Dec  5 04:11 usr/lib/
+drwxr-xr-x  0 root   root        0 Dec  5 04:11 usr/include/
+drwxr-xr-x  0 root   root        0 Dec  5 04:11 usr/bin/
+-rwxr-xr-x  0 root   root    69304 Dec  5 04:11 usr/bin/wnckprop
+-rwxr-xr-x  0 root   root    67020 Dec  5 04:11 usr/bin/wnck-urgency-monitor
+drwxr-xr-x  0 root   root        0 Dec  5 04:11 usr/include/libwnck-3.0/
+drwxr-xr-x  0 root   root        0 Dec  5 04:11 usr/include/libwnck-3.0/libwnck/
+-rw-r--r--  0 root   root     3017 Dec  5 04:11 usr/include/libwnck-3.0/libwnck/version.h
+-rw-r--r--  0 root   root    18204 Dec  5 04:11 usr/include/libwnck-3.0/libwnck/window.h
+-rw-r--r--  0 root   root    10280 Dec  5 04:11 usr/include/libwnck-3.0/libwnck/screen.h
+-rw-r--r--  0 root   root     5148 Dec  5 04:11 usr/include/libwnck-3.0/libwnck/tasklist.h
+-rw-r--r--  0 root   root     2497 Dec  5 04:11 usr/include/libwnck-3.0/libwnck/window-action-menu.h
+-rw-r--r--  0 root   root     4085 Dec  5 04:11 usr/include/libwnck-3.0/libwnck/workspace.h
+-rw-r--r--  0 root   root     2333 Dec  5 04:11 usr/include/libwnck-3.0/libwnck/selector.h
+-rw-r--r--  0 root   root     3759 Dec  5 04:11 usr/include/libwnck-3.0/libwnck/util.h
+-rw-r--r--  0 root   root     1264 Dec  5 04:11 usr/include/libwnck-3.0/libwnck/libwnck.h
+-rw-r--r--  0 root   root     1818 Dec  5 04:11 usr/include/libwnck-3.0/libwnck/wnck-enum-types.h
+-rw-r--r--  0 root   root     3536 Dec  5 04:11 usr/include/libwnck-3.0/libwnck/application.h
+-rw-r--r--  0 root   root     3102 Dec  5 04:11 usr/include/libwnck-3.0/libwnck/class-group.h
+-rw-r--r--  0 root   root     3185 Dec  5 04:11 usr/include/libwnck-3.0/libwnck/pager.h
+-rwxr-xr-x  0 root   root     1591 Dec  5 04:11 usr/lib/libwnck-3.la
+lrwxrwxrwx  0 root   root        0 Dec  5 04:11 usr/lib/libwnck-3.so.0 -> libwnck-3.so.0.2.2
+drwxr-xr-x  0 root   root        0 Dec  5 04:11 usr/lib/girepository-1.0/
+-rwxr-xr-x  0 root   root   331336 Dec  5 04:11 usr/lib/libwnck-3.so.0.2.2
+drwxr-xr-x  0 root   root        0 Dec  5 04:11 usr/lib/pkgconfig/
+lrwxrwxrwx  0 root   root        0 Dec  5 04:11 usr/lib/libwnck-3.so -> libwnck-3.so.0.2.2
+-rw-r--r--  0 root   root      346 Dec  5 04:11 usr/lib/pkgconfig/libwnck-3.0.pc
+-rw-r--r--  0 root   root    29360 Dec  5 04:11 usr/lib/girepository-1.0/Wnck-3.0.typelib
+=======> WARNING: Footprint ignored.
+=======> Building '/usr/ports/opt/libwnck-gtk3/libwnck-gtk3#3.20.1-1.pkg.tar.xz' succeeded.
+prt-get: Using PKGMK_PACKAGE_DIR: /usr/ports/opt/libwnck-gtk3
+prt-get: installing libwnck-gtk3 3.20.1-1
+prt-get: /usr/bin/pkgadd libwnck-gtk3#3.20.1-1.pkg.tar.xz
+prt-get: build done Thu Dec  5 04:11:57 2019
+
+usr/bin/wnck-urgency-monitor
+usr/bin/wnckprop
+pkgadd: listed file(s) already installed (use -f to ignore and overwrite)
+=========== last 50 lines of failing build lilo.log:
+prt-get: installing /usr/ports/opt/lilo
+prt-get: starting build Thu Dec  5 04:12:47 2019
+=======> Building '/usr/ports/opt/lilo/lilo#24.2-1.pkg.tar.xz'.
+bsdtar -p -o -C /usr/ports/opt/lilo/work/src -xf /sources/lilo-24.2.tar.gz
+cp lilo-config.patch /usr/ports/opt/lilo/work/src
+cp lilo.conf /usr/ports/opt/lilo/work/src
++ build
++ cd lilo-24.2
++ patch -p1 -i /usr/ports/opt/lilo/work/src/lilo-config.patch
+patching file Makefile
+patching file make.vars
+patching file man/Makefile
+patching file scripts/Makefile
+patching file src/Makefile
++ make all
+./checkit
+GCC version 3.3.5 or later is required
+gcc version 8.3.0
+OKAY
+
+AS86 version 0.16.14 or later is required
+as86 is not present
+
+LD86 version 0.16.14 or later is required
+ld86 is not present
+
+BCC version 0.16.14 or later is recommended
+bcc is not present
+You will not be able to make floppy2, diag2.img, or lilo.com
+
+make: *** [Makefile:91: test.img] Error 1
+=======> ERROR: Building '/usr/ports/opt/lilo/lilo#24.2-1.pkg.tar.xz' failed.
+=========== last 50 lines of failing build mailman.log:
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Logging/Logger.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Logging/MultiLogger.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Logging/StampedLogger.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Logging/Syslog.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Logging/Utils.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Logging/__init__.py ...
+Listing /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/MTA ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/MTA/Manual.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/MTA/Postfix.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/MTA/Utils.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/MTA/__init__.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/MailList.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Mailbox.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/MemberAdaptor.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Message.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/OldStyleMemberships.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Pending.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Post.py ...
+Listing /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Queue ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Queue/ArchRunner.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Queue/BounceRunner.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Queue/CommandRunner.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Queue/IncomingRunner.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Queue/MaildirRunner.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Queue/NewsRunner.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Queue/OutgoingRunner.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Queue/RetryRunner.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Queue/Runner.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Queue/Switchboard.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Queue/VirginRunner.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Queue/__init__.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Queue/sbcache.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/SafeDict.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/SecurityManager.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Site.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/TopicMgr.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/UserDesc.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Utils.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/Version.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/__init__.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/htmlformat.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/i18n.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/mm_cfg.py ...
+Compiling /usr/ports/opt/mailman/work/pkg/usr/lib/mailman/Mailman/versions.py ...
++ install -D -m 0755 /usr/ports/opt/mailman/work/src/mailman.rc /usr/ports/opt/mailman/work/pkg/etc/rc.d/mailman
++ install -d /usr/ports/opt/mailman/work/pkg/etc/cron.d
++ cat
++ chown -R root:mailman /usr/ports/opt/mailman/work/pkg/etc/mailman /usr/ports/opt/mailman/work/pkg/usr/lib/mailman /usr/ports/opt/mailman/work/pkg/var/lib/mailman /usr/ports/opt/mailman/work/pkg/var/lock/mailman /usr/ports/opt/mailman/work/pkg/var/log/mailman /usr/ports/opt/mailman/work/pkg/var/run/mailman /usr/ports/opt/mailman/work/pkg/var/spool/mailman
+chown: invalid group: 'root:mailman'
+=======> ERROR: Building '/usr/ports/opt/mailman/mailman#2.1.23-1.pkg.tar.xz' failed.
+=========== last 50 lines of failing build mariadb.log:
+          ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/ports/opt-ppc/mariadb/work/src/mariadb-10.4.10/include/my_atomic.h:153:43: note: suggested alternative: 'my_atomic_addlong'
+ #define my_atomic_add32_explicit(P, A, O) my_atomic_add32((P), (A))
+                                           ^~~~~~~~~~~~~~~
+/usr/ports/opt-ppc/mariadb/work/src/mariadb-10.4.10/include/my_pthread.h:822:10: note: in expansion of macro 'my_atomic_add32_explicit'
+   (void) my_atomic_add32_explicit(value, 1, MY_MEMORY_ORDER_RELAXED);
+          ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/ports/opt-ppc/mariadb/work/src/mariadb-10.4.10/include/my_pthread.h: In function 'void thread_safe_decrement32(int32*)':
+/usr/ports/opt-ppc/mariadb/work/src/mariadb-10.4.10/include/my_atomic.h:153:43: error: 'my_atomic_add32' was not declared in this scope
+ #define my_atomic_add32_explicit(P, A, O) my_atomic_add32((P), (A))
+                                           ^~~~~~~~~~~~~~~
+/usr/ports/opt-ppc/mariadb/work/src/mariadb-10.4.10/include/my_pthread.h:827:10: note: in expansion of macro 'my_atomic_add32_explicit'
+   (void) my_atomic_add32_explicit(value, -1, MY_MEMORY_ORDER_RELAXED);
+          ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/ports/opt-ppc/mariadb/work/src/mariadb-10.4.10/include/my_atomic.h:153:43: note: suggested alternative: 'my_atomic_addlong'
+ #define my_atomic_add32_explicit(P, A, O) my_atomic_add32((P), (A))
+                                           ^~~~~~~~~~~~~~~
+/usr/ports/opt-ppc/mariadb/work/src/mariadb-10.4.10/include/my_pthread.h:827:10: note: in expansion of macro 'my_atomic_add32_explicit'
+   (void) my_atomic_add32_explicit(value, -1, MY_MEMORY_ORDER_RELAXED);
+          ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/ports/opt-ppc/mariadb/work/src/mariadb-10.4.10/include/my_pthread.h: In function 'void thread_safe_increment64(int64*)':
+/usr/ports/opt-ppc/mariadb/work/src/mariadb-10.4.10/include/my_atomic.h:154:43: error: 'my_atomic_add64' was not declared in this scope
+ #define my_atomic_add64_explicit(P, A, O) my_atomic_add64((P), (A))
+                                           ^~~~~~~~~~~~~~~
+/usr/ports/opt-ppc/mariadb/work/src/mariadb-10.4.10/include/my_pthread.h:832:10: note: in expansion of macro 'my_atomic_add64_explicit'
+   (void) my_atomic_add64_explicit(value, 1, MY_MEMORY_ORDER_RELAXED);
+          ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/ports/opt-ppc/mariadb/work/src/mariadb-10.4.10/include/my_atomic.h:154:43: note: suggested alternative: 'my_atomic_addlong'
+ #define my_atomic_add64_explicit(P, A, O) my_atomic_add64((P), (A))
+                                           ^~~~~~~~~~~~~~~
+/usr/ports/opt-ppc/mariadb/work/src/mariadb-10.4.10/include/my_pthread.h:832:10: note: in expansion of macro 'my_atomic_add64_explicit'
+   (void) my_atomic_add64_explicit(value, 1, MY_MEMORY_ORDER_RELAXED);
+          ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/ports/opt-ppc/mariadb/work/src/mariadb-10.4.10/include/my_pthread.h: In function 'void thread_safe_decrement64(int64*)':
+/usr/ports/opt-ppc/mariadb/work/src/mariadb-10.4.10/include/my_atomic.h:154:43: error: 'my_atomic_add64' was not declared in this scope
+ #define my_atomic_add64_explicit(P, A, O) my_atomic_add64((P), (A))
+                                           ^~~~~~~~~~~~~~~
+/usr/ports/opt-ppc/mariadb/work/src/mariadb-10.4.10/include/my_pthread.h:837:10: note: in expansion of macro 'my_atomic_add64_explicit'
+   (void) my_atomic_add64_explicit(value, -1, MY_MEMORY_ORDER_RELAXED);
+          ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/ports/opt-ppc/mariadb/work/src/mariadb-10.4.10/include/my_atomic.h:154:43: note: suggested alternative: 'my_atomic_addlong'
+ #define my_atomic_add64_explicit(P, A, O) my_atomic_add64((P), (A))
+                                           ^~~~~~~~~~~~~~~
+/usr/ports/opt-ppc/mariadb/work/src/mariadb-10.4.10/include/my_pthread.h:837:10: note: in expansion of macro 'my_atomic_add64_explicit'
+   (void) my_atomic_add64_explicit(value, -1, MY_MEMORY_ORDER_RELAXED);
+          ^~~~~~~~~~~~~~~~~~~~~~~~
+make[2]: *** [mysys/CMakeFiles/mysys.dir/build.make:1298: mysys/CMakeFiles/mysys.dir/my_new.cc.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:5403: mysys/CMakeFiles/mysys.dir/all] Error 2
+make: *** [Makefile:152: all] Error 2
+=======> ERROR: Building '/usr/ports/opt-ppc/mariadb/mariadb#10.4.10-1.pkg.tar.xz' failed.
+=========== last 50 lines of failing build mplayer.log:
+     const vector uint32_t vswapbig = (vector uint32_t) {16, 16, 16, 16};
+                 ^~~~~~~~~
+                 ;
+libswscale/ppc/swscale_altivec.c:194:45: error: expected ')' before 'uint32_t'
+     const vector uint32_t vswapbig = (vector uint32_t) {16, 16, 16, 16};
+                                      ~      ^~~~~~~~~
+                                             )
+libswscale/ppc/swscale_altivec.c:194:56: error: expected ',' or ';' before '{' token
+     const vector uint32_t vswapbig = (vector uint32_t) {16, 16, 16, 16};
+                                                        ^
+libswscale/ppc/swscale_altivec.c:195:17: error: expected ';' before 'uint16_t'
+     const vector uint16_t vswapsmall = vec_splat_u16(8);
+                 ^~~~~~~~~
+                 ;
+libswscale/ppc/swscale_altivec.c:195:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     const vector uint16_t vswapsmall = vec_splat_u16(8);
+     ^~~~~
+libswscale/ppc/swscale_altivec.c:195:40: error: incompatible types when initializing type 'uint16_t' {aka 'short unsigned int'} using type '__vector(8) short unsigned int'
+     const vector uint16_t vswapsmall = vec_splat_u16(8);
+                                        ^~~~~~~~~~~~~
+libswscale/ppc/swscale_altivec.c:196:11: error: expected ';' before 'uint32_t'
+     vector uint32_t v;
+           ^~~~~~~~~
+           ;
+libswscale/ppc/swscale_altivec.c:197:5: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+     vector float vd;
+     ^~~~~~
+libswscale/ppc/swscale_altivec.c:203:9: error: 'v' undeclared (first use in this function)
+         v = vec_ld(0, (const uint32_t *) &src[i]);
+         ^
+libswscale/ppc/swscale_altivec.c:211:43: error: expected ')' before 'uint32_t'
+         vd = (vector float) vec_rl((vector uint32_t) vd, vswapbig);
+                                    ~      ^~~~~~~~~
+                                           )
+libswscale/ppc/swscale_altivec.c:211:53: error: expected ')' before 'vd'
+         vd = (vector float) vec_rl((vector uint32_t) vd, vswapbig);
+                                                     ^~~
+                                                     )
+libswscale/ppc/swscale_altivec.c:212:43: error: expected ')' before 'uint16_t'
+         vd = (vector float) vec_rl((vector uint16_t) vd, vswapsmall);
+                                    ~      ^~~~~~~~~
+                                           )
+libswscale/ppc/swscale_altivec.c:212:53: error: expected ')' before 'vd'
+         vd = (vector float) vec_rl((vector uint16_t) vd, vswapsmall);
+                                                     ^~~
+                                                     )
+make[1]: *** [ffbuild/common.mak:59: libswscale/ppc/swscale_altivec.o] Error 1
+make[1]: Leaving directory '/usr/ports/opt/mplayer/work/src/mplayer-2019-09-20/ffmpeg'
+make: *** [Makefile:739: ffmpeg/libswscale/libswscale.a] Error 2
+=======> ERROR: Building '/usr/ports/opt/mplayer/mplayer#2019-09-20-1.pkg.tar.xz' failed.
+=========== last 50 lines of failing build nodejs.log:
+                 'node_tag': '',
+                 'node_target_type': 'executable',
+                 'node_use_bundled_v8': 'true',
+                 'node_use_dtrace': 'false',
+                 'node_use_etw': 'false',
+                 'node_use_lttng': 'false',
+                 'node_use_openssl': 'true',
+                 'node_use_perfctr': 'false',
+                 'node_use_v8_platform': 'true',
+                 'node_without_node_options': 'false',
+                 'openssl_fips': '',
+                 'openssl_no_asm': 0,
+                 'shlib_suffix': 'so.57',
+                 'target_arch': 'ppc64',
+                 'uv_parent_path': '/deps/uv/',
+                 'uv_use_dtrace': 'false',
+                 'v8_enable_gdbjit': 0,
+                 'v8_enable_i18n_support': 1,
+                 'v8_enable_inspector': 1,
+                 'v8_no_strict_aliasing': 1,
+                 'v8_optimized_debug': 0,
+                 'v8_promise_internal_field_count': 1,
+                 'v8_random_seed': 0,
+                 'v8_trace_maps': 0,
+                 'v8_use_snapshot': 'true',
+                 'want_separate_host_toolset': 0}}
+creating config.gypi
+creating config.mk
++ make
+make -C out BUILDTYPE=Release V=1
+  LD_LIBRARY_PATH=/usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/lib.host:/usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/lib.target:$LD_LIBRARY_PATH; export LD_LIBRARY_PATH; cd ../.; mkdir -p /usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj/gen; python tools/js2c.py "/usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj/gen/node_javascript.cc" lib/internal/bootstrap_node.js lib/async_hooks.js lib/assert.js lib/buffer.js lib/child_process.js lib/console.js lib/constants.js lib/crypto.js lib/cluster.js lib/dgram.js lib/dns.js lib/domain.js lib/events.js lib/fs.js lib/http.js lib/http2.js lib/_http_agent.js lib/_http_client.js lib/_http_common.js lib/_http_incoming.js lib/_http_outgoing.js lib/_http_server.js lib/https.js lib/inspector.js lib/module.js lib/net.js lib/os.js lib/path.js lib/perf_hooks.js lib/process.js lib/punycode.js lib/querystring.js lib/readline.js lib/repl.js lib/stream.js lib/_stream_readable.js lib/_stream_writable.js lib/_stream_duplex.js lib/_stream_transform.js lib/_stream_passthrough.js lib/_stream_wrap.js lib/string_decoder.js lib/sys.js lib/timers.js lib/tls.js lib/_tls_common.js lib/_tls_legacy.js lib/_tls_wrap.js lib/tty.js lib/url.js lib/util.js lib/v8.js lib/vm.js lib/zlib.js lib/internal/async_hooks.js lib/internal/buffer.js lib/internal/child_process.js lib/internal/cluster/child.js lib/internal/cluster/master.js lib/internal/cluster/round_robin_handle.js lib/internal/cluster/shared_handle.js lib/internal/cluster/utils.js lib/internal/cluster/worker.js lib/internal/encoding.js lib/internal/errors.js lib/internal/freelist.js lib/internal/fs.js lib/internal/http.js lib/internal/inspector_async_hook.js lib/internal/linkedlist.js lib/internal/loader/Loader.js lib/internal/loader/ModuleMap.js lib/internal/loader/ModuleJob.js lib/internal/loader/ModuleWrap.js lib/internal/loader/ModuleRequest.js lib/internal/loader/search.js lib/internal/safe_globals.js lib/internal/net.js lib/internal/module.js lib/internal/os.js lib/internal/process/next_tick.js lib/internal/process/promises.js lib/internal/process/stdio.js lib/internal/process/warning.js lib/internal/process.js lib/internal/querystring.js lib/internal/process/write-coverage.js lib/internal/readline.js lib/internal/repl.js lib/internal/socket_list.js lib/internal/test/unicode.js lib/internal/trace_events_async_hooks.js lib/internal/url.js lib/internal/util.js lib/internal/util/types.js lib/internal/http2/core.js lib/internal/http2/compat.js lib/internal/http2/util.js lib/internal/v8_prof_polyfill.js lib/internal/v8_prof_processor.js lib/internal/streams/lazy_transform.js lib/internal/streams/BufferList.js lib/internal/streams/legacy.js lib/internal/streams/destroy.js lib/internal/wrap_js_stream.js deps/v8/tools/splaytree.js deps/v8/tools/codemap.js deps/v8/tools/consarray.js deps/v8/tools/csvparser.js deps/v8/tools/profile.js deps/v8/tools/profile_view.js deps/v8/tools/logreader.js deps/v8/tools/tickprocessor.js deps/v8/tools/SourceMap.js deps/v8/tools/tickprocessor-driver.js deps/node-inspect/lib/_inspect.js deps/node-inspect/lib/internal/inspect_client.js deps/node-inspect/lib/internal/inspect_repl.js ./config.gypi src/notrace_macros.py src/nolttng_macros.py src/noperfctr_macros.py
+  touch /usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj.host/node_js2c.stamp
+  LD_LIBRARY_PATH=/usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/lib.host:/usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/lib.target:$LD_LIBRARY_PATH; export LD_LIBRARY_PATH; cd ../.; mkdir -p /usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj/gen; python tools/compress_json.py deps/v8/src/inspector/js_protocol.json "/usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj/gen/v8_inspector_protocol_json.h"
+  touch /usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj.host/v8_inspector_compress_protocol_json.stamp
+  LD_LIBRARY_PATH=/usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/lib.host:/usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/lib.target:$LD_LIBRARY_PATH; export LD_LIBRARY_PATH; cd ../deps/v8/src/inspector; mkdir -p /usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj/gen/src; python ../../third_party/inspector_protocol/CheckProtocolCompatibility.py --stamp "/usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj/gen/src/js_protocol.stamp" js_protocol.json
+  touch /usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj.target/deps/v8/src/inspector/protocol_compatibility.stamp
+  touch 6847641624dfeabae44a590acd0615fd4bb82afe.intermediate
+  LD_LIBRARY_PATH=/usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/lib.host:/usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/lib.target:$LD_LIBRARY_PATH; export LD_LIBRARY_PATH; cd ../deps/v8/src/inspector; mkdir -p /usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj/gen/src/inspector/protocol /usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj/gen/include/inspector; python ../../third_party/inspector_protocol/CodeGenerator.py --jinja_dir ../../third_party --output_base "/usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj/gen/src/inspector" --config inspector_protocol_config.json
+  touch /usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj.target/deps/v8/src/inspector/protocol_generated_sources.stamp
+  LD_LIBRARY_PATH=/usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/lib.host:/usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/lib.target:$LD_LIBRARY_PATH; export LD_LIBRARY_PATH; cd ../deps/v8/src/inspector; mkdir -p /usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj/gen/src/inspector; python build/xxd.py InjectedScriptSource_js injected-script-source.js "/usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj/gen/src/inspector/injected-script-source.h"
+  touch /usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj.target/deps/v8/src/inspector/inspector_injected_script.stamp
+  touch /usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj.target/tools/icu/icu_implementation.stamp
+  touch /usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj.target/tools/icu/icu_uconfig.stamp
+  touch /usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj.target/tools/icu/icu_uconfig_target.stamp
+  g++ '-DU_COMMON_IMPLEMENTATION=1' '-DU_ATTRIBUTE_DEPRECATED=' '-D_CRT_SECURE_NO_DEPRECATE=' '-DU_STATIC_IMPLEMENTATION=1' '-DUCONFIG_NO_SERVICE=1' '-DUCONFIG_NO_REGULAR_EXPRESSIONS=1' '-DU_ENABLE_DYLOAD=0' '-DU_HAVE_STD_STRING=0' '-DUCONFIG_NO_BREAK_ITERATION=0' -I../deps/icu-small/source/common  -pthread -Wall -Wextra -Wno-unused-parameter -m64 -mminimal-toc -Wno-deprecated-declarations -O3 -fno-omit-frame-pointer -fno-exceptions -std=gnu++0x -frtti -MMD -MF /usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/.deps//usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj.target/icuucx/deps/icu-small/source/common/ucnv2022.o.d.raw  -O2 -pipe -mcpu=powerpc -mtune=750 -msecure-plt -mno-altivec -c -o /usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj.target/icuucx/deps/icu-small/source/common/ucnv2022.o ../deps/icu-small/source/common/ucnv2022.cpp
+cc1plus: error: '-m64' not supported in this configuration
+make[1]: *** [tools/icu/icuucx.target.mk:283: /usr/ports/opt-ppc/nodejs/work/src/node-v8.12.0/out/Release/obj.target/icuucx/deps/icu-small/source/common/ucnv2022.o] Error 1
+rm 6847641624dfeabae44a590acd0615fd4bb82afe.intermediate
+make: *** [Makefile:88: node] Error 2
+=======> ERROR: Building '/usr/ports/opt-ppc/nodejs/nodejs#8.12.0-1.pkg.tar.xz' failed.
+=========== last 50 lines of failing build pangox-compat.log:
+    shaper = pango_font_find_shaper (font, language, wc);
+    ^~~~~~
+In file included from /usr/include/pango-1.0/pango/pango-attributes.h:25,
+                 from /usr/include/pango-1.0/pango/pango.h:25,
+                 from pango-impl-utils.h:28,
+                 from pangox.c:29:
+/usr/include/pango-1.0/pango/pango-font.h:625:23: note: declared here
+ PangoEngineShape *    pango_font_find_shaper       (PangoFont        *font,
+                       ^~~~~~~~~~~~~~~~~~~~~~
+pangox.c: In function 'pango_x_font_get_metrics':
+pangox.c:983:17: warning: implicit declaration of function 'pango_font_metrics_new'; did you mean 'pango_font_metrics_ref'? [-Wimplicit-function-declaration]
+       metrics = pango_font_metrics_new ();
+                 ^~~~~~~~~~~~~~~~~~~~~~
+                 pango_font_metrics_ref
+pangox.c:983:15: warning: assignment to 'PangoFontMetrics *' {aka 'struct _PangoFontMetrics *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+       metrics = pango_font_metrics_new ();
+               ^
+pangox.c: In function 'pango_x_get_shaper_map':
+pangox.c:1359:3: warning: 'pango_find_map' is deprecated [-Wdeprecated-declarations]
+   return pango_find_map (language, engine_type_id, render_type_id);
+   ^~~~~~
+In file included from pangox-private.h:26,
+                 from pangox.c:30:
+/usr/include/pango-1.0/pango/pango-modules.h:59:16: note: declared here
+ PangoMap *     pango_find_map        (PangoLanguage       *language,
+                ^~~~~~~~~~~~~~
+pangox.c: In function 'pango_x_font_find_shaper':
+pangox.c:1380:3: warning: 'pango_script_for_unichar' is deprecated: Use 'g_unichar_get_script' instead [-Wdeprecated-declarations]
+   script = pango_script_for_unichar (ch);
+   ^~~~~~
+In file included from /usr/include/pango-1.0/pango/pango-gravity.h:112,
+                 from /usr/include/pango-1.0/pango/pango-types.h:196,
+                 from /usr/include/pango-1.0/pango/pango-font.h:26,
+                 from /usr/include/pango-1.0/pango/pango-attributes.h:25,
+                 from /usr/include/pango-1.0/pango/pango.h:25,
+                 from pango-impl-utils.h:28,
+                 from pangox.c:29:
+/usr/include/pango-1.0/pango/pango-script.h:310:13: note: declared here
+ PangoScript pango_script_for_unichar         (gunichar             ch) G_GNUC_CONST;
+             ^~~~~~~~~~~~~~~~~~~~~~~~
+pangox.c:1381:3: warning: 'pango_map_get_engine' is deprecated [-Wdeprecated-declarations]
+   return (PangoEngineShape *)pango_map_get_engine (shape_map, script);
+   ^~~~~~
+In file included from pangox-private.h:26,
+                 from pangox.c:30:
+/usr/include/pango-1.0/pango/pango-modules.h:63:16: note: declared here
+ PangoEngine *  pango_map_get_engine  (PangoMap            *map,
+                ^~~~~~~~~~~~~~~~~~~~
+make: *** [Makefile:424: libpangox_1_0_la-pangox.lo] Error 1
+=======> ERROR: Building '/usr/ports/opt/pangox-compat/pangox-compat#0.0.2-2.pkg.tar.xz' failed.
+=========== last 50 lines of failing build pear.log:
+-rw-r--r--  0 root   root    15894 Dec  5 06:58 usr/lib/php/pear/PEAR/Command/Pickle.php
+-rw-r--r--  0 root   root    40145 Dec  5 06:58 usr/lib/php/pear/PEAR/Command/Package.php
+-rw-r--r--  0 root   root     2570 Dec  5 06:58 usr/lib/php/pear/PEAR/Command/Auth.php
+-rw-r--r--  0 root   root    46284 Dec  5 06:58 usr/lib/php/pear/PEAR/Command/Registry.php
+-rw-r--r--  0 root   root    15126 Dec  5 06:58 usr/lib/php/pear/PEAR/REST/13.php
+-rw-r--r--  0 root   root    11240 Dec  5 06:58 usr/lib/php/pear/PEAR/REST/11.php
+-rw-r--r--  0 root   root    32656 Dec  5 06:58 usr/lib/php/pear/PEAR/REST/10.php
+-rw-r--r--  0 root   root    25676 Dec  5 06:58 usr/lib/php/pear/PEAR/Frontend/CLI.php
+-rw-r--r--  0 root   root     7867 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role.php
+drwxr-xr-x  0 root   root        0 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/
+-rw-r--r--  0 root   root     3966 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Cfg.php
+-rw-r--r--  0 root   root      780 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Ext.php
+-rw-r--r--  0 root   root      420 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Www.xml
+-rw-r--r--  0 root   root      421 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Cfg.xml
+-rw-r--r--  0 root   root      401 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Doc.xml
+-rw-r--r--  0 root   root     6214 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Common.php
+-rw-r--r--  0 root   root      402 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Test.xml
+-rw-r--r--  0 root   root      780 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Doc.php
+-rw-r--r--  0 root   root      881 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Src.php
+-rw-r--r--  0 root   root      429 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Php.xml
+-rw-r--r--  0 root   root      780 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Php.php
+-rw-r--r--  0 root   root      402 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Data.xml
+-rw-r--r--  0 root   root      432 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Script.xml
+-rw-r--r--  0 root   root      786 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Script.php
+-rw-r--r--  0 root   root      290 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Src.xml
+-rw-r--r--  0 root   root      322 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Ext.xml
+-rw-r--r--  0 root   root      782 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Test.php
+-rw-r--r--  0 root   root      776 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Www.php
+-rw-r--r--  0 root   root      421 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Man.xml
+-rw-r--r--  0 root   root      804 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Man.php
+-rw-r--r--  0 root   root      782 Dec  5 06:58 usr/lib/php/pear/PEAR/Installer/Role/Data.php
+-rw-r--r--  0 root   root     1707 Dec  5 06:58 usr/lib/php/pear/PEAR/ChannelFile/Parser.php
+-rw-r--r--  0 root   root    76206 Dec  5 06:58 usr/lib/php/pear/PEAR/Downloader/Package.php
+=======> WARNING: Footprint ignored.
+=======> Building '/usr/ports/opt/pear/pear#1.10.9-1.pkg.tar.xz' succeeded.
+prt-get: Using PKGMK_PACKAGE_DIR: /usr/ports/opt/pear
+prt-get: installing pear 1.10.9-1
+prt-get: /usr/bin/pkgadd pear#1.10.9-1.pkg.tar.xz
+prt-get: build done Thu Dec  5 06:58:31 2019
+
+usr/lib/php/pear/.channels/.alias/pear.txt
+usr/lib/php/pear/.channels/.alias/pecl.txt
+usr/lib/php/pear/.channels/.alias/phpdocs.txt
+usr/lib/php/pear/.channels/__uri.reg
+usr/lib/php/pear/.channels/doc.php.net.reg
+usr/lib/php/pear/.channels/pear.php.net.reg
+usr/lib/php/pear/.channels/pecl.php.net.reg
+usr/lib/php/pear/.filemap
+usr/lib/php/pear/.lock
+pkgadd: listed file(s) already installed (use -f to ignore and overwrite)
+=========== last 50 lines of failing build postfix.log:
+-rw-r--r--  0 root   root       4300 Dec  5 09:11 usr/share/man/man5/pgsql_table.5.gz
+-rw-r--r--  0 root   root       2390 Dec  5 09:11 usr/share/man/man5/relocated.5.gz
+-rw-r--r--  0 root   root       9211 Dec  5 09:11 usr/share/man/man5/ldap_table.5.gz
+-rw-r--r--  0 root   root       6342 Dec  5 09:11 usr/share/man/man5/header_checks.5.gz
+-rw-r--r--  0 root   root       3859 Dec  5 09:11 usr/share/man/man5/transport.5.gz
+-rw-r--r--  0 root   root       3576 Dec  5 09:11 usr/share/man/man5/master.5.gz
+-rw-r--r--  0 root   root       3504 Dec  5 09:11 usr/share/man/man5/sqlite_table.5.gz
+-rw-r--r--  0 root   root       3293 Dec  5 09:11 usr/share/man/man5/aliases.5.gz
+-rw-r--r--  0 root   root       2749 Dec  5 09:11 usr/share/man/man5/regexp_table.5.gz
+-rw-r--r--  0 root   root       3265 Dec  5 09:11 usr/share/man/man5/pcre_table.5.gz
+-rw-r--r--  0 root   root     127681 Dec  5 09:11 usr/share/man/man5/postconf.5.gz
+-rw-r--r--  0 root   root       1905 Dec  5 09:11 usr/share/man/man5/lmdb_table.5.gz
+-rw-r--r--  0 root   root       2002 Dec  5 09:11 usr/share/man/man5/cidr_table.5.gz
+-rw-r--r--  0 root   root       3295 Dec  5 09:11 usr/share/man/man5/memcache_table.5.gz
+-rw-r--r--  0 root   root       1223 Dec  5 09:11 usr/share/man/man5/nisplus_table.5.gz
+-rw-r--r--  0 root   root       5555 Dec  5 09:11 usr/share/man/man5/access.5.gz
+-rw-r--r--  0 root   root       3407 Dec  5 09:11 usr/share/man/man5/generic.5.gz
+-rw-r--r--  0 root   root       2764 Dec  5 09:11 usr/share/man/man5/bounce.5.gz
+-rw-r--r--  0 root   root       3623 Dec  5 09:11 usr/share/man/man5/postfix-wrapper.5.gz
+-rw-r--r--  0 root   root       3964 Dec  5 09:11 usr/share/man/man5/virtual.5.gz
+-rw-r--r--  0 root   root       5148 Dec  5 09:11 usr/share/man/man5/mysql_table.5.gz
+drwxr-xr-x  0 root   root          0 Dec  5 09:11 var/
+drwxr-xr-x  0 root   root          0 Dec  5 09:11 var/spool/
+drwxr-xr-x  0 root   root          0 Dec  5 09:11 var/lib/
+drwx------  0 mail   root          0 Dec  5 09:11 var/lib/postfix/
+drwxr-xr-x  0 root   root          0 Dec  5 09:11 var/spool/postfix/
+drwx------  0 mail   root          0 Dec  5 09:11 var/spool/postfix/hold/
+drwx------  0 mail   root          0 Dec  5 09:11 var/spool/postfix/deferred/
+drwx-wx---  0 mail   postdrop      0 Dec  5 09:11 var/spool/postfix/maildrop/
+drwx------  0 mail   root          0 Dec  5 09:11 var/spool/postfix/flush/
+drwxr-xr-x  0 mail   root          0 Dec  5 09:11 var/spool/postfix/pid/
+drwx------  0 mail   root          0 Dec  5 09:11 var/spool/postfix/bounce/
+drwx------  0 mail   root          0 Dec  5 09:11 var/spool/postfix/trace/
+drwx------  0 mail   root          0 Dec  5 09:11 var/spool/postfix/saved/
+drwx------  0 mail   root          0 Dec  5 09:11 var/spool/postfix/corrupt/
+drwx------  0 mail   root          0 Dec  5 09:11 var/spool/postfix/incoming/
+drwx--x---  0 mail   postdrop      0 Dec  5 09:11 var/spool/postfix/public/
+drwx------  0 mail   root          0 Dec  5 09:11 var/spool/postfix/defer/
+drwx------  0 mail   root          0 Dec  5 09:11 var/spool/postfix/private/
+drwx------  0 mail   root          0 Dec  5 09:11 var/spool/postfix/active/
+=======> WARNING: Footprint ignored.
+=======> Building '/usr/ports/opt/postfix/postfix#3.3.6-1.pkg.tar.xz' succeeded.
+prt-get: Using PKGMK_PACKAGE_DIR: /usr/ports/opt/postfix
+prt-get: installing postfix 3.3.6-1
+prt-get: /usr/bin/pkgadd postfix#3.3.6-1.pkg.tar.xz
+prt-get: build done Thu Dec  5 09:12:00 2019
+
+usr/bin/mailq
+usr/sbin/sendmail
+pkgadd: listed file(s) already installed (use -f to ignore and overwrite)
+=========== last 50 lines of failing build qtwebengine.log:
+    opus ................................. yes
+    ffmpeg ............................... no
+    libvpx ............................... yes
+    snappy ............................... no
+    glib ................................. yes
+    zlib ................................. yes
+    minizip .............................. no
+    libevent ............................. yes
+    jsoncpp .............................. no
+    protobuf ............................. yes
+    libxml2 and libxslt .................. no
+    lcms2 ................................ yes
+    png .................................. yes
+    JPEG ................................. yes
+    harfbuzz ............................. yes
+    freetype ............................. yes
+  Required system libraries:
+    fontconfig ........................... yes
+    dbus ................................. yes
+    nss .................................. yes
+    khr .................................. yes
+    glibc ................................ yes
+  Required system libraries for qpa-xcb:
+    x11 .................................. yes
+    libdrm ............................... yes
+    xcomposite ........................... yes
+    xcursor .............................. yes
+    xi ................................... yes
+    xtst ................................. yes
+Qt WebEngineQml:
+  UI Delegates ........................... yes
+  Test Support ........................... no
+
+Qt is now configured for building. Just run 'make'.
+Once everything is built, you must run 'make install'.
+Qt will be installed into '/usr'.
+
+Prior to reconfiguration, make sure you remove any leftovers from
+the previous build.
+
+ 
+QtWebEngine can only be built for x86, x86-64, ARM, Aarch64, and MIPSel architectures.
+QtWebEngine will not be built.
++ make
+make: Nothing to be done for 'first'.
++ make INSTALL_ROOT=/usr/ports/opt/qtwebengine/work/pkg install
+make: Nothing to be done for 'install'.
++ find /usr/ports/opt/qtwebengine/work/pkg/usr/lib -type f -name '*.prl' -exec sed -i -e '/^QMAKE_PRL_BUILD_DIR/d' '{}' ';'
+find: '/usr/ports/opt/qtwebengine/work/pkg/usr/lib': No such file or directory
+=======> ERROR: Building '/usr/ports/opt/qtwebengine/qtwebengine#5.13.2-1.pkg.tar.xz' failed.
+=========== last 50 lines of failing build qtwebkit.log:
+                                                                    ^~~~~~~~
+/usr/ports/opt/qtwebkit/work/src/qtwebkit-5.212.0-alpha3/Source/JavaScriptCore/bytecode/PolymorphicAccess.h:375:21: error: 'JumpList' in 'class JSC::MacroAssembler' does not name a type
+     MacroAssembler::JumpList success;
+                     ^~~~~~~~
+/usr/ports/opt/qtwebkit/work/src/qtwebkit-5.212.0-alpha3/Source/JavaScriptCore/bytecode/PolymorphicAccess.h:376:21: error: 'JumpList' in 'class JSC::MacroAssembler' does not name a type
+     MacroAssembler::JumpList failAndRepatch;
+                     ^~~~~~~~
+/usr/ports/opt/qtwebkit/work/src/qtwebkit-5.212.0-alpha3/Source/JavaScriptCore/bytecode/PolymorphicAccess.h:377:21: error: 'JumpList' in 'class JSC::MacroAssembler' does not name a type
+     MacroAssembler::JumpList failAndIgnore;
+                     ^~~~~~~~
+/usr/ports/opt/qtwebkit/work/src/qtwebkit-5.212.0-alpha3/Source/JavaScriptCore/bytecode/PolymorphicAccess.h:378:5: error: 'GPRReg' does not name a type; did you mean 'Reg'?
+     GPRReg baseGPR { InvalidGPRReg };
+     ^~~~~~
+     Reg
+/usr/ports/opt/qtwebkit/work/src/qtwebkit-5.212.0-alpha3/Source/JavaScriptCore/bytecode/PolymorphicAccess.h:380:5: error: 'GPRReg' does not name a type; did you mean 'Reg'?
+     GPRReg scratchGPR { InvalidGPRReg };
+     ^~~~~~
+     Reg
+/usr/ports/opt/qtwebkit/work/src/qtwebkit-5.212.0-alpha3/Source/JavaScriptCore/bytecode/PolymorphicAccess.h:381:31: error: 'LinkBuffer' was not declared in this scope
+     Vector<std::function<void(LinkBuffer&)>> callbacks;
+                               ^~~~~~~~~~
+/usr/ports/opt/qtwebkit/work/src/qtwebkit-5.212.0-alpha3/Source/JavaScriptCore/bytecode/PolymorphicAccess.h:381:31: note: suggested alternative: 'ArrayBuffer'
+     Vector<std::function<void(LinkBuffer&)>> callbacks;
+                               ^~~~~~~~~~
+                               ArrayBuffer
+/usr/ports/opt/qtwebkit/work/src/qtwebkit-5.212.0-alpha3/Source/JavaScriptCore/bytecode/PolymorphicAccess.h:381:43: error: template argument 1 is invalid
+     Vector<std::function<void(LinkBuffer&)>> callbacks;
+                                           ^~
+/usr/ports/opt/qtwebkit/work/src/qtwebkit-5.212.0-alpha3/Source/JavaScriptCore/bytecode/PolymorphicAccess.h:381:46: error: template argument 1 is invalid
+     Vector<std::function<void(LinkBuffer&)>> callbacks;
+                                              ^~~~~~~~~
+In file included from /usr/ports/opt/qtwebkit/work/src/qtwebkit-5.212.0-alpha3/Source/JavaScriptCore/bytecode/CallLinkInfo.h:32,
+                 from /usr/ports/opt/qtwebkit/work/src/qtwebkit-5.212.0-alpha3/Source/JavaScriptCore/bytecode/CodeBlock.h:37,
+                 from /usr/ports/opt/qtwebkit/work/src/qtwebkit-5.212.0-alpha3/Source/JavaScriptCore/llint/LLIntOffsetsExtractor.cpp:29:
+/usr/ports/opt/qtwebkit/work/src/qtwebkit-5.212.0-alpha3/Source/JavaScriptCore/jit/JITWriteBarrier.h: In member function 'void JSC::JITWriteBarrierBase::set(JSC::VM&, JSC::CodeLocationDataLabelPtr, JSC::JSCell*, JSC::JSCell*)':
+/usr/ports/opt/qtwebkit/work/src/qtwebkit-5.212.0-alpha3/Source/JavaScriptCore/jit/JITWriteBarrier.h:85:25: error: 'repatchPointer' is not a member of 'JSC::MacroAssembler'
+         MacroAssembler::repatchPointer(m_location, value);
+                         ^~~~~~~~~~~~~~
+/usr/ports/opt/qtwebkit/work/src/qtwebkit-5.212.0-alpha3/Source/JavaScriptCore/jit/JITWriteBarrier.h: In member function 'JSC::JSCell* JSC::JITWriteBarrierBase::get() const':
+/usr/ports/opt/qtwebkit/work/src/qtwebkit-5.212.0-alpha3/Source/JavaScriptCore/jit/JITWriteBarrier.h:93:61: error: 'readPointer' is not a member of 'JSC::MacroAssembler'
+         void* result = static_cast<JSCell*>(MacroAssembler::readPointer(m_location));
+                                                             ^~~~~~~~~~~
+/usr/ports/opt/qtwebkit/work/src/qtwebkit-5.212.0-alpha3/Source/JavaScriptCore/jit/JITWriteBarrier.h: In member function 'void JSC::JITWriteBarrierBase::clear(void*)':
+/usr/ports/opt/qtwebkit/work/src/qtwebkit-5.212.0-alpha3/Source/JavaScriptCore/jit/JITWriteBarrier.h:105:29: error: 'repatchPointer' is not a member of 'JSC::MacroAssembler'
+             MacroAssembler::repatchPointer(m_location, clearedValue);
+                             ^~~~~~~~~~~~~~
+make[2]: *** [Source/JavaScriptCore/CMakeFiles/LLIntOffsetsExtractor.dir/build.make:98: Source/JavaScriptCore/CMakeFiles/LLIntOffsetsExtractor.dir/llint/LLIntOffsetsExtractor.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:676: Source/JavaScriptCore/CMakeFiles/LLIntOffsetsExtractor.dir/all] Error 2
+make: *** [Makefile:163: all] Error 2
+=======> ERROR: Building '/usr/ports/opt/qtwebkit/qtwebkit#5.212.0.a3-2.pkg.tar.xz' failed.
+=========== last 50 lines of failing build ruby-mysql.log:
+drwxr-xr-x  0 root   root        0 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/support/
+-rw-r--r--  0 root   root     1078 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/LICENSE
+-rw-r--r--  0 root   root    27824 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/support/5072E1F5.asc
+-rw-r--r--  0 root   root     2360 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/support/mysql_enc_to_ruby.rb
+-rw-r--r--  0 root   root     4562 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/support/libmysql.def
+-rw-r--r--  0 root   root     1517 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/support/ruby_enc_to_mysql.rb
+drwxr-xr-x  0 root   root        0 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/
+-rw-r--r--  0 root   root       60 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/infile.h
+-rw-r--r--  0 root   root     3128 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/infile.c
+-rw-r--r--  0 root   root    17476 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/statement.o
+-rwxr-xr-x  0 root   root   133156 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/mysql2.so
+-rw-r--r--  0 root   root     2064 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/mysql2_ext.o
+-rw-r--r--  0 root   root    30604 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/result.o
+-rw-r--r--  0 root   root    45800 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/client.o
+-rw-r--r--  0 root   root     3028 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/infile.o
+-rw-r--r--  0 root   root    36770 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/result.c
+-rw-r--r--  0 root   root     1057 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/mysql2_ext.h
+-rw-r--r--  0 root   root      920 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/wait_for_single_fd.h
+-rw-r--r--  0 root   root     5926 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/mysql_enc_name_to_ruby.h
+-rw-r--r--  0 root   root      683 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/client.h
+-rw-r--r--  0 root   root        0 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/.sitearchdir.-.mysql2.time
+-rw-r--r--  0 root   root      399 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/statement.h
+-rw-r--r--  0 root   root    50812 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/client.c
+-rw-r--r--  0 root   root     9680 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/Makefile
+-rw-r--r--  0 root   root     3729 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/mysql_enc_to_ruby.h
+-rw-r--r--  0 root   root      392 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/mysql2_ext.c
+-rw-r--r--  0 root   root    10485 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/extconf.rb
+-rw-r--r--  0 root   root      709 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/result.h
+-rw-r--r--  0 root   root    20025 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/ext/mysql2/statement.c
+-rw-r--r--  0 root   root     2908 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/lib/mysql2.rb
+drwxr-xr-x  0 root   root        0 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/lib/mysql2/
+-rw-r--r--  0 root   root      121 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/lib/mysql2/console.rb
+-rwxr-xr-x  0 root   root   133156 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/lib/mysql2/mysql2.so
+-rw-r--r--  0 root   root       93 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/lib/mysql2/result.rb
+-rw-r--r--  0 root   root     1124 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/lib/mysql2/em.rb
+-rw-r--r--  0 root   root      231 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/lib/mysql2/statement.rb
+-rw-r--r--  0 root   root       53 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/lib/mysql2/field.rb
+-rw-r--r--  0 root   root     6216 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/lib/mysql2/client.rb
+-rw-r--r--  0 root   root       45 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/lib/mysql2/version.rb
+-rw-r--r--  0 root   root     3790 Dec  5 10:12 usr/lib/ruby/gems/2.6/gems/mysql2-0.5.3/lib/mysql2/error.rb
+-rw-r--r--  0 root   root    74240 Dec  5 10:12 usr/lib/ruby/gems/2.6/cache/mysql2-0.5.3.gem
+=======> WARNING: Footprint ignored.
+=======> Building '/usr/ports/opt/ruby-mysql/ruby-mysql#0.5.2-1.pkg.tar.xz' succeeded.
+prt-get: Using PKGMK_PACKAGE_DIR: /usr/ports/opt/ruby-mysql
+prt-get: installing ruby-mysql 0.5.2-1
+prt-get: /usr/bin/pkgadd ruby-mysql#0.5.2-1.pkg.tar.xz
+prt-get: build done Thu Dec  5 10:12:55 2019
+
+usr/lib/ruby/gems/2.6/cache/mysql2-0.5.3.gem
+pkgadd: listed file(s) already installed (use -f to ignore and overwrite)
+=========== last 50 lines of failing build ruby-ncurses.log:
+drwxr-xr-x  0 root   root        0 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/lib/
+-rwxrwxr-x  0 root   root      883 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/LICENSE.txt
+drwxr-xr-x  0 root   root        0 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/ext/
+-rw-rw-r--  0 root   root       43 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/.gitignore
+-rw-r--r--  0 root   root     2886 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/Changelog.md
+-rwxrwxr-x  0 root   root    12121 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/README.md
+-rw-r--r--  0 root   root    26532 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/COPYING
+-rw-rw-r--  0 root   root     1191 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/ncurses-ruby.gemspec
+-rw-r--r--  0 root   root      446 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/TODO
+drwxr-xr-x  0 root   root        0 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/examples/
+-rwxr-xr-x  0 root   root     4539 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/examples/example.rb
+-rwxr-xr-x  0 root   root     1662 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/examples/read_line.rb
+-rwxr-xr-x  0 root   root     6959 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/examples/rain.rb
+-rwxr-xr-x  0 root   root     2490 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/examples/form.rb
+-rwxrwxr-x  0 root   root     5468 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/examples/tclock.rb
+-rwxr-xr-x  0 root   root     4935 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/examples/form2.rb
+-rwxr-xr-x  0 root   root      592 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/examples/test_scanw.rb
+-rw-r--r--  0 root   root     1275 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/examples/LICENSES_for_examples
+-rwxr-xr-x  0 root   root     1454 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/examples/hello_ncurses.rb
+drwxr-xr-x  0 root   root        0 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/ext/ncurses/
+-rwxr-xr-x  0 root   root   264952 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/ext/ncurses/ncurses.so
+-rw-r--r--  0 root   root        0 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/ext/ncurses/.sitearchdir.time
+-rw-r--r--  0 root   root    45932 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/ext/ncurses/panel_wrap.o
+-rw-r--r--  0 root   root     1967 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/ext/ncurses/form_wrap.h
+-rw-rw-r--  0 root   root    49667 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/ext/ncurses/form_wrap.c
+-rw-rw-r--  0 root   root    98511 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/ext/ncurses/ncurses_wrap.c
+-rw-r--r--  0 root   root   171564 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/ext/ncurses/menu_wrap.o
+-rw-r--r--  0 root   root    35328 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/ext/ncurses/menu_wrap.c
+-rw-r--r--  0 root   root   576004 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/ext/ncurses/ncurses_wrap.o
+-rw-rw-r--  0 root   root     4592 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/ext/ncurses/ncurses_wrap.h
+-rw-r--r--  0 root   root     1117 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/ext/ncurses/panel_wrap.h
+-rw-r--r--  0 root   root    11062 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/ext/ncurses/panel_wrap.c
+-rw-r--r--  0 root   root     1701 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/ext/ncurses/menu_wrap.h
+-rw-r--r--  0 root   root     9552 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/ext/ncurses/Makefile
+-rwxrwxr-x  0 root   root     3714 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/ext/ncurses/extconf.rb
+-rw-r--r--  0 root   root   236668 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/ext/ncurses/form_wrap.o
+-rwxr-xr-x  0 root   root   264952 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/lib/ncurses.so
+-rwxr-xr-x  0 root   root     8646 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/lib/ncurses.rb
+drwxr-xr-x  0 root   root        0 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/lib/ncurses-ruby/
+-rw-rw-r--  0 root   root       61 Dec  5 10:13 usr/lib/ruby/gems/2.6/gems/ncurses-ruby-1.2.4/lib/ncurses-ruby/version.rb
+-rw-r--r--  0 root   root    67072 Dec  5 10:14 usr/lib/ruby/gems/2.6/cache/ncurses-ruby-1.2.4.gem
+=======> WARNING: Footprint ignored.
+=======> Building '/usr/ports/opt/ruby-ncurses/ruby-ncurses#1.2.4-1.pkg.tar.xz' succeeded.
+prt-get: Using PKGMK_PACKAGE_DIR: /usr/ports/opt/ruby-ncurses
+prt-get: installing ruby-ncurses 1.2.4-1
+prt-get: /usr/bin/pkgadd ruby-ncurses#1.2.4-1.pkg.tar.xz
+prt-get: build done Thu Dec  5 10:14:36 2019
+
+usr/lib/ruby/gems/2.6/cache/ncurses-ruby-1.2.4.gem
+pkgadd: listed file(s) already installed (use -f to ignore and overwrite)
+=========== last 50 lines of failing build ruby-sqlite3.log:
+-rw-r--r--  0 root   root     4474 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/ext/sqlite3/backup.c
+-rw-r--r--  0 root   root     2633 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/ext/sqlite3/extconf.rb
+-rw-r--r--  0 root   root     2927 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/ext/sqlite3/exception.c
+-rw-r--r--  0 root   root    11375 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/ext/sqlite3/statement.c
+-rw-r--r--  0 root   root     5174 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/ext/sqlite3/sqlite3.c
+-rw-r--r--  0 root   root    14522 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/test/test_database.rb
+-rw-r--r--  0 root   root      385 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/test/test_sqlite3.rb
+-rw-r--r--  0 root   root     5077 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/test/test_integration_statement.rb
+-rw-r--r--  0 root   root      715 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/test/test_integration_open_close.rb
+-rw-r--r--  0 root   root     1232 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/test/test_database_readwrite.rb
+-rw-r--r--  0 root   root     2118 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/test/test_collation.rb
+-rw-r--r--  0 root   root     1057 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/test/test_statement_execute.rb
+-rw-r--r--  0 root   root     1051 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/test/test_database_readonly.rb
+-rw-r--r--  0 root   root     7242 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/test/test_statement.rb
+-rw-r--r--  0 root   root     2287 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/test/test_integration_pending.rb
+-rw-r--r--  0 root   root     4839 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/test/test_encoding.rb
+-rw-r--r--  0 root   root     1054 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/test/test_backup.rb
+-rw-r--r--  0 root   root     8507 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/test/test_integration_aggregate.rb
+-rw-r--r--  0 root   root      333 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/test/helper.rb
+-rw-r--r--  0 root   root      978 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/test/test_result_set.rb
+-rw-r--r--  0 root   root    14185 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/test/test_integration.rb
+-rw-r--r--  0 root   root     1073 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/test/test_deprecated.rb
+-rw-r--r--  0 root   root     4102 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/test/test_integration_resultset.rb
+-rw-r--r--  0 root   root     3503 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/test/test_database_flags.rb
+-rw-r--r--  0 root   root     1691 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/rakelib/native.rake
+-rw-r--r--  0 root   root     3109 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/rakelib/vendor_sqlite3.rake
+-rw-r--r--  0 root   root      188 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/rakelib/faq.rake
+-rw-r--r--  0 root   root     1136 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/rakelib/gem.rake
+-rw-r--r--  0 root   root      361 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/lib/sqlite3.rb
+drwxr-xr-x  0 root   root        0 Dec  5 10:15 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/lib/sqlite3/
+-rw-r--r--  0 root   root     1283 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/lib/sqlite3/errors.rb
+-rw-r--r--  0 root   root     4072 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/lib/sqlite3/statement.rb
+-rw-r--r--  0 root   root     1771 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/lib/sqlite3/constants.rb
+-rw-r--r--  0 root   root    14439 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/lib/sqlite3/pragmas.rb
+-rw-r--r--  0 root   root     4114 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/lib/sqlite3/translator.rb
+-rw-r--r--  0 root   root    24998 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/lib/sqlite3/database.rb
+-rw-r--r--  0 root   root     5530 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/lib/sqlite3/resultset.rb
+-rw-r--r--  0 root   root      458 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/lib/sqlite3/version.rb
+-rw-r--r--  0 root   root     1057 Dec  5 10:14 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/lib/sqlite3/value.rb
+-rwxr-xr-x  0 root   root    67480 Dec  5 10:15 usr/lib/ruby/gems/2.6/gems/sqlite3-1.4.1/lib/sqlite3/sqlite3_native.so
+-rw-r--r--  0 root   root    70144 Dec  5 10:15 usr/lib/ruby/gems/2.6/cache/sqlite3-1.4.1.gem
+=======> WARNING: Footprint ignored.
+=======> Building '/usr/ports/opt/ruby-sqlite3/ruby-sqlite3#1.4.1-1.pkg.tar.xz' succeeded.
+prt-get: Using PKGMK_PACKAGE_DIR: /usr/ports/opt/ruby-sqlite3
+prt-get: installing ruby-sqlite3 1.4.1-1
+prt-get: /usr/bin/pkgadd ruby-sqlite3#1.4.1-1.pkg.tar.xz
+prt-get: build done Thu Dec  5 10:15:02 2019
+
+usr/lib/ruby/gems/2.6/cache/sqlite3-1.4.1.gem
+pkgadd: listed file(s) already installed (use -f to ignore and overwrite)
+=========== last 50 lines of failing build squid.log:
+/usr/bin/ld: MemStore.cc:(.text+0x4cc0): undefined reference to `__atomic_load_8'
+/usr/bin/ld: MemStore.cc:(.text+0x4fe0): undefined reference to `__atomic_load_8'
+/usr/bin/ld: MemStore.cc:(.text+0x5a2c): undefined reference to `__atomic_fetch_sub_8'
+/usr/bin/ld: MemStore.cc:(.text+0x5a44): undefined reference to `__atomic_fetch_add_8'
+/usr/bin/ld: MemStore.o: in function `MemStore::copyFromShm(StoreEntry&, int, Ipc::StoreMapAnchor const&)':
+MemStore.cc:(.text+0x6e44): undefined reference to `__atomic_load_8'
+/usr/bin/ld: MemStore.cc:(.text+0x6f98): undefined reference to `__atomic_load_8'
+/usr/bin/ld: MemStore.cc:(.text+0x73d8): undefined reference to `__atomic_load_8'
+/usr/bin/ld: MemStore.cc:(.text+0x74dc): undefined reference to `__atomic_load_8'
+/usr/bin/ld: MemStore.o: in function `MemStore::updateAnchoredWith(StoreEntry&, int, Ipc::StoreMapAnchor const&)':
+MemStore.cc:(.text+0x77cc): undefined reference to `__atomic_load_8'
+/usr/bin/ld: fs/.libs/libfs.a(RockSwapDir.o):RockSwapDir.cc:(.text+0x2034): more undefined references to `__atomic_load_8' follow
+/usr/bin/ld: fs/.libs/libfs.a(RockSwapDir.o): in function `Rock::SwapDir::handleWriteCompletionSuccess(Rock::WriteRequest const&)':
+RockSwapDir.cc:(.text+0x4930): undefined reference to `__atomic_store_8'
+/usr/bin/ld: fs/.libs/libfs.a(RockSwapDir.o): in function `Rock::SwapDir::openStoreIO(StoreEntry&, void (*)(void*, int, RefCount<StoreIOState>), void (*)(void*, int, RefCount<StoreIOState>), void*)':
+RockSwapDir.cc:(.text+0x7590): undefined reference to `__atomic_load_8'
+/usr/bin/ld: fs/.libs/libfs.a(RockRebuild.o): in function `Rock::Rebuild::finalizeOrThrow(int, Rock::LoadingEntry&)':
+RockRebuild.cc:(.text+0x1a5c): undefined reference to `__atomic_load_8'
+/usr/bin/ld: RockRebuild.cc:(.text+0x1b80): undefined reference to `__atomic_store_8'
+/usr/bin/ld: fs/.libs/libfs.a(RockRebuild.o): in function `Rock::Rebuild::primeNewEntry(Ipc::StoreMapAnchor&, int, Rock::DbCellHeader const&)':
+RockRebuild.cc:(.text+0x30e0): undefined reference to `__atomic_load_8'
+/usr/bin/ld: RockRebuild.cc:(.text+0x318c): undefined reference to `__atomic_load_8'
+/usr/bin/ld: fs/.libs/libfs.a(RockRebuild.o): in function `Rock::Rebuild::importEntry(Ipc::StoreMapAnchor&, int, Rock::DbCellHeader const&)':
+RockRebuild.cc:(.text+0x35c0): undefined reference to `__atomic_load_8'
+/usr/bin/ld: fs/.libs/libfs.a(RockRebuild.o): in function `Rock::Rebuild::addSlotToEntry(int, int, Rock::DbCellHeader const&)':
+RockRebuild.cc:(.text+0x376c): undefined reference to `__atomic_load_8'
+/usr/bin/ld: RockRebuild.cc:(.text+0x38a0): undefined reference to `__atomic_load_8'
+/usr/bin/ld: fs/.libs/libfs.a(RockRebuild.o):RockRebuild.cc:(.text+0x39a4): more undefined references to `__atomic_load_8' follow
+/usr/bin/ld: fs/.libs/libfs.a(RockRebuild.o): in function `Rock::Rebuild::addSlotToEntry(int, int, Rock::DbCellHeader const&)':
+RockRebuild.cc:(.text+0x39c0): undefined reference to `__atomic_store_8'
+/usr/bin/ld: RockRebuild.cc:(.text+0x39cc): undefined reference to `__atomic_load_8'
+/usr/bin/ld: RockRebuild.cc:(.text+0x3b00): undefined reference to `__atomic_load_8'
+/usr/bin/ld: fs/.libs/libfs.a(RockRebuild.o): in function `Rock::Rebuild::startNewEntry(int, int, Rock::DbCellHeader const&)':
+RockRebuild.cc:(.text+0x3cd4): undefined reference to `__atomic_load_8'
+/usr/bin/ld: ipc/.libs/libipc.a(StoreMap.o): in function `Ipc::StoreMapAnchor::set(StoreEntry const&, unsigned char const*)':
+StoreMap.cc:(.text+0x2bf4): undefined reference to `__atomic_store_8'
+/usr/bin/ld: ipc/.libs/libipc.a(StoreMap.o): in function `Ipc::StoreMapAnchor::exportInto(StoreEntry&) const':
+StoreMap.cc:(.text+0x2cd0): undefined reference to `__atomic_load_8'
+/usr/bin/ld: ipc/.libs/libipc.a(StoreMap.o): in function `Ipc::StoreMapAnchor::rewind()':
+StoreMap.cc:(.text+0x2db0): undefined reference to `__atomic_store_8'
+collect2: error: ld returned 1 exit status
+libtool: link: rm -f ".libs/squidS.o"
+make[3]: *** [Makefile:6356: squid] Error 1
+make[3]: Leaving directory '/usr/ports/opt/squid/work/src/squid-4.9/src'
+make[2]: *** [Makefile:7126: all-recursive] Error 1
+make[2]: Leaving directory '/usr/ports/opt/squid/work/src/squid-4.9/src'
+make[1]: *** [Makefile:6136: all] Error 2
+make[1]: Leaving directory '/usr/ports/opt/squid/work/src/squid-4.9/src'
+make: *** [Makefile:584: all-recursive] Error 1
+=======> ERROR: Building '/usr/ports/opt/squid/squid#4.9-1.pkg.tar.xz' failed.
+=========== last 50 lines of failing build syslinux.log:
+	-f /usr/ports/opt/syslinux/work/src/syslinux-6.03/$i/Makefile all; done
+make[3]: Entering directory '/usr/ports/opt/syslinux/work/src/syslinux-6.03/bios/libinstaller'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/usr/ports/opt/syslinux/work/src/syslinux-6.03/bios/libinstaller'
+make[3]: Entering directory '/usr/ports/opt/syslinux/work/src/syslinux-6.03/bios/mtools'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/usr/ports/opt/syslinux/work/src/syslinux-6.03/bios/mtools'
+make[3]: Entering directory '/usr/ports/opt/syslinux/work/src/syslinux-6.03/bios/linux'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/usr/ports/opt/syslinux/work/src/syslinux-6.03/bios/linux'
+make[3]: Entering directory '/usr/ports/opt/syslinux/work/src/syslinux-6.03/bios/extlinux'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/usr/ports/opt/syslinux/work/src/syslinux-6.03/bios/extlinux'
+make[3]: Entering directory '/usr/ports/opt/syslinux/work/src/syslinux-6.03/bios/utils'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/usr/ports/opt/syslinux/work/src/syslinux-6.03/bios/utils'
+mkdir -m 755 -p /usr/ports/opt/syslinux/work/pkg/usr/bin
+install -m 755 -c mtools/syslinux extlinux/extlinux /usr/ports/opt/syslinux/work/pkg/usr/bin
+mkdir -m 755 -p /usr/ports/opt/syslinux/work/pkg/usr/share/syslinux
+install -m 644 -c core/pxelinux.0 gpxe/gpxelinux.0 gpxe/gpxelinuxk.0 core/isolinux.bin core/isolinux-debug.bin core/lpxelinux.0 mbr/*.bin memdisk/memdisk com32/menu/*.c32 com32/modules/*.c32 com32/mboot/*.c32 com32/hdt/*.c32 com32/rosh/*.c32 com32/gfxboot/*.c32 com32/sysdump/*.c32 com32/lua/src/*.c32 com32/chain/*.c32 com32/lib/*.c32 com32/libutil/*.c32 com32/gpllib/*.c32 com32/elflink/ldlinux/*.c32 com32/cmenu/libmenu/*.c32 /usr/ports/opt/syslinux/work/pkg/usr/share/syslinux
+install -m 644 -c  /usr/ports/opt/syslinux/work/pkg/usr/share/syslinux
+install: missing destination file operand after '/usr/ports/opt/syslinux/work/pkg/usr/share/syslinux'
+Try 'install --help' for more information.
+make[2]: [/usr/ports/opt/syslinux/work/src/syslinux-6.03/Makefile:332: local-install] Error 1 (ignored)
+mkdir -m 755 -p /usr/ports/opt/syslinux/work/pkg/usr/share/syslinux/diag
+install -m 644 -c diag/mbr/handoff.bin diag/geodsp/geodsp1s.img.xz diag/geodsp/geodspms.img.xz /usr/ports/opt/syslinux/work/pkg/usr/share/syslinux/diag
+mkdir -m 755 -p /usr/ports/opt/syslinux/work/pkg/usr/share/man/man1
+install -m 644 -c /usr/ports/opt/syslinux/work/src/syslinux-6.03/man/*.1 /usr/ports/opt/syslinux/work/pkg/usr/share/man/man1
+: mkdir -m 755 -p /usr/ports/opt/syslinux/work/pkg/usr/share/man/man8
+: install -m 644 -c man/*.8 /usr/ports/opt/syslinux/work/pkg/usr/share/man/man8
+set -e ; for i in com32 utils ; \
+	do make -r -C $i SRC="/usr/ports/opt/syslinux/work/src/syslinux-6.03/$i" OBJ="/usr/ports/opt/syslinux/work/src/syslinux-6.03/bios/$i" \
+	-f /usr/ports/opt/syslinux/work/src/syslinux-6.03/$i/Makefile install; done
+make[3]: Entering directory '/usr/ports/opt/syslinux/work/src/syslinux-6.03/bios/com32'
+make -C /usr/ports/opt/syslinux/work/src/syslinux-6.03/bios/com32/libupload SRC="/usr/ports/opt/syslinux/work/src/syslinux-6.03/com32"/libupload OBJ="/usr/ports/opt/syslinux/work/src/syslinux-6.03/bios/com32"/libupload/ \
+	-f /usr/ports/opt/syslinux/work/src/syslinux-6.03/com32/libupload/Makefile install
+make[4]: Entering directory '/usr/ports/opt/syslinux/work/src/syslinux-6.03/bios/com32/libupload'
+gcc: error: unrecognized command line option '-mregparm=3'; did you mean '-mregnames'?
+gcc -Wp,-MT,zout.o,-MD,./.zout.o.d -std=gnu99 -m32    -fno-stack-protector -fwrapv -freg-struct-return -Os -fPIC -fno-exceptions -fno-asynchronous-unwind-tables -fno-strict-aliasing -falign-functions=0 -falign-jumps=0 -falign-labels=0 -falign-loops=0 -mregparm=3 -DREGPARM=3 -W -Wall -Wstrict-prototypes  -fomit-frame-pointer -D__COM32__ -D__FIRMWARE_BIOS__ -nostdinc -iwithprefix include -I/usr/ports/opt/syslinux/work/src/syslinux-6.03/com32/libutil/include -I/usr/ports/opt/syslinux/work/src/syslinux-6.03/com32/include -I/usr/ports/opt/syslinux/work/src/syslinux-6.03/com32/include/sys -I/usr/ports/opt/syslinux/work/src/syslinux-6.03/com32/gplinclude -c -o zout.o /usr/ports/opt/syslinux/work/src/syslinux-6.03/com32/libupload/zout.c
+gcc: error: unrecognized command line option '-mregparm=3'; did you mean '-mregnames'?
+make[4]: *** [/usr/ports/opt/syslinux/work/src/syslinux-6.03/mk/com32.mk:97: zout.o] Error 1
+make[4]: Leaving directory '/usr/ports/opt/syslinux/work/src/syslinux-6.03/bios/com32/libupload'
+make[3]: *** [/usr/ports/opt/syslinux/work/src/syslinux-6.03/com32/Makefile:8: libupload] Error 2
+make[3]: Leaving directory '/usr/ports/opt/syslinux/work/src/syslinux-6.03/bios/com32'
+make[2]: *** [/usr/ports/opt/syslinux/work/src/syslinux-6.03/Makefile:342: install] Error 2
+make[2]: Leaving directory '/usr/ports/opt/syslinux/work/src/syslinux-6.03/bios'
+make[1]: *** [/usr/ports/opt/syslinux/work/src/syslinux-6.03/Makefile:253: bios] Error 2
+make[1]: Leaving directory '/usr/ports/opt/syslinux/work/src/syslinux-6.03'
+make: *** [Makefile:103: install] Error 2
+=======> ERROR: Building '/usr/ports/opt/syslinux/syslinux#6.03-5.pkg.tar.xz' failed.
+=========== last 50 lines of failing build tcsh.log:
+prt-get: installing /usr/ports/opt/tcsh
+prt-get: starting build Thu Dec  5 15:55:25 2019
+=======> Downloading 'ftp://ftp.astron.com/pub/tcsh/tcsh-6.22.00.tar.gz'.
+=======> Partial download found, trying to resume
+--2019-12-05 15:55:25--  ftp://ftp.astron.com/pub/tcsh/tcsh-6.22.00.tar.gz
+           => '/sources/tcsh-6.22.00.tar.gz.partial'
+Resolving ftp.astron.com... 2620:106:3003:1f00:9e8e:99ff:fe15:cae4, 38.117.134.18
+Connecting to ftp.astron.com|2620:106:3003:1f00:9e8e:99ff:fe15:cae4|:21... failed: Connection refused.
+Connecting to ftp.astron.com|38.117.134.18|:21... connected.
+Logging in as anonymous ... Logged in!
+==> SYST ... done.    ==> PWD ... done.
+==> TYPE I ... done.  ==> CWD (1) /pub/tcsh ... done.
+==> SIZE tcsh-6.22.00.tar.gz ... done.
+
+==> PASV ... done.    ==> RETR tcsh-6.22.00.tar.gz ... 
+No such file 'tcsh-6.22.00.tar.gz'.
+
+=======> Partial download failed, restarting
+--2019-12-05 15:55:28--  ftp://ftp.astron.com/pub/tcsh/tcsh-6.22.00.tar.gz
+           => '/sources/tcsh-6.22.00.tar.gz.partial'
+Resolving ftp.astron.com... 2620:106:3003:1f00:9e8e:99ff:fe15:cae4, 38.117.134.18
+Connecting to ftp.astron.com|2620:106:3003:1f00:9e8e:99ff:fe15:cae4|:21... failed: Connection refused.
+Connecting to ftp.astron.com|38.117.134.18|:21... connected.
+Logging in as anonymous ... Logged in!
+==> SYST ... done.    ==> PWD ... done.
+==> TYPE I ... done.  ==> CWD (1) /pub/tcsh ... done.
+==> SIZE tcsh-6.22.00.tar.gz ... done.
+
+==> PASV ... done.    ==> RETR tcsh-6.22.00.tar.gz ... 
+No such file 'tcsh-6.22.00.tar.gz'.
+
+=======> ERROR: Downloading 'ftp://ftp.astron.com/pub/tcsh/tcsh-6.22.00.tar.gz' failed.
+=========== last 50 lines of failing build xdg-dbus-proxy.log:
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... 64
+checking for gcc... (cached) gcc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to accept ISO C89... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports the include directive... yes (GNU style)
+checking whether make supports nested variables... yes
+checking whether UID '0' is supported by ustar format... yes
+checking whether GID '0' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+checking dependency style of gcc... gcc3
+checking whether make supports nested variables... (cached) yes
+checking whether to enable maintainer-specific portions of Makefiles... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for GLIB... yes
+checking for gawk... (cached) gawk
+checking for a sed that does not truncate output... /bin/sed
+checking whether to build with code coverage support... no
+checking for xsltproc... /usr/bin/xsltproc
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
++ make
+make  all-am
+make[1]: Entering directory '/usr/ports/opt/xdg-dbus-proxy/work/src/xdg-dbus-proxy-0.1.1'
+  CC       flatpak-proxy.o
+  CC       dbus-proxy.o
+  CCLD     xdg-dbus-proxy
+xsltproc --nonet --stringparam man.output.quietly 1 --stringparam funcsynopsis.style ansi --stringparam man.th.extra1.suppress 1 --stringparam man.authors.section.enabled 0 --stringparam man.copyright.section.enabled 0 http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl xdg-dbus-proxy.xml
+I/O error : Attempt to load network entity http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl
+warning: failed to load external entity "http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl"
+cannot parse http://docbook.sourceforge.net/release/xsl/current/manpages/docbook.xsl
+make[1]: *** [Makefile:1615: xdg-dbus-proxy.1] Error 4
+make[1]: Leaving directory '/usr/ports/opt/xdg-dbus-proxy/work/src/xdg-dbus-proxy-0.1.1'
+make: *** [Makefile:658: all] Error 2
+=======> ERROR: Building '/usr/ports/opt/xdg-dbus-proxy/xdg-dbus-proxy#0.1.1-1.pkg.tar.xz' failed.
+=========== last 50 lines of failing build xpdf.log:
+prt-get: installing /usr/ports/opt/xpdf
+prt-get: starting build Thu Dec  5 18:46:07 2019
+=======> Downloading 'https://xpdfreader-dl.s3.amazonaws.com/xpdf-4.01.01.tar.gz'.
+=======> Partial download found, trying to resume
+--2019-12-05 18:46:07--  https://xpdfreader-dl.s3.amazonaws.com/xpdf-4.01.01.tar.gz
+Resolving xpdfreader-dl.s3.amazonaws.com... 52.216.21.43
+Connecting to xpdfreader-dl.s3.amazonaws.com|52.216.21.43|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2019-12-05 18:46:08 ERROR 403: Forbidden.
+
+=======> Partial download failed, restarting
+--2019-12-05 18:46:08--  https://xpdfreader-dl.s3.amazonaws.com/xpdf-4.01.01.tar.gz
+Resolving xpdfreader-dl.s3.amazonaws.com... 52.216.21.43
+Connecting to xpdfreader-dl.s3.amazonaws.com|52.216.21.43|:443... connected.
+HTTP request sent, awaiting response... 403 Forbidden
+2019-12-05 18:46:08 ERROR 403: Forbidden.
+
+=======> ERROR: Downloading 'https://xpdfreader-dl.s3.amazonaws.com/xpdf-4.01.01.tar.gz' failed.
