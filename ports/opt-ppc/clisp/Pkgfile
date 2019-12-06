@@ -7,11 +7,11 @@ name=clisp
 version=2.49
 release=1
 source=(https://ftp.gnu.org/pub/gnu/clisp/latest/$name-$version.tar.bz2
-        clisp-2.49.92-after_glibc_cfree_bdb.patch)
+        clisp-2.49.90-after_glibc_cfree_bdb.patch)
 
 build() {
   cd $name-$version
-  patch -p1 -i $SRC/clisp-2.49.92-after_glibc_cfree_bdb.patch
+  patch -p1 -i $SRC/clisp-2.49.90-after_glibc_cfree_bdb.patch
 
   ./configure \
     --prefix=/usr
