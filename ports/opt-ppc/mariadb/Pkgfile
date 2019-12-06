@@ -7,12 +7,14 @@ name=mariadb
 version=10.4.10
 release=1
 source=(https://downloads.mariadb.com/MariaDB//$name-$version/source/$name-$version.tar.gz 
+        ppchax.patch
         mariadb
         pre-install)
 
 build() {
 
 	cd $name-$version
+        patch -p1 -i $SRC/ppchax.patch
 
 	mkdir build && cd build
 
