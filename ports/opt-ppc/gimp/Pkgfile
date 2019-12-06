@@ -7,10 +7,15 @@
 name=gimp
 version=2.10.14
 release=1
-source=(https://download.gimp.org/pub/gimp/v${version%.*}/gimp-$version.tar.bz2)
+source=(https://download.gimp.org/pub/gimp/v${version%.*}/gimp-$version.tar.bz2
+   gimp-2.10.14-ppchack.patch)
 
 build() {
   cd gimp-$version
+#
+# hack for building on ppc.
+#
+  patch -p1 -i $SRC/gimp-2.10.14-ppchack.patch
 
   sed -i -e '/$(helpbrowser)/d' plug-ins/Makefile.in
   ./configure --prefix=/usr \
