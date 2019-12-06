@@ -8,14 +8,12 @@ version=10.4.10
 release=1
 source=(https://downloads.mariadb.com/MariaDB//$name-$version/source/$name-$version.tar.gz 
         mariadb
-        gcc_builtins_ppc.h
         pre-install)
 
 build() {
 
 	cd $name-$version
 
-	cp $SRC/gcc_builtins_ppc.h include/atomic/gcc_builtins.h
 	mkdir build && cd build
 
 	cmake .. \
