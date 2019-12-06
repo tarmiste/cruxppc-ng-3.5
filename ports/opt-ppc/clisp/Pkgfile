@@ -1,0 +1,30 @@
+# Description: GNU CLisp is an ANSI Common Lisp Implementation.
+# URL:         http://clisp.cons.org/
+# Maintainer:  Thomas Penteker, tek at serverop dot de
+# Depends on:  libsigsegv readline
+
+name=clisp
+version=2.49
+release=1
+source=(https://ftp.gnu.org/pub/gnu/clisp/latest/$name-$version.tar.bz2
+        clisp-2.49.92-after_glibc_cfree_bdb.patch)
+
+build() {
+  cd $name-$version
+  patch -p1 -i $SRC/clisp-2.49.92-after_glibc_cfree_bdb.patch
+
+  ./configure \
+    --prefix=/usr
+
+  cd src
+
+  ./makemake \
+    --with-dynamic-ffi \
+    --without-dynamic-modules \
+    --prefix=/usr
+
+  make -j1
+  make -j1 DESTDIR=$PKG install
+
+  rm -r $PKG/usr/share/{doc,locale}
+}
