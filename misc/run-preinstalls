@@ -1,4 +1,5 @@
 #!/bin/sh
+# Run all the pre-install scripts.
 
 # ===== ./opt/dovecot/pre-install pre-install
 #!/bin/sh
