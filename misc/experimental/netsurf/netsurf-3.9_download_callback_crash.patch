@@ -1,0 +1,21 @@
+--- netsurf/frontends/gtk/download.c.orig	2019-09-11 17:40:47.000000000 -0400
++++ netsurf/frontends/gtk/download.c	2019-09-11 17:41:19.000000000 -0400
+@@ -751,7 +751,7 @@
+ static gboolean nsgtk_download_gsourcefunc__nsgtk_download_update(
+ 		gpointer user_data)
+ {
+-	bool *force_update = user_data;
+- 	return nsgtk_download_update(*force_update);
++	bool force_update = (bool)user_data;
++ 	return nsgtk_download_update(force_update);
+ }
+ 
+@@ -838,7 +838,7 @@
+ 		g_timeout_add(
+ 			UPDATE_RATE,
+ 			nsgtk_download_gsourcefunc__nsgtk_download_update,
+-			FALSE);
++			(gpointer)FALSE);
+ 	}
+ 
+ 	nsgtk_downloads_list = g_list_prepend(nsgtk_downloads_list, download);

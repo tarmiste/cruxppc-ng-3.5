@@ -6,7 +6,8 @@
 name=netsurf
 version=3.9
 release=1
-source=(http://download.netsurf-browser.org/netsurf/releases/source-full/netsurf-all-$version.tar.gz .watch)
+source=(http://download.netsurf-browser.org/netsurf/releases/source-full/netsurf-all-$version.tar.gz 
+    netsurf-3.9_download_callback_crash.patch )
 
 build() {
 	make -C */ install "DESTDIR=$PKG" PREFIX=/usr
