@@ -1,0 +1,14 @@
+# Description: Lightweight and fast web browser.
+# URL:         https://www.netsurf-browser.org/
+# Maintainer:  TBA
+# Depends on:  libidn libmng gtk p5-html-parser
+
+name=netsurf
+version=3.9
+release=1
+source=(http://download.netsurf-browser.org/netsurf/releases/source-full/netsurf-all-$version.tar.gz .watch)
+
+build() {
+	make -C */ install "DESTDIR=$PKG" PREFIX=/usr
+	( cd "$PKG/usr/bin" && ln -s netsurf-gtk netsurf )
+}
