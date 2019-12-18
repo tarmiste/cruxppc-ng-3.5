@@ -10,6 +10,8 @@ source=(http://download.netsurf-browser.org/netsurf/releases/source-full/netsurf
     netsurf-3.9_download_callback_crash.patch )
 
 build() {
+	patch -p1 -i $SRC/netsurf-3.9_download_callback_crash.patch
+
 	make -C */ install "DESTDIR=$PKG" PREFIX=/usr
 	( cd "$PKG/usr/bin" && ln -s netsurf-gtk netsurf )
 }
