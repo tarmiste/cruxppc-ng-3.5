@@ -7,10 +7,12 @@ name=xorg-xf86-video-r128
 version=6.12.0
 release=1
 source=(http://xorg.freedesktop.org/releases/individual/driver/xf86-video-r128-$version.tar.bz2
+    xaa.patch
     ppc.patch)
 
 build() {
 	cd xf86-video-r128-$version
+	patch -p1 -i $SRC/xaa.patch
 	patch -p1 -i $SRC/ppc.patch
 
 	./configure --prefix=/usr --mandir=/usr/man
