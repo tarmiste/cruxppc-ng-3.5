@@ -44,6 +44,7 @@ iproute2: db iptables attr linux-pam libcap iproute2
 iptables: iptables 
 kbd: kbd 
 kmod: kmod 
+lcms2: xz libtiff lcms2
 less: ncurses libpcre less 
 libarchive: bzip2 xz zlib attr lzo acl libarchive 
 libcap: attr linux-pam libcap 
@@ -141,7 +142,9 @@ libffi: libffi
 libgcrypt: libgpg-error libgcrypt 
 libgpg-error: libgpg-error 
 libidl: libpcre libffi db ncurses openssl bzip2 zlib expat libtirpc mpdecimal xz readline gdbm sqlite3 python python3 ninja python3-setuptools meson glib libidl 
+libidn: libidn
 libjpeg-turbo: openssl zlib bzip2 xz attr lzo expat ncurses nasm curl acl libarchive cmake libjpeg-turbo 
+libmng: lcms2 libmng
 libnl: libnl 
 libpng: zlib libpng 
 libtiff: openssl zlib bzip2 xz attr lzo expat ncurses nasm curl acl libarchive cmake libjpeg-turbo libtiff 
@@ -152,7 +155,6 @@ libtirpc: libtirpc
 libxml2: zlib xz libxml2 
 libxml2-python: db ncurses openssl bzip2 zlib xz readline libxml2 gdbm sqlite3 python libxml2-python 
 libxslt: zlib xz libxml2 libxslt 
-linux-firmware: linux-firmware 
 llvm: openssl zlib bzip2 xz attr lzo expat ncurses libffi db curl acl readline libarchive gdbm sqlite3 cmake python ninja llvm 
 lvm2: kmod ncurses zlib libaio eudev util-linux libdevmapper lvm2 
 mdadm: mdadm 
@@ -161,11 +163,14 @@ mpdecimal: mpdecimal
 mtools: mtools 
 mutt: ncurses openssl zlib readline gdbm mutt 
 nano: zlib ncurses file nano 
+netsurf: libidn libmng p5-html-parser netsurf
 nfs-utils: kmod ncurses zlib attr linux-pam libtirpc openssl keyutils eudev readline libcap rpcbind libevent util-linux sqlite3 libdevmapper nfs-utils 
 ninja: db ncurses openssl bzip2 zlib readline gdbm sqlite3 python ninja 
 nspr: nspr
 nss: nspr sqlite3 nss 
 openbox: db ncurses openssl bzip2 zlib xorg-xorgproto xz libpthread-stubs mtdev expat libffi libtirpc mpdecimal xorg-util-macros xorg-libpixman libpcre fribidi readline libpng xorg-libxdmcp xorg-libxau libxml2 xorg-xtrans gdbm sqlite3 freetype libxslt xorg-libice python python3 fontconfig xorg-libsm xorg-xcb-proto xorg-libevdev ninja python3-setuptools meson libinput glib xorg-libxcb gobject-introspection xorg-libx11 xorg-xcb-util xorg-libxext xorg-libxrender xorg-libxinerama xorg-libxrandr cairo harfbuzz xorg-libxft pango openbox 
+p5-html-parser: p5-html-tagset p5-html-parser
+p5-html-tagset: p5-html-tagset
 p5-xml-parser: expat db ncurses readline gdbm perl p5-xml-parser 
 pango: xorg-xorgproto xorg-util-macros zlib expat db ncurses openssl bzip2 xz libpthread-stubs mtdev libffi libtirpc mpdecimal xorg-libpixman libpcre fribidi xorg-libxdmcp xorg-libxau xorg-xtrans libpng readline libxml2 xorg-libice freetype gdbm sqlite3 libxslt xorg-libsm fontconfig python python3 xorg-xcb-proto xorg-libevdev ninja python3-setuptools meson libinput glib xorg-libxcb gobject-introspection xorg-libx11 xorg-xcb-util xorg-libxext xorg-libxrender cairo harfbuzz xorg-libxft pango 
 parted: kmod ncurses zlib eudev readline util-linux libdevmapper parted 
