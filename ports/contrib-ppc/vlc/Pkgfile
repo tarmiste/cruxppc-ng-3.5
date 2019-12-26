@@ -1,8 +1,8 @@
 # Description: The cross-platform media player and streaming server
 # URL:         http://www.videolan.org/vlc/
-# Maintainer:  Thomas Penteker, tek at serverop dot de
-# Packager:    Matt Housh, jaeger at morpheus dot net
-# Depends on:  libmad ffmpeg qt4 libdvdnav libgcrypt alsa-lib liba52 xorg-libxcb
+# Maintainer:  TBA
+# Packager:    TBA
+# Depends on:  libmad ffmpeg qt5 libdvdnav libgcrypt alsa-lib liba52 xorg-libxcb
 # Nice to have:opus libvorbis x264 libogg libmtp libtheora flac
 
 name=vlc
@@ -28,6 +28,7 @@ build() {
     --disable-fribidi \
     --disable-dbus \
     --disable-lua \
+    --disable-altivec \
     --enable-alsa
 
   #make
