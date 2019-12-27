@@ -1,7 +1,7 @@
 # Description:  Versatile media player and encoder/converter
 # URL:          http://www.mplayerhq.hu/
-# Maintainer:   Thomas Penteker, tek at serverop dot de
-# Packager:     Matt Housh, jaeger at morpheus dot net
+# Maintainer:   TBA
+# Packager:     TBA
 # Depends on:   expat, freetype, xorg-libxinerama, xorg-libxv, xorg-libxxf86dga, xorg-libxxf86vm, yasm
 # Nice to have: libsdl, libjpeg-turbo, libpng, lame, zlib, libogg, libvorbis, cdparanoia, win32-essential-codecs, faac, x264, libdvdnav, libdca
 
@@ -22,6 +22,7 @@ build() {
   ./configure --prefix=/usr \
       --mandir=/usr/share/man \
       --codecsdir=/usr/share/codecs \
+      --disable-altivec \
       --confdir=/etc/mplayer
   make
   make DESTDIR=$PKG install
