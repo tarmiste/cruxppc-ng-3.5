@@ -118,6 +118,14 @@ getent passwd polkitd || /usr/sbin/useradd -g polkitd -r -d /var/empty -s /bin/f
 
 /usr/bin/passwd -l polkitd
 
+
+# ===== ./opt/nsd/pre-install pre-install
+#!/bin/sh
+
+getent group nsd || /usr/sbin/groupadd -r nsd
+getent passwd nsd || /usr/sbin/useradd -g nsd -r -d /var/lib/nsd -s /bin/false nsd
+/usr/bin/passwd -l nsd
+
 # ===== ./opt/mailman/pre-install pre-install
 #!/bin/sh
 
@@ -133,12 +141,4 @@ mmhome="/usr/lib/mailman"
 	/usr/sbin/useradd -s /sbin/nologin -d $mmhome --system -g $mmgroup $mmuser
 
 # End of file
-
-# ===== ./opt/nsd/pre-install pre-install
-#!/bin/sh
-
-getent group nsd || /usr/sbin/groupadd -r nsd
-getent passwd nsd || /usr/sbin/useradd -g nsd -r -d /var/lib/nsd -s /bin/false nsd
-/usr/bin/passwd -l nsd
-
 
