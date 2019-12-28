@@ -137,6 +137,7 @@ jfsutils: kmod ncurses zlib eudev util-linux jfsutils
 json-c: json-c 
 keyutils: keyutils 
 libaio: libaio 
+libcroco: libcroco
 libevent: openssl libevent 
 libffi: libffi 
 libgcrypt: libgpg-error libgcrypt 
@@ -190,6 +191,7 @@ ruby: gdbm libgmp openssl zlib libffi libyaml ruby
 shared-mime-info: libpcre libffi db ncurses openssl bzip2 zlib expat libtirpc mpdecimal xz readline libxml2 gdbm sqlite3 perl python python3 p5-xml-parser ninja python3-setuptools intltool meson glib shared-mime-info 
 smartmontools: smartmontools
 spice-protocol: python-pyparsing spice-protocol 
+spidermonkey: spidermonkey
 sqlite3: ncurses zlib readline sqlite3 
 talloc: bzip2 expat ncurses libffi libtirpc mpdecimal zlib xz readline gdbm sqlite3 python3 talloc 
 u-boot-tools: u-boot-tools
