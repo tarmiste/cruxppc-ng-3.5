@@ -1,15 +1,15 @@
 # Description: The Rust language with Cargo included.
 # URL: http://www.rust-lang.org/
-# Maintainer:  TBA
-# Depends on: llvm python3
+# Maintainer: TBA
+# Depends on: llvm
 # Optional: sccache llvm-32
 
 name=rust
-version=1.38.0
+version=1.40.0
 ##cat src/stage0.txt
-_date=2019-08-15
-_rustc=1.37.0
-_cargo=0.38.0
+_date=2019-11-07
+_rustc=1.39.0
+_cargo=0.40.0
 ##
 
 release=1
@@ -21,12 +21,6 @@ source=(
 )
  
 build() {
-
-# This package build fails (after hours of compiling) and so is disabled for now.  Remove
-# the following exit if you wish to attempt the build anyway.
-# 
-	exit 1
-
 	cd "${name}c-$version-src"
 
 	local ERROR
