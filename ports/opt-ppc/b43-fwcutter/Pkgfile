@@ -5,9 +5,9 @@
 # PPC!=
 
 name=b43-fwcutter
-version=013
+version=019
 release=1
-source=(http://bu3sch.de/b43/fwcutter/$name-$version.tar.bz2)
+source=(http://bues.ch/b43/fwcutter/$name-$version.tar.bz2)
 
 build() {
 	cd $name-$version
