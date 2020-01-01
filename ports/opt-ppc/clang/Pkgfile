@@ -4,12 +4,12 @@
 # Depends on:  llvm
 
 name=clang
-version=9.0.0
+version=9.0.1
 release=1
-source=(http://releases.llvm.org/$version/{llvm,cfe}-$version.src.tar.xz)
+source=(https://github.com/llvm/llvm-project/releases/download/llvmorg-$version/{llvm,clang}-$version.src.tar.xz)
 
 build() {
-  mv cfe-$version.src llvm-$version.src/tools/clang
+  mv clang-$version.src llvm-$version.src/tools/clang
 
   cd llvm-$version.src
   mkdir build
