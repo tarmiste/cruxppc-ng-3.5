@@ -1,0 +1,175 @@
+[   143.669] 
+X.Org X Server 1.20.6
+X Protocol Version 11, Revision 0
+[   143.682] Build Operating System: Linux 4.19.24-cruxppc-alpha ppc 
+[   143.687] Current Operating System: Linux host 4.19.24-cruxppc-alpha #1 SMP Fri Dec 13 13:51:01 UTC 2019 ppc
+[   143.687] Kernel command line: root=UUID=92583696-91db-42ab-bdb7-fcb489120826 ro root=/dev/sda7 
+[   143.697] Build Date: 27 December 2019  08:16:02AM
+[   143.702]  
+[   143.707] Current version of pixman: 0.38.4
+[   143.717] 	Before reporting problems, check http://wiki.x.org
+	to make sure that you have the latest version.
+[   143.717] Markers: (--) probed, (**) from config file, (==) default setting,
+	(++) from command line, (!!) notice, (II) informational,
+	(WW) warning, (EE) error, (NI) not implemented, (??) unknown.
+[   143.739] (==) Log file: "/var/log/Xorg.0.log", Time: Wed Jan  1 21:59:39 2020
+[   143.778] (==) Using config file: "/etc/X11/xorg.conf"
+[   143.783] (==) Using system config directory "/usr/share/X11/xorg.conf.d"
+[   143.818] (==) ServerLayout "Default Layout"
+[   143.818] (**) |-->Screen "Default Screen" (0)
+[   143.818] (**) |   |-->Monitor "Generic Monitor"
+[   143.823] (**) |   |-->Device "ATI Technologies, Inc. Rage 128 Pro Ultra TR"
+[   143.823] (**) |-->Input Device "Generic Keyboard"
+[   143.823] (**) |-->Input Device "Configured Mouse"
+[   143.823] (**) |-->Input Device "stylus"
+[   143.823] (**) |-->Input Device "cursor"
+[   143.823] (**) |-->Input Device "eraser"
+[   143.823] (==) Automatically adding devices
+[   143.823] (==) Automatically enabling devices
+[   143.823] (==) Automatically adding GPU devices
+[   143.848] (==) Max clients allowed: 256, resource mask: 0x1fffff
+[   143.849] (WW) The directory "/usr/share/X11/fonts/misc" does not exist.
+[   143.849] 	Entry deleted from font path.
+[   143.849] (WW) The directory "/usr/share/X11/fonts/cyrillic" does not exist.
+[   143.849] 	Entry deleted from font path.
+[   143.849] (WW) The directory "/usr/share/X11/fonts/100dpi/" does not exist.
+[   143.849] 	Entry deleted from font path.
+[   143.849] (WW) The directory "/usr/share/X11/fonts/75dpi/" does not exist.
+[   143.849] 	Entry deleted from font path.
+[   143.849] (WW) The directory "/usr/share/X11/fonts/Type1" does not exist.
+[   143.849] 	Entry deleted from font path.
+[   143.849] (WW) The directory "/usr/share/X11/fonts/100dpi" does not exist.
+[   143.849] 	Entry deleted from font path.
+[   143.849] (WW) The directory "/usr/share/X11/fonts/75dpi" does not exist.
+[   143.849] 	Entry deleted from font path.
+[   143.849] (WW) The directory "/var/lib/defoma/x-ttcidfont-conf.d/dirs/TrueType" does not exist.
+[   143.849] 	Entry deleted from font path.
+[   143.850] (WW) The directory "/usr/share/fonts/X11/OTF/" does not exist.
+[   143.850] 	Entry deleted from font path.
+[   143.850] (WW) The directory "/usr/share/fonts/X11/Type1/" does not exist.
+[   143.850] 	Entry deleted from font path.
+[   143.850] (**) FontPath set to:
+	/usr/share/fonts/X11/misc,
+	/usr/share/fonts/X11/misc/,
+	/usr/share/fonts/X11/TTF/,
+	/usr/share/fonts/X11/100dpi/,
+	/usr/share/fonts/X11/75dpi/
+[   143.850] (==) ModulePath set to "/usr/lib/xorg/modules"
+[   143.850] (**) Extension "Composite" is enabled
+[   143.851] (WW) Hotplugging is on, devices using drivers 'kbd', 'mouse' or 'vmmouse' will be disabled.
+[   143.851] (WW) Disabling Generic Keyboard
+[   143.851] (WW) Disabling Configured Mouse
+[   143.851] (II) Loader magic: 0xbdc638
+[   143.851] (II) Module ABI versions:
+[   143.851] 	X.Org ANSI C Emulation: 0.4
+[   143.851] 	X.Org Video Driver: 24.0
+[   143.851] 	X.Org XInput driver : 24.1
+[   143.851] 	X.Org Server Extension : 10.0
+[   143.866] (--) PCI:*(0@0:16:0) 1002:5452:1002:5452 rev 0, Mem @ 0x94000000/67108864, 0x90000000/16384, I/O @ 0x00000400/256, BIOS @ 0x????????/131072
+[   143.866] (II) Open APM successful
+[   143.873] (II) "glx" will be loaded. This was enabled by default and also specified in the config file.
+[   143.874] (II) LoadModule: "dri"
+[   143.874] (II) Module "dri" already built-in
+[   143.874] (II) LoadModule: "extmod"
+[   143.874] (II) Module "extmod" already built-in
+[   143.874] (II) LoadModule: "dbe"
+[   143.875] (II) Module "dbe" already built-in
+[   143.875] (II) LoadModule: "glx"
+[   143.894] (II) Loading /usr/lib/xorg/modules/extensions/libglx.so
+[   144.085] (II) Module glx: vendor="X.Org Foundation"
+[   144.085] 	compiled for 1.20.6, module version = 1.0.0
+[   144.085] 	ABI class: X.Org Server Extension, version 10.0
+[   144.085] (II) LoadModule: "ati"
+[   144.086] (II) Loading /usr/lib/xorg/modules/drivers/ati_drv.so
+[   144.098] (II) Module ati: vendor="X.Org Foundation"
+[   144.098] 	compiled for 1.20.6, module version = 19.1.0
+[   144.098] 	Module class: X.Org Video Driver
+[   144.098] 	ABI class: X.Org Video Driver, version 24.0
+[   144.098] (II) LoadModule: "r128"
+[   144.099] (II) Loading /usr/lib/xorg/modules/drivers/r128_drv.so
+[   144.117] (II) Module r128: vendor="X.Org Foundation"
+[   144.117] 	compiled for 1.20.6, module version = 6.12.0
+[   144.117] 	Module class: X.Org Video Driver
+[   144.117] 	ABI class: X.Org Video Driver, version 24.0
+[   144.117] (II) LoadModule: "wacom"
+[   144.141] (WW) Warning, couldn't open module wacom
+[   144.141] (EE) Failed to load module "wacom" (module does not exist, 0)
+[   144.141] (II) R128: Driver for ATI Rage 128 chipsets:
+	ATI Rage 128 Mobility M3 LE (PCI), ATI Rage 128 Mobility M3 LF (AGP),
+	ATI Rage 128 Mobility M4 MF (AGP), ATI Rage 128 Mobility M4 ML (AGP),
+	ATI Rage 128 Pro GL PA (PCI/AGP), ATI Rage 128 Pro GL PB (PCI/AGP),
+	ATI Rage 128 Pro GL PC (PCI/AGP), ATI Rage 128 Pro GL PD (PCI),
+	ATI Rage 128 Pro GL PE (PCI/AGP), ATI Rage 128 Pro GL PF (AGP),
+	ATI Rage 128 Pro VR PG (PCI/AGP), ATI Rage 128 Pro VR PH (PCI/AGP),
+	ATI Rage 128 Pro VR PI (PCI/AGP), ATI Rage 128 Pro VR PJ (PCI/AGP),
+	ATI Rage 128 Pro VR PK (PCI/AGP), ATI Rage 128 Pro VR PL (PCI/AGP),
+	ATI Rage 128 Pro VR PM (PCI/AGP), ATI Rage 128 Pro VR PN (PCI/AGP),
+	ATI Rage 128 Pro VR PO (PCI/AGP), ATI Rage 128 Pro VR PP (PCI),
+	ATI Rage 128 Pro VR PQ (PCI/AGP), ATI Rage 128 Pro VR PR (PCI),
+	ATI Rage 128 Pro VR PS (PCI/AGP), ATI Rage 128 Pro VR PT (PCI/AGP),
+	ATI Rage 128 Pro VR PU (PCI/AGP), ATI Rage 128 Pro VR PV (PCI/AGP),
+	ATI Rage 128 Pro VR PW (PCI/AGP), ATI Rage 128 Pro VR PX (PCI/AGP),
+	ATI Rage 128 GL RE (PCI), ATI Rage 128 GL RF (AGP),
+	ATI Rage 128 RG (AGP), ATI Rage 128 VR RK (PCI),
+	ATI Rage 128 VR RL (AGP), ATI Rage 128 4X SE (PCI/AGP),
+	ATI Rage 128 4X SF (PCI/AGP), ATI Rage 128 4X SG (PCI/AGP),
+	ATI Rage 128 4X SH (PCI/AGP), ATI Rage 128 4X SK (PCI/AGP),
+	ATI Rage 128 4X SL (PCI/AGP), ATI Rage 128 4X SM (AGP),
+	ATI Rage 128 4X SN (PCI/AGP), ATI Rage 128 Pro ULTRA TF (AGP),
+	ATI Rage 128 Pro ULTRA TL (AGP), ATI Rage 128 Pro ULTRA TR (AGP),
+	ATI Rage 128 Pro ULTRA TS (AGP?), ATI Rage 128 Pro ULTRA TT (AGP?),
+	ATI Rage 128 Pro ULTRA TU (AGP?)
+[   144.143] (++) using VT number 1
+
+[   144.144] (**) R128(0): Depth 24, (--) framebuffer bpp 32
+[   144.144] (==) R128(0): Default visual is TrueColor
+[   144.145] (==) R128(0): Using gamma correction (1.0, 1.0, 1.0)
+[   144.145] (II) R128(0): PCI bus 0 card 16 func 0
+[   144.145] (II) R128(0): Pixel depth = 24 bits stored in 4 bytes (32 bpp pixmaps)
+[   144.145] (**) R128(0): Option "UseFBDev" "false"
+[   144.145] (**) R128(0): Option "SWcursor" "true"
+[   144.145] (**) R128(0): Option "ForcePCIMode" "true"
+[   144.145] (II) R128(0): Acceleration of RENDER operations will be enabled upon successful loading of DRI and EXA.
+[   144.145] (II) R128(0): VGAAccess option set to FALSE, VGA module load skipped.
+[   144.145] (**) R128(0): Software cursor requested.
+[   144.145] (**) R128(0): Forced into PCI only mode.
+[   144.145] (==) R128(0): RGB weight 888
+[   144.145] (II) R128(0): Using 8 bits per RGB (8 bit DAC)
+[   144.146] (--) R128(0): Chipset: "ATI Rage 128 Pro ULTRA TR (AGP)" (ChipID = 0x5452)
+[   144.146] (--) R128(0): Linear framebuffer at 0x94000000
+[   144.146] (--) R128(0): MMIO registers at 0x90000000
+[   144.147] (EE) R128(0): Unable to map MMIO aperture. Invalid argument (22)
+[   144.147] (WW) R128(0): No outputs definitely connected, trying again...
+[   144.147] (WW) R128(0): Unable to find connected outputs - setting 1024x768 initial framebuffer
+[   144.147] (==) R128(0): DPI set to (96, 96)
+[   144.147] (II) Loading sub module "fb"
+[   144.147] (II) LoadModule: "fb"
+[   144.149] (II) Loading /usr/lib/xorg/modules/libfb.so
+[   144.181] (II) Module fb: vendor="X.Org Foundation"
+[   144.181] 	compiled for 1.20.6, module version = 1.0.0
+[   144.181] 	ABI class: X.Org ANSI C Emulation, version 0.4
+[   144.181] (II) R128(0): Loading EXA module...
+[   144.181] (II) Loading sub module "exa"
+[   144.181] (II) LoadModule: "exa"
+[   144.183] (II) Loading /usr/lib/xorg/modules/libexa.so
+[   144.199] (II) Module exa: vendor="X.Org Foundation"
+[   144.199] 	compiled for 1.20.6, module version = 2.6.0
+[   144.199] 	ABI class: X.Org Video Driver, version 24.0
+[   144.199] (II) R128(0): Loading EXA module.
+[   144.199] (EE) R128(0): No modes.
+[   144.199] (II) UnloadModule: "r128"
+[   144.199] (II) UnloadSubModule: "exa"
+[   144.199] (II) Unloading exa
+[   144.200] (II) UnloadSubModule: "fb"
+[   144.200] (II) Unloading fb
+[   144.200] (EE) Screen(s) found, but none have a usable configuration.
+[   144.201] (EE) 
+Fatal server error:
+[   144.201] (EE) no screens found(EE) 
+[   144.201] (EE) 
+Please consult the The X.Org Foundation support 
+	 at http://wiki.x.org
+ for help. 
+[   144.201] (EE) Please also check the log file at "/var/log/Xorg.0.log" for additional information.
+[   144.201] (EE) 
+[   144.218] (EE) Server terminated with error (1). Closing log file.
