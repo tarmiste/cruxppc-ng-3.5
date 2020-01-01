@@ -18,10 +18,16 @@ source=(
 	https://static.rust-lang.org/dist/$_date/rust-std-$_rustc-powerpc-unknown-linux-gnu.tar.gz
 	https://static.rust-lang.org/dist/$_date/rustc-$_rustc-powerpc-unknown-linux-gnu.tar.gz
 	https://static.rust-lang.org/dist/$_date/cargo-$_cargo-powerpc-unknown-linux-gnu.tar.gz
+	0007-Fix-C-aggregate-passing-ABI-on-powerpc.patch
+	0008-Fix-zero-sized-aggregate-ABI-on-powerpc.patch
+	0010-test-c-variadic-Fix-patterns-on-powerpc64.patch
 )
  
 build() {
 	cd "${name}c-$version-src"
+	patch -p1 -i $SRC/0007-Fix-C-aggregate-passing-ABI-on-powerpc.patch
+	patch -p1 -i $SRC/0008-Fix-zero-sized-aggregate-ABI-on-powerpc.patch
+	patch -p1 -i $SRC/0010-test-c-variadic-Fix-patterns-on-powerpc64.patch
 
 	local ERROR
 	local DATE="$(awk '/^date: / { print $2 }' src/stage0.txt)"
