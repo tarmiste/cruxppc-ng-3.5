@@ -1,21 +1,7 @@
-From c9a914f48652de22832a40ef9639ff8d57c57f31 Mon Sep 17 00:00:00 2001
-From: Samuel Holland <samuel@sholland.org>
-Date: Wed, 4 Sep 2019 20:40:18 -0500
-Subject: [PATCH 07/16] Fix C aggregate-passing ABI on powerpc
-
-The existing code (which looks like it was copied from MIPS) passes
-aggregates by value in registers. This is wrong. According to the SVR4
-powerpc psABI, all aggregates are passed indirectly.
----
- src/librustc_target/abi/call/mod.rs     |  2 +-
- src/librustc_target/abi/call/powerpc.rs | 41 ++++++-------------------
- 2 files changed, 11 insertions(+), 32 deletions(-)
-
-diff --git a/src/librustc_target/abi/call/mod.rs b/src/librustc_target/abi/call/mod.rs
-index fbbd120f934..f4d98177072 100644
---- a/src/librustc_target/abi/call/mod.rs
-+++ b/src/librustc_target/abi/call/mod.rs
-@@ -562,7 +562,7 @@ impl<'a, Ty> FnType<'a, Ty> {
+diff -Naur a/src/librustc_target/abi/call/mod.rs b/src/librustc_target/abi/call/mod.rs
+--- a/src/librustc_target/abi/call/mod.rs	2019-12-16 15:38:05.000000000 +0000
++++ b/src/librustc_target/abi/call/mod.rs	2020-01-01 19:24:53.252369250 +0000
+@@ -554,7 +554,7 @@
              "arm" => arm::compute_abi_info(cx, self),
              "mips" => mips::compute_abi_info(cx, self),
              "mips64" => mips64::compute_abi_info(cx, self),
@@ -23,11 +9,10 @@ index fbbd120f934..f4d98177072 100644
 +            "powerpc" => powerpc::compute_abi_info(self),
              "powerpc64" => powerpc64::compute_abi_info(cx, self),
              "s390x" => s390x::compute_abi_info(cx, self),
-             "asmjs" => asmjs::compute_abi_info(cx, self),
-diff --git a/src/librustc_target/abi/call/powerpc.rs b/src/librustc_target/abi/call/powerpc.rs
-index d496abf8e8b..f20defd6f5b 100644
---- a/src/librustc_target/abi/call/powerpc.rs
-+++ b/src/librustc_target/abi/call/powerpc.rs
+             "msp430" => msp430::compute_abi_info(self),
+diff -Naur a/src/librustc_target/abi/call/powerpc.rs b/src/librustc_target/abi/call/powerpc.rs
+--- a/src/librustc_target/abi/call/powerpc.rs	2019-12-16 15:38:05.000000000 +0000
++++ b/src/librustc_target/abi/call/powerpc.rs	2020-01-01 19:24:53.252369250 +0000
 @@ -1,49 +1,28 @@
 -use crate::abi::call::{ArgType, FnType, Reg, Uniform};
 -use crate::abi::{HasDataLayout, LayoutOf, Size, TyLayoutMethods};
@@ -88,6 +73,3 @@ index d496abf8e8b..f20defd6f5b 100644
 +        classify_arg_ty(arg);
      }
  }
--- 
-2.21.0
-
