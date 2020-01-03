@@ -27,8 +27,8 @@ source=(
 build() {
 	cd "${name}c-$version-src"
 	#patch -p1 -i $SRC/ppcfixes.patch
-	patch -p1 -i $SRC/0007-Fix-C-aggregate-passing-ABI-on-powerpc.patch
-	patch -p1 -i $SRC/0008-Fix-zero-sized-aggregate-ABI-on-powerpc.patch
+	#patch -p1 -i $SRC/0007-Fix-C-aggregate-passing-ABI-on-powerpc.patch
+	#patch -p1 -i $SRC/0008-Fix-zero-sized-aggregate-ABI-on-powerpc.patch
 	#patch -p1 -i $SRC/0010-test-c-variadic-Fix-patterns-on-powerpc64.patch
 
 	local ERROR
