@@ -1,16 +1,21 @@
 # Description: Qt Free Edition, version 5.x.
 # URL: http://www.qt.io/
-# Maintainer:  TBA
+# Maintainer: TBA
 # Depends on: dbus gdk-pixbuf gst-plugins-base libepoxy libmng libxkbcommon xorg-libxcomposite xorg-libxcursor xorg-libxi xorg-libxinerama xorg-xcb-util-image xorg-xcb-util-keysyms xorg-xcb-util-wm
 
 name=qt5
 version=5.13.2
-release=1
+release=2
 source=(https://download.qt.io/official_releases/qt/${version::4}/$version/single/qt-everywhere-src-$version.tar.xz
 	qt5-logo.png)
 
 build() {
 	cd qt-everywhere-src-$version
+
+	export PYTHON='/usr/bin/python3'
+	mkdir $SRC/bin
+	ln -s /usr/bin/python3 $SRC/bin/python
+	export PATH="$SRC/bin:$PATH"
 
 	# Respect system CXX
 	[ "$CXX" ] || CXX=g++
@@ -49,7 +54,6 @@ build() {
 		-sysconfdir /usr/etc/xdg \
 		-confirm-license \
 		-dbus-linked \
-		-no-egl \
 		-nomake examples \
 		-no-pch \
 		-no-rpath \
@@ -69,6 +73,10 @@ build() {
 
 	make
 	make -j1 INSTALL_ROOT=$PKG install
+
+	sed 's|/usr/bin/python|/usr/bin/python3|g' \
+		-i $PKG/usr/lib/qt5/mkspecs/features/uikit/devices.py
+	2to3-3.7 --write --nobackups $PKG/usr/lib/qt5/mkspecs/features/uikit/devices.py
     
 	# Fix paths
 	find $PKG/usr/lib/ -type f -name '*.prl' \
@@ -88,8 +96,8 @@ build() {
 	# Add menu entries for all those hidden but great Qt applications:
 	# # Qt5 logo:
 	install -d $PKG/usr/share/icons/hicolor/48x48/apps
-# requires imagemagick
-#	convert qtdoc/doc/src/images/qt-logo.png  -resize 48x48 $PKG/usr/share/icons/hicolor/48x48/apps/qt5-logo.png
+	# requires imagemagick
+	#convert qtdoc/doc/src/images/qt-logo.png  -resize 48x48 $PKG/usr/share/icons/hicolor/48x48/apps/qt5-logo.png
 	install -m 0644 $SRC/qt5-logo.png $PKG/usr/share/icons/hicolor/48x48/apps/qt5-logo.png
 
 	# Assistant icons
