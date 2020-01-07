@@ -1,16 +1,10 @@
-bitlbee
-clisp
-cmus
-freerdp
-hexchat
-hpcups
-hunspell-es
-libesmtp
-libmpeg2
-librsvg
-lsscsi
-mailman
-pear
-squid
-xchat
-xsane
+package adwaita-icon-theme
+package clisp
+package faudio
+package freerdp
+package libsdl2
+package mailman
+package qtwebengine
+package qtwebkit
+package squid
+package texlive
