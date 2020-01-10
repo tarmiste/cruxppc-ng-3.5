@@ -7,8 +7,8 @@
 
 # firmware for b43
 URL1=http://www.lwfinger.com/b43-firmware
-FILE1=broadcom-wl-6.30.163.46.tar.bz2
-FIRMWARE1=broadcom-wl-6.30.163.46.wl_apsta.o
+FILE1=broadcom-wl-5.100.138.tar.bz2
+FIRMWARE1=broadcom-wl-5.100.138/linux/wl_apsta.o
 
 # firmware for b43legacy
 URL2=http://downloads.openwrt.org/sources
