@@ -4,7 +4,7 @@
 # Depends on:  ncurses zlib openssl cmake libaio linux-pam
 
 name=mariadb
-version=10.4.11
+version=10.4.12
 release=1
 source=(https://downloads.mariadb.com/MariaDB//$name-$version/source/$name-$version.tar.gz 
         ppchax.patch
